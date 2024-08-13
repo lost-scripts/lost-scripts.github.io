@@ -1,0 +1,27 @@
+# GENERAL #
+###########
+
+
+
+# PATHS #
+#########
+
+
+
+# FOLDERS #
+###########
+docs
+public
+resources
+themes/hugo-theme-stack
+
+# FILE TYPES #
+##############
+
+
+
+# FILES #
+#########
+
+assets/jsconfig.json
+.hugo_build.lock

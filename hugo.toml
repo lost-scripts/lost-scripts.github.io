@@ -1,0 +1,7 @@
+baseURL = 'https://lost-scripts.github.io/'
+languageCode = 'en-us'
+title = 'Lost Scripts'
+theme = 'lost-scripts-theme'
+
+cleanDestinationDir = true
+publishDir = 'docs'
