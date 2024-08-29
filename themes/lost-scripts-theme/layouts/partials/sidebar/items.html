@@ -1,0 +1,10 @@
+<h3>{{ site.Title }}</h3>
+<nav class="sidebar-items">
+  <ul>
+    {{ range .Site.RegularPages }}
+      {{ if or (eq (path.Dir .File.Path) "items") (eq .Type "items") }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</nav>

@@ -1,0 +1,11 @@
+<h3>Documentation</h3>
+<!--{{ partial "menu.html" (dict "menuID" "main" "page" .) }}-->
+<nav class="sidebar-items">
+  <ul>
+    {{ range .Site.RegularPages }}
+      {{ if or (eq (path.Dir .File.Path) "doc") (eq .Type "doc") }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</nav>

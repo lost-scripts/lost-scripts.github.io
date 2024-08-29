@@ -1,17 +1,52 @@
 <!DOCTYPE html>
 <html lang="{{ or site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
 <head>
-  {{ partial "head.html" . }}
+	{{ partial "head.html" . }}
 </head>
 <body>
-  <header>
-    {{ partial "header.html" . }}
-  </header>
-  <main>
-    {{ block "main" . }}{{ end }}
-  </main>
-  <footer>
-    {{ partial "footer.html" . }}
-  </footer>
+
+	<header>
+		{{ partial "header.html" . }}
+	</header>
+
+
+	<div class="container">
+		<nav class="sidebar">
+			<!-- Aquí puedes agregar tu menú de navegación u otro contenido -->
+
+			<div class="headers">
+				{{ partial "sidebar/header.html" . }}
+			</div>
+
+			<div class="sidebar-main">
+				{{ partial "sidebar/items.html" . }}
+			</div>
+
+			{{ partial "sidebar/doc.html" . }}
+
+		</nav>
+
+		<main class="content">
+			<!--
+			<div class="headers">
+				{{ partial "main/header.html" . }}
+			</div>
+			-->
+			<div class="mains">
+				{{ block "main" . }}{{ end }}
+			</div>
+
+			<div class="footers center">
+				{{ partial "main/footer.html" . }}
+			</div>
+		</main>
+	</div>
+
+	<!--
+	<footer>
+		{{ partial "footer.html" . }}
+	</footer>
+	-->
+
 </body>
 </html>

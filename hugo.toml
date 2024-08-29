@@ -1,7 +1,15 @@
 baseURL = 'https://lost-scripts.github.io/'
 languageCode = 'en-us'
-title = 'Lost Scripts'
+title = 'Lost Scripts™'
+copyright = 'Copyright © 2024 · Rai López · All Rights Reserved'
 theme = 'lost-scripts-theme'
 
 cleanDestinationDir = true
 publishDir = 'docs'
+
+[author]
+name = 'Rai López'
+homepage = 'https://lost-scripts.github.io/'
+
+[params]
+subtitle = 'The Lost (Moho® Scripts) Ark'
