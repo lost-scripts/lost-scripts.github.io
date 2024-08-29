@@ -2,7 +2,7 @@ baseURL = 'https://lost-scripts.github.io/'
 languageCode = 'en-us'
 title = 'Lost Scripts™'
 copyright = 'Copyright © 2024 · Rai López · All Rights Reserved'
-theme = 'lost-scripts-theme'
+theme = 'hugo-lost-theme'
 
 cleanDestinationDir = true
 publishDir = 'docs'
