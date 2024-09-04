@@ -1,0 +1,8 @@
+<!--{{ partial "menu.html" (dict "menuID" "main" "page" .) }}-->
+<ul class="nav-articles">
+	{{ range .Site.RegularPages }}
+		{{ if or (eq (path.Dir .File.Path) "doc") (eq .Type "doc") }}
+			<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+		{{ end }}
+	{{ end }}
+</ul>

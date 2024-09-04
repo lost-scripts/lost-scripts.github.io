@@ -1,0 +1,8 @@
+<!--<h3>{{ site.Title }}</h3>-->
+<ul class="nav-articles">
+	{{ range .Site.RegularPages }}
+		{{ if or (eq (path.Dir .File.Path) "scripts") (eq .Type "script") }}
+			<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+		{{ end }}
+	{{ end }}
+</ul>

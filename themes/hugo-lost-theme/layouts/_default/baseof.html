@@ -3,50 +3,53 @@
 <head>
 	{{ partial "head.html" . }}
 </head>
-<body>
 
+<body>
 	<header>
 		{{ partial "header.html" . }}
 	</header>
 
-
-	<div class="container">
-		<nav class="sidebar">
-			<!-- Aquí puedes agregar tu menú de navegación u otro contenido -->
-
-			<div class="headers">
-				{{ partial "sidebar/header.html" . }}
+	<main id="layout">
+		<nav id="nav" class="box">
+			<!--
+			<div class="header">
+				{{ partial "nav/header.html" . }}
 			</div>
-
-			<div class="sidebar-main">
-				{{ partial "sidebar/items.html" . }}
+			-->
+			<!--
+			<div class="main">
+				{{ partial "nav/main/scripts.html" . }}
 			</div>
-
-			{{ partial "sidebar/doc.html" . }}
-
+			-->
+			<!--
+			<div class="main">
+				{{ partial "nav/main/doc.html" . }}
+			</div>
+			-->
+			<div class="main">
+				{{ partial "nav/main.html" . }}
+			</div>
 		</nav>
 
-		<main class="content">
+		<div id="article" class="box">
 			<!--
-			<div class="headers">
+			<div class="header">
 				{{ partial "main/header.html" . }}
 			</div>
 			-->
-			<div class="mains">
+			<div class="main">
 				{{ block "main" . }}{{ end }}
 			</div>
 
-			<div class="footers center">
+			<div class="footer center">
 				{{ partial "main/footer.html" . }}
 			</div>
-		</main>
-	</div>
-
+		</div>
+	</main>
 	<!--
 	<footer>
 		{{ partial "footer.html" . }}
 	</footer>
 	-->
-
 </body>
 </html>

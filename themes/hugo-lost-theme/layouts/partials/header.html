@@ -1,3 +1,14 @@
-<h1>{{ site.Title }}</h1>
 <!--{{ partial "menu.html" (dict "menuID" "main" "page" .) }}-->
-<input type="text" id="menu-search" class="right middle" onkeyup="myFunction()" placeholder="🔍" disabled>
+<hgroup>
+	<h1>{{ site.Title }}</h1>
+	<small>{{ site.Params.subtitle }}</small>
+</hgroup>
+
+<div>
+	<input type="text" id="menu-search" onkeyup="myFunction()" placeholder="🔍" disabled>
+	<label class="switch">
+  		<input type="checkbox" disabled>
+  		<span class="slider round">☀</span>
+	</label>
+</div>
+

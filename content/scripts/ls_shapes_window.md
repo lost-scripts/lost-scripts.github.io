@@ -1,9 +1,9 @@
 +++
 title = 'LS Shapes Window'
-type = 'items'
-tags = []
-categories = []
-date = 2024-08-17T04:22:57+02:00
+type = 'script'
+tags = ['vectors', 'shapes']
+categories = ['window']
+date = 2024-08-17T04:24:43+02:00
 hidden = false
 draft = false
 keywords = []

@@ -1,12 +1,23 @@
+# General
 baseURL = 'https://lost-scripts.github.io/'
 languageCode = 'en-us'
 title = 'Lost Scripts™'
 copyright = 'Copyright © 2024 · Rai López · All Rights Reserved'
 theme = 'hugo-lost-theme'
 
+# Forzar limpieza del directorio de destino
 cleanDestinationDir = true
+
+# Deshabilitar renderizado rápido
+#disableFastRender = true
+
+# Reducir la complejidad del renderizado si no necesitas taxonomías
+#disableKinds = ["taxonomy", "taxonomyTerm"]
+
+# Directorio de publicación
 publishDir = 'docs'
 
+# Otras configuraciones...
 [author]
 name = 'Rai López'
 homepage = 'https://lost-scripts.github.io/'
