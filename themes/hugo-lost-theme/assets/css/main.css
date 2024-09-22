@@ -1,26 +1,73 @@
-:root {
-	--headH: 80px;
-	--mainH: 100%;
-	--footH: 40px;
-	--accentCol: #ff0;
-	--bgCol: #444;
-	--hCol: #999;
-	--hoverCol: #666;
-	--navCol: #222;
-	--artCol: #333;
+/*@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i');*/
+/*@import url('https://fonts.googleapis.com/css?family=Bree+Serif');*/
 
-	--primary-text-color: #222;
-	--secondary-text-color: #fff;
-	--primary-bg-color: #222;
-	--secondary-bg-color: #fff;
-	--tertiary-bg-color: #ddd;
+:root {
+--headH: 80px;
+--mainH: 100%;
+--footH: 40px;
+--col: #ddd;
+--acCol: #ff0; /* accent color */
+--hoCol: #666;
+--bgCol: #444;
+--hCol: #999;
+--navCol: #222;
+--artCol: #333;
+
+--grayF0: #FFF;
+--grayE1: #DDD;
+--grayD2: #DDD;
+--grayC3: #CCC;
+--grayB4: #BBB;
+--grayA6: #AAA;
+--gray80: #808080;
+--gray6A: #666;
+--gray4B: #444;
+--gray3C: #333;
+--gray2D: #222;
+--gray1E: #111;
+--gray0F: #000;
+
+--primary-text-color: #222;
+--secondary-text-color: #fff;
+--primary-bg-color: #222;
+--secondary-bg-color: #fff;
+--tertiary-bg-color: #ddd;
+}
+
+/*dark-mode styles*/
+.dark-mode {
+	--gray0F: #FFF;
+	--gray1E: #EEE;
+	--gray2D: #DDD;
+	--gray3C: #CCC;
+	--gray4B: #BBB;
+	--gray6A: #AAA;
+	--grayA6: #666;
+	--grayB4: #444;
+	--grayC3: #333;
+	--grayD2: #222;
+	--grayE1: #111;
+	--grayF0: #000;
+
+	--bodyBG:#2b2b2b;
+	--wrapperBG: #212121;
+	--wrapperBG2: #212121;
+	--text-color: #C5C5C5;
+	--codeBG:#424242;
+	box-shadow: none;
+} 
+.dark-mode span.nav-indicator{
+	background-color: #ACD6FF !important;
+} 
+.dark-mode li{
+	color: var(--text-color);
 }
 
 * {
-	padding: 0;
 	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
-	border: 1px dotted grey;
+	border: 0px dotted grey;
 }
 
 *:disabled {
@@ -29,22 +76,56 @@
 	cursor: not-allowed;
 }
 
+@supports not selector(::-webkit-scrollbar) { /* Wrap new scrollbar properties in @supports rule for browsers without `::-webkit-scrollbar-*` support. This way chrome won't override `::-webkit-scrollbar-*` selectors */
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: unset var(--grayB4); /*SlateGrey DarkSlateGrey;*/
+	}
+}
+
+*::-webkit-scrollbar {
+	height: 10px;
+	width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	border-radius: 0;
+	background-color: unset;
+}
+
+*::-webkit-scrollbar-corner {
+	background: inherit;
+}
+
+*::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background-color: var(--grayB4);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: var(--grayA6); 
+}
+
+*::-webkit-scrollbar-thumb:active {
+	background: var(--acCol);
+}
+
 html {
 	height: 100%; /*min-height: 100vh;*/
 	width: 100%;
 	overflow: hidden;
 }
 
-body, .box {
+body, .body {
 	display: flex;
 	flex-flow: column;
 	height: 100%; /*min-height: 100vh;*/
 	width: 100%;
-	overflow: hidden;
-	color: #fff;
-	accent-color: var(--accentCol);
-	background-color: var(--bgCol);
-	font-family: sans-serif, Arial;
+	/*overflow: hidden;*/
+	color: var(--gray0F);
+	accent-color: var(--acCol);
+	background-color: var(--grayB4);
+	font-family: 'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif,'Segoe UI Emoji'; /*font-family: sans-serif, Arial;*/ /*font-family: 'Source Sans Pro', sans-serif;*/
 	line-height: 1.5;
 }
 
@@ -58,33 +139,29 @@ header, .header {
 	background-color: inherit;
 }
 
+header.root {
+	background-color: var(--grayC3);
+}
+
 main, .main {
 	display: flex;
 	flex-flow: column;
 	flex: 1 1 auto;
-	gap: 8px;
-	height: auto; /* Remove fixed height? */
-	overflow-y: auto;
-	background-color: inherit;
+	height: 100%; /* Remove fixed height? */
+	overflow-y: auto; /* hidden? */
 }
 
 main#layout {
 	flex-flow: row;
-	gap: 4px;
+	gap: 0;
 	overflow: hidden;
+	background-color: inherit;
 }
 
 main#layout #article {
-	background-color: var(--artCol);
+	background-color: var(--grayC3);
+	box-shadow: inset 2px 4px 6px 0 rgba(0, 0, 0, 0.3);
 }
-
-/* Added to nav bellow
-main#layout > nav {
-	flex: 33%;
-	min-width: 128px;
-	max-width: 384px;
-}
-*/
 
 footer, .footer {
 	flex: 0 1 auto; /* flex: 0 1 32px */
@@ -97,65 +174,45 @@ a {
 	text-decoration: none;
 }
 
-@supports not selector(::-webkit-scrollbar) { /* Wrap new scrollbar properties in @supports rule for browsers without `::-webkit-scrollbar-*` support. This way chrome won't override `::-webkit-scrollbar-*` selectors */
-	div {
-		scrollbar-width: thin;
-		scrollbar-color: SlateGrey DarkSlateGrey;
-	}
-}
-
-div::-webkit-scrollbar {
-	height: 10px;
-	width: 10px;
-}
-
-div::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
-	border-radius: 5px;
-	background-color: inherit;
-}
-
-div::-webkit-scrollbar-corner {
-	background: inherit;
-}
-
-div::-webkit-scrollbar-thumb {
-	border-radius: 5px;
-	background-color: #555;
-}
-
-div::-webkit-scrollbar-thumb:hover {
-	background: var(--hoverCol); 
-}
-
-div::-webkit-scrollbar-thumb:active {
-	background: var(--accentCol);
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Josefin Sans', sans-serif; /*font-family: 'Bree Serif', serif;*/
+	color: yellow;
 }
 
 h1 {
-	font-family: 'Josefin Sans', sans-serif;
-	color: var(--hCol);
+	font-size: 36px;
 }
 
 hgroup {
 	display: block;
+	padding: 4px 8px;
 	line-height: 1;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-nav {
+hr {
+	height: 2px;
+	color: #333;
+	background-color: #444;
+	border: none;
+}
+
+p {
+	margin-top: 20px;
+	margin-bottom: 0;
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+nav, .nav {
 	flex: 33%;
+	height: 100%;
 	min-width: 128px;
 	max-width: 384px;
-	gap: 4px;
-	padding: 2px;
-	background-color: var(--navCol) !important;
-	box-shadow: 2px 0 4px rgba(0, 0, 0, 0.3);
-}
-
-nav .main {
-	height: 100%; /*height: auto; /* Remove fixed height? */
-	gap: 4px;
-	overflow: hidden;
+	overflow-y: auto;
+	background-color: var(--grayD2) !important;
+	/*box-shadow: 4px 0 6px rgba(0, 0, 0, 0.3);*/
+	container: nav / inline-size;
 }
 
 nav ul {
@@ -173,13 +230,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-	color: var(--hoverCol);
+	color: var(--grayA6);
 }
 
 nav ul li a:active {
-	color: var(--accentCol);
+	color: var(--acCol);
 }
-
+/*
 .nav-articles a {
 	display: block;
 	padding: 2px 4px;
@@ -199,95 +256,87 @@ nav ul li a:active {
 	background-color: #444;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
 }
-
-/* Style the tabs */
-.nav-tabs {
+*/
+.container {
+	display: flex;
+	flex-flow: column;
 	height: 100%;
 	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	background: #e5e5e5;
-	box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
-	container-type: inline-size;
 }
 
-.nav-tabs input {
+.tabs {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	background: inherit;
+	/*box-shadow: 0 24px 40px -16px rgba(0,0,0,0.3);*/
+}
+
+.input {
 	position: absolute;
 	opacity: 0;
 }
 
-/* Style the row labels (tabs) */
-.nav-tabs label {
-	position: -webkit-sticky; /* Safari */
-	position: sticky;
-	flex: 0 0 auto;
-	top: 0;
+.label {
 	height: 32px;
 	width: 100%;
-	padding: 2px 4px;
-	background: #e5e5e5;
+	padding: 4px 8px;
+	color: var(--gray6A);
+	background: var(--grayB4);
 	cursor: pointer;
-	text-align: left;
-	white-space: nowrap;
-	font-weight: bold;
+	font-weight: 550;
 	font-size: 14px;
-	color: #7f7f7f;
 	transition: background 0.1s, color 0.1s;
 }
 
-.nav-tabs label:hover {
-	background: #d8d8d8;
+.label:hover {
+	background-color: var(--grayA6);
 }
 
-.nav-tabs label:active {
-	background: #ccc;
+.label:active {
+	color: var(--acCol);
+	background: var(--grayC3);
 }
 
-.nav-tabs input:focus + label {
+.input:focus + .label {
 	z-index: 1;
 }
 
-.nav-tabs input:checked + label {
-	background: #fff;
-	color: #000;
+.input:checked + .label {
+	background: inherit;
+	color: var(--gray0F);
+	font-weight: 800;
+	box-shadow: inset 2px 4px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
-/* Style the column labels (tabs) */
-@container (width > 224px) {
-	.nav-tabs {
-		flex-flow: row wrap;
-		flex: 1;
-	}
-
-	.nav-tabs label {
-		flex: 1;
-		flex-grow: 1;
-		width: auto;
-		text-align: center;
-	}
-
-	.panel {
-		flex-grow: 1;
-		order: 99;
-	}
+input:not(input:checked) + label {
+	box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
 .panel {
 	display: none;
-	flex-flow: column;
-	flex-grow: 1;
+	padding: 20px 30px 30px;
 	overflow-y: auto;
-	background: #fff;
+	box-shadow: inset 8px 0px 4px -6px rgba(0, 0, 0, 0.3);
+	background: unset;
+
 }
 
-.nav-tabs input:checked + label + .panel {
-	display: flex;
-	}
-
-p {
-	margin: 0.25rem;
-	padding: 0.25rem;
+.input:checked + .label + .panel {
+	display: block;
 }
+
+.hs, .hs1, .hs2, .hs3 { /* Horizontal Separator*/
+	display: block;
+	height: 2px;
+	width: 2px;
+	background-color: transparent;
+	border-bottom: 1px solid #ddd;
+}
+.hs1 {height: 4px;}
+.hs2 {height: 8px;}
+.hs3 {height: 16px;}
 
 .left {
 	float: left;
@@ -311,6 +360,11 @@ p {
 	*/
 }
 
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
 .middle {
 	display: flex;
 	align-items: center;
@@ -325,4 +379,83 @@ p {
 	border: 1px solid #ddd;
 	border-radius: 16px;
 	vertical-align: middle;
+}
+
+/* Light Mode */
+.sun-btn {
+	display: block;
+	padding: 0 8px;
+	font-size: 1.5rem;
+	color: #ffc533;
+}
+
+.moon-btn {
+	display: none;
+}
+/* Dark Mode */
+.dark-mode .sun-btn{
+	display: none;
+}
+
+.dark-mode .moon-btn {
+	display: block;
+	padding: 0 8px;
+	font-size: 1.5rem;
+	color: #AAA;
+}
+
+@media (width < 600px) {
+	body {
+		/*background-color: #000;*/
+	}
+}
+
+/* Accordion mode */
+@container nav (width < 256px) {
+	nav .main {
+		overflow-y: hidden;
+		/*gap: 2px;*/
+		/*border-top: 0 none;*/
+	}
+
+	.tabs {
+		height: 100%;
+	}
+
+	.input:checked + .label + .panel {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.panel {
+		flex-grow: 1;
+	}
+}
+
+/* Tab mode */
+@container nav (width > 256px) {
+	.tabs {
+		height: auto;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.label {
+		flex: 1 0 auto;
+		position: sticky;
+		top: 0;
+		width: auto;
+		text-align: center;
+		z-index: 1;
+	}
+
+	.panel {
+		width: 100%;
+		order: 99;
+	}
+
+	.input:checked + .label + .panel {
+		display: block;
+	}
 }
