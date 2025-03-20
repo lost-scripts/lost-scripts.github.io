@@ -1,58 +1,62 @@
 <!DOCTYPE html>
-<html lang="{{ or site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<html lang="{{ .Site.Language.Lang }}" dir="{{ .Site.Language.LanguageDirection | default `ltr` }}">
+
 <head>
-	{{ partial "head.html" . }}
+	{{- .Store.Set "isHome" (eq .Page.RelPermalink .Site.Params.homepage) -}} {{- /* site.Home.Store.Set "isHome" (eq .Page.RelPermalink .Site.Params.homepage) */ -}}
+	{{- partial "head.html" . -}}
 </head>
 
-<body>
-	<header class="root"> <!-- HEADER -->
-		{{ partial "header.html" . }}
+<body> <!-- <body>, <section>, .section -->
+	<header id="header">
+		{{- partial "header.html" . -}}
 	</header>
 
-	<main id="layout"> <!-- MAIN -->
-		<nav id="nav" class="body">
-			<div class="main">
-				<div class="tabs">
-					<input class="input" name="tabs" type="radio" id="tab-1"/>
-					<label class="label" for="tab-1">📄 Scripts</label>
-					<div class="panel">
-						{{ partial "nav/main/scripts.html" . }}
-					</div>
-					<input class="input" name="tabs" type="radio" id="tab-2"/>
-					<label class="label" for="tab-2">📚 Docs</label>
-					<div class="panel">
-						{{ partial "nav/main/doc.html" . }}
-					</div>
-					<input class="input" name="tabs" type="radio" id="tab-3"/>
-					<label class="label" for="tab-3">🧪 Lab</label>
-					<div class="panel">
-						<p>Tekno Match (Citrus ×clementina) is a hybrid between a mandarin orange and a sweet orange, so named in 1902. The exterior is a deep orange colour with a smooth, glossy appearance. Clementines can be separated into 7 to 14 segments. Similarly to tangerines, they tend to be easy to peel.</p>
-					</div>
-				</div>
-			</div>
+	<section id="section"> <!-- <main> base -> <section> -->
+		<nav id="nav" class="section">
+			<section id="nav-main" class="section tabs">
+				{{- partial "nav/main.html" . -}}
+			</section>
+
+			<footer id="nav-footer">
+				{{- partial "nav/footer.html" . -}}
+			</footer>
 		</nav>
 
-		<div id="article" class="body">
+		<section id="view"> <!-- <article> section base -> <section> -->
 			<!--
-			<div class="header">
-				{{ partial "main/header.html" . }}
-			</div>
+			<header id="view-header" class="sticky">
+				{{- /* partial "main/header.html" . */ -}}
+			</header>
 			-->
-			<div class="main">
-				{{ block "main" . }}{{ end }}
-			</div>
+			<main id="view-main" class="responsive scroll"> <!-- <div> .main -> <main> -->
+				{{- block "main" . -}}{{- end -}}
+			</main>
 
-			<div class="footer center">
-				{{ partial "main/footer.html" . }}
-			</div>
-		</div>
-	</main>
+			<footer id="view-footer">
+				{{- partial "main/footer.html" . -}}
+			</footer>
+		</section>
+		<!--
+		<aside id="aside" class="section responsive">
+			<section id="aside-main">
+				{{- /* partial "aside.html" . */ -}}
+			</section>
+		</aside>
+		-->
+	</section>
 
-	<footer> <!-- FOOTER -->
-		<!--{{ partial "footer.html" . }}-->
+	<!--
+	<footer id="footer" class="center">
+		{{- /* partial "footer.html" . */ -}}
 	</footer>
+	-->
+
+	<script type="module" crossorigin src="/assets/index-C7zxpy4f.js"></script>
+
+	{{- partialCached "foot.html" . -}} <!--<script type="text/javascript" src="/js/main-defer.js"></script>-->
 
 	<script>
+		/*
 		// Recover the active tab or set first one as active
 		var activeTab = localStorage.getItem('activeTab');
 		var tabs = document.querySelectorAll('.tabs input[type="radio"]');
@@ -62,23 +66,7 @@
 			tabs[0].checked = true;
 			localStorage.setItem('activeTab', tabs[0].id);
 		}
+		*/
 	</script>
-	<!--
-	<script>
-		// Recover the active tab
-		var activeTab = localStorage.getItem('activeTab');
-		if (activeTab) {
-			document.getElementById(activeTab).checked = true;
-		}
-
-		// Save active tab when it's changed
-		var tabs = document.querySelectorAll('.tabs input[type="radio"]');
-		tabs.forEach(function(tab) {
-			tab.addEventListener('change', function() {
-				localStorage.setItem('activeTab', this.id);
-			});
-		});
-	</script>
-	-->
 </body>
 </html>

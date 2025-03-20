@@ -1,26 +1,119 @@
-# General
+###############
+#   GENERAL   #
+###############
+
 baseURL = 'https://lost-scripts.github.io/'
 languageCode = 'en-us'
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = false
+enableMissingTranslationPlaceholder = true
 title = 'Lost Scripts™'
-copyright = 'Copyright © 2024 · Rai López · All Rights Reserved'
+copyright = 'Copyright © 2025 · Rai López · All Rights Reserved' #'© 2025 · Rai López · ARR'
 theme = 'hugo-lost-theme'
-
-# Forzar limpieza del directorio de destino
-cleanDestinationDir = true
-
-# Deshabilitar renderizado rápido
-#disableFastRender = true
-
-# Reducir la complejidad del renderizado si no necesitas taxonomías
-#disableKinds = ["taxonomy", "taxonomyTerm"]
-
-# Directorio de publicación
 publishDir = 'docs'
 
-# Otras configuraciones...
-[author]
-name = 'Rai López'
-homepage = 'https://lost-scripts.github.io/'
+
+###############
+# PERFORMANCE #
+###############
+
+cleanDestinationDir = true # remove files from destination not found in static directories
+disableFastRender = true # Enables full re-renders on changes (commented cause this setting doesn't really belong here...)
+#disableKinds = ['taxonomy', 'taxonomyTerm', 'term', ' robotsTXT', 'RSS', 'sitemap', '404'] # Reduce rendering complexity if you don't need taxonomies
+
+[services]
+	rss.limit = 10
+
+
+###############
+#   CONTENT   #
+###############
+
+[languages]
+	[languages.en]
+		title = 'Here be Lost Scripts'
+		languageName = 'En'
+		weight = 1
+
+	[languages.es]
+		title = 'Aquí hay Lost Scripts'
+		languageName = 'Es'
+		weight = 2
+
+	[languages.ca]
+		title = 'Aquí hi ha Lost Scripts'
+		languageName = 'Ca'
+		weight = 3
+
+[markup]
+	defaultMarkdownHandler = 'goldmark'
+
+[markup.goldmark]
+	renderer.unsafe = true # Allow HTML in md files (WARNING: make sure content is under your control!)
+	renderHooks.image.enableDefault = true
+	parser.autoIDType = 'github'
+	parser.autoHeadingID = true
+	parser.attribute.block = true
+	parser.attribute.title = true
+
+[markup.highlight]
+	lineNoStart = 1
+	lineNos = true
+	lineNumbersInTable = false
+	style = "monokai"
+	#noClasses = false
+	#hl_Lines = '1 4-6'
+
+[outputs]
+	home = ['html', 'json', 'rss']
+
+
+###############
+#    OTHER    #
+###############
 
 [params]
+homepage = '/scripts/ls/'
+homeIcon = 'house'
 subtitle = 'The Lost (Moho® Scripts) Ark'
+author = { name = 'Rai López', homepage = 'https://lost-scripts.github.io/' }
+copyrightAlt = '© 2025 · Rai López · ARR'
+since = 2024
+banner = true
+faStyle = 'solid'
+
+# Social Networking and Contact Links (The last shall be first/top! (Or use order key)) | TEMP: 'https://lost-scripts.github.io/rss'
+links = [ 
+{ href = 'https://mohoscripting.com/', src = '/icons/icon_ms_logo.svg', alt = 'Moho Scripting', start = 'Other Links:', title = 'Moho Scripting...', order = 5 },
+{ href = 'mailto:rai.lopez@outlook.com', icon = 'fa-solid fa-envelope', alt = 'Email', title = 'Email...', order = 4 },
+{ href = '/index.xml', icon = 'fa-solid fa-rss', alt = 'Subscribe', title = 'Subscribe...', rel= 'alternate', type = 'application/rss+xml', order = 3 },
+{ href = 'https://instagram.com/Lost_Scripts', icon = 'fa-brands fa-instagram', alt = 'Instagram', title = 'Instagram...', order = 2 },
+{ href = 'https://github.com/lost-scripts', icon = 'fa-brands fa-github', alt = 'GitHub', title = 'GitHub...', order = 1 }]
+
+# Navigation tabs
+[[menus.nav]]
+	name = 'Scripts'
+	identifier = 'scripts'
+	url = '/scripts/'
+	weight = 1
+	[menus.nav.params]
+		icon = '/icons/fa-file-code-solid.svg' #'📄'
+		item = 'Script'
+
+[[menus.nav]]
+	name = 'Docs'
+	identifier = 'docs'
+	url = '/docs/'
+	weight = 2
+	[menus.nav.params]
+		icon = '/icons/fa-book-solid.svg' #'📚'
+		item = 'Document'
+
+[[menus.nav]]
+	name = 'Lab'
+	identifier = 'lab'
+	url = '/lab/'
+	weight = 3
+	[menus.nav.params]
+		icon = '/icons/fa-flask-solid.svg' #'🧪'
+		item = 'Experiment'

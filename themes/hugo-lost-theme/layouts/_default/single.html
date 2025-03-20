@@ -1,10 +1,62 @@
+{{- /*
+{{- define "main" -}}
+	<!--
+	<div class="heading">
+		<img src="index.png" alt="LS Shapes Window Icon" class="center" style="width: 100px; height: 100px;" />
+		<h1 align="center">{{ .Title }}</h1><br>
+	</div>
+	-->
+	<!--
+	<div class="heading">
+		<img src="index.png" alt="LS Shapes Window Icon" />
+
+		<h1>{{ .Title }}</h1>
+
+		<img src="https://img.shields.io/github/v/release/lost-scripts/ls?color=yellow" alt="GitHub version">
+		<img src="https://img.shields.io/github/v/tag/lost-scripts/ls" alt="GitHub tag">
+		<img src="https://img.shields.io/github/downloads/repo-size/lost-scripts/ls/latest/total" alt="GitHub downloads">
+	</div>
+	-->
+
+	{{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
+	{{- $dateHuman := .Date | time.Format ":date_long" -}}
+	<<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+
+	{{ .Content }}
+	{{- partial "terms.html" (dict "taxonomy" "tags" "page" .) -}}
+{{- end -}}
+*/ -}}
+
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+	{{- if eq .Section "scripts" -}}
+		{{ .Content }}
+		{{- partial "terms.html" (dict "taxonomy" "tags" "page" .) -}}
+	{{- else if eq .Section "docs" -}}
+		<h1>{{ .Title }}</h1>
+		{{- /* .Parent.Content */ -}}
+		{{- if and (isset .Params "date") (ne .Params.date "") -}}
+			{{- $dateMachine := .Params.date | time.Format "2006-01-02T15:04:05-07:00" -}}
+			{{- $dateHuman := .Params.date | time.Format ":date_long" -}}
+			<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+		{{- end -}}
+		<br>
+		{{ .Description }}
+		<br>
+		{{ .Content }}
+	{{- else if eq .Section "lab" -}}
+		{{ .Content }}
+		{{- partial "terms.html" (dict "taxonomy" "tags" "page" .) -}}
+	{{- else -}}
+		<h1>{{ .Title }}</h1>
 
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+		{{- if and (isset .Params "date") (ne .Params.date "") -}}
+			{{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
+			{{- $dateHuman := .Date | time.Format ":date_long" -}}
+			<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+		{{- end -}}
+	
+		{{ .Content }}
+		{{- partial "terms.html" (dict "taxonomy" "tags" "page" .) -}}
+	{{- end -}}
+{{- end -}}
 
-  {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-{{ end }}

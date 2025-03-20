@@ -1,22 +1,54 @@
-<!--{{ partial "menu.html" (dict "menuID" "main" "page" .) }}-->
-<hgroup>
-	<h1>{{ site.Title }}</h1>
-	<small>{{ site.Params.subtitle }}</small>
-</hgroup>
+<!--{{/*  partial "menu.html" (dict "menuID" "main" "page" .) */}}-->
+<div id="header-left" class="wrap">
+	<hgroup id="logos" class="shadowize">
+		<a href="{{ .Site.BaseURL | relLangURL }}" title="{{ site.Title }}">
+			<!--<h1>{{ site.Title }}</h1>-->
+			<!--<small>{{ site.Params.subtitle }}</small>-->
+			<!--<img src="/icons/logo.png" height="44px" class="colorize">-->
 
-<div class="row middle">
-	<input type="text" id="menu-search" onkeyup="myFunction()" placeholder="🔍" disabled>
+			<img src="/icons/logo.png" height="44px" class="colorize" id="logo">
+			<img src="/icons/logo_alt.png" height="44px" class="colorize" id="logo-alt">
+		</a>
+	</hgroup>
 
-	<span id="sun" class="sun-btn">&#x2600;</span>
-	<span id="moon" class="moon-btn">&#x263D;</span>
-	<!--<audio id="switchOn" src="assets/switch-on.aac"></audio>-->
-	<!--<audio id="switchOff" src="assets/switch-off.aac"></audio>-->
-	<audio id="switcher" src="data:audio/aac;base64,UklGRr4GAABXQVZFZm10IBAAAAABAAEAIlYAACJWAAABAAgATElTVBoAAABJTkZPSVNGVA0AAABMYXZmNjEuNS4xMDEAAGRhdGF4BgAAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAf4CAf39/gICAgIB/gICAf39/gICAf3+AgICAgICAgH+AgH9/f39/f4CAgIB/gICAf3+Af4CAgICAgICAgIB/gIB/f39/f39/f4CAgH+AgH9/f4B/f4CAf3+AgH9/f39/f3+AgH+AgIB/f39/f39/gH9/gIB/f4B/f35/f39+f4CAgIB/gH9+fn5+gIB/gYKCgoGBgoCBgX59fnl9gHyBfn+FgX6Ag4CAfX55dn6JiYeMh1GVRHeac45Zum7CpmBHdoigjZeVqHGnWXBrZ6WmfH1kfy1rL1eVbqp8kX+LjKOJZ0mErJCBi2+hh5OmlY5hTF9ugYh6cXmRlMB+dW5UenOFgYVxep2Qj3iajHqHiZdufXV5gnJ+dY5+gotygnh1i4R8c216eIuEjIKAl32QfXh/bWdtf4aGhoqGgYN4eHVxgn1/f36EgXp6dnZ5goWKfnd5gIR/eHWCgnZze4SIhY+RhIWAeXp6gXx/gYiIiYZ5eXp6eXqDiX1xeoR+gIaNjoGCg357gIR+fXt/gYaDf4KFiYOCg3x6fX1+f4GDgoCChYSAenl8fn6BhIKAgYCGgX18f4J9fX5/gX+AgYB9fYF/fX1/f35+f4J+enh5fHt6en6Cgn9+fn6Bg4N9e3p+gX+AgoB+f4KCgH9+f35+gICBgH5/gH+AgYKBgYGCgH2AgoJ/foCCgoGCgn9/gYKBf319fX+BgYKAfoCCgoF/f359fX6Af39+gIGBgoKCgICAgH59fn9/f4CBgYGBgoKBfn5/gH9+f4B/f4CBgH+AgIB/fn9/fn+AgIB/gIGAf39/gICAf39/fX19fn5/f39/f4CAgH9/f35+fn5+fn+AgH9/f39/f39/f39/gIB/gICAgYCAgICAf39/f4B/f4CAgICAgICAgICAgICAgH9/gICAgYGAgICAgICAgH+AgICAgICAgICAgICAgIB/gICAgIB/f39/gICAgICAf39/f39/gH9/f4CAf39/f39/f39/f3+AgIB/f39/f39/f3+AgIB/f39/f39/f4B/f3+AgH9/f39/f39/f39/gICAgICAf39/f3+AgICAgICAgIB/gH9/gH+Af3+AgIB/f4B/f4CAgICAgICAgICAgICAgICAgICAgH+AgICAgICAgICAgICAgH+AgICAf39/gIB/f39/f4CAgIB/f3+AgIB/f39/gIB/gH9/f39/f39/f3+AgICAgH9/f39/f39/f39/f39/f39/f39/f39/f39/f4B/f39/f39/f4CAgIB/f39/f39/gIB/f3+AgH9/f4CAgIB/gICAgICAf3+AgICAgICAgICAgH9/f3+AgICAf3+AgICAgICAgICAgIB/f4CAgIB/f3+AgH+Af39/f3+Af3+AgICAgICAf4CAgH9/f39/f39/gICAgIB/f39/f39/gICAgIB/f3+Af39/f39/f3+AgH9/f4CAf39/f39/f39/gICAgICAgIB/gIB/f39/f39/f4CAf39/gH9/f3+AgICAf4CAgIB/f4CAgICAgICAgICAf4CAf4CAgICAgICAgH9/f39/f3+AgICAgICAgICAgIB/f39/f3+AgICAf39/f39/f39/f39/gIB/gH9/gICAf39/f4B/f39/f4CAgIB/f39/gH9/f39/f39/gH9/f4CAf3+AgICAgICAgICAgICAgICAgICAf39/f3+AgICAgICAgICAgICAgH+AgIB/f3+AgICAgICAgICAgICAgICAgICAf3+AgIB/f39/f39/f4CAgIB/gICAgIB/f39/f39/f39/f4CAgH9/f39/f39/f39/f39/f39/f39/f3+AgICAgICAgICAf4CAgICAgICAf4CAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgH9/f3+AgICAgICAgICAgIB/f4CAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA"></audio>
-	<!--<button onmousedown="let audio = new Audio('data:audio/aac;base64,UklGRr4GAABXQVZFZm10IBAAAAABAAEAIlYAACJWAAABAAgATElTVBoAAABJTkZPSVNGVA0AAABMYXZmNjEuNS4xMDEAAGRhdGF4BgAAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAf4CAf39/gICAgIB/gICAf39/gICAf3+AgICAgICAgH+AgH9/f39/f4CAgIB/gICAf3+Af4CAgICAgICAgIB/gIB/f39/f39/f4CAgH+AgH9/f4B/f4CAf3+AgH9/f39/f3+AgH+AgIB/f39/f39/gH9/gIB/f4B/f35/f39+f4CAgIB/gH9+fn5+gIB/gYKCgoGBgoCBgX59fnl9gHyBfn+FgX6Ag4CAfX55dn6JiYeMh1GVRHeac45Zum7CpmBHdoigjZeVqHGnWXBrZ6WmfH1kfy1rL1eVbqp8kX+LjKOJZ0mErJCBi2+hh5OmlY5hTF9ugYh6cXmRlMB+dW5UenOFgYVxep2Qj3iajHqHiZdufXV5gnJ+dY5+gotygnh1i4R8c216eIuEjIKAl32QfXh/bWdtf4aGhoqGgYN4eHVxgn1/f36EgXp6dnZ5goWKfnd5gIR/eHWCgnZze4SIhY+RhIWAeXp6gXx/gYiIiYZ5eXp6eXqDiX1xeoR+gIaNjoGCg357gIR+fXt/gYaDf4KFiYOCg3x6fX1+f4GDgoCChYSAenl8fn6BhIKAgYCGgX18f4J9fX5/gX+AgYB9fYF/fX1/f35+f4J+enh5fHt6en6Cgn9+fn6Bg4N9e3p+gX+AgoB+f4KCgH9+f35+gICBgH5/gH+AgYKBgYGCgH2AgoJ/foCCgoGCgn9/gYKBf319fX+BgYKAfoCCgoF/f359fX6Af39+gIGBgoKCgICAgH59fn9/f4CBgYGBgoKBfn5/gH9+f4B/f4CBgH+AgIB/fn9/fn+AgIB/gIGAf39/gICAf39/fX19fn5/f39/f4CAgH9/f35+fn5+fn+AgH9/f39/f39/f39/gIB/gICAgYCAgICAf39/f4B/f4CAgICAgICAgICAgICAgH9/gICAgYGAgICAgICAgH+AgICAgICAgICAgICAgIB/gICAgIB/f39/gICAgICAf39/f39/gH9/f4CAf39/f39/f39/f3+AgIB/f39/f39/f3+AgIB/f39/f39/f4B/f3+AgH9/f39/f39/f39/gICAgICAf39/f3+AgICAgICAgIB/gH9/gH+Af3+AgIB/f4B/f4CAgICAgICAgICAgICAgICAgICAgH+AgICAgICAgICAgICAgH+AgICAf39/gIB/f39/f4CAgIB/f3+AgIB/f39/gIB/gH9/f39/f39/f3+AgICAgH9/f39/f39/f39/f39/f39/f39/f39/f39/f4B/f39/f39/f4CAgIB/f39/f39/gIB/f3+AgH9/f4CAgIB/gICAgICAf3+AgICAgICAgICAgH9/f3+AgICAf3+AgICAgICAgICAgIB/f4CAgIB/f3+AgH+Af39/f3+Af3+AgICAgICAf4CAgH9/f39/f39/gICAgIB/f39/f39/gICAgIB/f3+Af39/f39/f3+AgH9/f4CAf39/f39/f39/gICAgICAgIB/gIB/f39/f39/f4CAf39/gH9/f3+AgICAf4CAgIB/f4CAgICAgICAgICAf4CAf4CAgICAgICAgH9/f39/f3+AgICAgICAgICAgIB/f39/f3+AgICAf39/f39/f39/f39/gIB/gH9/gICAf39/f4B/f39/f4CAgIB/f39/gH9/f39/f39/gH9/f4CAf3+AgICAgICAgICAgICAgICAgICAf39/f3+AgICAgICAgICAgICAgH+AgIB/f3+AgICAgICAgICAgICAgICAgICAf3+AgIB/f39/f39/f4CAgIB/gICAgIB/f39/f39/f39/f4CAgH9/f39/f39/f39/f39/f39/f39/f3+AgICAgICAgICAf4CAgICAgICAf4CAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgH9/f3+AgICAgICAgICAgIB/f4CAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA').play(); audio.volume = 0.33;">Click Me</button>-->
-	<!--<button onmousedown="let audio = new Audio('assets/switch.wav'); audio.volume = 0.33; audio.play();">Click Me</button>-->
-	<!--Last method:
+	<div id="docsearch" class="docsearcher"></div>
+
+	{{ partial "filterer.html" . }}
+</div>
+
+<div id="header-center" class="wrap">
+	{{ partial "linker.html" . }}
+
+	{{- if.Site.Params.banner -}}
+		<span id="banner">🚧 {{ i18n `under_construction` }} 🚧</span>
+	{{- end -}}
+</div>
+
+<div id="header-right" class="wrap">
+	<audio id="darker-audio" style="display: none;" src="data:audio/aac;base64,UklGRr4GAABXQVZFZm10IBAAAAABAAEAIlYAACJWAAABAAgATElTVBoAAABJTkZPSVNGVA0AAABMYXZmNjEuNS4xMDEAAGRhdGF4BgAAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAf4CAf39/gICAgIB/gICAf39/gICAf3+AgICAgICAgH+AgH9/f39/f4CAgIB/gICAf3+Af4CAgICAgICAgIB/gIB/f39/f39/f4CAgH+AgH9/f4B/f4CAf3+AgH9/f39/f3+AgH+AgIB/f39/f39/gH9/gIB/f4B/f35/f39+f4CAgIB/gH9+fn5+gIB/gYKCgoGBgoCBgX59fnl9gHyBfn+FgX6Ag4CAfX55dn6JiYeMh1GVRHeac45Zum7CpmBHdoigjZeVqHGnWXBrZ6WmfH1kfy1rL1eVbqp8kX+LjKOJZ0mErJCBi2+hh5OmlY5hTF9ugYh6cXmRlMB+dW5UenOFgYVxep2Qj3iajHqHiZdufXV5gnJ+dY5+gotygnh1i4R8c216eIuEjIKAl32QfXh/bWdtf4aGhoqGgYN4eHVxgn1/f36EgXp6dnZ5goWKfnd5gIR/eHWCgnZze4SIhY+RhIWAeXp6gXx/gYiIiYZ5eXp6eXqDiX1xeoR+gIaNjoGCg357gIR+fXt/gYaDf4KFiYOCg3x6fX1+f4GDgoCChYSAenl8fn6BhIKAgYCGgX18f4J9fX5/gX+AgYB9fYF/fX1/f35+f4J+enh5fHt6en6Cgn9+fn6Bg4N9e3p+gX+AgoB+f4KCgH9+f35+gICBgH5/gH+AgYKBgYGCgH2AgoJ/foCCgoGCgn9/gYKBf319fX+BgYKAfoCCgoF/f359fX6Af39+gIGBgoKCgICAgH59fn9/f4CBgYGBgoKBfn5/gH9+f4B/f4CBgH+AgIB/fn9/fn+AgIB/gIGAf39/gICAf39/fX19fn5/f39/f4CAgH9/f35+fn5+fn+AgH9/f39/f39/f39/gIB/gICAgYCAgICAf39/f4B/f4CAgICAgICAgICAgICAgH9/gICAgYGAgICAgICAgH+AgICAgICAgICAgICAgIB/gICAgIB/f39/gICAgICAf39/f39/gH9/f4CAf39/f39/f39/f3+AgIB/f39/f39/f3+AgIB/f39/f39/f4B/f3+AgH9/f39/f39/f39/gICAgICAf39/f3+AgICAgICAgIB/gH9/gH+Af3+AgIB/f4B/f4CAgICAgICAgICAgICAgICAgICAgH+AgICAgICAgICAgICAgH+AgICAf39/gIB/f39/f4CAgIB/f3+AgIB/f39/gIB/gH9/f39/f39/f3+AgICAgH9/f39/f39/f39/f39/f39/f39/f39/f39/f4B/f39/f39/f4CAgIB/f39/f39/gIB/f3+AgH9/f4CAgIB/gICAgICAf3+AgICAgICAgICAgH9/f3+AgICAf3+AgICAgICAgICAgIB/f4CAgIB/f3+AgH+Af39/f3+Af3+AgICAgICAf4CAgH9/f39/f39/gICAgIB/f39/f39/gICAgIB/f3+Af39/f39/f3+AgH9/f4CAf39/f39/f39/gICAgICAgIB/gIB/f39/f39/f4CAf39/gH9/f3+AgICAf4CAgIB/f4CAgICAgICAgICAf4CAf4CAgICAgICAgH9/f39/f3+AgICAgICAgICAgIB/f39/f3+AgICAf39/f39/f39/f39/gIB/gH9/gICAf39/f4B/f39/f4CAgIB/f39/gH9/f39/f39/gH9/f4CAf3+AgICAgICAgICAgICAgICAgICAf39/f3+AgICAgICAgICAgICAgH+AgIB/f3+AgICAgICAgICAgICAgICAgICAf3+AgIB/f39/f39/f4CAgIB/gICAgIB/f39/f39/f39/f4CAgH9/f39/f39/f39/f39/f39/f39/f3+AgICAgICAgICAf4CAgICAgICAf4CAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgH9/f3+AgICAgICAgICAgIB/f4CAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA"></audio>
+	<!--Alt method:
 	<audio id="switcher2" src="assets/switch.wav"></audio>
 	<button onmousedown="let audio = document.getElementById('switcher2'); audio.volume = 0.33; audio.play()">Click Me</button>
 	-->
-</div>
 
+	<button id="resetter" title="{{ i18n `Reset Pinhole [?]` }}"></button>
+	<dialog id="resetDialog">
+		<p>{{ i18n "reset_reload" }}</p> <!--The reset pinhole resets all preferences to default and reloads. Continue?-->
+		<form method="dialog">
+			<button id="cancelButton">{{ i18n "cancel" }}</button>
+			<button id="confirmButton">{{ i18n "OK" }}</button>
+		</form>
+	</dialog>
+
+	<label id="highlighter-label" class="swatch-label" aria-label="Current mode highlights"  title="{{i18n `mode_highlights` }}" data-light-hl="{{ i18n `light_highlights` }}" data-dark-hl="{{ i18n `dark_highlights` }}">
+		<input type="color" id="highlighter">
+	</label>
+	
+	<label id="darker-label" class="toggle-label" title="{{ i18n `light_switch` }}" data-light="{{ i18n `go_light` }}" data-dark="{{ i18n `go_dark` }}" data-auto="{{ i18n `_auto` }}">
+		<input type="checkbox" id="darker" class="toggle darked audio" aria-label="Theme toggler">
+	</label>
+
+	<!--<input id="searcher" type="text" onkeyup="myFunction()" placeholder="🔍">-->
+
+	{{- partial "i18ner.html" . -}}
+</div>

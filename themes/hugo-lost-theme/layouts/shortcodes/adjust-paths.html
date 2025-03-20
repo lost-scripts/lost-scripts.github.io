@@ -1,0 +1,12 @@
+<!-- Adjust relative paths for HTML kind of resources of the "homepaged" post (WARNING: './' not allowed!) -->
+{{- $content := "" -}}
+{{- if (isset . "Inner") -}}
+	{{- $content = .Inner -}}
+{{- else -}}
+	{{- $content = .Content -}}
+{{- end -}}
+
+{{- $content = $content | replaceRE `(src|href|srcset|poster|data-[\w-]+)=['"](([^'"/]+|./[^'"]+))['"]` (printf "$1=\"%s$2\"" .Page.RelPermalink) -}}
+{{- $content | safeHTML -}}
+
+

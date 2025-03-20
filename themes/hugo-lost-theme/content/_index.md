@@ -1,9 +1,8 @@
 +++
-title = 'Home'
-date = 2023-01-01T08:00:00-07:00
-draft = false
+#title = 'Home'
+#draft = false
+#keywords = ['Moho', 'Animation', '2D', 'LostMarble', 'LM', 'LostScripts', 'LS', 'Scripting', 'Script', 'Lua', 'Programming', 'Tools', 'Utility', 'Utilities']
+[_build]
+#render = 'never'  # This is needed to avoid page collisions when using any element as homepage with: url = 'index.html' and (optionally) weight = 1 
 +++
 
-Laborum voluptate pariatur ex culpa magna nostrud est incididunt fugiat
-pariatur do dolor ipsum enim. Consequat tempor do dolor eu. Non id id anim anim
-excepteur excepteur pariatur nostrud qui irure ullamco.

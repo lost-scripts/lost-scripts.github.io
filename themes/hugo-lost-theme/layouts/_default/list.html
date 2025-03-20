@@ -1,8 +1,38 @@
-{{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
-{{ end }}
+{{- /* <!-- Creates section (Scripts, Docs, etc.) content page --> */ -}}
+
+{{- /*
+{{- define "main" -}}
+	<h1>{{ .Title }}</h1>
+	{{ .Content }}
+	{{- range .Pages -}}
+		<h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+		{{ .Description }}
+	{{- end -}}
+{{- end -}}
+*/ -}}
+
+{{- define "main" -}}
+	<h1>{{ .Title }}</h1>
+	{{ .Content }}
+	{{- range .Pages -}}
+		<h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+		{{- $text := "" -}}
+		{{- if .Description -}}
+			{{- $text = .Description -}}
+		{{- else if and (isset .Params "summary") (ne .Params.summary "") -}}
+			{{- /* partial "_markup/adjust-paths.html" . */ -}}
+			{{- $text = .Summary -}}
+		{{- else -}}
+			{{- $text = i18n "no_desc" -}}
+		{{- end -}}
+		{{- $text | truncate 128 "..." | safeHTML -}}
+	{{- end -}}
+
+	{{- /*
+	{{- range .Pages.GroupBy "Weight" "Reverse" -}}
+		{{- range .Pages.ByDate.Reverse -}}
+			<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+		{{- end -}}
+	{{- end -}}
+	*/ -}}
+{{- end -}}
