@@ -1,0 +1,12 @@
+{{- define "main" -}}
+	<h1>{{ .Title }}</h1>
+	{{- .Content -}}
+	{{- range .Pages -}}
+		<h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+		{{- with .Description -}}
+			<p>{{- . | truncate 128 -}}</p>
+		{{- else with .Content -}}
+			<p>{{- . | truncate 256 -}}</p>
+		{{- end -}}
+	{{- end -}}
+{{ end }}
