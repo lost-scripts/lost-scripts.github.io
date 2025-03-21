@@ -1,0 +1,23 @@
+<div>
+{{- with .GetTerms "tags" -}}
+	<h3>{{ (index . 0).Parent.LinkTitle }}</h3>
+	<ul>
+		{{- range . -}}
+			<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+		{{- end -}}
+	</ul>
+{{- end -}}
+</div>
+
+<br>
+
+<div>
+{{- with .Keywords -}}
+	<h3>Keywords</h3>
+	<ul>
+		{{- range . -}}
+			<li><a href="{{ "search?q=" | absURL }}{{ . }}">{{ . }}</a></li>
+		{{- end -}}
+	</ul>
+{{- end -}}
+</div>

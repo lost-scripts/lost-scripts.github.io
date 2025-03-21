@@ -1,0 +1,43 @@
+<div class="pager">
+	{{- $isHome := .Store.Get "isHome" -}}
+
+	{{- with .NextInSection -}}
+		<span id="next-item" title="{{ i18n `previous` | default `Previous` }}"><a class="next" href="{{ .RelPermalink }}"><i class='fa fa-caret-left'></i> {{ .Title }}</a></span>
+	{{- else -}}
+		<span class="grayed" title="{{ i18n `no_previous` | default `No previous...` }}"><i class='fa fa-backward-step'></i>&nbsp;</span>
+	{{- end -}}
+
+	{{- if not $isHome -}} {{- /* if eq "home" .Kind */ -}}
+		<span class="breadcrumber" aria-label="Breadcrumbs">
+			<ul>
+				{{- range .Ancestors.Reverse -}}
+					<li>
+						<a href="{{ if .IsHome }}/{{ else }}{{ .RelPermalink }}{{ end }}">
+							{{- if .IsHome -}}
+								{{- /* i18n "home" | default "Home" */ -}}
+								{{- /* with page.Params.prefix -}}
+									<i class='fa fa-{{ . }}'></i>
+								{{- end */ -}}
+								<i class='fa fa-{{ site.Params.homeIcon }}' title='{{ i18n "home" | default "Home" }}'></i>
+							{{- else -}}
+								{{ .LinkTitle }}
+							{{- end -}}
+						</a>
+					</li>
+					<!--<span aria-hidden="true">»</span>-->
+				{{- end -}}
+				<li class="active">
+					<a href="{{ .RelPermalink }}" aria-current="location">{{ .LinkTitle }}</a>
+				</li>
+			</ul>
+		</span>
+	{{- else -}}
+		<span><i class='fa fa-house grayed' title='{{ i18n "at_home" | default "At Home" }}'></i></span>
+	{{- end -}}
+
+	{{- with .PrevInSection -}}
+		<span id="prev-item" title="{{ i18n `next` | default `Next` }}"><a class="prev" href="{{ .RelPermalink }}">{{ .Title }} <i class='fa fa-caret-right'></i></a></span>
+	{{- else -}}
+		<span class="grayed" title="{{ i18n `no_next` | default `No next...` }}">&nbsp;<i class='fa fa-forward-step'></i></span>
+	{{- end -}}
+</div>

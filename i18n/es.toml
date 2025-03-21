@@ -1,0 +1,107 @@
+[welcome]
+other = 'Bienvenido'
+
+[home]
+other = 'Inicio'
+
+[at_home]
+other = 'En inicio'
+
+['previous']
+other = 'Anterior'
+
+['next']
+other = 'Siguiente'
+
+['no_previous']
+other = 'Sin anterior...'
+
+['no_next']
+other = 'Sin siguiente...'
+
+[Scripts]
+other = 'Scripts'
+
+[Docs]
+other = 'Docu'
+
+[Lab]
+other = 'Labo'
+
+['NEW!']
+other = 'RECIEN AÑADIDO'
+
+['UPD!']
+other = 'RECIEN ACTUALIZADO'
+
+['WIP!']
+other = 'EN CURSO/NO DISP.'
+
+['TODO']
+other = 'PENDIENTE...'
+
+['BETA']
+other = 'VERSIÓN BETA'
+
+['ALPHA']
+other = 'VERSIÓN ALPHA'
+
+['Reset Pinhole [?]']
+other = 'Hoyo de reset [?]'
+
+[light_switch]
+other = 'Interruptor'
+
+[go_light]
+other = 'Aclara!'
+
+[go_dark]
+other = 'Oscurece!'
+
+[_auto]
+other = ' (AUTO)'
+
+[mode_highlights]
+other = 'Resaltado del modo actual'
+
+[light_highlights]
+other = 'Resaltado del modo claro'
+
+[dark_highlights]
+other = 'Resaltado del modo oscuro'
+
+[cancel]
+other = 'Cancelar'
+
+[filters]
+other = 'Filtros'
+
+[go_to]
+other = 'Ir a'
+
+[go_to_tags]
+other = 'Ir a la página de las etiquetas'
+
+[no_desc]
+other = 'Sin descripción.'
+
+[OK]
+other = 'OK'
+
+[reset_reload]
+other = 'Restablecer todas las preferencias/ajustes y recargar?'
+
+[Tag]
+other = 'Etiqueta'
+
+[translate]
+other = 'Traduce!'
+
+['Subscribe...']
+other = 'Suscríbete...'
+
+['Other Links:']
+other = 'Otros:'
+
+['under_construction']
+other = 'EN CONSTRUCCIÓN'

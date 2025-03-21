@@ -1,0 +1,53 @@
+<!--<div class="tabs">-->
+	{{- $currentPage := . -}}
+	{{- $currentSection := .Section -}}
+	{{- range .Site.Menus.nav -}}
+		{{- $isActive := or ($currentPage.IsMenuCurrent "nav" .) ($currentPage.HasMenuCurrent "nav" .) (eq $currentSection .Identifier) -}}
+		{{- $isContaining := (where (index $.Site.RegularPages) "Section" .Identifier) -}}
+
+		<input class="input" name="tabs" type="radio" id="tab-{{ .Identifier }}" {{ if $isActive }}checked{{ end }}/>
+
+		<label class="label {{ if .Identifier | in $isContaining }}marker{{ else if $isActive }}marker{{ end }}" for="tab-{{ .Identifier }}">
+			<img src="{{ .Params.icon }}" class="icon colorize" alt="{{ i18n .Name }} icon"> <!--{{ with .Params.icon }}{{ . }}&nbsp;{{ end }}-->
+			<span class="text">{{ i18n .Name }}</span>
+		</label>
+		<div class="panel scroll-y">
+			{{- if eq .Identifier "scripts" -}}
+				{{ partial "nav/main/scripts.html" $currentPage -}}
+			{{- else if eq .Identifier "docs" }}
+				{{ partial "nav/main/docs.html" $currentPage -}}
+			{{- else if eq .Identifier "lab" -}}
+				{{ partial "nav/main/lab.html" $currentPage -}}
+			{{- end -}}
+		</div>
+	{{- end -}}
+
+	<script>
+		function storeLastActiveTabIfChanged(tabId) {
+			const currentTab = localStorage.getItem('lastActiveTab');
+			if (currentTab !== tabId) {
+				localStorage.setItem('lastActiveTab', tabId);
+			}
+		}
+
+		document.addEventListener("DOMContentLoaded", function() {
+			const lastActiveTab = localStorage.getItem('lastActiveTab') || 'scripts';
+			const allTabs = document.querySelectorAll('input[name="tabs"]');
+			let activeTabFound = false;
+
+			allTabs.forEach(tab => {
+				if (tab.checked) {
+					storeLastActiveTabIfChanged(tab.id.substring(4));
+					activeTabFound = true; 
+				}
+				tab.addEventListener('change', function() {
+					storeLastActiveTabIfChanged(this.id.substring(4));
+				});
+			});
+
+			if (!activeTabFound) {
+				document.getElementById(`tab-${lastActiveTab}`).checked = true;
+			}
+		});
+	</script>
+<!--</div>-->
