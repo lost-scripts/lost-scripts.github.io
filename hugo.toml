@@ -9,7 +9,7 @@ defaultContentLanguageInSubdir = false
 enableMissingTranslationPlaceholder = true
 title = 'Lost Scripts™'
 copyright = 'Copyright © 2025 · Rai López · All Rights Reserved' #'© 2025 · Rai López · ARR'
-theme = 'hugo-lost-theme'
+theme = 'lost-theme'
 publishDir = 'docs'
 
 
