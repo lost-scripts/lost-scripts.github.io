@@ -10,9 +10,9 @@
 
 # FOLDERS #
 ###########
-/docs
-/public
-/resources
+#/docs/
+/public/
+/resources/
 /themes/*
 !/themes/lost-theme/
 !/themes/new-theme/
