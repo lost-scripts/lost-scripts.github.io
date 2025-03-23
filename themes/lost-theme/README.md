@@ -122,11 +122,13 @@ To synchronize updates from the theme repository:
 git subtree pull --prefix=themes/lost-theme ../lost-theme main --squash # `--squash` helps to avoid mixing historical commits of the theme directly into the user's project.
 ```
 
+## Support
+
+If you encounter issues or have questions, feel free to write a comment or open a ticket in the [Issues](https://github.com/lost-scripts/lost-theme/issues) section.
+
 
 ## Other...
 
 - **Bare Repository:** The central repository for the theme could be cloned as bare repository using this command `git clone --bare https://github.com/lost-scripts/lost-theme` instead, which avoids using the `git config receive.denyCurrentBranch updateInstead` configuration. A bare repository avoids conflicts when pushing from multiple projects but complicates maintenance because you lose direct visibility into the files. You also can convert an existing non-bare repository to bare, but this process is more advanced and requires careful management of the worktree. Refer to Git's documentation for detailed steps.
 
 - **Multiple Sites Using the Theme:** This workflow supports using the same theme repository across multiple Hugo projects. Push updates from one project and pull them into others to maintain consistency.
-
-- **Support:** If you encounter issues or have questions, feel free to open a ticket or comment.
