@@ -10,10 +10,12 @@
 
 # FOLDERS #
 ###########
-docs
-public
-resources
-themes/hugo-theme-stack
+/docs
+/public
+/resources
+/themes/*
+!/themes/lost-theme/
+!/themes/new-theme/
 
 # FILE TYPES #
 ##############
