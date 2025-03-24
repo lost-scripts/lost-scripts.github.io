@@ -10,7 +10,7 @@ enableMissingTranslationPlaceholder = true
 title = 'Lost Scripts™'
 copyright = 'Copyright © 2025 · Rai López · All Rights Reserved' #'© 2025 · Rai López · ARR'
 theme = 'lost-theme'
-publishDir = 'docs'
+publishDir = 'docs' # Use `hugo server --destination public` (or alias `hserver` if configured) for previewing and `hugo --destination docs` (or `h`) for final generation.
 
 
 ###############
