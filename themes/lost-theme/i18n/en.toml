@@ -89,7 +89,7 @@ other = 'No description.'
 other = 'OK'
 
 [reset_reload]
-other = 'Reset all preferences/settings and reload?'
+other = 'Reset all preferences and reload?'
 
 [Tag]
 other = 'Tag'

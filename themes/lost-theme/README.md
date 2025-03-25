@@ -122,6 +122,11 @@ To synchronize updates from the theme repository:
 git subtree pull --prefix=themes/lost-theme ../lost-theme main --squash # `--squash` helps to avoid mixing historical commits of the theme directly into the user's project.
 ```
 
+## Known Issues
+
+- Translated pages have trouble showing images inserted in HTML format.
+- The list is simply too longer right now, but I'll keep adding more as they come to mind...
+
 ## Support
 
 If you encounter issues or have questions, feel free to write a comment or open a ticket in the [Issues](https://github.com/lost-scripts/lost-theme/issues) section.

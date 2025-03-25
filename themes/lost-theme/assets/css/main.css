@@ -861,7 +861,7 @@ button:active {
 dialog {
 	max-width: 67%;
 	margin: auto;
-	padding: 1rem;
+	padding: 1em 1em 0.67em 1em;
 	border: none;
 	border-radius: var(--round);
 	box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.67);
@@ -870,6 +870,7 @@ dialog {
 
 dialog p {
 	margin-bottom: 1.5rem;
+	white-space: wrap;
 	color: var(--gray-0F);
 	font-size: 1rem;
 }
@@ -908,7 +909,7 @@ hgroup {
 }
 
 hr {
-	height: 4px;
+	height: 2px;
 	margin: 0.5em 0;
 	border: 1px solid var(--veiled);
 	background-color: var(--veiled);
@@ -967,7 +968,7 @@ th, td {
 		border-right: none;
 	} 
 	& img {
-		vertical-align: sub;
+		/*vertical-align: sub;*/ /* NOTE: Don't remember why I added this here... */
 	}
 }
 
@@ -1007,27 +1008,34 @@ th, td {
 	background: linear-gradient(to right, rgba(0,0,0,0.15) 0%, transparent 33.3%);
 
 	& #banner {
-		height: 85%;
-		width: 50%;
-		max-width: max-content;
+		height: 80%;
+		width: 33%;
+		/*max-width: max-content;*/
+		container: banner / inline-size;
 		margin: 0 auto;
-		padding: 0 5%;
+		padding: 0 4%;
 		place-content: center;
+		line-height: 1.25cqw;
 		text-align: center;
-		font-size: small;
+		overflow: hidden;
+		border-radius: var(--round);
+		box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.67) inset;
+		background-image: repeating-linear-gradient(-45deg, rgb(from var(--text-inv) r g b / 50%) 0 10px, rgb(from var(--accent) r g b / 50%) 10px 20px);
+	& span {
+		font-size: small; /* fallback for unsupported browsers ↴ */
+		font-size: clamp(0.33em, 9cqw, 0.9em);
 		font-weight: bold;
 		white-space: wrap;
-		overflow: hidden;
-		border-radius: 4px;
-		background-image: repeating-linear-gradient(
-			-45deg,
-			rgb(from var(--text-inv) r g b / 50%) ,
-			rgb(from var(--text-inv) r g b / 50%) 8px,
-			rgb(from var(--accent) r g b / 50%) 8px,
-			rgb(from var(--accent) r g b / 50%) 16px
-		);
 		text-shadow: 1px 1px 4px var(--text-inv);
+		user-select: none;
+		}
 	}
+}
+
+@keyframes blink {  
+	0% { opacity: 1.0; }
+	25% { opacity: 0.0; }
+	100% { opacity: 1.0; }
 }
 
 #header-right {
@@ -1551,7 +1559,7 @@ input:not(input:checked) + .label {
 }
 
 .docsearch-modal-container {
-	/*backdrop-filter: blur(4px);*/ /* Slows down the dialog! */
+	backdrop-filter: blur(4px); /* It used to slow down the dialog! But not anymore? */
 }
 
 .docsearch-modal-search-container {
@@ -1867,6 +1875,35 @@ input:not(input:checked) + .label {
 	}
 }
 
+.gallery {
+	position: relative;
+	width: 100%;
+
+	& tr {
+		& > td {
+			max-width: 0;
+			padding: 12px 12px 6px 12px;
+			overflow-x: auto;
+			white-space: nowrap;
+			font-size: smaller;
+
+			& img {
+				max-width: 100%; /* Unlocks cell overflow & scrolling! */
+				vertical-align: top;
+				box-shadow: -1px 1px 2px 1px rgb(0, 0, 0, 0.33);
+			}
+		}
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		mix-blend-mode: multiply;
+		box-shadow: -2px 2px 4px 2px rgb(0, 0, 0, 0.33) inset;
+		pointer-events: none;
+	}
+}
+
 .forbid {
 	pointer-events: none;
 }
@@ -1875,6 +1912,10 @@ input:not(input:checked) + .label {
 	/*pointer-events: none;*/ /* Moved to .forbidto to can avoid limitations */
 	filter: saturate(33%);
 	opacity: 0.67;
+}
+
+.blinker {
+	animation: blink var(--medium) 3;
 }
 
 .left {
@@ -1899,6 +1940,12 @@ input:not(input:checked) + .label {
 	*/
 }
 
+.middle {
+	display: flex;
+	align-items: center;
+	/*vertical-align: middle;*/
+}
+
 .row {
 	display: flex;
 	flex-direction: row;
@@ -1907,12 +1954,6 @@ input:not(input:checked) + .label {
 .col {
 	display: flex;
 	flex-direction: column;
-}
-
-.middle {
-	display: flex;
-	align-items: center;
-	/*vertical-align: middle;*/
 }
 
 .toggle-label {

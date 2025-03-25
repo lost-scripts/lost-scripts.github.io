@@ -89,7 +89,7 @@ other = 'Sin descripción.'
 other = 'OK'
 
 [reset_reload]
-other = 'Restablecer todas las preferencias/ajustes y recargar?'
+other = 'Restablecer todas las preferencias y recargar?'
 
 [Tag]
 other = 'Etiqueta'
