@@ -23,8 +23,8 @@ Weight = -1
 		</th>
 		<th align="right" valign="middle" width="1920" nowrap>
 			<a href="https://moho.lostmarble.com/" title="Go to Moho website"><img height="20px" src="https://img.shields.io/badge/For-Moho_Pro_14.3+-orange" alt="Moho version"></a>
-			<a href="https://github.com/lost-scripts/ls7_script/releases/latest" title="Go to download page"><img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls7_script?logo=github" alt="GitHub version"></a>
-			<a href="#!" style="cursor: default;"><img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls7_script/total.svg?color=yellow" alt="GitHub downloads"></a>
+			<a href="https://github.com/lost-scripts/ls/releases/latest" title="Go to download page"><img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls?logo=github" alt="GitHub version"></a>
+			<a href="#!" style="cursor: default;"><img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls/total.svg?color=yellow" alt="GitHub downloads"></a>
 		</th>
 	</tr>
 </table>
@@ -65,8 +65,8 @@ El nucli que et proporciona tots els mòduls i recursos que [Moho®](https://moh
 		</th>
 		<th align="right" valign="middle" nowrap>
 			<a href="https://moho.lostmarble.com/" title="Anar al lloc web de Moho"><img height="20px" src="https://img.shields.io/badge/For-Moho_Pro_14.3+-orange" alt="Moho version"></a>
-			<a href="https://github.com/lost-scripts/ls7_script/releases/latest" title="Anar a la pàgina de descàrrega..."><img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls7_script?logo=github" alt="GitHub version"></a>
-			<a href="#!" style="cursor: default;"><img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls7_script/total.svg?color=yellow" alt="GitHub downloads"></a>
+			<a href="https://github.com/lost-scripts/ls_shapes_window/releases/latest" title="Anar a la pàgina de descàrrega..."><img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls_shapes_window?logo=github" alt="GitHub version"></a>
+			<a href="#!" style="cursor: default;"><img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls_shapes_window/total.svg?color=yellow" alt="GitHub downloads"></a>
 		</th>
 	</tr>
 	<tr>
@@ -75,7 +75,7 @@ El nucli que et proporciona tots els mòduls i recursos que [Moho®](https://moh
 		</td>
 		<td width="1920" valign="middle">
 			<div>
-				Paleta de formes persistents i molts altres ajudants per a una millor gestió dels vectors Moho® en general i <i>Formes líquides</i> en particular... Això és tot!
+				Paleta de formes persistents i moltes altres utilitats per a una millor gestió dels vectors Moho® en general i les <i>Formes líquides</i> en particular... Això és tot!
 			</div>
 		</td>
 	</tr>

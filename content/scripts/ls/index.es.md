@@ -23,8 +23,8 @@ Weight = -1
 		</th>
 		<th align="right" valign="middle" width="1920" nowrap>
 			<a href="https://moho.lostmarble.com/" title="Go to Moho website"><img height="20px" src="https://img.shields.io/badge/For-Moho_Pro_14.3+-orange" alt="Moho version"></a>
-			<a href="https://github.com/lost-scripts/ls7_script/releases/latest" title="Go to download page"><img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls7_script?logo=github" alt="GitHub version"></a>
-			<a href="#!" style="cursor: default;"><img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls7_script/total.svg?color=yellow" alt="GitHub downloads"></a>
+			<a href="https://github.com/lost-scripts/ls/releases/latest" title="Go to download page"><img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls?logo=github" alt="GitHub version"></a>
+			<a href="#!" style="cursor: default;"><img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls/total.svg?color=yellow" alt="GitHub downloads"></a>
 		</th>
 	</tr>
 </table>
@@ -65,8 +65,8 @@ El núcleo que te proporciona todos los módulos y recursos que [Moho®](https:/
 		</th>
 		<th align="right" valign="middle" nowrap>
 			<a href="https://moho.lostmarble.com/" title="Go to Moho website"><img height="20px" src="https://img.shields.io/badge/For-Moho_Pro_14.3+-orange" alt="Moho version"></a>
-			<a href="https://github.com/lost-scripts/ls7_script/releases/latest" title="Go to download page"><img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls7_script?logo=github" alt="GitHub version"></a>
-			<a href="#!" style="cursor: default;"><img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls7_script/total.svg?color=yellow" alt="GitHub downloads"></a>
+			<a href="https://github.com/lost-scripts/ls_shapes_window/releases/latest" title="Go to download page"><img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls_shapes_window?logo=github" alt="GitHub version"></a>
+			<a href="#!" style="cursor: default;"><img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls_shapes_window/total.svg?color=yellow" alt="GitHub downloads"></a>
 		</th>
 	</tr>
 	<tr>
@@ -75,7 +75,7 @@ El núcleo que te proporciona todos los módulos y recursos que [Moho®](https:/
 		</td>
 		<td width="1920" valign="middle">
 			<div>
-				A persistent shape palette plus many other helpers for better management of Moho® vectors in general and <i>Liquid Shapes</i> in particular... That's all!
+				Paleta de formas persistente y muchas otras utilidades para una mejor gestión de los vectores Moho® en general y las <i>Formas Líquidas</i> en particular... Eso es todo!
 			</div>
 		</td>
 	</tr>
@@ -112,7 +112,7 @@ Más que características de cara al usuario, «LS Project» trabaja de forma in
 
 ## Instalación
 
-Partiendo de que ya has descomprimido el archivo descargado, en realidad tienes dos métodos de instalación diferentes...
+Partiendo de que ya has descomprimido el archivo descargado, dispones de dos métodos de instalación diferentes...
 
 <table width="100%" align="center" valign="top" border="2">
 	<tr>
@@ -133,10 +133,10 @@ Partiendo de que ya has descomprimido el archivo descargado, en realidad tienes 
 	</tr>
 	<tr valign="top">
 		<td>
-			2. Arrástra y suelta (o copia y pega) todas ellas en la carpeta Scripts de tu <a href="https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3" title="Go to Moho manual">Carpeta de contenido personalizado.</a>.
+			2. Arrástra y suelta (o copia y pega) todas ellas en la carpeta <em>Scripts</em> de tu <a href="https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3" title="Ir al manual de Moho">Carpeta de contenido personalizado.</a>.
 		</td>
 		<td>
-			2. Pulsa el botón "Selecciona una carpeta de Guion", ve a la carpeta recién descomprimida (e.g. ls_shapes_window) y selecciónala.
+			2. Pulsa el botón <em>Selecciona una carpeta de Guion</em>, ve a la carpeta recién descomprimida (e.g. ls_shapes_window) y selecciónala.
 		</td>
 	</tr>
 	<tr valign="top">
@@ -149,7 +149,7 @@ Partiendo de que ya has descomprimido el archivo descargado, en realidad tienes 
 	</tr>
 </table>
 
-> ⚠ **ADVERTENCIA:** Por favor, asegúrate de que has desinstalado todo *Lost Script* en tu sistema antes de eliminar los recursos compartidos o podrían empezar a dar errores o dejar de funcionar. Para desinstalar un script, simplemente elimina cualquier archivo y carpeta que coincida con su nombre y reinicia Moho® o *Recargar herramientas y pinceles* si es necesario.
+> ⚠ **ADVERTENCIA:** Por favor, asegúrate de que has desinstalado todo *Lost Script* en tu sistema antes de eliminar los recursos compartidos o podrían empezar a dar errores o dejar de funcionar. Para desinstalar un script, simplemente elimina cualquier archivo y carpeta que coincida con su nombre y reinicia Moho® o *Recarga herramientas y pinceles* si es necesario.
 
 <br>
 
@@ -161,7 +161,7 @@ Como usuario habitual de Moho®, normalmente no tendrás que interactuar con est
 
 ## Colab y soporte
 
-Las sugerencias y *bugs* pueden ser reportados en la sección [*Issues*](https://github.com/lost-scripts/ls/issues "Ir a la sección ''Issues''") (o en el hilo correspondiente, si lo hay, en la sección [*Scripting*](https://www.lostmarble.com/forum/viewforum.php?f=12 "Ir a la sección ''Scripting'' del foro Lost Marble") del [*foro Lost Marble*](https://www.lostmarble.com/forum "Ir al foro Lost Marble")).
+Las sugerencias y *bugs* pueden ser reportados en la sección [*Issues*](https://github.com/lost-scripts/ls/issues "Ir a la sección ''Issues''") (preferiblemente) o en el hilo correspondiente, si lo hay, en la sección [*Scripting*](https://www.lostmarble.com/forum/viewforum.php?f=12 "Ir a la sección ''Scripting'' del foro Lost Marble") del [*foro Lost Marble*](https://www.lostmarble.com/forum "Ir al foro Lost Marble").
 
 <br>
 

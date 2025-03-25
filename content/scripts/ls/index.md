@@ -23,8 +23,8 @@ Weight = -1
 		</th>
 		<th align="right" valign="middle" width="1920" nowrap>
 			<a href="https://moho.lostmarble.com/" title="Go to Moho website"><img height="20px" src="https://img.shields.io/badge/For-Moho_Pro_14.3+-orange" alt="Moho version"></a>
-			<a href="https://github.com/lost-scripts/ls7_script/releases/latest" title="Go to download page"><img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls7_script?logo=github" alt="GitHub version"></a>
-			<a href="#!" style="cursor: default;"><img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls7_script/total.svg?color=yellow" alt="GitHub downloads"></a>
+			<a href="https://github.com/lost-scripts/ls/releases/latest" title="Go to download page"><img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls?logo=github" alt="GitHub version"></a>
+			<a href="#!" style="cursor: default;"><img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls/total.svg?color=yellow" alt="GitHub downloads"></a>
 		</th>
 	</tr>
 </table>
@@ -65,8 +65,8 @@ Provides all the necessary shared/common resources and helpers that [Moho®](htt
 		</th>
 		<th align="right" valign="middle" nowrap>
 			<a href="https://moho.lostmarble.com/" title="Go to Moho website"><img height="20px" src="https://img.shields.io/badge/For-Moho_Pro_14.3+-orange" alt="Moho version"></a>
-			<a href="https://github.com/lost-scripts/ls7_script/releases/latest" title="Go to download page"><img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls7_script?logo=github" alt="GitHub version"></a>
-			<a href="#!" style="cursor: default;"><img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls7_script/total.svg?color=yellow" alt="GitHub downloads"></a>
+			<a href="https://github.com/lost-scripts/ls_shapes_window/releases/latest" title="Go to download page"><img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls_shapes_window?logo=github" alt="GitHub version"></a>
+			<a href="#!" style="cursor: default;"><img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls_shapes_window/total.svg?color=yellow" alt="GitHub downloads"></a>
 		</th>
 	</tr>
 	<tr>
@@ -133,10 +133,10 @@ Starting from you have already unzipped the downloaded file, you actually have t
 	</tr>
 	<tr valign="top">
 		<td>
-			2. Drag & Drop (or Copy & Paste) them all into the Scripts folder of your <a href="https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3" title="Go to Moho manual">Custom Content Folder</a>.
+			2. Drag & Drop (or Copy & Paste) them all into the <em>Scripts</em> folder of your <a href="https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3" title="Go to Moho manual">Custom Content Folder</a>.
 		</td>
 		<td>
-			2. Press "Select A Script Folder" button, browse to the just uzipped folder (e.g. ls_shapes_window) and select it.
+			2. Press <em>Select A Script Folder</em> button, browse to the just uzipped folder (e.g. ls_shapes_window) and select it.
 		</td>
 	</tr>
 	<tr valign="top">
@@ -149,7 +149,7 @@ Starting from you have already unzipped the downloaded file, you actually have t
 	</tr>
 </table>
 
-> ⚠ **WARNING:** Please, make sure you have uninstalled every *Lost Script* on your system before removing any shared resources or they may start throwing errors or stop working. For uninstalling a script, just remove any file and folder matching its name and restart Moho® or *Reload Tools And Brushes* if necessary.
+> ⚠ **WARNING:** Please, make sure you have uninstalled every *Lost Script* on your system before removing any shared resource or they may start throwing errors or stop working. For uninstalling a script, just remove any file and folder matching its name and restart Moho® or *Reload Tools And Brushes* if necessary.
 
 <br>
 
@@ -161,13 +161,13 @@ As a regular Moho® user, you will not normally have to interact with this set o
 
 ## Collab & Support
 
-Suggestions and bugs can be reported in the [<i>Issues</i>](https://github.com/lost-scripts/ls/issues "Go to ''Issues'' section") section (or in the corresponding topic, if any, in [<i>Scripting</i>](https://www.lostmarble.com/forum/viewforum.php?f=12 "Go to Lost Marble Forum's ''Scripting'' section") section of the [<i>Lost Marble Forum</i>](https://www.lostmarble.com/forum "Go to the ''Lost Marble Forum''")).
+Suggestions and bugs can be reported in the [<i>Issues</i>](https://github.com/lost-scripts/ls/issues "Go to ''Issues'' section") section (preferably) or in the corresponding topic, if any, in [<i>Scripting</i>](https://www.lostmarble.com/forum/viewforum.php?f=12 "Go to Lost Marble Forum's ''Scripting'' section") section of the [<i>Lost Marble Forum</i>](https://www.lostmarble.com/forum "Go to the ''Lost Marble Forum''").
 
 <br>
 
 ## Other...
 
-| [👉 Go to the Lost Scripts™ website...](https://lost-scripts.github.io) | [👉 Go to the Lost Marble Forum topic...](https://www.lostmarble.com/forum/viewtopic.php?t=36508) |
+| [👉 Go to the Lost Scripts™ website...](https://lost-scripts.github.io) | [👉 Go to Lost Marble Forum topic...](https://www.lostmarble.com/forum/viewtopic.php?t=36508) |
 | :---: | :---: |
 
 ---
