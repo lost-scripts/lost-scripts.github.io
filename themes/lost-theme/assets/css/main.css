@@ -7,6 +7,7 @@
 	--is-dark: 0;
 	--bg: light-dark(#EEE, #111);
 	--text: #000;
+	--text-inv: #FFF;
 	--accent-light: #227CAF;
 	--accent: var(--accent-light); /*--accent: light-dark(#227CAF, #E0A000);*/
 	--accent-dark: #E0A000;
@@ -196,6 +197,7 @@
 	--accent: var(--accent-dark);
 	--bg: #111;
 	--text: #FFF;
+	--text-inv: #000;
 	--a: #7dd4ff;
 	--a-hover: #82ff80;
 	--a-visited: #ee80ff;
@@ -252,8 +254,8 @@
 /* 20241018: Pure CSS solution (requires enter exact dimensions)
 .icon.colorize {
 	position: relative;
-	width: var(--w, var(--h, var(--icon-size)));
 	height: var(--h, var(--w, var(--icon-size)));
+	width: var(--w, var(--h, var(--icon-size)));
 	mask-image: var(--url);
 	mask-size: 100% 100%;
 	mask-repeat: no-repeat;
@@ -523,9 +525,9 @@ nav, .nav {
 	resize: horizontal; /*flex: 33.3%;*/ /* TBD: Swap for not allowing horizontal resizing */
 	height: 100%; /*min-height: 100vh;*/
 	width: 100%;
-	overflow: hidden; /*overflow-y: auto;*/
 	min-width: calc(var(--nav-w-max) / 3.33);
 	max-width: var(--nav-w-max);
+	overflow: hidden; /*overflow-y: auto;*/
 	background-color: var(--gray-D2) !important;
 	box-shadow: inset 8px 0px 4px -6px rgba(0, 0, 0, 0.33); /*box-shadow: 4px 0 6px rgba(0, 0, 0, 0.3);*/
 
@@ -534,8 +536,8 @@ nav, .nav {
 
 		& span {
 			margin: 0 auto; /* NOTE: Allows centering even 1 element with space-between */
-			font-size: 0.5rem; /* fallback for unsupported browsers */
-			font-size: clamp(0.5rem, 4.5cqw, 0.67rem); /* minimum 8px, based on 4.5cqw, maximum 22px */
+			font-size: 0.5em; /* fallback for unsupported browsers ↴ */
+			font-size: clamp(0.5em, 4.5cqw, 0.67em);
 			color: color-mix(in srgb, var(--text) 67%, transparent);
 			text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.33);
 		}
@@ -575,8 +577,8 @@ nav ul li {
 			font-size: 1.25em;
 			color: var(--gray-5A);
 			/*
+			height: 5px;
 			width: 9px;
-  			height: 5px;
 			background: url('/icons/fa-angle-down-solid.svg') no-repeat;
 			background-size: cover;
 			*/
@@ -600,9 +602,9 @@ nav ul li {
 			margin: 2px 6px 6px 6px;
 			text-align: justify;
 			text-justify: auto;
-			font-size: smaller; /* fallback for unsupported browsers ↴ */
+			font-size: smaller;
+			font-size: clamp(0.75em, 4.5cqw, 0.85em);
 			line-height: clamp(1.2em, 4.5cqw, 1.3em); /*1.35*/
-			font-size: clamp(0.75em, 4.5cqw, 0.85em); /* minimum 8px, based on 4.5cqw, maximum 22px */
 		}
 	}
 }
@@ -719,8 +721,8 @@ nav ul li details summary a {
 
 	& img {
 		display: block;
-		width: 100%;
 		height: auto;
+		width: 100%;
 		max-height: 16px;
 		pointer-events: auto;
 	}
@@ -739,9 +741,9 @@ nav ul li details summary a {
 	pointer-events: none;
 
 	& img {
+		height: auto;
 		min-width: 0;
 		max-width: 100%;
-		height: auto;
 		max-height: 16px;
 		object-fit: contain;
 		flex-shrink: 1;
@@ -934,6 +936,8 @@ table {
 	border-spacing: 0;
 	border-radius: var(--round);
 	border: 1px solid var(--gray-A5);
+	font-size: 0.85rem;
+    font-size: clamp(0.5em, 4.5cqw, 1em);
 	overflow: hidden;
 
 	& tr:nth-child(odd), th td {
@@ -998,18 +1002,36 @@ th, td {
 }
 
 #header-center {
-	flex: 1 0 auto;
-	padding: 0 12px;
+	flex: 1 1 auto;
+	padding-left: 12px;
 	background: linear-gradient(to right, rgba(0,0,0,0.15) 0%, transparent 33.3%);
 
 	& #banner {
+		height: 85%;
+		width: 50%;
+		max-width: max-content;
 		margin: 0 auto;
+		padding: 0 5%;
+		place-content: center;
+		text-align: center;
+		font-size: small;
 		font-weight: bold;
+		white-space: wrap;
+		overflow: hidden;
+		border-radius: 4px;
+		background-image: repeating-linear-gradient(
+			-45deg,
+			rgb(from var(--text-inv) r g b / 50%) ,
+			rgb(from var(--text-inv) r g b / 50%) 8px,
+			rgb(from var(--accent) r g b / 50%) 8px,
+			rgb(from var(--accent) r g b / 50%) 16px
+		);
+		text-shadow: 1px 1px 4px var(--text-inv);
 	}
 }
 
 #header-right {
-	padding: 0 12px;
+	padding-right: 12px;
 }
 
 #logo {
@@ -1038,8 +1060,8 @@ th, td {
 
 			&::before { /* Allow unfold upon outside click */
 				content: "";
-				width: 100vw;
 				height: 100vh;
+				width: 100vw;
 				position: fixed;
 				top: 0;
 				left: 0;
@@ -1097,11 +1119,11 @@ th, td {
 		}*/
 		& > * { /* For elements inside label, etc. */
 			display: inherit;
+			width: 100%;
+			padding: 4px 0.5em 4px 1.5em;
 			justify-content: inherit;
 			align-items: inherit;
 			gap: inherit;
-			width: 100%;
-			padding: 4px 0.5em 4px 1.5em;
 			cursor: pointer;
 
 			& span {
@@ -1115,10 +1137,10 @@ th, td {
 		& a, button { /* For direct-child elements  */
 			all: unset;
 			display: inherit;
+			width: 100%;
 			justify-content: inherit;
 			align-items: inherit;
 			gap: inherit;
-			width: 100%;
 			padding: 4px 0.5em 4px 1.5em;
 
 			&:focus-visible {
@@ -1136,8 +1158,8 @@ th, td {
 
 			&[type="checkbox"], &[type="radio"] {
 				appearance: none; -webkit-appearance: none;
-				width: 1em;
 				height: 1em;
+				width: 1em;
 	
 				&:checked::before {
 					content: "✔";
@@ -1663,8 +1685,8 @@ input:not(input:checked) + .label {
 
 	& span {
 		align-items: center;
-		font-size: 0.33rem; /* fallback for unsupported browsers */
-		font-size: clamp(0.33rem, 4.5cqw, 0.75rem); /* minimum 8px, based on 4.5cqw, maximum 22px */
+		font-size: 0.5em; /* fallback for unsupported browsers ↴ */
+		font-size: clamp(0.33em, 4.5cqw, 0.75em);
 		color: color-mix(in srgb, var(--text) 67%, transparent);
 		text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.33);
 		user-select: none;
@@ -1724,9 +1746,9 @@ input:not(input:checked) + .label {
 
 	& img {
 		display: block;
-		max-height: 40px;
 		height: auto;
 		width: auto;
+		max-height: 40px;
 		min-width: 0; /* https://stackoverflow.com/q/36230944/2805176 */
 		flex-grow: 0;
 		flex-shrink: 1;
@@ -1834,8 +1856,8 @@ input:not(input:checked) + .label {
 				}
 			}
 			&:nth-child(2) div { /* Description cell */
-				width: 100%;
 				height: 3.33em;
+				width: 100%;
 				padding: 0.15em 0.3em;
 				vertical-align: top;
 				overflow-y: auto;
