@@ -167,7 +167,7 @@ Suggestions and bugs can be reported in the [<i>Issues</i>](https://github.com/l
 
 ## Other...
 
-| [👉 Go to the Lost Scripts™ website...](https://lost-scripts.github.io/ls) | [👉 Go to the Lost Marble Forum topic...](https://github.com/lost-scripts/ls/tree/main#!) |
+| [👉 Go to the Lost Scripts™ website...](https://lost-scripts.github.io) | [👉 Go to the Lost Marble Forum topic...](https://www.lostmarble.com/forum/viewtopic.php?t=36508) |
 | :---: | :---: |
 
 ---
