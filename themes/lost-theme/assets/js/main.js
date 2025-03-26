@@ -81,10 +81,11 @@ function updateIcons() {
 			const styHeight = container.clientHeight;
 			const styWidth = container.clientWidth; //console.log(styWidth, styHeight)
 			const height = styHeight || attHeight || natHeight;
-			const width = styWidth || attWidth || (natWidth > 0 && natWidth !== natHeight ? width : "auto"); //console.log(width, height); // 20250310-1620: Added extra ternary fallback (following note: 20250310-0157)
+			const width = styWidth || attWidth || "auto"; //const width = styWidth || attWidth || (natWidth > 0 && natWidth !== natHeight && "auto") || "auto"; // 20250326-2010: Removed extra ternary fallback (following note: 20250310-0157)
+			//console.log(width, height);
 
 			container.height = height; // Make sure the container has the right height & width in all cases (see note bellow)
-			container.width = width; // 20250310-0157: It seems to be responsible for the logo resizing (natWidth related) glitch upon swap on nav resizing!
+			container.width = width; // 20250310-0157: It seems to be responsible for the logo resizing (natWidth related) glitch upon the swap on nav resizing!
 			//container.style.setProperty('--url', `url(${imgSrc})`);
 			container.style.backgroundImage = `url(${imgSrc}), linear-gradient(${lightDir}, ${col}, rgb(from ${col} r g b / ${lightAlt}))`; // For solid or gradual, but always opaque, coloring 
 			container.style.backgroundSize = '100% 100%, 100% 100%';
@@ -136,7 +137,7 @@ if (context === "head") {
 	// DOM-dependent logic...
 }
 
-if (!document.body || context !== "body") {return;} //if (!document.body) {return;} // Terminates the execution when called from head!
+if (!document.body) {return;} // if (!document.body || context !== "body") {return;} // Terminates the execution when called from head!
 
 
 ///////////////
