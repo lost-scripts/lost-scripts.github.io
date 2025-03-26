@@ -131,12 +131,12 @@ function audioFeedback(emitter, vol = 0.25) {
 
 // Execute code blocks depending on the value of 'data-context'
 if (context === "head") {
-    // DOM-independent logic...
+	// DOM-independent logic...
 } else if (context === "body") {
-    // DOM-dependent logic...
+	// DOM-dependent logic...
 }
 
-if (!document.body) {return;} // Terminates the execution when called from head!
+if (!document.body || context !== "body") {return;} //if (!document.body) {return;} // Terminates the execution when called from head!
 
 
 ///////////////
