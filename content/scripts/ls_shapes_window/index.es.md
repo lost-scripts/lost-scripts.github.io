@@ -48,32 +48,30 @@ Herramienta versátil que te ayuda a gestionar y manipular formas en Moho® con 
 {{< html-img src="index.png" class="center" >}}
 -->
 
-## Galería (Expandible)
+## Galería
 
-<details align="center" width="100%" style="cursor:pointer; user-select: none;">
+<details align="center" width="100%" class="gallery-holder" style="cursor:pointer; user-select: none;">
 	<summary title="Clica la flecha para mostrar/ocultar la galería de imágenes">
-		<a inert href="#!"><img align="center" height="96px" src="ScriptResources/ls_shapes_window/docs/index_gallery.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" alt="Script UI" style="vertical-align: middle;"></a>&ensp;&ensp;
+		<a inert href="#!"><img align="center" height="96px" src="docs/index_gallery.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" alt="Script UI" style="vertical-align: middle;"></a>&ensp;&ensp;
 	</summary>
 	<br>
-	<!--<div style="width: 100%; overflow-x: auto; border-radius: var(--round); border: 1px solid var(--gray-A5); box-shadow: -1px 2px 3px 1px rgba(0, 0, 0, 0.16) inset;">-->
-		<table align="center" class="gallery" style="border: none;">
-			<tr>
-				<td nowrap><!-- width="1024px" for full width container-->
-					<img src="ScriptResources/ls_shapes_window/docs/index_gallery_1.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="SHAPE Mode for shape managing" height="512px" align="top">&ensp;
-					<img src="ScriptResources/ls_shapes_window/docs/index_gallery_2.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="STYLE Mode for style managing" height="512px" align="top">&ensp;
-					<img src="ScriptResources/ls_shapes_window/docs/index_gallery_3.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="TWEAK Menu for shape tweaking &amp; utils" height="512px" align="top">&ensp;
-					<img src="ScriptResources/ls_shapes_window/docs/index_gallery_4.gif" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="Live/Scrollable (plus customizable) Swatches" height="512px" align="top">&ensp;
-					<img src="ScriptResources/ls_shapes_window/docs/index_gallery_5.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="Or just keep it compact..." align="top">
-					<br>
-				</td>
-			</tr>
-		</table>
-	<!--</div>-->
+	<table align="center" border="0" class="gallery">
+		<tr>
+			<td nowrap><!-- width="1024px" for full width container-->
+				<img src="docs/index_gallery_1.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="SHAPE Mode for shape managing" height="512px" align="top">&ensp;
+				<img src="docs/index_gallery_2.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="STYLE Mode for style managing" height="512px" align="top">&ensp;
+				<img src="docs/index_gallery_3.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="TWEAK Menu for shape tweaking &amp; utils" height="512px" align="top">&ensp;
+				<img src="docs/index_gallery_4.gif" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="Live/Scrollable (plus customizable) Swatches" height="512px" align="top">&ensp;
+				<img src="docs/index_gallery_5.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="Or just keep it compact..." align="top">
+				<br>
+			</td>
+		</tr>
+	</table>
 </details>
 
 <br>
 
-## Características principales
+## Características
 
 - Visualiza las relaciones entre las formas en las capas de un vistazo.
 - Saca el máximo partido de las *Formas Líquidas" de Moho gracias a una gestión mejorada.
@@ -84,6 +82,7 @@ Herramienta versátil que te ayuda a gestionar y manipular formas en Moho® con 
 - Muchas paletas/muestras de color interactivas (y puedes crear las suyas propias fácilmente).
 - Funciones de recoloración y otros asistentes.
 - Varios modos de visualización de la ventana para adaptarse mejor a sus necesidades.
+- Y... ¡mucho más!
 
 <br>
 
