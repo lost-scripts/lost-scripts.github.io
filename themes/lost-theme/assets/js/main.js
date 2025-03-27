@@ -82,9 +82,8 @@ function updateIcons() {
 			const styWidth = container.clientWidth; //console.log(styWidth, styHeight)
 			const height = styHeight || attHeight || natHeight;
 			const width = styWidth || attWidth || "auto"; //const width = styWidth || attWidth || (natWidth > 0 && natWidth !== natHeight && "auto") || "auto"; // 20250326-2010: Removed extra ternary fallback (following note: 20250310-0157)
-			//console.log(width, height);
 
-			container.height = height; // Make sure the container has the right height & width in all cases (see note bellow)
+			container.height = height; //console.log(width, height); // Make sure the container has the right height & width in all cases (see note bellow)
 			container.width = width; // 20250310-0157: It seems to be responsible for the logo resizing (natWidth related) glitch upon the swap on nav resizing!
 			//container.style.setProperty('--url', `url(${imgSrc})`);
 			container.style.backgroundImage = `url(${imgSrc}), linear-gradient(${lightDir}, ${col}, rgb(from ${col} r g b / ${lightAlt}))`; // For solid or gradual, but always opaque, coloring 

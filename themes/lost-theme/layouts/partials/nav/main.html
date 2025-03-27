@@ -43,11 +43,35 @@
 				tab.addEventListener('change', function() {
 					storeLastActiveTabIfChanged(this.id.substring(4));
 				});
+
+				// Add middle click "open section" funtinality by selecting the label associated with the tab & adding the listener...
+				document.querySelector(`label[for="${tab.id}"]`)?.addEventListener('mousedown', function(event) {
+					if (event.button === 1) { // Middle mouse button
+						const sectionUrl = `/${this.htmlFor.substring(4)}/`; // Get the section ID from "for" and generate the relative URL of the section
+						window.location.replace(sectionUrl); // Open the section just like any other link
+					}
+				});
 			});
 
 			if (!activeTabFound) {
 				document.getElementById(`tab-${lastActiveTab}`).checked = true;
 			}
 		});
+		/*
+		document.addEventListener("DOMContentLoaded", function() {
+			const tabs = document.querySelectorAll(".label"); // Selecciona todas las tabs (labels)
+			
+			tabs.forEach(tab => {
+				tab.addEventListener("mousedown", function(event) {
+					if (event.button === 1) { // Verifica si el clic fue con el botón central (botón 1)
+						const sectionId = this.htmlFor.substring(4); // Obtén el ID de la sección desde el atributo "for"
+						const sectionUrl = `/${sectionId}/`; // Genera la URL relativa de la sección
+
+						window.location.replace(sectionUrl); //window.open(sectionUrl, "_blank");
+					}
+				});
+			});
+		});
+		*/
 	</script>
 <!--</div>-->
