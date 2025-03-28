@@ -73,6 +73,9 @@ other = 'Resaltado del modo oscuro'
 [cancel]
 other = 'Cancelar'
 
+[check_status]
+other = 'Comprobar estado'
+
 [filters]
 other = 'Filtros'
 

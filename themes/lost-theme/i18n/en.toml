@@ -73,6 +73,9 @@ other = 'Dark mode highlights'
 [cancel]
 other = 'Cancel'
 
+[check_status]
+other = 'Check Status'
+
 [filters]
 other = 'Filters'
 

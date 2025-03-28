@@ -1,0 +1,32 @@
+{{/*
+E.G. (simple param): {{< get-param `homepage` >}}
+E.G. (map param): {{< get-param `map` `mapField` >}}
+E.G. (array param): {{< get-param `array` 0 >}}
+E.G. (specify a default value at the end): {{< get-param `unDefinedParam` `` `NOT FOUND!` >}}
+*/}}
+
+{{- $root := index .Site.Params (index .Params 0) -}}
+{{- if $root -}}
+	{{- if eq (len .Params) 2 -}}
+		{{- with index $root (index .Params 1) -}}
+			{{- . -}}
+		{{- else -}}
+			{{- "" -}}
+		{{- end -}}
+	{{- else if eq (len .Params) 3 -}}
+		{{- $value := index $root (index .Params 1) -}}
+		{{- if $value -}}
+			{{- $value -}}
+		{{- else -}}
+			{{- index .Params 2 -}}
+		{{- end -}}
+	{{- else -}}
+		{{- $root -}} <!-- Returns the complete object if no sublevels are specified -->
+	{{- end -}}
+{{- else -}}
+	{{- if eq (len .Params) 3 -}}
+		{{- index .Params 2 -}} <!-- Returns the default value if the parameter does not exist -->
+	{{- else -}}
+		{{- "" -}} <!-- Returns nothing if no default value is specified -->
+	{{- end -}}
+{{- end -}}

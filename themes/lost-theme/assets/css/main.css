@@ -797,6 +797,9 @@ a {
 	color: var(--a);
 	text-decoration: none;
 
+	&:link {
+		color: inherit;
+	}
 	&:visited {
 		color: var(--a-visited);
 	}
@@ -811,12 +814,18 @@ a {
 	&:active {
 		color: var(--accent)
 	}
-
-	/* Anula el subrayado para los elementos con la clase 'fa' dentro de los enlaces */
-	& .fa {
+	&[href=""], &:not([href]) { /* Disguise links without a href */
+		pointer-events: none;
+		cursor: default;
+		text-decoration: none;
+		color: var(--text);
+	}
+	& .fa {	/* Un-underline elements with the class `fa` within links */
 		text-decoration: none;
 	}
-}
+} /* NOTE: LoVe-HAte (Never forget...) */
+
+
 
 blockquote {
 	width: 100%;
@@ -839,10 +848,10 @@ blockquote {
 	}
 }
 
-button {
+button, .button, a.button {
 	display: inline-block;
 	padding: 4px 8px;
-	color: var(--gray-3C);
+	color: rgb(from var(--text) r g b / 90%);
 	border-radius: var(--round);
 	text-align: center;
 	text-decoration: none;
@@ -852,6 +861,16 @@ button {
 	user-select: none;
 	box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.33);
 
+	&:hover {
+		text-decoration: none;
+		background-color: var(--gray-A5);
+	}
+	&:active {
+		transform: translateX(1px) translateY(1px);
+		border-color: var(--accent);
+		box-shadow: 1px 2px 2px 0 inset rgba(0, 0, 0, 0.33);
+		background-color: color-mix(in srgb, var(--accent) 50%, var(--gray-A5));
+	}
 	&.tag {
 		cursor: pointer;
 
@@ -861,17 +880,6 @@ button {
 			opacity: 50%;
 		}
 	}
-}
-
-button:hover {
-	background-color: var(--gray-A5);
-}
-
-button:active {
-	transform: translateX(1px) translateY(1px);
-	border-color: var(--accent);
-	background-color: color-mix(in srgb, var(--accent) 50%, var(--gray-A5));
-	box-shadow: 1px 2px 2px 0 inset rgba(0, 0, 0, 0.33);
 }
 
 dialog {

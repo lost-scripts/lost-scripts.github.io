@@ -90,6 +90,9 @@ links = [
 { href = 'https://instagram.com/Lost_Scripts', icon = 'fa-brands fa-instagram', alt = 'Instagram', title = 'Instagram...', order = 2 },
 { href = 'https://github.com/lost-scripts', icon = 'fa-brands fa-github', alt = 'GitHub', title = 'GitHub...', order = 1 }]
 
+# Other Links...
+linksAlt = { hosting = 'https://pages.github.com/', hostingStatus = 'https://www.githubstatus.com/' }
+
 # Navigation tabs
 [[menus.nav]]
 	name = 'Scripts'
