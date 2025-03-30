@@ -17,8 +17,8 @@
 								{{- /* i18n "home" | default "Home" */ -}}
 								{{- /* with page.Params.prefix -}}
 									<i class='fa fa-{{ . }}'></i>
-								{{- end */ -}}
-								<i class='fa fa-{{ site.Params.homeIcon }}' title='{{ i18n "home" | default "Home" }}'></i>
+								{{- /* end */ -}}
+								<i class='fa fa-{{ site.Params.homeIcon }}' title='{{ i18n "home" | default "Home" }}'></i> <!--'fa{{ if not $isHome }}-solid {{ else }}-regular{{ end }}'-->
 							{{- else -}}
 								{{ .LinkTitle }}
 							{{- end -}}

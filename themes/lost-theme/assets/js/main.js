@@ -294,11 +294,27 @@ updatePseudoStyles(curAccent);
 	Array.prototype.forEach.call(highlightBlocks, addCopyButton);
 })();
 
-
 const resetButton = document.getElementById('resetter');
 const resetDialog = document.getElementById('resetDialog');
 const cancelButton = document.getElementById('cancelButton');
 const confirmButton = document.getElementById('confirmButton');
+const dynamicElements = document.querySelectorAll('a, img');
+
+// Find elements with attributes such as `data-alt-*` and modify in consequence to make them mutable accordingly e.g. to context
+dynamicElements.forEach(element => { // Iterates over all attributes of the element
+	Array.from(element.attributes).forEach(attr => {
+		if (attr.name.startsWith('data-alt-')) { // Adjust prefix to be more specific
+			const propertyName = attr.name.replace('data-alt-', '').toLowerCase(); // Case-desensitization avoids problems with upper/lower case letters
+			if (propertyName === 'textcontent') { // Special handling of `textContent` and maybe others not being an attribute of the HTML element in the DOM?
+				element.textContent = attr.value;
+			} else if (propertyName === 'disabled' || propertyName === 'hidden') { // Special handling of bool attributes (`true` by default unless it's `false`)
+				element[propertyName] = attr.value !== 'false';
+			} else if (propertyName in element) { // Verifies that exists as a property of element
+				element[propertyName] = attr.value;
+			}
+		}
+	});
+});
 
 // Function to get the current value of a CSS variable from a specific element
 function getCSSVarValue(variable, element = root) {

@@ -114,11 +114,16 @@ Starting from you have already unzipped the downloaded file, you actually have t
 Suggestions and bugs can be reported in the [<i>Issues</i>](https://github.com/lost-scripts/ls_shapes_window/issues "Go to ''Issues'' section") section (preferably) or in the corresponding topic, if any, in [<i>Scripting</i>](https://www.lostmarble.com/forum/viewforum.php?f=12 "Go to Lost Marble Forum's ''Scripting'' section") section of the [<i>Lost Marble Forum</i>](https://www.lostmarble.com/forum "Go to the ''Lost Marble Forum''").
 
 <br>
-
+<!--
 ## Other...
-
 | [👉 Go to the Lost Scripts™ website...](https://lost-scripts.github.io/scripts/ls_shapes_window) | [👉 Go to Lost Marble Forum topic...](https://www.lostmarble.com/forum/viewtopic.php?t=36508) |
 | :---: | :---: |
+-->
+
+## Links of interest...
+
+- <a href="https://lost-scripts.github.io/scripts/ls_shapes_window" data-alt-href="https://github.com/lost-scripts/ls_shapes_window" data-alt-textContent="Script repository" data-alt-title="Go to the script repository...">Script page</a>
+- [Lost Marble Forum topic](https://www.lostmarble.com/forum/viewtopic.php?t=36508)
 
 ---
 
