@@ -14,7 +14,7 @@
 	<details name="topic">
 		<summary>
 			<a href="{{ .page.RelPermalink }}">
-				<picture id="item-icon">
+				<picture name="nav-item-icon">
 					{{- $iconPathBase := replace (path.Clean .page.File.Path) ".md" "" -}}
 					{{- $iconPathSVG := printf "%s.svg" $iconPathBase | relURL -}} <!-- {{- /* $iconPathSVG := path.Clean (replace .page.File.Path ".md" ".svg") | relURL */ -}} -->
 					{{- $iconPathPNG := printf "%s.png" $iconPathBase | relURL -}}
@@ -37,8 +37,8 @@
 						<img src="/icons/icon_unknown.png" class="icon colorize" alt="❌">
 					{{- end -}}
 				</picture>
-				<span id="item-title">{{ .page.Title }}</span>
-				<div id="script-flags" class="flags">
+				<span name="nav-item-text">{{ .page.Title }}</span>
+				<div name="nav-item-flags" class="flags">
 					{{- range .page.Params.flags -}}
 						<span class="{{ lower . }}" title="{{ i18n . }}">{{ . }}</span>
 					{{- end -}}

@@ -122,12 +122,13 @@
 	--header-left-w: var(--nav-w);
 	--header-left-w-min: calc(var(--nav-w-max) / 3);
 	--main-h: 100%;
+	--main-w: 66.6%;
+	--main-w-min: 320px;
 	--footer-h: calc(var(--header-h-px) / 2);
 	--tabs-h: 32px;
-	--art-w: 66.6%;
 	--nav-w-def: 33.3%;
 	--nav-w: var(--nav-w-def, 33.3%);
-	--nav-w-mid: 192px;
+	--nav-w-min: 192px;
 	--nav-w-max: 384px;
 	--aside-w-def: calc(var(--nav-w-def) / 2);
 	--aside-w: var(--aside-w-def, 16.6%);
@@ -382,6 +383,7 @@ body {
 			z-index: 1;
 
 			& > main, #view-main {
+				min-width: var(--main-w-min);
 				padding-block: calc(var(--m) * 2vh);
 				padding-inline: clamp(2rem, var(--s-res), 8rem);
 				container: main / inline-size;
@@ -985,8 +987,6 @@ table {
 	border-spacing: 0;
 	border-radius: var(--round);
 	border: 1px solid var(--gray-A5);
-	font-size: 0.85rem;
-    font-size: clamp(0.5em, 4.5cqw, 1em);
 	overflow: hidden;
 
 	& tr:nth-child(odd), th td {
@@ -1005,6 +1005,10 @@ th, td {
 	padding: 0.2em 0.4em;
 	border-right: 1px solid var(--gray-A5);
 	border-bottom: 1px solid var(--gray-A5);
+	font-size: smaller;
+    font-size: clamp(0.5em, 4.5cqw, 1em);
+	line-height: clamp(1.16em, 4.5cqw, 1.33em);
+	container-type: inline-size;
 
 	& th {
 		vertical-align: center;
@@ -1538,14 +1542,17 @@ input:not(input:checked) + .label {
 	height: 0;
 	visibility: hidden;
 	padding: 8px 2px 2px 4px;
-	/*overflow-y: auto;*/
 	scroll-snap-type: y mandatory;
 	background: unset;
-	/*box-shadow: inset 8px 0px 4px -6px rgba(0, 0, 0, 0.33);*/
 
-	&:nth-of-type(1) ul li:nth-of-type(1) summary a picture img { /* Allow first tab's item's icon customization, e.g. if it has special meaning like Home */
-		max-height: 1.25em;
-		margin-bottom: 0.25em;
+	&:nth-of-type(1) ul li:nth-of-type(1) summary a picture { /* Allow first tab's item's icon customization, e.g. if it has special meaning like Home (or viewBox can be modified instead if using a SVG file) */
+		& img:not([src$=".svg"]) { /* Bitmap rules */
+			/*transform: scale(0.9) translateY(-2px);*/
+		}
+		& img[src$=".svg"] { /* SVG Rules */
+			max-height: 1.25em;
+			margin-bottom: 0.25em;
+		}
 	}
 }
 
@@ -1828,10 +1835,12 @@ input:not(input:checked) + .label {
 			padding: 0 0.1em;
 			border: none;
 		}
-
 		& th:nth-child(2) {
-			overflow-x: auto;
+			padding: 0 0.5em;
 			white-space: nowrap;
+			overflow-x: auto;
+			/*mask-image: linear-gradient(to left, transparent, black 0.5em); -webkit-mask-image: linear-gradient(to left, transparent, black 0.5em);*/
+			mask-image: linear-gradient(to right, transparent, black 0.5em, black calc(100% - 0.5em), transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent, black 0.5em, black calc(100% - 0.5em), transparent 100%);
 
 			&::-webkit-scrollbar {
 				height: calc(var(--scroll) / 2);
@@ -1850,6 +1859,8 @@ input:not(input:checked) + .label {
 	
 			& img {
 				/*vertical-align: middle;*/
+				height: 20px;
+				width: auto;
 				max-width: 100%;
 				user-select: none;
 			}
@@ -1866,14 +1877,22 @@ input:not(input:checked) + .label {
 
 	& tr {
 		& > th {
-			padding: 0 0.1em;
+			user-select: none;
+			font-size: 0px;
+			line-height: 0;
 
 			&:first-child { /* Name cell */
-				user-select: none;
+				& img {
+					height: 20px;
+					width: auto;
+					padding: 1px;
+				}
 			}
 			&:nth-child(2) { /* Shields cell */
 				overflow-x: auto;
 				white-space: nowrap;
+				mask-image: linear-gradient(to left, transparent, black 0.33rem, black calc(100% - 0.33rem), transparent 100%);
+				padding: 0 0.25rem;
 
 				&::-webkit-scrollbar {
 					height: calc(var(--scroll) / 2);
@@ -1889,10 +1908,14 @@ input:not(input:checked) + .label {
 				}
 				*/
 				& img {
-					max-width: 100%; /* Unlocks cell overflow & scrolling! */
-					user-select: none;
+					height: 20px;
+					width: auto;
+					max-width: 100%; /* Unlocks cell overflow & scrolling! But squashes images if wider than container... */
+					padding: 1px 0;
 				}
-
+				& >:not(:last-child) {
+					padding-right: 0.25rem;
+				}
 			}
 		}
 		& > td {
@@ -1906,7 +1929,7 @@ input:not(input:checked) + .label {
 				}
 			}
 			&:nth-child(2) div { /* Description cell */
-				height: 3.33em;
+				height: calc(3 * clamp(1.25em, 4.5cqw, 1.45em));
 				width: 100%;
 				padding: 0.15em 0.3em;
 				vertical-align: top;
@@ -1915,7 +1938,7 @@ input:not(input:checked) + .label {
 				text-wrap: pretty;
 				hyphens: auto;
 				hyphenate-limit-chars: 6;
-				/*font-size: 90%;*/
+				container-type: inline-size;
 			}
 		}
 	}

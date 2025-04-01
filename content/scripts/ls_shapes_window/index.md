@@ -120,10 +120,10 @@ Suggestions and bugs can be reported in the [<i>Issues</i>](https://github.com/l
 | :---: | :---: |
 -->
 
-## Links of interest...
+## Other...
 
-- <a href="https://lost-scripts.github.io/scripts/ls_shapes_window" data-alt-href="https://github.com/lost-scripts/ls_shapes_window" data-alt-textContent="Script repository" data-alt-title="Go to the script repository...">Script page</a>
-- [Lost Marble Forum topic](https://www.lostmarble.com/forum/viewtopic.php?t=36508)
+- <a href="https://lost-scripts.github.io/scripts/ls_shapes_window" data-alt-href="https://github.com/lost-scripts/ls_shapes_window" data-alt-textContent="Shapes window repository" data-alt-title="Go to the Shapes Window repository...">Shapes Window webpage</a>
+- [Lost Marble Forum topic](https://www.lostmarble.com/forum/viewtopic.php?t=36508 "Go to the Lost Marble Forum topic...")
 
 ---
 

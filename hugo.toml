@@ -75,14 +75,15 @@ disableFastRender = true # Enables full re-renders on changes (commented cause t
 [params]
 homepage = '/scripts/ls/'
 homeIcon = 'house'
+navMode = 'auto' # auto / tab / accordion
+faStyle = 'solid'
 subtitle = 'The Lost (Moho® Scripts) Ark'
 author = { name = 'Rai López', homepage = 'https://lost-scripts.github.io/' }
 copyrightAlt = '© 2025 · Rai López · ARR'
 since = 2024
 banner = true
-faStyle = 'solid'
 
-# Social Networking and Contact Links (The last shall be first/top! (Or use order key)) | TEMP: 'https://lost-scripts.github.io/rss'
+# Social Networking and Contact Links (The last shall be first/top! (Or use order key))
 links = [ 
 { href = 'https://mohoscripting.com/', src = '/icons/icon_ms_logo.svg', alt = 'Moho Scripting', start = 'Other Links:', title = 'Moho Scripting...', order = 5 },
 { href = 'mailto:rai.lopez@outlook.com', icon = 'fa-solid fa-envelope', alt = 'Email', title = 'Email...', order = 4 },

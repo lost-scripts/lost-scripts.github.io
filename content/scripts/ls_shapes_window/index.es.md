@@ -118,8 +118,8 @@ Las sugerencias y *bugs* pueden ser reportados en la sección [*Issues*](https:/
 
 ## Otros...
 
-| [👉 Ir a la web de Lost Scripts™...](https://lost-scripts.github.io/scripts/ls_shapes_window) | [👉 Ir al tema del Foro Lost Marble...](https://www.lostmarble.com/forum/viewtopic.php?t=36508) |
-| :---: | :---: |
+- <a href="https://lost-scripts.github.io/scripts/ls_shapes_window" data-alt-href="https://github.com/lost-scripts/ls_shapes_window" data-alt-textContent="Repositorio de Shapes window" data-alt-title="Ir al repositorio de Shapes Window...">Página web de Shapes Window</a>
+- [Lost Marble Forum topic](https://www.lostmarble.com/forum/viewtopic.php?t=36508 "Go to the Lost Marble Forum topic...")
 
 ---
 
