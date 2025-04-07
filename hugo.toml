@@ -75,7 +75,7 @@ disableFastRender = true # Enables full re-renders on changes (commented cause t
 [params]
 homepage = '/scripts/ls/'
 homeIcon = 'house'
-navMode = 'tabbed' # auto (default) / tabbed / accordion
+navMode = 'auto' # auto (default) / tabbed / accordion
 faStyle = 'solid'
 subtitle = 'The Lost (Moho® Scripts) Ark'
 author = { name = 'Rai López', homepage = 'https://lost-scripts.github.io/' }
