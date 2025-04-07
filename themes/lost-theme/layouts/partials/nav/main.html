@@ -1,13 +1,14 @@
-<!--<div class="tabs">-->
+<div class="section tabs"> <!-- Redundant! But it was necessary to have .tabs as another child to work with container and style queries, otherwise `.tabs` was the container of the variables itself and could not be handled... -->
 	{{- $currentPage := . -}}
 	{{- $currentSection := .Section -}}
+	{{- $tabCount := len .Site.Menus.nav -}}
 	{{- range .Site.Menus.nav -}}
 		{{- $isActive := or ($currentPage.IsMenuCurrent "nav" .) ($currentPage.HasMenuCurrent "nav" .) (eq $currentSection .Identifier) -}}
 		{{- $isContaining := (where (index $.Site.RegularPages) "Section" .Identifier) -}}
 
 		<input class="input" name="tabs" type="radio" id="tab-{{ .Identifier }}" {{ if $isActive }}checked{{ end }}/>
 
-		<label class="label {{ if .Identifier | in $isContaining }}marker{{ else if $isActive }}marker{{ end }}" for="tab-{{ .Identifier }}">
+		<label class="label {{ if .Identifier | in $isContaining }}marker{{ else if $isActive }}marker{{ end }}" for="tab-{{ .Identifier }}" style="--tab-count: {{ $tabCount }};">
 			<img src="{{ .Params.icon }}" class="icon colorize" alt="{{ i18n .Name }} icon"> <!--{{ with .Params.icon }}{{ . }}&nbsp;{{ end }}-->
 			<span class="text">{{ i18n .Name }}</span>
 		</label>
@@ -44,7 +45,7 @@
 					storeLastActiveTabIfChanged(this.id.substring(4));
 				});
 
-				// Add middle click "open section" funtinality by selecting the label associated with the tab & adding the listener...
+				// Add middle click "open section" functionality by selecting the label associated with the tab & adding the listener...
 				document.querySelector(`label[for="${tab.id}"]`)?.addEventListener('mousedown', function(event) {
 					if (event.button === 1) { // Middle mouse button
 						const sectionUrl = `/${this.htmlFor.substring(4)}/`; // Get the section ID from "for" and generate the relative URL of the section
@@ -74,4 +75,4 @@
 		});
 		*/
 	</script>
-<!--</div>-->
+</div>

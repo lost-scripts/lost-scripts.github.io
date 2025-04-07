@@ -12,8 +12,8 @@
 	</header>
 
 	<section id="section"> <!-- <main> base -> <section> -->
-		<nav id="nav" class="section" data-nav-mode="{{ .Site.Params.navMode | default `auto` }}">
-			<section id="nav-main" class="section tabs">
+		<nav id="nav" class="section">
+			<section id="nav-main" class="section" style="--nav-mode: {{ .Site.Params.navMode | default `auto` }};">
 				{{- partial "nav/main.html" . -}}
 			</section>
 

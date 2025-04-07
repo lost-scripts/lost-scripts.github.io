@@ -126,9 +126,10 @@
 	--main-w-min: 320px;
 	--footer-h: calc(var(--header-h-px) / 2);
 	--tabs-h: 32px;
+	--nav-swap: 192px;
 	--nav-w-def: 33.3%;
 	--nav-w: var(--nav-w-def, 33.3%);
-	--nav-w-min: 192px;
+	--nav-w-min: 128px;
 	--nav-w-max: 384px;
 	--aside-w-def: calc(var(--nav-w-def) / 2);
 	--aside-w: var(--aside-w-def, 16.6%);
@@ -523,6 +524,7 @@ footer, .footer {
 }
 
 nav, .nav {
+	--nav-width: 0;
 	display: flex;
 	flex-flow: column;
 	resize: horizontal; /*flex: 33.3%;*/ /* TBD: Swap for not allowing horizontal resizing */
@@ -800,7 +802,7 @@ a {
 	text-decoration: none;
 
 	&:link {
-		color: inherit;
+		/*color: inherit;*/
 	}
 	&:visited {
 		color: var(--a-visited);
@@ -1452,15 +1454,6 @@ a:not(.anchor):not(.link-button):not(.link-image):not(
 
 .highlight-copy-btn:hover {
 	opacity: 1;
-}  
-
-.tabs {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	width: 100%;
-	padding-right: 2px;
-	/*box-shadow: 0 24px 40px -16px rgba(0,0,0,0.33);*/
 }
 
 .input {
@@ -1468,15 +1461,34 @@ a:not(.anchor):not(.link-button):not(.link-image):not(
 	opacity: 0;
 }
 
-.label {
-	height: var(--tabs-h);
+.tabs {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	height: 100%;
 	width: 100%;
+	padding-right: 2px;
+	/*box-shadow: 0 24px 40px -16px rgba(0,0,0,0.33);*/
+}
+
+.label {
+	--gap: 1px;
+	flex: 1 0 calc(100% / var(--tab-count, 3)); /*calc(100% / var(--tab-count, 3) - (var(--gap) * (var(--tab-count, 3) - 1)))*/
+	position: sticky;
+	top: 0;
+	height: var(--tabs-h);
+	width: auto;
 	padding: 4px 4px;
-	cursor: pointer;
+	color: var(--gray-5A);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: center;
 	font-weight: 550;
 	font-size: 14px;
+	cursor: pointer;
 	user-select: none;
-	color: var(--gray-5A);
+	z-index: 1;
 	background: var(--gray-B4);
 	transition: background var(--shorter), color var(--shorter);
 
@@ -1508,6 +1520,9 @@ a:not(.anchor):not(.link-button):not(.link-image):not(
 	&.marker img {
 		/*filter: brightness(150%);*/
 	}
+	&:not(:last-of-type) {
+		/*margin-right: 2px;*/
+	}
 }
 
 .input:focus + .label {
@@ -1524,7 +1539,10 @@ a:not(.anchor):not(.link-button):not(.link-image):not(
 }
 
 .input:checked + .label + .panel {
-	display: block;
+	display: flex 1; /* block */
+	top: 0; /* dispensable? */
+	height: calc(100% - var(--tabs-h, 32px));
+	padding-top: 8px; /* Added to solve dissapearing colorized images issue! */
 	visibility: visible;
 }
 
@@ -1538,10 +1556,12 @@ input:not(input:checked) + .label {
 }
 
 .panel {
-	/*display: none;*/ /* Commented and ussing 0 height and hidden visibility to solve dissapearing colorized images issue! */
-	height: 0;
+	order: 99;
+	/*display: none;*/ /* Commented and ussing hidden visibility and 0 height to solve dissapearing colorized images issue! */
 	visibility: hidden;
-	padding: 8px 2px 2px 4px;
+	height: 0;
+	width: 100%;
+	padding: 0 2px 0 4px; /* 8px 2px 2px 4px */
 	scroll-snap-type: y mandatory;
 	background: unset;
 
@@ -2145,47 +2165,19 @@ input:not(input:checked) + .label {
 /* AT-RULES */
 /************/
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--is-dark: 1;
-	}
-}
+/* Nav modes */
+/*
+nav > section {
+	--nav-width: 0;
+	&[data-nav-mode="auto"] { --nav-mode: auto; }
+	&[data-nav-mode="tabbed"] { --nav-mode: tabbed; }
+	&[data-nav-mode="accordion"] { --nav-mode: accordion; }
+}*/
 
-@media (width < 600px) {
-	body {
-		/*background-color: #000;*/
-	}
-}
-
-/* Accordion mode */
+/* Nav accordion/narrow mode */
 @container nav (width < 192px) {
-	nav#nav {
-		overflow-y: hidden;
-		/*gap: 2px;*/
-		/*border-top: 0 none;*/
-	}
-	.tabs {
-		height: 100%;
-		gap: 1px;
-	}
-	.label {
-		padding-left: 8px;
-	}
-	.input:checked + .label + .panel {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding-top: 7px; /* Avoids little items jump...*/
-	}
-	.panel {
-		/*flex-grow: 1;*/ /* Commented and added rules bellow to solve dissapearing colorized images issue! */
-		flex-grow: 0;
-		height: 0;
-		padding-top: 0;
-		padding-bottom: 0;
-		visibility: hidden;
-		/*overflow: hidden;*/
-		/*display: none;*/
+	nav > section {
+		--nav-width: -192;
 	}
 	#nav-footer .copyright.long {
 		display: none !important;
@@ -2208,47 +2200,128 @@ input:not(input:checked) + .label {
 	.docsearch-btn-keys {
 		display: none;
 	}
+	
+	@-moz-document url-prefix() { /* NOTE: Auto mode Firefox-specific temporary fallback... Sync with below! */
+		.tabs {
+			flex-wrap: unset;
+			flex-direction: column;
+			height: 100%;
+			gap: 1px;
+		}
+		.label {
+			flex: unset;
+			position: unset;
+			top: unset;
+			width: 100%;
+			padding-left: 8px;
+			text-align: unset;
+			z-index: unset;
+		}
+		.input:checked + .label + .panel {
+			display: flex;
+			flex: 1;
+			flex-direction: column;
+			top: unset;
+			height: unset;
+			padding-top: 7px;
+		}
+		.panel {
+			order: unset;
+			flex-grow: 0;
+			height: 0;
+			width: unset;
+			padding-top: 0;
+			padding-bottom: 0;
+			visibility: hidden;
+		}
+	}
+}
+
+@container style(--nav-mode: accordion) or style(--nav-mode: auto) {
+	@container style(--nav-mode: accordion) or style(--nav-width: -192) {
+		.tabs {
+			flex-wrap: unset;
+			flex-direction: column;
+			height: 100%;
+			gap: 1px;
+		}
+		.label {
+			flex: unset;
+			position: unset;
+			top: unset;
+			width: 100%;
+			padding-left: 8px;
+			text-align: unset;
+			z-index: unset;
+		}
+		.input:checked + .label + .panel {
+			display: flex;
+			flex: 1;
+			flex-direction: column;
+			top: unset;
+			height: unset;
+			padding-top: 7px; /* Avoids little items jump...*/
+		}
+		.panel {
+			order: unset;
+			/*flex-grow: 1;*/ /* Commented and added rules bellow to solve dissapearing colorized images issue! */
+			flex-grow: 0;
+			height: 0;
+			width: unset;
+			padding-top: 0;
+			padding-bottom: 0;
+			visibility: hidden;
+		}
+	}
 }
 
 /* Tab mode */
 @container nav (width >= 192px) {
+	nav > section {
+		--nav-width: 192;
+	}
+
 	.tabs {
-		height: 100%;
+		/*height: 100%;
 		flex-direction: row;
-		flex-wrap: wrap;
+		flex-wrap: wrap;*/
 	}
 	.label {
-		flex: 1 0 auto;
+		/*flex: 1 0 auto;
 		position: sticky;
 		top: 0;
 		width: auto;
 		text-align: center;
-		z-index: 1;
+		z-index: 1;*/
 	}
 	.panel {
-		order: 99;
-		width: 100%;
+		/*order: 99;
+		width: 100%;*/
 		/* Added rules bellow to solve dissapearing colorized images issue! */
-		height: 0;
+		/*height: 0;
 		padding-top: 0;
 		padding-bottom: 0;
-		visibility: hidden;
+		visibility: hidden;*/
 	}
 	.input:checked + .label + .panel {
-		display: flex 1;
-		height: calc(100% - var(--tabs-h, 32px));
-		top: 0; /* dispensable? */
-		padding-top: 8px; /* Added to solve dissapearing colorized images issue! */
+		/*display: flex 1;*/
+		/*height: calc(100% - var(--tabs-h, 32px));*/
+		/*top: 0;*/ /* dispensable? */
+		/*padding-top: 8px;*/ /* Added to solve dissapearing colorized images issue! */
 	}
 }
 
-/* Example for a rule that acts always over a container with e.g. `container: dropdown / inline-size;`
-@container dropdown (min-width: 0) {
-	> {
-		translate: -100% 0;
+@media (prefers-color-scheme: dark) {
+	:root {
+		--is-dark: 1;
 	}
 }
-*/
+
+@media (width < 600px) {
+	body {
+		/*background-color: #000;*/
+	}
+}
 
 @supports not selector(::-webkit-scrollbar) { /* Wrap new scrollbar properties in @supports rule for browsers without `::-webkit-scrollbar-...` support. This way chrome won't override `::-webkit-scrollbar-...` selectors */
 	* {
@@ -2273,3 +2346,11 @@ input:not(input:checked) + .label {
 	50% { color: var(--accent ); }
 	100% { color: unset; }
 }
+
+/* Example for a rule that acts always over a container with e.g. `container: dropdown / inline-size;`
+@container dropdown (min-width: 0) {
+	> {
+		translate: -100% 0;
+	}
+}
+*/
