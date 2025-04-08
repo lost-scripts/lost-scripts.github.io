@@ -102,7 +102,7 @@ Starting from you have already unzipped the downloaded file, you actually have t
 
 ## Usage
 
-1. **Opening**: Open the *LS Shapes Window* from Moho®'s *Tools* palette or *Scripts* menu entry.
+1. **Opening**: Open *Shapes Window* from Moho's *Tools* palette or via its entry in the *Scripts* menu.
 2. **Operating**: Now you can have it permanently open to perform various shape operations.
 3. **Customizing**: Unfold Window's main menu: 🔽 (at top left of the window) to access diffent settings & actions.
 4. **Tooltips**: Hold the cursor over the different elements to get a hint of their functions...

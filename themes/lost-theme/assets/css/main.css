@@ -1759,15 +1759,17 @@ input:not(input:checked) + .label {
 
 .pager {
 	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	align-items: end;
+	flex: 1 0 auto;
 	gap: 8px;
+	overflow: hidden;
+	align-items: end;
+	justify-content: space-between;
+	container-type: inline-size;
+	font-size: 0.5em; /* fallback for unsupported browsers ↴ */
+	font-size: clamp(0.33em, 3.33cqw, 0.75em);
 
 	& span {
 		align-items: center;
-		font-size: 0.5em; /* fallback for unsupported browsers ↴ */
-		font-size: clamp(0.33em, 4.5cqw, 0.75em);
 		color: color-mix(in srgb, var(--text) 67%, transparent);
 		text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.33);
 		user-select: none;
@@ -1788,6 +1790,7 @@ input:not(input:checked) + .label {
 
 .breadcrumber {
 	padding: 0 0.5rem;
+	overflow: hidden;
 
 	& ol, ul {
 		display: flex;
@@ -1795,12 +1798,17 @@ input:not(input:checked) + .label {
 	}
 	& li {
 		list-style: none;
-	}
-	& li:not(:last-child)::after {
-		display: inline-block;
-		margin: 0 0.25rem;
-		color: var(--accent);
-		content: "▸"; /* → */
+
+		&:last-child {
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		&:not(:last-child)::after {
+			display: inline-block;
+			margin: 0 0.25rem;
+			color: var(--accent);
+			content: "▸"; /* → */
+		}
 	}
 }
 

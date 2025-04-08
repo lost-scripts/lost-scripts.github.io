@@ -102,7 +102,7 @@ Partiendo de que ya has descomprimido el archivo descargado, dispones de dos mé
 
 ## Uso
 
-1. **Abrir**: Abre la ventana *LS Shapes Window* desde la paleta *Herramientas* de Moho® o desde la entrada de menú *Scripts*.
+1. **Abrir**: Abre la ventana *Shapes Window* desde la paleta *Herramientas* de Moho o mediante su entrada en el menú *Scripts*.
 2. **Usar**: Ahora puedes tenerla permanentemente abierta para realizar diversas operaciones con formas.
 3. **Personalizar**: Despliega el menú principal de la ventana 🔽 (en la parte superior izquierda) para acceder a diferentes ajustes y acciones.
 4. **Tooltips**: Mantén el cursor sobre los diferentes elementos para obtener pistas sobre sus funciones...
