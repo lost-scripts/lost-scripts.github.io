@@ -101,7 +101,7 @@ linksAlt = { hosting = 'https://pages.github.com/', hostingStatus = 'https://www
 	url = '/scripts/'
 	weight = 1
 	[menus.nav.params]
-		icon = '/icons/fa-file-code-solid.svg' #'📄'
+		icon = 'fa-file-code' #'/icons/fa-file-code-solid.svg' #'📄'
 		item = 'Script'
 
 [[menus.nav]]
@@ -110,7 +110,7 @@ linksAlt = { hosting = 'https://pages.github.com/', hostingStatus = 'https://www
 	url = '/docs/'
 	weight = 2
 	[menus.nav.params]
-		icon = '/icons/fa-book-solid.svg' #'📚'
+		icon = 'fa-book' #'/icons/fa-book-solid.svg' #'📚'
 		item = 'Document'
 
 [[menus.nav]]
@@ -119,5 +119,5 @@ linksAlt = { hosting = 'https://pages.github.com/', hostingStatus = 'https://www
 	url = '/lab/'
 	weight = 3
 	[menus.nav.params]
-		icon = '/icons/fa-flask-solid.svg' #'🧪'
+		icon = 'fa-flask' #'/icons/fa-flask-solid.svg' #'🧪'
 		item = 'Experiment'

@@ -9,7 +9,8 @@
 		<input class="input" name="tabs" type="radio" id="tab-{{ .Identifier }}" {{ if $isActive }}checked{{ end }}/>
 
 		<label class="label {{ if .Identifier | in $isContaining }}marker{{ else if $isActive }}marker{{ end }}" for="tab-{{ .Identifier }}" style="--tab-count: {{ $tabCount }};">
-			<img src="{{ .Params.icon }}" class="icon colorize" alt="{{ i18n .Name }} icon"> <!--{{ with .Params.icon }}{{ . }}&nbsp;{{ end }}-->
+			<!--<img src="{{ .Params.icon }}" class="icon colorize" alt="{{ i18n .Name }} icon">--> <!--{{ with .Params.icon }}{{ . }}&nbsp;{{ end }}-->
+			<i class="fa {{ .Params.icon }} icon" alt="{{ i18n .Name }} icon"></i>
 			<span class="text">{{ i18n .Name }}</span>
 		</label>
 		<div class="panel scroll-y">
