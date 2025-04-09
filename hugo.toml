@@ -97,27 +97,41 @@ linksAlt = { hosting = 'https://pages.github.com/', hostingStatus = 'https://www
 # Navigation tabs
 [[menus.nav]]
 	name = 'Scripts'
+	pre = 'fa-file-code' #'/icons/fa-file-code-solid.svg' #'📄'
+	title = 'Scripts'
 	identifier = 'scripts'
 	url = '/scripts/'
 	weight = 1
 	[menus.nav.params]
-		icon = 'fa-file-code' #'/icons/fa-file-code-solid.svg' #'📄'
 		item = 'Script'
 
 [[menus.nav]]
 	name = 'Docs'
+	pre = 'fa-book' #'/icons/fa-book-solid.svg' #'📚'
+	title = 'Documentation'
 	identifier = 'docs'
 	url = '/docs/'
 	weight = 2
 	[menus.nav.params]
-		icon = 'fa-book' #'/icons/fa-book-solid.svg' #'📚'
 		item = 'Document'
 
 [[menus.nav]]
 	name = 'Lab'
+	pre = 'fa-flask' #'/icons/fa-flask-solid.svg' #'🧪'
+	title = 'Lab!'
 	identifier = 'lab'
 	url = '/lab/'
 	weight = 3
 	[menus.nav.params]
-		icon = 'fa-flask' #'/icons/fa-flask-solid.svg' #'🧪'
 		item = 'Experiment'
+
+[[menus.nav]]
+	name = 'Blog'
+	pre = 'fa-blog' #'/icons/fa-blog-solid.svg' #'🅱'
+	title = 'Blog'
+	identifier = 'posts'
+	url = '/posts/'
+	weight = 4
+	[menus.nav.params]
+		item = 'Post'
+		hidden = true

@@ -3,25 +3,29 @@
 	{{- $currentSection := .Section -}}
 	{{- $tabCount := len .Site.Menus.nav -}}
 	{{- range .Site.Menus.nav -}}
-		{{- $isActive := or ($currentPage.IsMenuCurrent "nav" .) ($currentPage.HasMenuCurrent "nav" .) (eq $currentSection .Identifier) -}}
-		{{- $isContaining := (where (index $.Site.RegularPages) "Section" .Identifier) -}}
+		{{- if not .Params.hidden -}}
+			{{- $isActive := or ($currentPage.IsMenuCurrent "nav" .) ($currentPage.HasMenuCurrent "nav" .) (eq $currentSection .Identifier) -}}
+			{{- $isContaining := (where (index $.Site.RegularPages) "Section" .Identifier) -}}
 
-		<input class="input" name="tabs" type="radio" id="tab-{{ .Identifier }}" {{ if $isActive }}checked{{ end }}/>
+			<input class="input" name="tabs" type="radio" id="tab-{{ .Identifier }}" {{ if $isActive }}checked{{ end }}/>
 
-		<label class="label {{ if .Identifier | in $isContaining }}marker{{ else if $isActive }}marker{{ end }}" for="tab-{{ .Identifier }}" style="--tab-count: {{ $tabCount }};">
-			<!--<img src="{{ .Params.icon }}" class="icon colorize" alt="{{ i18n .Name }} icon">--> <!--{{ with .Params.icon }}{{ . }}&nbsp;{{ end }}-->
-			<i class="fa {{ .Params.icon }} icon" alt="{{ i18n .Name }} icon"></i>
-			<span class="text">{{ i18n .Name }}</span>
-		</label>
-		<div class="panel scroll-y">
-			{{- if eq .Identifier "scripts" -}}
-				{{ partial "nav/main/scripts.html" $currentPage -}}
-			{{- else if eq .Identifier "docs" }}
-				{{ partial "nav/main/docs.html" $currentPage -}}
-			{{- else if eq .Identifier "lab" -}}
-				{{ partial "nav/main/lab.html" $currentPage -}}
-			{{- end -}}
-		</div>
+			<label class="label {{ if .Identifier | in $isContaining }}marker{{ else if $isActive }}marker{{ end }}" for="tab-{{ .Identifier }}" style="--tab-count: {{ $tabCount }};" title="{{ i18n .Title }}">
+				<!--<img src="{{ .Params.icon }}" class="icon colorize" alt="{{ i18n .Name }} icon">--> <!--{{ with .Params.icon }}{{ . }}&nbsp;{{ end }}-->
+				<i class="fa {{ .Pre }} icon" alt="{{ i18n .Name }} icon"></i>
+				<span class="text">{{ i18n .Name }}</span>
+			</label>
+			<div class="panel scroll-y">
+				{{- if eq .Identifier "scripts" -}}
+					{{ partial "nav/main/scripts.html" $currentPage -}}
+				{{- else if eq .Identifier "docs" }}
+					{{ partial "nav/main/docs.html" $currentPage -}}
+				{{- else if eq .Identifier "lab" -}}
+					{{ partial "nav/main/lab.html" $currentPage -}}
+				{{- else if eq .Identifier "posts" -}}
+					{{ partial "nav/main/posts.html" $currentPage -}}
+				{{- end -}}
+			</div>
+		{{- end -}}
 	{{- end -}}
 
 	<script>

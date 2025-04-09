@@ -25,8 +25,17 @@ other = 'Scripts'
 [Docs]
 other = 'Docs'
 
+[Documentation]
+other = 'Documentation'
+
 [Lab]
 other = 'Lab'
+
+['Lab!']
+other = 'Lab!'
+
+[Blog]
+other = 'Blog'
 
 ['NEW!']
 other = 'RECENTLY ADDED'
