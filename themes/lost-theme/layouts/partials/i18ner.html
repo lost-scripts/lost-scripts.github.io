@@ -1,4 +1,4 @@
-{{/*
+{{- /*
 {{- if .IsTranslated -}}
 	{{- range .Translations -}}
 		<span class="i18ner" style=""> 
@@ -7,7 +7,7 @@
 		</span>
 	{{- end -}}
 {{- end -}}
-*/}}
+*/ -}}
 
 {{- if gt (len .Site.Languages) 1 -}}
 	<div id="i18ner">

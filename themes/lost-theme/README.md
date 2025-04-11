@@ -2,11 +2,13 @@
 
 Lost Theme is an item focused Hugo theme packed with customizable, eye-catching and powerful features. It is **work in progress**, tho... so expect ongoing changes/updates and enhancements.
 
+![Screenshot1](.github/README_01_dark-mode.png "Dark Mode")
+![Screenshot2](.github/README_02_light+accordion-mode.png "Light + Accordion Mode")
 
 ## Features
 
 - Tab/Accordion navigator for intuitive content organization.
-- Navigator filters for enhanced usability.
+- Navigator filters for enhanced usability (First tab only ATM).
 - Search box for quick access to relevant content.
 - Dark mode toggle for better readability.
 - Customizable highlight colors for personal styling.
@@ -134,6 +136,6 @@ If you encounter issues or have questions, feel free to write a comment or open 
 
 ## Other...
 
-- **Bare Repository:** The central repository for the theme could be cloned as bare repository using this command `git clone --bare https://github.com/lost-scripts/lost-theme` instead, which avoids using the `git config receive.denyCurrentBranch updateInstead` configuration. A bare repository avoids conflicts when pushing from multiple projects but complicates maintenance because you lose direct visibility into the files. You also can convert an existing non-bare repository to bare, but this process is more advanced and requires careful management of the worktree. Refer to Git's documentation for detailed steps.
+- **Bare Repository:** Alternatively, the central repository for the theme could be cloned as *bare repository* using the command `git clone --bare https://github.com/lost-scripts/lost-theme` to avoid having to apply the `git config receive.denyCurrentBranch updateInstead` configuration. A bare repository avoids conflicts when pushing from multiple projects but complicates maintenance because you lose direct visibility into the files. You also can convert an existing *non-bare* repository to *bare*, but this process is more advanced and requires careful management of the worktree. Refer to Git's documentation for further details.
 
 - **Multiple Sites Using the Theme:** This workflow supports using the same theme repository across multiple Hugo projects. Push updates from one project and pull them into others to maintain consistency.

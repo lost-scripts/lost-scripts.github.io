@@ -1,5 +1,6 @@
-<!--{{- /* partial "menu.html" (dict "menuID" "main" "page" .) */ -}}-->
-{{/*
+{{- /* partial "menu.html" (dict "menuID" "main" "page" .) */ -}}
+
+{{- /*
 <ul class="nav-articles">
 	{{- $currentPage := . -}}
 	{{- range .Site.RegularPages -}}
@@ -14,9 +15,9 @@
 		{{- end -}}
 	{{- end -}}
 </ul>
-*/}}
+*/ -}}
 
-{{/* <!-- Discarded in favor to bellow to preserve Hugo's default ordering! -->
+{{- /* <!-- Discarded in favor to bellow to preserve Hugo's default ordering! -->
 <ul class="nav-articles">
 	{{- $currentPage := . -}}
 	{{- $homepage := (site.Params.homepage | default "/") | urlize -}}
@@ -40,7 +41,7 @@
 		{{- end -}}
 	{{- end -}}
 </ul>
-*/}}
+*/ -}}
 
 <ul class="nav-articles">
 	{{- $currentPage := . -}}

@@ -1,9 +1,9 @@
-{{/*
+{{- /*
 E.G. (simple param): {{< get-param `homepage` >}}
 E.G. (map param): {{< get-param `map` `mapField` >}}
 E.G. (array param): {{< get-param `array` 0 >}}
 E.G. (specify a default value at the end): {{< get-param `unDefinedParam` `` `NOT FOUND!` >}}
-*/}}
+*/ -}}
 
 {{- $root := index .Site.Params (index .Params 0) -}}
 {{- if $root -}}

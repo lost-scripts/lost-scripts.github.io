@@ -1,4 +1,4 @@
-<!-- E.G.: {{/* < html-div class="center" > */}} -->
-<div class="{{ .Get "class" }}">
+{{- /* E.G.: {{< html-div class="center" >}} */ -}}
+<div class="{{ .Get `class` }}">
 	{{- .Inner -}}
 </div>

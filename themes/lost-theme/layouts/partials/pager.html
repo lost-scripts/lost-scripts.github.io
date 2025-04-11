@@ -15,7 +15,7 @@
 						<a href="{{ if .IsHome }}/{{ else }}{{ .RelPermalink }}{{ end }}">
 							{{- if .IsHome -}}
 								{{- /* i18n "home" | default "Home" */ -}}
-								{{- /* with page.Params.prefix -}}
+								{{- /* with page.Params.prefix */ -}}
 									<i class='fa fa-{{ . }}'></i>
 								{{- /* end */ -}}
 								<i class='fa fa-{{ site.Params.homeIcon }}' title='{{ i18n "home" | default "Home" }}'></i> <!--'fa{{ if not $isHome }}-solid {{ else }}-regular{{ end }}'-->

@@ -1,25 +1,27 @@
-# Try to get missing params form content...
+{{- /* Unsuccessful attempt to get missing "params" from contents... WARNING: Commented cause it started to throw errors from v0.145.0 onwards!  */ -}}
 
-{{- $param := .param }}
-{{- $value := index .page.Params $param }}
+{{- /* 
+{{- $param := .param -}}
+{{- $value := index .page.Params $param -}}
 
-{{- if not $value }}
-  {{- if eq $param "Title" }}
-    {{ $result := findRE "^#\\s+(.*)$" .page.Content }}
-    {{- if gt (len $result) 0 }}
-      {{ $value = index $result 0 1 | htmlUnescape }}
-    {{- end }}
-  {{- else if eq $param "Description" }}
-    {{ $content := .page.Content }}
-    {{ $start := findRE "(?m)^#\\s+.*" $content }}
-    {{- if gt (len $start) 0 }}
-      {{ $contentAfterTitle := after (len (index $start 0)) $content }}
-      {{ $firstParagraph := findRE "(?m)^[^#].*" $contentAfterTitle }}
-      {{- if gt (len $firstParagraph) 0 }}
-        {{ $value = index $firstParagraph 0 | htmlUnescape }}
-      {{- end }}
-    {{- end }}
-  {{- end }}
-{{- end }}
+{{- if not $value -}}
+	{{- if eq $param "Title" -}}
+		{{ $result := findRE "^#\\s+(.*)$" .page.Content }}
+		{{- if gt (len $result) 0 -}}
+			{{ $value = index $result 0 1 | htmlUnescape }}
+		{{- end -}}
+	{{- else if eq $param "Description" -}}
+		{{ $content := .page.Content }}
+		{{ $start := findRE "(?m)^#\\s+.*" $content }}
+		{{- if gt (len $start) 0 -}}
+			{{ $contentAfterTitle := after (len (index $start 0)) $content }}
+			{{ $firstParagraph := findRE "(?m)^[^#].*" $contentAfterTitle }}
+			{{- if gt (len $firstParagraph) 0 -}}
+				{{ $value = index $firstParagraph 0 | htmlUnescape }}
+			{{- end -}}
+		{{- end -}}
+	{{- end -}}
+{{- end -}}
 
-{{- return $value | default "" }}
+{{- return $value | default "" -}}
+*/ -}}

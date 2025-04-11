@@ -1,6 +1,6 @@
 <!-- Adjust relative paths for HTML kind of resources of the "homepaged" post (WARNING: './' not allowed!) -->
 {{- $content := "" -}}
-{{- if (isset . "Inner") -}} <!-- Try to make it work as shotcut as well? -->
+{{- if (isset . "Inner") -}} <!-- Try to make it work as shortcode as well? -->
 	{{- $content = .Inner -}}
 {{- else -}}
 	{{- $content = .Content -}}

@@ -16,16 +16,17 @@
 			<a href="{{ .page.RelPermalink }}">
 				<picture name="nav-item-icon">
 					{{- $iconPathBase := replace (path.Clean .page.File.Path) ".md" "" -}}
-					{{- $iconPathSVG := printf "%s.svg" $iconPathBase | relURL -}} <!-- {{- /* $iconPathSVG := path.Clean (replace .page.File.Path ".md" ".svg") | relURL */ -}} -->
+					{{- $iconPathSVG := printf "%s.svg" $iconPathBase | relURL -}} {{- /* $iconPathSVG := path.Clean (replace .page.File.Path ".md" ".svg") | relURL */ -}}
 					{{- $iconPathPNG := printf "%s.png" $iconPathBase | relURL -}}
 					{{- $iconPathJPG := printf "%s.jpg" $iconPathBase | relURL -}}
 
-					<!-- Debugging: Show generated routes in HTML --><!--
+					{{- /* <!-- Debugging: Show generated routes in HTML -->
 					<span style="font-size: 0.5em; color: red; display: block;">
 						SVG: {{- $iconPathSVG -}}<br>
 						PNG: {{- $iconPathPNG -}}<br>
 						JPG: {{- $iconPathJPG -}}
-					</span>	-->
+					</span>
+					*/ -}}
 
 					{{- if (fileExists $iconPathSVG) -}}
 						<img src="{{ $iconPathSVG }}" class="icon colorize" alt="{{ .page.Title }} icon">

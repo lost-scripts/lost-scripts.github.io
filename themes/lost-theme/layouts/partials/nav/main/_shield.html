@@ -4,9 +4,9 @@
 			<img class="shield" src="{{ .src }}" alt="{{ .alt }}">
 		</div>
 	{{- end -}}
-{{- end }}
+{{- end -}}
 
-<!--
+{{- /* 
 {{- with .page.Params.shields -}}
 	{{- $shields := . -}}
 	{{- $count := len $shields -}}
@@ -14,4 +14,4 @@
 		<img src="{{ $shield.src }}" alt="{{ $shield.alt }}" style="{{ if (eq $index 0) }}transform-origin: left center;{{ else if (eq $index (sub $count 1)) }}transform-origin: right center;{{ else }}transform-origin: center center;{{ end }}">
 	{{- end -}}
 {{- end -}}
--->
+*/ -}}
