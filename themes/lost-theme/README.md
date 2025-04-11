@@ -2,18 +2,22 @@
 
 Lost Theme is an item focused Hugo theme packed with customizable, eye-catching and powerful features. It is **work in progress**, tho... so expect ongoing changes/updates and enhancements.
 
-![Screenshot1](.github/README_01_dark-mode.png "Dark Mode")
-![Screenshot2](.github/README_02_light+accordion-mode.png "Light + Accordion Mode")
+|               Dark Mode               |               Light + Accordion Mode              |
+| :-----------------------------------: | :-----------------------------------------------: |
+|![C1](.github/README_01_dark-mode.png) | ![C2](.github/README_02_light+accordion-mode.png) |
+
 
 ## Features
 
 - Tab/Accordion navigator for intuitive content organization.
-- Navigator filters for enhanced usability (First tab only ATM).
-- Search box for quick access to relevant content.
+- Navigator filters for enhanced usability (1st section only ATM).
+- Lightweight & performant search box for quick access to relevant content.
 - Dark mode toggle for better readability.
 - Customizable highlight colors for personal styling.
 - Multi-language localization support.
 - Link Dock for links, Email, RSS feed, etc.
+- Optional `<aside>` continer.
+- Allows README.md files to be reused as pages with minimal changes. Or that's the goal...
 - And much more...
 
 
@@ -127,7 +131,7 @@ git subtree pull --prefix=themes/lost-theme ../lost-theme main --squash # `--squ
 ## Known Issues
 
 - Translated pages have trouble showing images inserted in HTML format.
-- The list is simply too longer right now, but I'll keep adding more as they come to mind...
+- The list is simply too long right now, but I'll keep adding more as they come to mind...
 
 ## Support
 
