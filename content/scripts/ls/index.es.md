@@ -84,7 +84,7 @@ El núcleo que te proporciona todos los módulos y recursos que [Moho®](https:/
 <table width="100%" border="2" class="card">
 	<tr>
 		<th width="96" valign="top">
-			<a href="https://lost-scripts.github.io/ls/" title="Go to Script page..."><img src="https://img.shields.io/badge/Yet%20Another%20Window%20More...-red.svg" width="96" height="20"></a>
+			<a href="https://lost-scripts.github.io/ls/" title="Go to Script page..."><img src="https://img.shields.io/badge/Other%20Window%3F-red.svg" width="96" height="20"></a>
 		</th>
 		<th align="right" valign="middle" nowrap>
 			<a href="https://moho.lostmarble.com/" title="Go to Moho website"><img height="20px" src="https://img.shields.io/badge/For-Moho_Pro_14.3+-orange" alt="Moho version"></a>

@@ -1,13 +1,23 @@
-{{- /*
-	{{- define "main" -}}
-		{{- with .GetPage `scripts/ls/ls.md` -}}
-			<h1>{{ .Title }}</h1>
-			{{ .Content }}
-		{{- end -}}
+{{- /* <!-- 20250412-01-55: Commented and added `<script>` block bellow to patch Hugo v0.146+ not using `layouts/index.html` as homepage... -->
+{{- define "main" -}}
+	{{ .Content }}
+	{{- range site.RegularPages -}}
+		<h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+		{{ .Summary }}
 	{{- end -}}
+{{- end -}}
 */ -}}
 
-{{- /*
+{{- /* <!-- 1st try... -->
+{{- define "main" -}}
+	{{- with .GetPage `scripts/ls/ls.md` -}}
+		<h1>{{ .Title }}</h1>
+		{{ .Content }}
+	{{- end -}}
+{{- end -}}
+*/ -}}
+
+{{- /* <!-- 2nd try... -->
 {{- define "main" -}}
 	{{- with .GetPage (.Site.Params.homepage | relURL) -}}
 		<h1>{{ .Title }}</h1>
