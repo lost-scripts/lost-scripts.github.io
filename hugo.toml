@@ -8,9 +8,9 @@ defaultContentLanguage = 'en'
 defaultContentLanguageInSubdir = false
 enableMissingTranslationPlaceholder = true
 title = 'Lost Scripts™'
-copyright = 'Copyright © 2025 · Rai López · All Rights Reserved' #'© 2025 · Rai López · ARR'
+copyright = 'Copyright © 2025 · Rai López · All Rights Reserved'
 theme = 'lost-theme'
-publishDir = 'docs' # Use `hugo server --destination public` (or alias `hserver` if configured) for previewing and `hugo --destination docs` (or `h`) for final generation.
+publishDir = 'docs' # Use `hugo server --destination public` (or alias `hs` if configured) for previewing and `hugo --destination docs` (or `h`) for final generation.
 
 
 ###############
