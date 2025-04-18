@@ -31,6 +31,34 @@ function switchTheme(state) {
 	updateIcons();
 }
 
+// Gets current theme of comments section (giscus)
+function getGiscusTheme() {
+	const el = document.querySelector('script[src*="giscus.app"]');
+	if (!el) return null;
+
+	const darked = localStorage.getItem('darked');
+	return darked === 'true' ? el.dataset.themeDark || 'dark' : darked === 'false' ? el.dataset.themeLight || 'light' : null;
+}
+
+// Applies current theme to comments section (giscus)
+function setGiscusTheme() {
+	const iframe = document.querySelector('iframe.giscus-frame');
+	if (!iframe) return;
+
+	const theme = getGiscusTheme();
+	if (iframe.classList.contains('giscus-frame--loading')) { // If giscus is still loading, we modify its src to use the new theme
+		const url = new URL(iframe.src);
+		url.searchParams.set('theme', theme);
+		iframe.src = url.toString();
+	} else { // If it's already loaded, we send the message to it for changing the theme
+		iframe.contentWindow?.postMessage({
+			giscus: {
+				setConfig: { theme }
+			}
+		}, 'https://giscus.app');
+	}
+}
+
 // Applies the stored accent color based on the current theme
 function applyStoredAccent() {
 	const storedAccentLight = localStorage.getItem('accentLight');
@@ -178,8 +206,21 @@ darker.addEventListener('click', function() {
 	highlighter.value = getCSSVarValue('--accent');
 	updatePseudoStyles(getCSSVarValue('--accent'));
 	updateIcons();
+	setGiscusTheme();
 	audioFeedback(this); // Or use: const audio = document.getElementById('other-audio');
 });
+
+// Esto puedes colocarlo directamente al inicio, antes de que se cargue Giscus (o en main.js si se ejecuta antes de entrar en viewport)
+const giscusScript = document.querySelector('script[src*="giscus.app"]');
+
+if (giscusScript) {
+	const darked = localStorage.getItem('darked'); // null = auto
+	const theme = darked === 'true' ? giscusScript.dataset.themeDark || 'dark'
+			: darked === 'false' ? giscusScript.dataset.themeLight || 'light'
+			: 'preferred_color_scheme'; // fallback
+
+	giscusScript.setAttribute('data-theme', theme);
+}
 
 // Initialize the picker color
 if (!root.classList.contains('darked')) {

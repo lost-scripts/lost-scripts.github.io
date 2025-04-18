@@ -233,6 +233,9 @@
 	li {
 		color: var(gray-3C);
 	}
+	.giscus {
+		/*filter: invert(0.9) hue-rotate(15deg) saturate(5);*/ /* dirty dark mode? */
+	}
 	.invert {
 		/*filter: invert(87%) sepia(91%) saturate(672%) hue-rotate(2deg) brightness(103%) contrast(101%);*/
 	}
@@ -1754,6 +1757,16 @@ input:not(input:checked) + .label {
 		transform: translateX(0px) translateY(0px);
 		box-shadow: -1px 1px 1px 1px rgba(0, 0, 0, 0.67) inset;
 		background-color: color-mix(in srgb, var(--accent) 50%, var(--gray-A5));
+	}
+}
+
+.commenter  {
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 1.5em;
+
+	.giscus {
+		opacity: 0.9;
 	}
 }
 

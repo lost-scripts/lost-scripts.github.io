@@ -31,6 +31,7 @@
 	{{- if eq .Section "scripts" -}}
 		{{ .Content }}
 		{{- partial "terms.html" (dict "taxonomy" "tags" "page" .) -}}
+		{{- partial "giscus.html" . -}}
 	{{- else if eq .Section "docs" -}}
 		<h1>{{ .Title }}</h1>
 		{{- /* .Parent.Content */ -}}
