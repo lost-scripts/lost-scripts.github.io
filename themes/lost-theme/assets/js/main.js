@@ -221,7 +221,7 @@ if (giscusScript) {
 
 	giscusScript.setAttribute('data-theme', theme);
 }
-
+ 
 // Initialize the picker color
 if (!root.classList.contains('darked')) {
 	highlighter.value = storedAccentLight || accentLightDef;
@@ -392,7 +392,7 @@ confirmButton.addEventListener('click', function() {
 // Manage nav width as best/simple as possible...
 if (nav) {
 	let previousWidth = nav.offsetWidth;
-	const navWidthMid = parseFloat(getComputedStyle(root).getPropertyValue('--nav-w-mid')) || 192;
+	const navWidthMid = parseFloat(getComputedStyle(root).getPropertyValue('--nav-swap')) || 192;
 
 	const observer = new ResizeObserver(() => {
 		const navWidth = nav.offsetWidth;
@@ -412,6 +412,38 @@ if (nav) {
 	});
 	observer.observe(nav);
 }
+
+// nav border resizer - Copyright (c) 2025 by Malcolm Rodrigues (https://codepen.io/rod911/pen/wvzPjEV)
+var navContainer = nav.parentElement; //document.querySelector("#section");
+var navResizer = document.querySelector("#resizer");
+var navResizerDrag = false;
+var navResizerMoveX = nav.getBoundingClientRect().width + navResizer.getBoundingClientRect().width / 2;
+
+navResizer.addEventListener("mousedown", function (e) {
+	navResizerDrag = true;
+	navResizerMoveX = e.x;
+});
+
+navContainer.addEventListener("mousemove", function (e) {
+	navResizerMoveX = e.x;
+	if (navResizerDrag) {
+		nav.style.width = navResizerMoveX - navResizer.getBoundingClientRect().width / 2 + "px";
+		e.preventDefault();
+	}
+});
+
+navContainer.addEventListener("mouseup", function (e) {
+	navResizerDrag = false;
+});
+
+// Listener for double click to reset nav auto-width
+navResizer.addEventListener('dblclick', function() {
+	if (nav) {
+		localStorage.removeItem('navWidth');
+		nav.style.width = styles?.getPropertyValue("--nav-w-def") || '33.3%';
+		console.log('Auto-width for nav was restablished.');
+	}
+});
 
 // Sync #header-left & nav widths (if I remember well...)
 window.addEventListener('resize', () => {

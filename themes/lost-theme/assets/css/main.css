@@ -248,7 +248,7 @@
 
 .responsive {
 	--padding-res: calc(var(--padding) * 1%);
-	--xxs-res:  calc(var(--xxs) * 10%); /*0.125*/
+	--xxs-res: calc(var(--xxs) * 10%); /*0.125*/
 	--xs-res: calc(var(--xs) * 10%); /*0.25*/
 	--s-res: calc(var(--s) * 10%); /*0.5*/
 	--m-res: calc(var(--m) * 10%); /*1*/
@@ -339,6 +339,7 @@
 		filter: saturate(33%);
 		opacity: 0.67;
 	}
+	/* &::-webkit-resizer {} */
 }
 
 html, body {
@@ -530,7 +531,7 @@ nav, .nav {
 	--nav-width: 0;
 	display: flex;
 	flex-flow: column;
-	resize: horizontal; /*flex: 33.3%;*/ /* TBD: Swap for not allowing horizontal resizing */
+	/*resize: horizontal;*/ /*flex: 33.3%;*/ /* TBD: Swap for not allowing horizontal resizing (finally, commented after adding border resize) */
 	height: 100%; /*min-height: 100vh;*/
 	width: 100%;
 	min-width: calc(var(--nav-w-max) / 3.33);
@@ -669,6 +670,40 @@ nav ul li details summary a {
 		color: inherit;
 		margin: -1px 0; /* Avoids translation bellow exposes details area at top! */
 		transform: translateX(1px) translateY(1px);
+	}
+}
+
+.resizer {
+	height: 100%;
+	width: 0;
+	flex-shrink: 0;
+	position: relative;
+	cursor: col-resize;
+	user-select: none;
+	background-color: transparent;
+	z-index: 2;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		height: 16px;
+		width: 6px;
+		transform: translate(-50%, -50%);
+		opacity: 0.67;
+		border-inline: 2px solid var(--text);
+		filter: drop-shadow(0px 0px 3px var(--text-inv));
+	}
+	&:hover::before {
+		height: 18px;
+		width: 9px;
+		border-inline-width: 3px;
+		filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.66));
+	}
+	&:active::before {
+		opacity: 1;
+		border-inline-color: var(--accent);
 	}
 }
 
@@ -846,7 +881,7 @@ blockquote {
 	hyphens: auto;
 	hyphenate-limit-chars: 6;
 	font-size: 0.875em;
-    font-size: clamp(0.75em, 6.5cqw, 1em);
+	font-size: clamp(0.75em, 6.5cqw, 1em);
 	background-color: color-mix(in srgb, var(--accent) 33%, transparent);
 	box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.33);
 
@@ -1011,7 +1046,7 @@ th, td {
 	border-right: 1px solid var(--gray-A5);
 	border-bottom: 1px solid var(--gray-A5);
 	font-size: smaller;
-    font-size: clamp(0.5em, 4.5cqw, 1em);
+	font-size: clamp(0.5em, 4.5cqw, 1em);
 	line-height: clamp(1.16em, 4.5cqw, 1.33em);
 	container-type: inline-size;
 
@@ -1105,7 +1140,7 @@ th, td {
 
 #filterer {
 	/*margin-top: 4px;*/
-	margin-right: 2px;
+	margin-right: 4px;
 	border-radius: var(--round);
 	cursor: pointer;
 	user-select: none;
@@ -1197,7 +1232,7 @@ th, td {
 			}
 		}
 
-		& a, button { /* For direct-child elements  */
+		& a, button { /* For direct-child elements */
 			all: unset;
 			display: inherit;
 			width: 100%;
@@ -1290,7 +1325,7 @@ th, td {
 		align-items: center;
 		justify-content: center;
 		height: 100%;
-		width:  auto;
+		width: auto;
 		/*filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.16));*/
 	}
 	& img {
@@ -1321,7 +1356,7 @@ th, td {
 	content: '';
 	position: absolute;
 	height: 100%;
-	width:  100%;
+	width: 100%;
 	scale: 1.1; /* Try to counteract aliasing */
 	display: inline-block;
 	align-items: center;
@@ -1361,10 +1396,10 @@ th, td {
 }
 
 @supports selector(:has(+ *)) {
-    .linker-item:hover + span + .linker-item, .linker-item:has(+ span + .linker-item:hover) { /*.linker-item:hover + .linker-item, .linker-item:has(+ .linker-item:hover)*/
+	.linker-item:hover + span + .linker-item, .linker-item:has(+ span + .linker-item:hover) { /*.linker-item:hover + .linker-item, .linker-item:has(+ .linker-item:hover)*/
 		scale: calc(var(--item-scale) * 0.75);
 	}
-    .linker-item:focus-visible + span + .linker-item, .linker-item:has(+ span + .linker-item:focus-visible) { /*.linker-item:focus-visible + .linker-item, .linker-item:has(+ .linker-item:focus-visible)*/
+	.linker-item:focus-visible + span + .linker-item, .linker-item:has(+ span + .linker-item:focus-visible) { /*.linker-item:focus-visible + .linker-item, .linker-item:has(+ .linker-item:focus-visible)*/
 		scale: calc(var(--item-scale) * 0.67);
 	}
 }
@@ -1760,7 +1795,7 @@ input:not(input:checked) + .label {
 	}
 }
 
-.commenter  {
+.commenter {
 	width: 100%;
 	margin: 0 auto;
 	padding-top: 1.5em;
@@ -2355,7 +2390,7 @@ nav > section {
 	}
 }
 
-@keyframes blink {  
+@keyframes blink {
 	0% { opacity: 1.0; }
 	25% { opacity: 0.075; }
 	100% { opacity: 1.0; }
