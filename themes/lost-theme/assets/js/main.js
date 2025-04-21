@@ -444,6 +444,8 @@ navContainer.addEventListener("pointerup", () => {
 if (isTouchDevice()) {
 	let lastTap = 0;
 	navResizer.addEventListener("pointerup", function () {
+		if (navResizerDrag) return;
+
 		const now = Date.now();
 		if (now - lastTap < 300) {
 			localStorage.removeItem("navWidth");
