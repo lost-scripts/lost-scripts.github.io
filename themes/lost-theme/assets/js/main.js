@@ -157,6 +157,11 @@ function audioFeedback(emitter, vol = 0.25) {
 	}
 }
 
+function isTouchDevice() {
+	return matchMedia("(pointer: coarse)").matches;
+}
+
+
 // Execute code blocks depending on the value of 'data-context'
 if (context === "head") {
 	// DOM-independent logic...
@@ -419,31 +424,41 @@ var navResizer = document.querySelector("#resizer");
 var navResizerDrag = false;
 var navResizerMoveX = nav.getBoundingClientRect().width + navResizer.getBoundingClientRect().width / 2;
 
-navResizer.addEventListener("mousedown", function (e) {
+navResizer.addEventListener("pointerdown", (e) => {
 	navResizerDrag = true;
-	navResizerMoveX = e.x;
+	navResizerMoveX = e.clientX;
 });
 
-navContainer.addEventListener("mousemove", function (e) {
-	navResizerMoveX = e.x;
+navContainer.addEventListener("pointermove", (e) => {
 	if (navResizerDrag) {
-		nav.style.width = navResizerMoveX - navResizer.getBoundingClientRect().width / 2 + "px";
+		nav.style.width = e.clientX - navResizer.getBoundingClientRect().width / 2 + "px";
 		e.preventDefault();
 	}
 });
 
-navContainer.addEventListener("mouseup", function (e) {
+navContainer.addEventListener("pointerup", () => {
 	navResizerDrag = false;
 });
 
 // Listener for double click to reset nav auto-width
-navResizer.addEventListener('dblclick', function() {
-	if (nav) {
-		localStorage.removeItem('navWidth');
-		nav.style.width = styles?.getPropertyValue("--nav-w-def") || '33.3%';
-		console.log('Auto-width for nav was restablished.');
-	}
-});
+if (isTouchDevice()) {
+	let lastTap = 0;
+	navResizer.addEventListener("pointerup", function () {
+		const now = Date.now();
+		if (now - lastTap < 300) {
+			localStorage.removeItem("navWidth");
+			nav.style.width = styles?.getPropertyValue("--nav-w-def") || "33.3%";
+			console.log("Auto-width (tap) restored.");
+		}
+		lastTap = now;
+	});
+} else {
+	navResizer.addEventListener("dblclick", function () {
+		localStorage.removeItem("navWidth");
+		nav.style.width = styles?.getPropertyValue("--nav-w-def") || "33.3%";
+		console.log("Auto-width (dblclick) restored.");
+	});
+}
 
 // Sync #header-left & nav widths (if I remember well...)
 window.addEventListener('resize', () => {

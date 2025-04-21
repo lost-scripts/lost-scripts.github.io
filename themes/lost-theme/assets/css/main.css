@@ -680,7 +680,6 @@ nav ul li details summary a {
 	position: relative;
 	cursor: col-resize;
 	user-select: none;
-	background-color: transparent;
 	z-index: 2;
 
 	&::before {
