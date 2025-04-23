@@ -9,16 +9,16 @@ Lost Theme is an item focused Hugo theme packed with customizable, eye-catching 
 
 ## Features
 
-- Tab/Accordion navigator for intuitive content organization.
-- Navigator filters for enhanced usability (1st section only ATM).
-- Lightweight & performant search box for quick access to relevant content.
+- Tab/Accordion navigator for intuitive navigation and organization.
+- Navigator filters for enhanced usability (1st section only, ATM).
+- Lightweight & performant [*pizza-searchbox*](github.com/infinilabs/pizza-searchbox) for quick access to relevant content.
 - Dark mode toggle for better readability.
-- Customizable highlight colors for personal styling.
+- Customizable highlights color for personal styling.
 - Multi-language localization support.
-- Link Dock for links, Email, RSS feed, etc.
-- Optional `<aside>` continer.
+- Link dock for links like Email, RSS feed, social, etc.
+- Simple comment system by [*giscus*](github.com/giscus/giscus) (requires a GitHub account, though).
+- Optional `<aside>` container.
 - Allows README.md files to be reused as pages with minimal changes. Or that's the goal...
-- And much more...
 
 
 ## Installation
@@ -64,13 +64,17 @@ theme = 'lost-theme'
 publishDir = 'docs'
 
 [params]
-homepage = '/scripts/ls/' # In case you want some post/item be your homepage
+homepage = '/scripts/ls/' # E.g. in case you want some post/item be your homepage
 homeIcon = 'house'
+navMode = 'auto' # auto (default) / tabbed / accordion
+comments = true
+commentsLight = "catppuccin_latte"
+commentsDark = "catppuccin_frappe"
+banner = false
 subtitle = 'Site subtitle'
 author = { name = 'Name', homepage = 'https://username.github.io/' }
 copyrightAlt = '© [YEAR] · [NAME] · ARR'
 since = 2024
-banner = false
 faStyle = 'solid'
 ```
 

@@ -2,25 +2,29 @@
 
 {{- if (eq (.Site.Params.comments | default true) true) -}}
 	{{- if (eq (.Params.comments | default true) true) -}}
-		<div class="commenter">
-			<script src="https://giscus.app/client.js"
-				data-repo="GitHubUserName/RepoName"
-				data-repo-id="ReplaceThisWithYourRepoId"
-				data-category="Announcements"
-				data-category-id="DIC_kwDOONd4H84CpGLA"
-				data-mapping="pathname"
-				data-strict="1"
-				data-reactions-enabled="1"
-				data-emit-metadata="0"
-				data-input-position="bottom"
-				data-theme="preferred_color_scheme"
-				data-theme-light="{{ .Site.Params.commentsLight | default `light` }}" 
-				data-theme-dark="{{ .Site.Params.commentsDark | default `dark` }}"
-				data-lang="en"
-				data-loading="lazy"
-				crossorigin="anonymous"
-				async>
-			</script>
-		</div>
+	{{- if or (not .Site.Params.commentsRepo) (eq .Site.Params.commentsRepo "") -}}
+			<p class="center" style="color: red; margin-top: 1.5rem;">⚠️ Comments couldn't be loaded due to giscus repo is not defined in config.toml</p>
+		{{- else -}}
+			<div class="commenter">
+				<script src="https://giscus.app/client.js"
+					data-repo="{{ .Site.Params.commentsRepo }}"
+					data-repo-id="{{ .Site.Params.commentsRepoId }}"
+					data-category="{{ .Site.Params.commentsCategory | default `Announcements` }}"
+					data-category-id="{{ .Site.Params.commentsCategoryId | default `DIC_kwDOONd4H84CpGLA` }}"
+					data-mapping="{{ .Site.Params.commentsMapping | default `pathname` }}"
+					data-strict="{{ .Site.Params.commentsStrict | default `1` }}"
+					data-reactions-enabled="{{ .Site.Params.commentsReactions | default `1` }}"
+					data-emit-metadata="{{ .Site.Params.commentsEmitMetadata | default `0` }}"
+					data-input-position="{{ .Site.Params.commentsInputPosition | default `bottom` }}"
+					data-theme="preferred_color_scheme"
+					data-theme-light="{{ .Site.Params.commentsThemeLight | default `light` }}" 
+					data-theme-dark="{{ .Site.Params.commentsThemeDark | default `dark` }}"
+					data-lang="{{ .Site.Language.Lang | default `en` }}"
+					data-loading="{{ .Site.Params.commentsLoading | default `lazy` }}"
+					crossorigin="anonymous"
+					async>
+				</script>
+			</div>
+		{{- end }}
 	{{- end -}}
 {{- end -}}

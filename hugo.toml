@@ -77,8 +77,10 @@ homepage = '/scripts/ls/'
 homeIcon = 'house'
 navMode = 'auto' # auto (default) / tabbed / accordion
 comments = true
-commentsLight = "catppuccin_latte"
-commentsDark = "catppuccin_frappe"
+commentsRepo = 'lost-scripts/lost-scripts.github.io'
+commentsRepoId='R_kgDOONd4Hw'
+commentsThemeLight = 'catppuccin_latte'
+commentsThemeDark = 'catppuccin_frappe'
 banner = true
 subtitle = 'The Lost (Moho® Scripts) Ark'
 author = { name = 'Rai López', homepage = 'https://lost-scripts.github.io/' }
