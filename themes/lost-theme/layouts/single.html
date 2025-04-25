@@ -31,7 +31,7 @@
 	{{- if eq .Section "scripts" -}}
 		{{ .Content }}
 		{{- partial "terms.html" (dict "taxonomy" "tags" "page" .) -}}
-		{{- partial "giscus.html" . -}}
+		{{- partial "commenter.html" . -}}
 	{{- else if eq .Section "docs" -}}
 		<h1>{{ .Title }}</h1>
 		{{- /* .Parent.Content */ -}}
@@ -44,11 +44,11 @@
 		{{ .Description }}
 		<br>
 		{{ .Content }}
-		{{- partial "giscus.html" . -}}
+		{{- partial "commenter.html" . -}}
 	{{- else if eq .Section "lab" -}}
 		{{ .Content }}
 		{{- partial "terms.html" (dict "taxonomy" "tags" "page" .) -}}
-		{{- partial "giscus.html" . -}}
+		{{- partial "commenter.html" . -}}
 	{{- else -}}
 		<h1>{{ .Title }}</h1>
 
