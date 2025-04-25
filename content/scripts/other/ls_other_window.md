@@ -4,6 +4,7 @@ tags = ['other']
 categories = ['tool']
 date = 2023-07-24T13:35:40+02:00
 description = "Placeholder for another Lost Script intended to accomplish some Moho® related purposes."
+comments = false
 
 [params]
     Author = 'Rai López'

@@ -5,6 +5,7 @@ tags = ['info']
 categories = ['tool']
 #date = 2024-06-30T03:43:40+02:00
 description = "Supposedly, a persistent info palette plus helpers for better management of Moho® elements."
+comments = false
 
 [params]
     Labels = ['script', 'experiment'] # Dispensable?

@@ -4,6 +4,7 @@ tags = ['other']
 categories = ['tool']
 date = 2023-07-24T13:35:40+02:00
 description = "Placeholder para otro Lost Script destinado a cumplir algunos menesteres relacionados con Moho®."
+comments = false
 
 [params]
     Author = 'Rai López'

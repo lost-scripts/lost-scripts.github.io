@@ -5,6 +5,7 @@ tags = ['other']
 categories = ['tool']
 date = 2002-06-21T16:00:00+02:00
 description = "Placeholder for the Lost Script experiment number 626."
+comments = true
 
 [params]
     Labels = ['script', 'experiment'] # Dispensable?

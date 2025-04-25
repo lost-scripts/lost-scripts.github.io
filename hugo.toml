@@ -79,6 +79,7 @@ navMode = 'auto' # auto (default) / tabbed / accordion
 comments = true
 commentsRepo = 'lost-scripts/lost-scripts.github.io'
 commentsRepoId='R_kgDOONd4Hw'
+commentsCategoryId = 'DIC_kwDOONd4H84CpGLA'
 commentsThemeLight = 'catppuccin_latte'
 commentsThemeDark = 'catppuccin_frappe'
 banner = true
@@ -119,6 +120,7 @@ linksAlt = { hosting = 'https://pages.github.com/', hostingStatus = 'https://www
 	weight = 2
 	[menus.nav.params]
 		item = 'Document'
+		#comments = false
 
 [[menus.nav]]
 	name = 'Lab'

@@ -7,6 +7,9 @@ subcategory = 'Index'
 date = 2023-10-20T19:29:50+02:00
 lastmod = 2024-02-09T00:54:00+02:00
 description = "Paleta persistente de formas más utilidades para una mejor gestión de vectores Moho® en general y de las 'Liquid Shapes' en particular."
+commentsRepo = 'lost-scripts/ls_shapes_window'
+commentsRepoId = 'R_kgDOMXYNXw'
+commentsCategoryId = 'DIC_kwDOMXYNX84CpZZs'
 
 [params]
 	Author = 'Rai López'

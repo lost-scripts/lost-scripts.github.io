@@ -9,15 +9,15 @@ Lost Theme is an item focused Hugo theme packed with customizable, eye-catching 
 
 ## Features
 
-- Tab/Accordion navigator for intuitive navigation and organization.
+- Tab/Accordion navigator (with auto mode) for intuitive navigation and organization.
 - Navigator filters for enhanced usability (1st section only, ATM).
-- Lightweight & performant [*pizza-searchbox*](github.com/infinilabs/pizza-searchbox) for quick access to relevant content.
-- Dark mode toggle for better readability.
+- Lightweight & performant [*pizza-searchbox*](github.com/infinilabs/pizza-searchbox) for quick searches along the site.
+- Light/Dark/System (default) modes to meet all needs...
 - Customizable highlights color for personal styling.
-- Multi-language localization support.
+- Flexible multi-language localization system: Translate a page or not and to any language!
 - Link dock for links like Email, RSS feed, social, etc.
-- Simple comment system by [*giscus*](github.com/giscus/giscus) (requires a GitHub account, though).
-- Optional `<aside>` container.
+- Simple, great and highly customizable [GitHub Discussions](docs.github.com/en/discussions) based comment system by [*giscus*](github.com/giscus/giscus).
+- Optional `<aside>` container (WIP!).
 - Allows README.md files to be reused as pages with minimal changes. Or that's the goal...
 
 

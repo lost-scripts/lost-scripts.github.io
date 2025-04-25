@@ -44,9 +44,11 @@
 		{{ .Description }}
 		<br>
 		{{ .Content }}
+		{{- partial "giscus.html" . -}}
 	{{- else if eq .Section "lab" -}}
 		{{ .Content }}
 		{{- partial "terms.html" (dict "taxonomy" "tags" "page" .) -}}
+		{{- partial "giscus.html" . -}}
 	{{- else -}}
 		<h1>{{ .Title }}</h1>
 
