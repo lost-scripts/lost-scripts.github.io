@@ -19,6 +19,9 @@ other = 'Sin anterior...'
 ['no_next']
 other = 'Sin siguiente...'
 
+['back_to_top']
+other = 'Volver arriba'
+
 [Scripts]
 other = 'Scripts'
 
@@ -69,6 +72,15 @@ other = 'Oscurece!'
 
 [_auto]
 other = ' (AUTO)'
+
+[INFO]
+other = 'INFO'
+
+[WARNING]
+other = 'ADVERTENCIA'
+
+[TIP]
+other = 'DATO'
 
 [mode_highlights]
 other = 'Resaltado del modo actual'

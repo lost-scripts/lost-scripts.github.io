@@ -520,6 +520,37 @@ window.resetFilters = function() {
 	sessionStorage.removeItem('selectedTags'); // Clear sessionStorage
 };
 
+// Go to top buttoon
+const lifter = document.getElementById("lifter");
+const lifterParent = lifter.parentElement;
+if (lifter && lifterParent) {
+	lifterParent.addEventListener("scroll", function () { // Show or hide the button on scroll
+		if (lifterParent.scrollTop > 333) {
+			lifter.style.display = 'block';
+			setTimeout(() => { lifter.classList.add('visible'); }, 0); //lifter.style.display = "block";
+		} else {
+			lifter.classList.remove('visible'); //lifter.style.display = "none";
+		}
+	});
+
+	lifter.addEventListener("click", function () {
+		//lifterParent.scrollTo({ top: 0, behavior: "smooth" }); // Commented cause `behavior: "smooth"` doesn't seem to work, hence...
+		const intervalTime = 1; // Interval in milliseconds (adjust for speed)
+		const scrollStep = -25; // Pixels to be shifted per interval (negative to go up)
+
+		const scrollInterval = setInterval(function() {
+			if (lifterParent.scrollTop > 0) {
+				lifter.style.pointerEvents = 'none';
+				lifterParent.scrollTop += scrollStep;
+			} else {
+				lifter.style.display = 'none';
+				lifter.style.pointerEvents = 'auto';
+				clearInterval(scrollInterval); // Stop interval when it reaches the top
+			}
+		}, intervalTime);
+	});
+}
+
 // Initial update of icons
 updateIcons();
 

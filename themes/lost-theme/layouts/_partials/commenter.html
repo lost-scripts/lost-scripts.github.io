@@ -20,7 +20,7 @@
 
 	{{- if or (not $repo) (eq $repo "") (not $catId) (eq $catId "") -}}
 			<blockquote style="margin-top: 1.5rem;">
-				<p>ℹ <strong>INFO:</strong> Comments could not be loaded because there is no <a href="https://giscus.app/#repository" title="Go to giscus.app"><em>giscus</em> repository</a> specified in the <code>params.commentsRepo</code> custom parameter of your Hugo project's <em>config.toml</em> file... Please check that!</p>
+				<p>ℹ <strong>{{ i18n `INFO` }}:</strong> Comments could not be loaded because there is no <a href="https://giscus.app/#repository" title="Go to giscus.app"><em>giscus</em> repository</a> specified in the <code>params.commentsRepo</code> custom parameter of your Hugo project's <em>config.toml</em> file... Please check that!</p>
 			</blockquote>
 	{{- else -}}
 		<div class="commenter">
