@@ -86,6 +86,35 @@ function getData(element, attr) {
 	return element.getAttribute(attr) || element.getAttribute('title') || '';
 }
 
+// Limit runs in ms (requires instantiation! E.g. const elemntShouldUpdate = createDebounceGuard(100);)
+function createDebounceGuard(delay) {
+	let timeoutId;
+	let canExecute = true;
+
+	return function() {
+		if (canExecute) {
+			canExecute = false;
+			clearTimeout(timeoutId);
+			timeoutId = setTimeout(() => {
+				canExecute = true;
+			}, delay);
+			return true;
+		}
+		return false;
+	};
+}
+
+// Convert scroll to opacity
+function scrollToOpacity(scrollTop, start, end) {
+	if (scrollTop > start && scrollTop < end) {
+		return 1 - ((scrollTop - start) / (end - start));
+	} else if (scrollTop >= end) {
+		return 0;
+	} else {
+		return 1;
+	}
+}
+
 // Update icons (colorized images)
 function updateIcons() {
 	document.querySelectorAll('.colorize').forEach(function(container) {
@@ -177,6 +206,7 @@ if (!document.body) {return;} // if (!document.body || context !== "body") {retu
 ///////////////
 
 const nav = document.getElementById('nav');
+const main = document.getElementById('view-main');
 const headerLeft = document.getElementById('header-left');
 
 //// THEME:
@@ -520,36 +550,53 @@ window.resetFilters = function() {
 	sessionStorage.removeItem('selectedTags'); // Clear sessionStorage
 };
 
-// Go to top buttoon
-const lifter = document.getElementById("lifter");
-const lifterParent = lifter.parentElement;
-if (lifter && lifterParent) {
-	lifterParent.addEventListener("scroll", function () { // Show or hide the button on scroll
-		if (lifterParent.scrollTop > 333) {
+// Main scroll progress dependent elements
+let mainScroll = 1; // Initial value when scrollTop is 0
+let mainScrollToOpacity = 1;
+const mainScrollThreshold = 333;
+const ribbon = document.getElementById("ribbon"); //const ribbonContainer = ribbon.parentElement;
+const ribbonShouldUpdate = createDebounceGuard(5);
+const lifter = document.getElementById("lifter"); //const lifterContainer = lifter.parentElement;
+const lifterShouldUpdate = createDebounceGuard(10);
+
+main.addEventListener("scroll", function () { // Show or hide the button on scroll
+	mainScroll = main.scrollTop
+	mainScrollToOpacity = scrollToOpacity(mainScroll, mainScrollThreshold  / 10, mainScrollThreshold );
+
+	if (lifter && lifterShouldUpdate()) { // Back to top button appearance 
+		if (mainScroll > mainScrollThreshold ) {
 			lifter.style.display = 'block';
 			setTimeout(() => { lifter.classList.add('visible'); }, 0); //lifter.style.display = "block";
 		} else {
 			lifter.classList.remove('visible'); //lifter.style.display = "none";
 		}
-	});
+	}
+	if (ribbon && ribbonShouldUpdate()) { // Ribbon element appearance
+		if (mainScroll < mainScrollThreshold ) {
+			ribbon.style.visibility = "visible";
+			ribbon.style.opacity = mainScrollToOpacity; //console.log("Scroll Progress:", mainScroll);
+		} else {
+			ribbon.style.opacity = 0;
+			ribbon.style.visibility = "hidden";
+		}
+	}
+});
 
-	lifter.addEventListener("click", function () {
-		//lifterParent.scrollTo({ top: 0, behavior: "smooth" }); // Commented cause `behavior: "smooth"` doesn't seem to work, hence...
-		const intervalTime = 1; // Interval in milliseconds (adjust for speed)
-		const scrollStep = -25; // Pixels to be shifted per interval (negative to go up)
-
-		const scrollInterval = setInterval(function() {
-			if (lifterParent.scrollTop > 0) {
-				lifter.style.pointerEvents = 'none';
-				lifterParent.scrollTop += scrollStep;
-			} else {
-				lifter.style.display = 'none';
-				lifter.style.pointerEvents = 'auto';
-				clearInterval(scrollInterval); // Stop interval when it reaches the top
-			}
-		}, intervalTime);
-	});
-}
+// Back to top button action
+lifter.addEventListener("click", function () { //main.scrollTo({ top: 0, behavior: "smooth" }); // Commented cause `behavior: "smooth"` doesn't seem to work, hence...
+	const intervalTime = 1; // Interval in milliseconds (adjust for speed)
+	const scrollStep = -25; // Pixels per interval (negative to go up)
+	const scrollInterval = setInterval(function() {
+		if (mainScroll > 0) {
+			lifter.style.pointerEvents = 'none';
+			main.scrollTop += scrollStep;
+		} else {
+			lifter.style.display = 'none';
+			lifter.style.pointerEvents = 'auto';
+			clearInterval(scrollInterval); // Stop interval when it reaches the top
+		}
+	}, intervalTime);
+});
 
 // Initial update of icons
 updateIcons();

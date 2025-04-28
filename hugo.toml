@@ -82,7 +82,8 @@ commentsRepoId='R_kgDOONd4Hw'
 commentsCategoryId = 'DIC_kwDOONd4H84CpGLA'
 commentsThemeLight = 'catppuccin_latte'
 commentsThemeDark = 'catppuccin_frappe'
-banner = true
+banner = false
+ribbon = true
 subtitle = 'The Lost (Moho® Scripts) Ark'
 author = { name = 'Rai López', homepage = 'https://lost-scripts.github.io/' }
 copyrightAlt = '© 2025 · Rai López · ARR'

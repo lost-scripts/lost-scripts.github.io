@@ -1,0 +1,134 @@
+[welcome]
+other = 'Benvingut'
+
+[home]
+other = 'Inici'
+
+[at_home]
+other = 'En inici'
+
+['previous']
+other = 'Anterior'
+
+['next']
+other = 'Següent'
+
+['no_previous']
+other = 'Sense anterior...'
+
+['no_next']
+other = 'Sense següent...'
+
+['back_to_top']
+other = 'Tornar a dalt'
+
+[Scripts]
+other = 'Scripts'
+
+[Docs]
+other = 'Docu'
+
+[Documentation]
+other = 'Documentació'
+
+[Lab]
+other = 'Labo'
+
+['Lab!']
+other = 'Laboratori!'
+
+[Blog]
+other = 'Blog'
+
+['NEW!']
+other = 'RECENT AFEGIT'
+
+['UPD!']
+other = 'RECENT ACTUALITZAT'
+
+['WIP!']
+other = 'EN CURS/NO DISP.'
+
+['TODO']
+other = 'PENDENT...'
+
+['BETA']
+other = 'VERSIÓ BETA'
+
+['ALPHA']
+other = 'VERSIÓ ALFA'
+
+['Reset Pinhole [?]']
+other = 'Forat de reset [?]'
+
+[light_switch]
+other = 'Interruptor'
+
+[go_light]
+other = 'Aclareix!'
+
+[go_dark]
+other = 'Enfosqueix!'
+
+[_auto]
+other = ' (AUTO)'
+
+[INFO]
+other = 'INFO'
+
+[WARNING]
+other = 'ADVERTÈNCIA'
+
+[TIP]
+other = 'CONSELL'
+
+[mode_highlights]
+other = 'Ressaltat del mode actual'
+
+[light_highlights]
+other = 'Ressaltat del mode clar'
+
+[dark_highlights]
+other = 'Ressaltat del mode fosc'
+
+[cancel]
+other = 'Cancel·la'
+
+[check_status]
+other = 'Comprovar estat'
+
+[filters]
+other = 'Filtres'
+
+[go_to]
+other = 'Anar a'
+
+[go_to_tags]
+other = 'Anar a la pàgina de les etiquetes'
+
+[no_desc]
+other = 'Sense descripció.'
+
+[OK]
+other = 'OK'
+
+[reset_reload]
+other = 'Restablecer totes les preferències i recarregar?'
+
+[Tag]
+other = 'Etiqueta'
+
+[translate]
+other = 'Tradueix!'
+
+['Subscribe...']
+other = 'Subscriu-te...'
+
+['Other Links:']
+other = 'Altres:'
+
+['under_construction']
+other = 'EN CONSTRUCCIÓ'
+
+['under_br_construction']
+other = 'EN<br>CONSTRUCCIÓ'

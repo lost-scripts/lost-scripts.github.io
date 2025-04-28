@@ -61,6 +61,11 @@
 		{{ .Content }}
 		{{- partial "terms.html" (dict "taxonomy" "tags" "page" .) -}}
 	{{- end -}}
+
+	{{- if.Site.Params.ribbon -}}
+		<div id="ribbon" class="ribbon"><span class="blinker">{{ i18n `under_br_construction` | safeHTML }}</span></div>
+	{{- end -}}
+
 	<button id="lifter" class="lifter" title="{{ i18n `back_to_top` }}"><i class='fa fa-angle-up'></i></button> <!--onclick="this.parentElement.scrollTo({top: 0, behavior: 'smooth'});"-->
 {{- end -}}
 

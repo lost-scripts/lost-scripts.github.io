@@ -1130,13 +1130,14 @@ th, td {
 		border-radius: var(--round);
 		box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.67) inset;
 		background-image: repeating-linear-gradient(-45deg, rgb(from var(--text-inv) r g b / 50%) 0 10px, rgb(from var(--accent) r g b / 50%) 10px 20px);
-	& span {
-		font-size: small; /* fallback for unsupported browsers ↴ */
-		font-size: clamp(0.33em, 9cqw, 0.9em);
-		font-weight: bold;
-		white-space: wrap;
-		text-shadow: 1px 1px 4px var(--text-inv);
-		user-select: none;
+
+		& span {
+			font-size: small; /* fallback for unsupported browsers ↴ */
+			font-size: clamp(0.33em, 9cqw, 0.9em);
+			font-weight: bold;
+			white-space: wrap;
+			text-shadow: 1px 1px 4px var(--text-inv);
+			user-select: none;
 		}
 	}
 }
@@ -1311,6 +1312,11 @@ th, td {
 	& a {
 		text-decoration: none;
 	}
+	&:hover {
+		/*--column-size: calc(var(--item-size) * 1.5);*/
+		--column-sice-var: calc(var(--widget-h-rem) * 1.25);
+		transition-delay: 0ms;
+	}
 	& #link-2, #link-3 { /* Individual tweaking */
 		& img, i {
 			scale: 95%;
@@ -1318,17 +1324,11 @@ th, td {
 	}
 }
 
-.linker:hover {
-	/*--column-size: calc(var(--item-size) * 1.5);*/
-	--column-sice-var: calc(var(--widget-h-rem) * 1.25);
-	transition-delay: 0ms;
-}
-
 .linker-item {
 	position: relative;
-	height: var(--widget-h-rem);
 	width: var(--widget-h-rem);
 	/*max-height: calc(var(--header-h) - 16px);*/
+	aspect-ratio: 1/1;
 	border-radius: 50%;
 	/*border: 2px solid var(--text);*/
 	outline-offset: 0;
@@ -1822,8 +1822,32 @@ input:not(input:checked) + .label {
 	}
 }
 
+.ribbon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-block: 0.25lh;
+	padding-inline: 1.25lh;
+	line-height: 1.25;
+	text-align: center;
+	text-shadow: 1px 1px 4px var(--text);
+	color: var(--text-inv);
+	font-size: 0.67em;
+	font-weight: bold;
+	clip-path: polygon(100% 100%, 0 100%, 999px calc(100% - 999px), calc(100% - 999px) calc(100% - 999px));
+	/*background-color: rgb(from var(--accent) r g b / 90%);*/
+	background:
+		/*repeating-linear-gradient(-30deg, rgb(from var(--text-inv) r g b / 25%) 0 10px, rgb(from var(--accent) r g b / 25%) 10px 20px),*/
+		linear-gradient(to right, transparent -33.3%, var(--accent) 33.3%, var(--accent) 66.6%, transparent 133.3%);
+	pointer-events: none;
+	user-select: none;
+	z-index: 999;
+	transform: translate(calc((1 - cos(45deg))*100%), -100%) rotate(45deg);
+	transform-origin: 0% 100%;
+}
+
 .lifter {
-	display: block;
+	display: none;
 	position: fixed;
 	right: clamp(14px, 2%, 48px);
 	bottom: 32px;
@@ -2306,7 +2330,12 @@ nav > section {
 	.docsearch-btn-keys {
 		display: none;
 	}
-	
+
+	@container nav (width <= 128px) {
+		.flags {
+			display: none;
+		}
+	}	
 	@-moz-document url-prefix() { /* NOTE: Auto mode Firefox-specific temporary fallback... Sync with below! */
 		.tabs {
 			flex-wrap: unset;
@@ -2381,12 +2410,6 @@ nav > section {
 	}
 }
 
-@container nav (width <= 128px) {
-	.flags {
-		display: none;
-	}
-}
-
 /* Tab mode */
 @container nav (width >= 192px) {
 	nav > section {
@@ -2430,6 +2453,29 @@ nav > section {
 }
 
 @media (pointer: coarse) { /* Pointer isn't very precise (e.g. touch/hybrid device) */
+	.linker {
+		--item-scale: 1.2;
+		--column-sice-var: calc(var(--widget-h-rem) * 1.25);
+	}
+	.linker-item {
+		scale: var(--item-scale);
+		width: var(--widget-h-rem);
+
+		&:hover {
+			outline: none;
+			scale: var(--item-scale);
+	
+			& + .linker-item-tip {
+				opacity: 0;
+			}
+		}
+	}
+	@supports selector(:has(+ *)) {
+		.linker-item:hover + span + .linker-item, .linker-item:has(+ span + .linker-item:hover) {
+			scale: var(--item-scale);
+		}
+	}
+
 	.resizer::before {
 		transform-origin: 67%;
 		transform: scale(1.5);

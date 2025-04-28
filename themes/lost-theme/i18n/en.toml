@@ -126,3 +126,6 @@ other = 'Other:'
 
 ['under_construction']
 other = 'UNDER CONSTRUCTION'
+
+['under_br_construction']
+other = 'UNDER<br>CONSTRUCTION'
