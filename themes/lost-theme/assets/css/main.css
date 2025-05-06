@@ -1569,10 +1569,9 @@ th, td {
 .tagger {
 	margin: 4px auto;
 	text-align: center;
-	border: 1px solid pink;
 
-	& >:not(:last-child) {
-		margin-right: 4px;
+	& > *:not(:last-child) {
+		margin: 0 4px 2px 0;
 	}
 }
 

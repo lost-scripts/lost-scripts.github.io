@@ -32,7 +32,7 @@ For a given taxonomy, renders a list of terms assigned to the page.
 	<div class="tagger">
 		<!--<span>{{- /* $label */ -}}:</span>-->
 		{{- range . -}}
-			<form action="{{ .RelPermalink }}" method="get" style="display: inline;">
+			<form action="{{ .RelPermalink }}" method="get" style="display: inline-block;">
 				<button type="submit" class="tag" title="{{ i18n `go_to` }} {{i18n $label }}...">{{ .LinkTitle }}</button>
 			</form>
 		{{- end -}}
