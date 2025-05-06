@@ -1,16 +1,18 @@
-<div id="linker" class="linker" style="--item-count: {{ len .Site.Params.links | default 3 }};">
+{{- $itemCount := len .Site.Params.links | default 3 -}}
+<div id="links" class="links" style="--item-count: {{ $itemCount }};">
 	{{- $index := 0 -}}
 	{{- range sort .Site.Params.links "order" "desc" -}}
 		{{- $index = add $index 1 -}}
-		<a href="{{ .href }}" target="_blank" id="link-{{ $index }}" class="linker-item" style="anchor-name: --link-{{ $index }};" aria-label="{{ i18n .start }} {{ ` ` }} {{ i18n .title | default .title }} {{ ` ` }} {{ i18n .end }}">
+		{{- $zIndex := sub $itemCount (sub $index 1) -}}
+		<a href="{{ .href }}" target="_blank" id="link-{{ $index }}" class="link" style="anchor-name: --link-{{ $index }}; z-index: {{ $zIndex }};" draggable="false" aria-label="{{ i18n .start }} {{ ` ` }} {{ i18n .title | default .title }} {{ ` ` }} {{ i18n .end }}">
 			{{- if .src -}}
-				<img src="{{ .src }}" alt="{{ .alt }}" class="linker-item-icon colorize">
+				<img src="{{ .src }}" class="link-icon colorize" alt="{{ .alt }}">
 			{{- else if .icon -}}
-				<i class="linker-item-icon {{ .icon }}" aria-hidden="true" alt="{{ .alt }}"></i>
+				<i class="link-icon {{ .icon }}" aria-hidden="true" alt="{{ .alt }}"></i>
 			{{- else -}}
-				<i class="linker-item-icon fa-regular fa-circle-question" aria-hidden="true" alt="{{ .alt }}"></i>
+				<i class="link-icon fa-regular fa-circle-question" aria-hidden="true" alt="{{ .alt }}"></i>
 			{{- end -}}
 		</a>
-		<span class="linker-item-tip" style="position-anchor: --link-{{ $index }};" aria-hidden="true">{{ i18n .start }} {{ ` ` }} {{ i18n .title | default .title }} {{ ` ` }} {{ i18n .end }}</span>
+		<span class="link-tip" style="position-anchor: --link-{{ $index }};" aria-hidden="true">{{ i18n .start }} {{ ` ` }} {{ i18n .title | default .title }} {{ ` ` }} {{ i18n .end }}</span>
 	{{- end -}}
 </div>

@@ -15,13 +15,13 @@
 			{{- if lt (len .Translations) 2 -}}
 				<!-- Button for less than three languages -->
 				{{- range .Translations -}}
-					<button onclick="location.href='{{ .Permalink }}'"  title="{{ i18n `translate` }}">
+					<button id="i18ner-but" onclick="location.href='{{ .Permalink }}'"  title="{{ i18n `translate` }}">
 						{{ .Language.LanguageName }}
 					</button>
 				{{- end -}}
 			{{- else -}}
 				<!-- Dropdown for more than two languages -->
-				<select onchange="location = this.value;" title="{{ i18n `translate` }} ({{ add (len .Translations) 1 }})">
+				<select id="i18ner-sel" onchange="location = this.value;" title="{{ i18n `translate` }} ({{ add (len .Translations) 1 }})">
 					<!-- Add default language -->
 					<option value="{{ $.Permalink }}" {{ if eq $.Page.Language.Lang $.Site.Language.Lang }}selected{{ end }}>{{ $.Site.Language.LanguageName }}</option>
 					{{- range .Translations -}}
@@ -30,7 +30,7 @@
 				</select>
 			{{- end -}}
 		{{- else -}}
-			<button class="disabled" disabled>
+			<button id="i18ner-dis" class="disabled" disabled>
 				<!-- <i class="fa fa-globe"></i> -->
 				{{ $.Site.Language.LanguageName }}
 			</button>

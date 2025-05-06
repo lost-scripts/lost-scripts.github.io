@@ -32,16 +32,19 @@ disableFastRender = true # Enables full re-renders on changes (commented cause t
 [languages]
 	[languages.en]
 		title = 'Here be Lost Scripts'
+		languageCode = 'en'
 		languageName = 'En'
 		weight = 1
 
 	[languages.es]
 		title = 'Aquí hay Lost Scripts'
+		languageCode = 'es'
 		languageName = 'Es'
 		weight = 2
 
 	[languages.ca]
 		title = 'Aquí hi ha Lost Scripts'
+		languageCode = 'ca'
 		languageName = 'Ca'
 		weight = 3
 
@@ -90,13 +93,14 @@ copyrightAlt = '© 2025 · Rai López · ARR'
 since = 2024
 faStyle = 'solid'
 
-# Social Networking and Contact Links (The last shall be first/top! (Or use order key))
+# Social Networking and Contact Links (use e.g. `order = 1`, etc. for override ordering)
 links = [ 
-{ href = 'https://mohoscripting.com/', src = '/icons/icon_ms_logo.svg', alt = 'Moho Scripting', start = 'Other Links:', title = 'Moho Scripting...', order = 5 },
-{ href = 'mailto:rai.lopez@outlook.com', icon = 'fa-solid fa-envelope', alt = 'Email', title = 'Email...', order = 4 },
-{ href = '/index.xml', icon = 'fa-solid fa-rss', alt = 'Subscribe', title = 'Subscribe...', rel= 'alternate', type = 'application/rss+xml', order = 3 },
-{ href = 'https://instagram.com/Lost_Scripts', icon = 'fa-brands fa-instagram', alt = 'Instagram', title = 'Instagram...', order = 2 },
-{ href = 'https://github.com/lost-scripts', icon = 'fa-brands fa-github', alt = 'GitHub', title = 'GitHub...', order = 1 }]
+{ href = 'https://github.com/lost-scripts', icon = 'fa-brands fa-github', alt = 'GitHub', title = 'GitHub...'},
+{ href = 'mailto:rai.lopez@outlook.com', icon = 'fa-solid fa-envelope', alt = 'Email', title = 'Email...'},
+{ href = '/index.xml', icon = 'fa-solid fa-rss', alt = 'Subscribe', title = 'Subscribe...', rel= 'alternate', type = 'application/rss+xml'},
+{ href = 'https://instagram.com/Lost_Scripts', icon = 'fa-brands fa-instagram', alt = 'Instagram', title = 'Instagram...'},
+{ href = 'https://mohoscripting.com/', src = '/icons/icon_ms_logo.svg', alt = 'Moho Scripting', start = 'Other Links:', title = 'Moho Scripting...'},
+]
 
 # Other Links...
 linksAlt = { hosting = 'https://pages.github.com/', hostingStatus = 'https://www.githubstatus.com/' }

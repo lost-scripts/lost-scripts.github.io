@@ -29,7 +29,7 @@
 	--header-h-px: calc(var(--header-h) * 1px); /* To pixels (50px) */
 	--header-h-rem: calc(var(--header-h) / 16rem); /* To rem (3rem) */
 	--header-left-w: var(--nav-w);
-	--header-left-w-min: calc(var(--nav-w-max) / 3);
+	--header-left-w-min: calc(var(--nav-w-max) / 3.33);
 	--main-h: 100%;
 	--main-w: 66.6%;
 	--main-w-min: 320px;
@@ -38,8 +38,8 @@
 	--nav-swap: 192px;
 	--nav-w-def: 33.3%;
 	--nav-w: var(--nav-w-def, 33.3%);
-	--nav-w-min: 128px;
 	--nav-w-max: 384px;
+	--nav-w-min: calc(var(--nav-w-max) / 3.33); /*128px*/
 	--aside-w-def: calc(var(--nav-w-def) / 2);
 	--aside-w: var(--aside-w-def, 16.6%);
 	--aside-w-max: calc(var(--nav-w-max) / 2);
@@ -323,6 +323,8 @@
 	padding: 0;
 	box-sizing: border-box;
 	border: 0px dotted gray; /* Borders Inspector (while in use, the nav may misbehave!) */
+	-webkit-tap-highlight-color: transparent;
+	-moz-tap-highlight-color: transparent;
 
 	&:focus-visible {
 		outline: 2px solid color-mix(in srgb, var(--accent) 90%, transparent);
@@ -364,7 +366,7 @@ html, body {
 	height: 100%; /*min-height: 100vh;*/
 	width: 100%;
 	overflow: hidden;
-	/*filter: invert(1) hue-rotate(30deg) saturate(10);*/ /* dirty dark mode? */
+	/*filter: invert(1) hue-rotate(30deg) saturate(10);*/ /* dirty dark mode tester? */
 }
 
 body {
@@ -376,11 +378,35 @@ body {
 	background-color: var(--gray-B4);
 	
 	& > header, #header {
+		container: header / inline-size;
+		/*position: relative;*/ /* Uncomment if the `height: inherit;` patch bellow wasn't enough! */
 		height: var(--header-h-px);
 		background-color: var(--gray-C3);
-		container: header / inline-size;
-		/*box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.33);*/
 		z-index: 3;
+
+		&::before { /* Little left overflow fade? */
+			/*
+			content: '';
+			position: absolute;
+			top: 0;
+			left: var(--header-left-w);
+			height: inherit;
+			width: var(--scroll);
+			background: linear-gradient(to left, transparent, var(--gray-C3));
+			pointer-events: none;
+			z-index: 99;
+			*/
+		}
+		&::after { /* Little right overflow fade */
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: inherit; /* 100% */
+			width: var(--scroll);
+			background: linear-gradient(to right, transparent, var(--gray-C3));
+			pointer-events: none;
+		}
 	}
 
 	& > section, #section {
@@ -552,7 +578,7 @@ nav, .nav {
 	/*resize: horizontal;*/ /*flex: 33.3%;*/ /* TBD: Swap for not allowing horizontal resizing (finally, commented after adding border resize) */
 	height: 100%; /*min-height: 100vh;*/
 	width: 100%;
-	min-width: calc(var(--nav-w-max) / 3.33);
+	min-width: var(--nav-w-min);
 	max-width: var(--nav-w-max);
 	overflow: hidden; /*overflow-y: auto;*/
 	background-color: var(--gray-D2) !important;
@@ -643,6 +669,12 @@ nav ul li {
 			font-size: clamp(0.75em, 4.5cqw, 0.85em);
 			line-height: clamp(1.2em, 4.5cqw, 1.3em); /*1.35*/
 		}
+
+		&:focus-within {
+			border-radius: 2px;
+			outline: 2px solid var(--accent);
+			outline-offset: 0;
+		}
 	}
 }
 
@@ -696,6 +728,9 @@ nav ul li details summary a {
 		color: inherit;
 		margin: -1px 0; /* Avoids translation bellow exposes details area at top! */
 		transform: translateX(1px) translateY(1px);
+	}
+	&:focus-visible {
+		outline: 0px solid var(--accent);
 	}
 	/*
 	&::after {
@@ -1126,43 +1161,51 @@ th, td {
 	max-width: var(--nav-w-max);
 	padding: 0 2px;
 	gap: 8px;
-	/*background: linear-gradient(to left, rgba(0,0,0,0.15) 0%, transparent 2.5%);*/
+	background: linear-gradient(to left, rgba(0,0,0,0.1) 0%, transparent 33.3%);
 }
 
-#header-center {
+#header-right {
+	container: inline-size;
 	flex: 1 1 auto;
-	padding-inline: 12px;
-	background: linear-gradient(to right, rgba(0,0,0,0.15) 0%, transparent 33.3%);
+	gap: clamp(0.5rem, 1.5cqw, 1.25rem);
+	padding-inline: 0 var(--scroll);
+	overflow: hidden;
+	/*mask-image: linear-gradient(to left, transparent, black calc(var(--scroll) * 1.33));*/
+	background-color: inherit;
 
 	& #banner {
-		height: 80%;
-		width: 33%;
-		/*max-width: max-content;*/
 		container: banner / inline-size;
-		margin: 0 auto;
-		padding: 0 4%;
+		flex: 0.75 0 auto;
 		place-content: center;
+		height: 80%;
+		/*max-width: max-content;*/
+		min-width: 20%;
+		margin: 2px auto;
+		padding: 0 2%;
+		overflow: hidden;
 		line-height: 1.25cqw;
 		text-align: center;
-		overflow: hidden;
 		border-radius: var(--round);
 		box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.67) inset;
 		background-image: repeating-linear-gradient(-45deg, rgb(from var(--text-inv) r g b / 50%) 0 10px, rgb(from var(--accent) r g b / 50%) 10px 20px);
 
 		& span {
 			font-size: small; /* fallback for unsupported browsers ↴ */
-			font-size: clamp(0.33em, 9cqw, 0.9em);
+			font-size: clamp(0.45em, 9cqw, 0.9em);
 			font-weight: bold;
+			line-height: clamp(0.45em, 9cqw, 0.9em);
 			white-space: wrap;
 			text-shadow: 1px 1px 4px var(--text-inv);
 			user-select: none;
 		}
 	}
-}
-
-#header-right {
-	padding-right: 12px;
-
+	& #tweaker {
+		justify-content: flex-end;
+		flex: 0.5 1 auto;
+		gap: inherit;
+		padding-left: 8px;
+		overflow-y: visible;
+	}
 	& >:not(:last-child) {
 		/*margin-right: 16px;*/
 	}
@@ -1315,34 +1358,105 @@ th, td {
 	}
 }
 
-.linker {
+#linker {
+	container: inline-size;
+	display: flex;
+	flex: 0.5 1 25%;
+	height: 100%;
+	overflow-x: visible;
+	align-items: center;
+	vertical-align: middle;
+	background-color: inherit;
+
+	-ms-overflow-style: none; /* IE & Edge */
+	scrollbar-width: none; /* Firefox */
+	&::-webkit-scrollbar { /* Safari & Chrome */
+		display: none;
+	}
+	&::before { /* Little left overflow fade */
+		content: '';
+		flex: 0 0 auto;
+		position: sticky;
+		top: 0;
+		left: 0;
+		height: inherit;
+		width: var(--scroll);
+		margin-right: calc(var(--scroll) * -1);
+		background-color: inherit;
+		mask-image: linear-gradient(to left, transparent, black); /*background: linear-gradient(to left, transparent, var(--gray-C3));*/
+		pointer-events: none;
+		z-index: 10;
+	}
+	&::after { /* Little right overflow fade */
+		content: '';
+		flex: 0 0 auto;
+		position: sticky;
+		right: 0;
+		height: inherit;
+		width: var(--scroll);
+		margin-left: auto;
+		background-color: inherit;
+		mask-image: linear-gradient(to right, transparent, black); /*background-color: linear-gradient(to right, transparent, inherit);*/
+		pointer-events: none;
+		z-index: 10;
+	}
+}
+
+& .links {
 	--item-scale: calc((var(--header-h) * 0.75) / (var(--widget-h) * 16));
 	--column-size: calc(var(--widget-h-rem) * 0.67);
-	--column-size-var: calc(100% / var(--item-count));
+	--column-size-min: calc(var(--widget-h-rem) * 0.25);
+	--column-size-max: calc(var(--widget-h-rem) * 0.75);
+	--column-size-var: calc(15cqw / var(--item-count)); /*calc(7.5cqw / var(--item-count));*/ /* calc(100% / var(--item-count)); */
+
 	display: grid;
-	grid-template-columns: repeat(var(--item-count), var(--column-size)); /* grid-template-columns: repeat(var(--item-count), var(--column-size-var));*/
+	grid-template-columns: repeat(calc(var(--item-count) - 1), clamp(var(--column-size-min), var(--column-size-var), var(--column-size-max))) auto; /* With var(--item-count) - 1) & 'auto' last column grows ensuring symmetry! */
+	grid-template-rows: 100%;
 	place-content: start;
-	max-width: calc(log(1000, 10) * 5%); /*max-width: calc(100% / var(--item-count));*/
-	margin-right: 8px;
+	align-items: center;
+	height: 100%;
+	width: fit-content; /*max-width: calc(log(1000, 10) * 5%);*/ /*max-width: calc(100% / var(--item-count));*/
+	margin: auto calc(var(--scroll) * -1) auto 0;
+	padding: 0 calc(var(--scroll) * 1.5);
+	border-radius: var(--widget-h-rem);
+	/*mask-image: linear-gradient(to left, transparent, black calc(var(--widget-h-rem) * 0.67), black calc(100% - calc(var(--widget-h-rem) * 0.67)), transparent 100%);*/
 	transition: 250ms;
 	transition-delay: 250ms;
 	z-index: 1;
 
 	& a {
 		text-decoration: none;
+
+		&:last-of-type {
+			/*margin-right: 8px !important;*/
+		}
 	}
 	&:hover, &:focus-within {
-		--column-size: calc(var(--widget-h-rem) * 1.25); /*--column-size: calc(var(--item-size) * 1.5);*/
+		--column-size-var: calc(var(--column-size) * 1.75);
+		--column-size-max: 100cqw;
 		transition-delay: 0ms;
+		/*z-index: calc(var(--item-count, 9) * 3) !important;*/
 	}
-	& #link-2, #link-3 { /* Individual tweaking */
+	&:focus-within {
+		&:not(:hover) > *:focus-visible + .link-tip { /* Some inner item has focus and not hovering */
+			opacity: 1;
+		}
+	}
+	/* It doesn't seem necessary??
+	&:not(:focus-within) {
+		&:not(:hover) > *:focus-visible + .link-tip {
+			opacity: 1;
+		}
+	}
+	*/
+	& #link-2, #link-3 { /* Fine tuning/tweaking */
 		& img, i {
 			scale: 95%;
 		}
 	}
 }
 
-.linker-item {
+.link {
 	position: relative;
 	width: var(--widget-h-rem);
 	/*max-height: calc(var(--header-h) - 16px);*/
@@ -1352,6 +1466,7 @@ th, td {
 	outline-offset: 0;
 	outline-color: transparent;
 	overflow: hidden;
+	user-select: none; -moz-user-drag: none; -webkit-user-drag: none;
 	background-color: color-mix(in srgb, var(--gray-C3) 75%, black);
 	transition: scale 250ms, outline-color 250ms;
 
@@ -1374,15 +1489,19 @@ th, td {
 	&:hover, &:focus-visible {
 		outline: 2px solid var(--accent);
 		scale: var(--item-scale);
-		z-index: 2;
+		z-index: var(--item-count, 9) !important;
+		/*border: calc(var(--item-count, 9) * 1px) solid red;*/ /* Visual Tester */
 
-		& + .linker-item-tip {
+		&:not(:focus-visible) + .link-tip {
+			opacity: 1; /*visibility: visible;*/
+		}
+		&:hover&:focus-visible + .link-tip {
 			opacity: 1; /*visibility: visible;*/
 		}
 	}
 }
 
-.linker-item:before {
+.link:before {
 	content: '';
 	position: absolute;
 	height: 100%;
@@ -1396,7 +1515,7 @@ th, td {
 	z-index: inherit;
 }
 
-.linker-item-tip {
+.link-tip {
 	position: absolute;
 	position-area: bottom;
 	translate: 0 16px;
@@ -1408,28 +1527,36 @@ th, td {
 	background-color: var(--gray-D2);
 	box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, 0.33);
 	pointer-events: none;
-	z-index: 2;
+	z-index: 10;
 	transition: opacity var(--shorter) ease-in-out;
 	transition-delay: var(--shorter);
 
 	&::after {
 		content: '';
 		position: absolute;
-		top: -5px; /* Coloca el piquito en el lado superior del tooltip */
+		top: -5px; /* Place the tail on the upper side of the tooltip. */
 		left: 50%;
 		transform: translateX(-50%);
-		border-width: 0 5px 5px 5px; /* Ajusta los bordes para crear el triángulo apuntando hacia arriba */
+		border-width: 0 5px 5px 5px; /* Adjust the edges to create the tail pointing upwards */
 		border-style: solid;
 		border-color: transparent transparent var(--gray-D2) transparent; /* Cambia los colores del borde */
 		filter: drop-shadow(0 -1px 0 var(--accent)) drop-shadow(0 -0.1px 0 var(--accent));
 	}
+
+	@-moz-document url-prefix() { /* Firefox only temporal `position-area` patch... */
+		translate: 0 36px;
+
+		&::after {
+			display: none;
+		}
+	}
 }
 
 @supports selector(:has(+ *)) {
-	.linker-item:hover + span + .linker-item, .linker-item:has(+ span + .linker-item:hover) { /*.linker-item:hover + .linker-item, .linker-item:has(+ .linker-item:hover)*/
+	.link:hover + span + .link, .link:has(+ span + .link:hover) { /*.link:hover + .link, .link:has(+ .link:hover)*/
 		scale: calc(var(--item-scale) * 0.75);
 	}
-	.linker-item:focus-visible + span + .linker-item, .linker-item:has(+ span + .linker-item:focus-visible) { /*.linker-item:focus-visible + .linker-item, .linker-item:has(+ .linker-item:focus-visible)*/
+	.link:focus-visible + span + .link, .link:has(+ span + .link:focus-visible) { /*.link:focus-visible + .link, .link:has(+ .link:focus-visible)*/
 		scale: calc(var(--item-scale) * 0.75);
 	}
 }
@@ -1540,7 +1667,12 @@ a:not(.anchor):not(.link-button):not(.link-image):not(
 	height: 100%;
 	width: 100%;
 	padding-right: 2px;
-	/*box-shadow: 0 24px 40px -16px rgba(0,0,0,0.33);*/
+
+	input:focus-visible + label {
+		outline: 2px dashed var(--accent);
+		outline-offset: -2px;
+		mask-image: linear-gradient(to top, transparent 2px, black 33.3%);
+	}
 }
 
 .label {
@@ -1688,11 +1820,12 @@ input:not(input:checked) + .label {
 
 .docsearch-btn-placeholder {
 	min-width: 0.9rem;
+	padding: 0 8px 0 0;
 	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
 	font-size: 0.85rem;
-	padding: 0 8px 0 0
+	white-space: nowrap;
+	text-overflow: ellipsis; /* Not necessary anymore?*/
+	mask-image: linear-gradient(to left, transparent, black 8px);
 }
 
 .docsearch-btn-key {
@@ -2458,6 +2591,12 @@ nav > section {
 	}
 }
 
+@container header (width < 512px) {
+	#banner {
+		display: none;
+	}
+}
+
 @media (prefers-color-scheme: dark) {
 	:root {
 		--is-dark: 1;
@@ -2465,28 +2604,43 @@ nav > section {
 }
 
 @media (pointer: coarse) { /* Pointer isn't very precise (e.g. touch/hybrid device) */
-	.linker {
-		--column-size: calc(var(--widget-h-rem) * 0.80);
+	#linker{
+		min-width: calc(var(--widget-h-rem) * 3.75 + var(--scroll));
+		overflow-x: scroll;
+	}
+	.links {
+		--column-size: calc(var(--widget-h-rem) * 1.25);
+		--column-size-min: calc(var(--widget-h-rem) * 1.25);
+		--column-size-max: calc(var(--widget-h-rem) * 1.25);
+		--column-size-var: calc(7.5cqw / var(--item-count));
 
 		&:hover {
-			--column-size: calc(var(--widget-h-rem) * 0.80);
+			--column-size: calc(var(--widget-h-rem) * 1.25) !important;
+			--column-size-min: calc(var(--widget-h-rem) * 1.25);
+			--column-size-max: calc(var(--widget-h-rem) * 1.25);
+			z-index: unset !important;
+		}
+		&:focus-within {
+			--column-size-min: calc(var(--widget-h-rem) * 1.25);
+			--column-size-max: calc(var(--widget-h-rem) * 1.25);
 		}
 	}
-	.linker-item {
+	.link {
 		scale: 1;
 		width: var(--widget-h-rem);
 
 		&:hover {
-			outline: none;
-			scale: 1;
-	
-			& + .linker-item-tip {
-				opacity: 0;
+			&:not(:active) {
+				outline: none;
+				scale: 1;
+			}
+			& + .link-tip {
+				opacity: 0 !important;
 			}
 		}
 	}
 	@supports selector(:has(+ *)) {
-		.linker-item:hover + span + .linker-item, .linker-item:has(+ span + .linker-item:hover) {
+		.link:hover + span + .link, .link:has(+ span + .link:hover) {
 			scale: 1;
 		}
 	}

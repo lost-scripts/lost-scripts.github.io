@@ -1,6 +1,6 @@
 <li class="{{ if .isActive }}active{{ end }}">
 	<details name="topic">
-		<summary>
+		<summary tabindex="-1">
 			<a href="{{ .page.RelPermalink }}">
 				<picture>
 					{{- $iconPathBase := replace (path.Clean .page.File.Path) ".md" "" -}}
