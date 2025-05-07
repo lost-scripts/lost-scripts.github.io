@@ -1376,14 +1376,13 @@ th, td {
 	container: inline-size;
 	display: flex;
 	flex: 0.5 1 25%;
-	position: relative;
 	height: 100%;
 	overflow-x: visible;
 	align-items: center;
 	vertical-align: middle;
 	background-color: inherit;
-	/*
-	&::before { /* Little left overflow fade
+
+	&::before { /* Little left overflow fade */
 		content: '';
 		flex: 0 0 auto;
 		position: sticky;
@@ -1392,11 +1391,11 @@ th, td {
 		width: var(--scroll);
 		margin-right: calc(var(--scroll) * -1);
 		background-color: inherit;
-		mask-image: linear-gradient(to left, transparent, black); /*background: linear-gradient(to left, transparent, var(--gray-C3));
+		mask-image: linear-gradient(to left, transparent, black); /*background: linear-gradient(to left, transparent, var(--gray-C3));*/
 		pointer-events: none;
 		z-index: 10;
 	}
-	&::after { /* Little right overflow fade
+	&::after { /* Little right overflow fade */
 		content: '';
 		flex: 0 0 auto;
 		position: sticky;
@@ -1405,31 +1404,10 @@ th, td {
 		width: var(--scroll);
 		margin-left: auto;
 		background-color: inherit;
-		mask-image: linear-gradient(to right, transparent, black); /*background-color: linear-gradient(to right, transparent, inherit);
+		mask-image: linear-gradient(to right, transparent, black); /*background-color: linear-gradient(to right, transparent, inherit);*/
 		pointer-events: none;
 		z-index: 10;
 	}
-	*/
-	&::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		overflow-y: hidden;
-		pointer-events: none;
-		border: 1px solid yellow;
-		z-index: 1000; /* Asegúrate de que esté por encima del contenido */
-		/* Gradiente de izquierda a derecha: sólido -> transparente -> transparente -> sólido */
-		background-image: linear-gradient(
-		  to right,
-		  var(--linker-bg, inherit) 0%,
-		  transparent calc(var(--scroll-fade-start, 20px)),
-		  transparent calc(100% - var(--scroll-fade-start, 20px)),
-		  var(--linker-bg, inherit) 100%
-		);
-	  }
 }
 
 & .links {
