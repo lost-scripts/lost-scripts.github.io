@@ -1104,8 +1104,8 @@ table {
 	width: 100%;
 	margin-bottom: 8px;
 	font-size: smaller;
-	font-size: clamp(0.5rem, 4.5cqi, 1rem);
-	line-height: clamp(1.16rem, 4.5cqi, 1.33rem);
+	font-size: clamp(0.5em, 4.5cqw, 1em);
+	line-height: clamp(1.16em, 4.5cqw, 1.33em);
 	/*border-collapse: collapse;*/
 	border-spacing: 0;
 	border-radius: var(--round);
@@ -1118,30 +1118,29 @@ table {
 	& tr:last-child td {
 		border-bottom: none;
 	}
-	& tfoot td {
-		border-top: 1px solid var(--gray-A5);
-	}
-}
+	th, td {
+		/*container-type: inline-size;*/
+		padding: 0.2em 0.4em;
+		border-right: 1px solid var(--gray-A5);
+		border-bottom: 1px solid var(--gray-A5);
+		font-size: inherit;
+		/*line-height: 0;*/ /* Alternative to `display: block` for no bottom padding (hacky) */
 
-th, td {
-	/*container-type: inline-size;*/
-	padding: 0.2em 0.4em;
-	border-right: 1px solid var(--gray-A5);
-	border-bottom: 1px solid var(--gray-A5);
-	font-size: inherit;
-	/*line-height: 0;*/ /* Alternative to `display: block` for no bottom padding (hacky) */
-	
+		&:last-child {
+			border-right: none;
+		} 
+		& img {
+			/*vertical-align: sub;*/ /* NOTE: Don't remember why I added this here... */
+		}
+	}
 	& th {
-		vertical-align: center;
+		vertical-align: middle;
 	}
 	& td {
 		vertical-align: top;
 	}
-	&:last-child {
-		border-right: none;
-	} 
-	& img {
-		/*vertical-align: sub;*/ /* NOTE: Don't remember why I added this here... */
+	& tfoot td {
+		border-top: 1px solid var(--gray-A5);
 	}
 }
 
@@ -2619,6 +2618,10 @@ nav > section {
 }
 
 @media (pointer: coarse) { /* Pointer isn't very precise (e.g. touch/hybrid device) */
+	table {
+		font-size: smaller !important;
+	}
+
 	#linker{
 		min-width: calc(var(--widget-h-rem) * 3.75 + var(--scroll));
 		overflow-x: scroll;
