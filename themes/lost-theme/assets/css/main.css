@@ -1091,6 +1091,16 @@ p {
 	line-height: 1.5;
 }
 
+select {
+	/*
+	appearance: base-select;
+
+	&::picker(select) {
+	appearance: base-select;
+	}
+	*/
+}
+
 table {
 	width: 100%;
 	margin-bottom: 8px;
@@ -1171,6 +1181,7 @@ th, td {
 	gap: clamp(0.75rem, 1.5cqw, 1.25rem);
 	overflow: hidden;
 	/*mask-image: linear-gradient(to left, transparent, black calc(var(--scroll) * 1.33));*/
+	/*background: linear-gradient(to right, rgba(0, 0, 0, 0.15) 0%, transparent 33.3%);*/
 	background-color: inherit;
 
 	& #banner {
@@ -1440,13 +1451,6 @@ th, td {
 			opacity: 1;
 		}
 	}
-	/* It doesn't seem necessary??
-	&:not(:focus-within) {
-		&:not(:hover) > *:focus-visible + .link-tip {
-			opacity: 1;
-		}
-	}
-	*/
 	& #link-2, #link-3 { /* Fine tuning */
 		& img, i {
 			scale: 95%;
@@ -1474,7 +1478,6 @@ th, td {
 		justify-content: center;
 		height: 100%;
 		width: auto;
-		/*filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.16));*/
 	}
 	& img {
 		margin: 0 auto;
@@ -1484,11 +1487,11 @@ th, td {
 		font-size: 100%;
 		color: var(--accent);
 	}
-	&:hover, &:focus-visible {
+	&:hover, &:focus-visible { /* NOTE: Look `@media (pointer: coarse)` if weirdness! */
 		scale: var(--item-scale);
 		outline: 2px solid var(--accent);
 		/*border: calc(var(--item-count, 9) * 1px) solid red;*/ /* Visual Tester */
-		box-shadow: -1px 2px 2px 1px rgba(0, 0, 0, 0.33);
+		box-shadow: -1px 2px 2px 1px rgb(0, 0, 0, 0.33);
 		background-image: linear-gradient(to bottom, rgb(from var(--gray-A5) r g b / 50%)); /*background: linear-gradient(rgb(0, 0, 0, 0.33)), var(--text-inv);*/
 		z-index: var(--item-count, 9) !important;
 
@@ -1500,11 +1503,6 @@ th, td {
 		}
 	}
 }
-/*
---gray-D2: #DDD;
---gray-C3: #CCC;
---gray-B4: #BBB;
-*/
 
 .link:before {
 	content: '';
@@ -1966,7 +1964,7 @@ input:not(input:checked) + .label {
 .commenter {
 	width: 100%;
 	margin: 0 auto;
-	padding-top: 1.5em;
+	padding-top: 1rem;
 
 	.giscus {
 		opacity: 0.9;
@@ -2645,6 +2643,8 @@ nav > section {
 			&:not(:active) {
 				outline: none;
 				scale: 1;
+				box-shadow: none;
+				background-image: none;
 			}
 			& + .link-tip {
 				opacity: 0 !important;

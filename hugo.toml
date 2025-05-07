@@ -33,19 +33,19 @@ disableFastRender = true # Enables full re-renders on changes (commented cause t
 	[languages.en]
 		title = 'Here be Lost Scripts'
 		languageCode = 'en'
-		languageName = 'En'
+		languageName = 'English'
 		weight = 1
 
 	[languages.es]
 		title = 'Aquí hay Lost Scripts'
 		languageCode = 'es'
-		languageName = 'Es'
+		languageName = 'Español'
 		weight = 2
 
 	[languages.ca]
 		title = 'Aquí hi ha Lost Scripts'
 		languageCode = 'ca'
-		languageName = 'Ca'
+		languageName = 'Català'
 		weight = 3
 
 [markup]
