@@ -1100,7 +1100,6 @@ select {
 }
 
 table {
-	container-type: inline-size;
 	width: 100%;
 	margin-bottom: 8px;
 	/*border-collapse: collapse;*/
@@ -1121,6 +1120,7 @@ table {
 }
 
 th, td {
+	/*container-type: inline-size;*/
 	padding: 0.2em 0.4em;
 	border-right: 1px solid var(--gray-A5);
 	border-bottom: 1px solid var(--gray-A5);
