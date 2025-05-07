@@ -1128,6 +1128,7 @@ th, td {
 	padding: 0.2em 0.4em;
 	border-right: 1px solid var(--gray-A5);
 	border-bottom: 1px solid var(--gray-A5);
+	font-size: inherit;
 	/*line-height: 0;*/ /* Alternative to `display: block` for no bottom padding (hacky) */
 	
 	& th {
