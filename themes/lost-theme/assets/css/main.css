@@ -1100,8 +1100,12 @@ select {
 }
 
 table {
+	container-type: inline-size;
 	width: 100%;
 	margin-bottom: 8px;
+	font-size: smaller;
+	font-size: clamp(0.5em, 4.5cqw, 1em);
+	line-height: clamp(1.16em, 4.5cqw, 1.33em);
 	/*border-collapse: collapse;*/
 	border-spacing: 0;
 	border-radius: var(--round);
@@ -1124,9 +1128,6 @@ th, td {
 	padding: 0.2em 0.4em;
 	border-right: 1px solid var(--gray-A5);
 	border-bottom: 1px solid var(--gray-A5);
-	font-size: smaller;
-	font-size: clamp(0.5em, 4.5cqw, 1em);
-	line-height: clamp(1.16em, 4.5cqw, 1.33em);
 	/*line-height: 0;*/ /* Alternative to `display: block` for no bottom padding (hacky) */
 	
 	& th {
