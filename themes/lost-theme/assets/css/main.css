@@ -374,7 +374,7 @@ body {
 	accent-color: var(--accent);
 	font-family: 'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif,'Segoe UI Emoji'; /*font-family: sans-serif, Arial;*/ /*font-family: 'Source Sans Pro', sans-serif;*/
 	font-size: 1rem;
-	line-height: 1.5;
+	line-height: 1.33;
 	background-color: var(--gray-B4);
 	
 	& > header, #header {
@@ -940,6 +940,7 @@ a {
 blockquote {
 	width: 100%;
 	margin-top: 4px;
+	margin-bottom: calc(var(--xs) * 2vh);
 	padding: 0.2em 0.6em;
 	container: inline-size;
 	border-radius: var(--round);
@@ -949,12 +950,14 @@ blockquote {
 	hyphens: auto;
 	hyphenate-limit-chars: 6;
 	font-size: 0.875em;
-	font-size: clamp(0.75em, 6.5cqw, 1em);
+	font-size: clamp(0.83em, 4cqw, 1em);
+	line-height: 1.25;
 	background-color: color-mix(in srgb, var(--accent) 33%, transparent);
 	box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.33);
 
 	& p {
-		font-size: 85%;
+		font-size: inherit;
+		line-height: inherit;
 	}
 }
 
@@ -1085,7 +1088,7 @@ li {
 p {
 	margin-bottom: calc(var(--xs) * 2vh); /*8px*/
 	font-size: 1rem;
-	line-height: 1.5;
+	line-height: 1.33;
 }
 
 select {
@@ -1103,8 +1106,8 @@ table {
 	width: 100%;
 	margin-bottom: 8px;
 	font-size: 0.75em;
-	font-size: clamp(0.5em, 4.5cqw, 1em);
-	line-height: clamp(1.25em, 4.5cqw, 1.33em);
+	font-size: clamp(0.67em, 4.5cqw, 1em);
+	line-height: 1.33; /*clamp(1.275em, 4.5cqw, 1.325em);*/
 	/*border-collapse: collapse;*/
 	border-spacing: 0;
 	border-radius: var(--round);
@@ -1201,7 +1204,6 @@ table {
 			font-size: small; /* fallback for unsupported browsers ↴ */
 			font-size: clamp(0.45em, 9cqw, 0.9em);
 			font-weight: bold;
-			line-height: clamp(0.45em, 9cqw, 0.9em);
 			white-space: wrap;
 			text-shadow: 1px 1px 4px var(--text-inv);
 			user-select: none;
@@ -2230,16 +2232,17 @@ input:not(input:checked) + .label {
 				}
 			}
 			&:nth-child(2) div { /* Description cell */
-				height: calc(3 * clamp(1.25em, 4.5cqw, 1.45em));
+				container-type: inline-size;
+				height: calc(3.25 * clamp(1.25em, 4.5cqw, 1.45em));
 				width: 100%;
-				padding: 0.15em 0.3em;
+				padding: 0.15em 0.3em 0.3em 0.3em;
 				vertical-align: top;
 				overflow-y: auto;
+				line-height: clamp(1.25em, 4.5cqw, 1.45em);
 				text-align: justify;
 				text-wrap: pretty;
 				hyphens: auto;
 				hyphenate-limit-chars: 6;
-				container-type: inline-size;
 			}
 		}
 	}
@@ -2629,9 +2632,9 @@ input:not(input:checked) + .label {
 	}
 
 	/* Workaround for weird mobile's 'Desktop mode' scalable font-size behavior! */
-	@container main (inline-size < 320px) { table{font-size: 0.67em; line-height: 1.275} }
-	@container main (inline-size >= 320px) and (inline-size < 640px) { table{font-size: 0.83em; line-height: 1.3} }
-	@container main (inline-size >= 640px) { table{font-size: 1em; line-height: 1.325} }
+	@container main (inline-size < 320px) { table {font-size: 0.67em; } }
+	@container main (inline-size >= 320px) and (inline-size < 640px) { table {font-size: 0.83em;} }
+	@container main (inline-size >= 640px) { table{font-size: 1em;} }
 }
 
 @media (hover: none) { /* No pointer that can hover (e.g. a pure touch device) */
