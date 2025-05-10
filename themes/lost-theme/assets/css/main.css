@@ -435,8 +435,8 @@ body {
 			& > main, #view-main {
 				container: main / inline-size;
 				min-width: var(--main-w-min);
-				padding-block: calc(var(--m) * 2vh);
-				padding-inline: clamp(2rem, var(--s-res), 8rem);
+				padding-block: clamp(0.75rem, calc(var(--m) * 2vh), 1.5rem);
+				padding-inline: clamp(1rem, var(--s-res), 10rem);
 				z-index: 1;
 			}
 			&::before {
@@ -1967,12 +1967,26 @@ input:not(input:checked) + .label {
 }
 
 .commenter {
+	position: relative;
 	width: 100%;
 	margin: 0 auto;
 	padding-top: 1rem;
 
 	.giscus {
 		opacity: 0.9;
+	}
+
+	&::before { /* The heading gradient */
+		content: '';
+		position: absolute;
+		bottom: -6px;
+		right: -12px;
+		height: 110%;
+		width: calc(100% + 24px);
+		border-radius: var(--round);
+		border: 0px solid var(--text-inv);
+		pointer-events: none;
+		background: linear-gradient(calc(0deg - 6.6deg), rgb(from var(--text-inv) r g b / 33.3%) 0%, rgb(from var(--text-inv) r g b / 0%) 66.7%);
 	}
 }
 
@@ -2139,13 +2153,13 @@ input:not(input:checked) + .label {
 		content: '';
 		position: absolute;
 		top: 0;
-		right: -4px;
-		height: clamp(96px, 200%, 120px);
-		width: calc(100% + 8px);
+		right: -12px;
+		height: clamp(80px, 210%, 110px);
+		width: calc(100% + 24px);
 		border-radius: var(--round);
 		border: 0px solid var(--text-inv);
 		pointer-events: none;
-		background: linear-gradient(calc(180deg - 3deg), rgb(from var(--text-inv) r g b / 25%) 0%, rgb(from var(--text-inv) r g b / 0%) 66.7%);
+		background: linear-gradient(calc(180deg - 3.3deg), rgb(from var(--text-inv) r g b / 33.3%) 0%, rgb(from var(--text-inv) r g b / 0%) 66.7%);
 	}
 	
 	& tr {
