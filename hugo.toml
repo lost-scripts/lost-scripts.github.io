@@ -85,6 +85,7 @@ commentsRepoId='R_kgDOONd4Hw'
 commentsCategoryId = 'DIC_kwDOONd4H84CpGLA'
 commentsThemeLight = 'catppuccin_latte'
 commentsThemeDark = 'catppuccin_frappe'
+aside = false
 banner = false
 ribbon = true
 subtitle = 'The Lost (Moho® Scripts) Ark'

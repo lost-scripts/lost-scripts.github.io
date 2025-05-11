@@ -266,7 +266,7 @@
 }
 
 .responsive {
-	--padding-res: calc(var(--padding) * 1%);
+	--w-factor: 1;
 	--xxs-res: calc(var(--xxs) * 10%); /*0.125*/
 	--xs-res: calc(var(--xs) * 10%); /*0.25*/
 	--s-res: calc(var(--s) * 10%); /*0.5*/
@@ -411,20 +411,21 @@ body {
 	}
 
 	& > section, #section {
+		container: section / inline-size;
 		flex-flow: row;
 		gap: 0;
 		overflow: hidden;
 		background-color: inherit;
-		container: section / inline-size;
 
 		& > nav, #nav {
+			container: nav / inline-size;
 			flex-grow: unset;
 			width: var(--nav-w);
-			container: nav / inline-size;
 			box-shadow: inset 8px 0px 4px -6px rgba(0, 0, 0, 0.33), 2px 4px 6px 0 rgba(0, 0, 0, 0.33); /* For allowing both! */
 			z-index: 2;
 		}
 		& > section, #view {
+			container: view / inline-size;
 			position: relative;
 			width: unset;
 			flex: 3;
@@ -435,8 +436,9 @@ body {
 			& > main, #view-main {
 				container: main / inline-size;
 				min-width: var(--main-w-min);
-				padding-block: clamp(0.75rem, calc(var(--m) * 2vh), 1.5rem);
-				padding-inline: clamp(1rem, var(--s-res), 10rem);
+				padding-block: clamp(0.75rem, calc(var(--m) * 1.5vh), 1.25rem);
+				padding-inline: clamp(1rem, calc(var(--s-res) * var(--w-factor, 1)), 10rem);
+				transition: padding-inline var(--short) ease-in-out;
 				z-index: 1;
 			}
 			&::before {
@@ -453,21 +455,21 @@ body {
 			}
 		}
 		& > aside, #aside {
+			container: aside / inline-size;
 			flex: 0.33 1 var(--aside-w);
 			min-width: calc(var(--aside-w-max) / 2);
 			max-width: var(--aside-w-max);
 			padding-block: calc(var(--m) * 2vh);
 			padding-inline: clamp(0.75rem, 2cqw, 1.25rem);
+			box-shadow: inset 8px 0px 4px -6px rgb(0, 0, 0, 0.33), 2px 4px 6px 0 rgb(0, 0, 0, 0.33); /* For allowing both! */
 			background-color: var(--gray-C3);
-			box-shadow: inset 8px 0px 4px -6px rgba(0, 0, 0, 0.33), 2px 4px 6px 0 rgba(0, 0, 0, 0.33); /* For allowing both! */
-			container: aside / inline-size;
 			z-index: 0;
 		}
 	}
 
 	& > footer, #footer {
-		background-color: var(--gray-B4);
 		container: footer / inline-size;
+		background-color: var(--gray-B4);
 	}
 }
 
@@ -1986,7 +1988,7 @@ input:not(input:checked) + .label {
 		border-radius: var(--round);
 		border: 0px solid var(--text-inv);
 		pointer-events: none;
-		background: linear-gradient(calc(0deg - 6.6deg), rgb(from var(--text-inv) r g b / 33.3%) 0%, rgb(from var(--text-inv) r g b / 0%) 66.7%);
+		background: linear-gradient(calc(0deg - 10deg), rgb(from var(--text-inv) r g b / 33.3%) 0%, rgb(from var(--text-inv) r g b / 0%) 66.7%);
 	}
 }
 
@@ -2501,6 +2503,25 @@ input:not(input:checked) + .label {
 /* AT-RULES */
 /************/
 
+@media (prefers-color-scheme: dark) {
+	:root {
+		--is-dark: 1;
+	}
+}
+
+@supports not selector(::-webkit-scrollbar) { /* Wrap new scrollbar properties in @supports rule for browsers without `::-webkit-scrollbar-...` support. This way chrome won't override `::-webkit-scrollbar-...` selectors */
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: unset var(--gray-B4); /*SlateGray DarkSlateGray;*/
+	}
+}
+
+@container header (width < 512px) {
+	#banner {
+		display: none;
+	}
+}
+
 /* Nav modes */
 /*nav > section {
 	--nav-width: 0;
@@ -2616,15 +2637,28 @@ input:not(input:checked) + .label {
 	}
 }
 
-@container header (width < 512px) {
-	#banner {
-		display: none;
+@container view (inline-size < 512px) {
+	.responsive {
+		--w-factor: 1;
+	}
+	@media (pointer: coarse) {
+		table {font-size: 0.67em;} /* And bellow: Workaround for weird mobile's 'Desktop mode' scalable font-size behavior! */
 	}
 }
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--is-dark: 1;
+@container view (inline-size >= 512px) and (inline-size < 1024px) {
+	.responsive {
+		--w-factor: 1.5;
+	}
+	@media (pointer: coarse) {
+		table {font-size: 0.83em;}
+	}
+}
+@container view (inline-size >= 1024px) {
+	.responsive {
+		--w-factor: 2;
+	}
+	@media (pointer: coarse) {
+		table{font-size: 1em;}
 	}
 }
 
@@ -2689,22 +2723,10 @@ input:not(input:checked) + .label {
 			scale: 1;
 		}
 	}
-
-	/* Workaround for weird mobile's 'Desktop mode' scalable font-size behavior! */
-	@container main (inline-size < 320px) { table {font-size: 0.67em; } }
-	@container main (inline-size >= 320px) and (inline-size < 640px) { table {font-size: 0.83em;} }
-	@container main (inline-size >= 640px) { table{font-size: 1em;} }
 }
 
 @media (hover: none) { /* No pointer that can hover (e.g. a pure touch device) */
 	
-}
-
-@supports not selector(::-webkit-scrollbar) { /* Wrap new scrollbar properties in @supports rule for browsers without `::-webkit-scrollbar-...` support. This way chrome won't override `::-webkit-scrollbar-...` selectors */
-	* {
-		scrollbar-width: thin;
-		scrollbar-color: unset var(--gray-B4); /*SlateGray DarkSlateGray;*/
-	}
 }
 
 @keyframes blink {
