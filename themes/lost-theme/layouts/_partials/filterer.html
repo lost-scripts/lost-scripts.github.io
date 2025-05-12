@@ -9,7 +9,7 @@
 		<hr>
 
 		<!-- Group of checkbox inputs for tags -->
-		{{- range .Site.Taxonomies.tags -}}
+		{{- range sort (sort .Site.Taxonomies.tags "Page.Title") "Page.Weight" "asc" -}}
 			<li>
 				<label title="{{ .Page.Description | .Page.RenderString | default (i18n `no_desc`) }}">
 					<input type="checkbox" name="filter-{{ .Page.LinkTitle | urlize }}" value="{{ .Page.LinkTitle }}" class="filter-entry" >{{ .Page.Title }}

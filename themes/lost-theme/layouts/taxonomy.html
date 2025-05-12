@@ -2,7 +2,7 @@
 	<h1>{{ .Title }}</h1>
 	{{- .Content -}}
 	<div id="tag-container"> <!-- WIP! (Improve styling in main.css) -->
-		{{- range .Data.Terms.Alphabetical -}} {{- /* .Data.Terms.ByCount */ -}}
+		{{- range sort (sort .Data.Terms.Alphabetical) "Page.Weight" "asc" -}}
 			<span>
 				<h3><a href="{{ .Page.RelPermalink }}">&hairsp;{{ .Page.LinkTitle }}</a> <sup>({{ .Count }})</sup></h3>
 				<p>{{ .Page.Description | .Page.RenderString | default (i18n "no_desc") }}</p>
