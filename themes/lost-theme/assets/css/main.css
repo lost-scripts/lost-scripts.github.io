@@ -953,8 +953,8 @@ blockquote {
 	text-wrap: pretty;
 	hyphens: auto;
 	hyphenate-limit-chars: 6;
-	font-size: 0.875em;
-	font-size: clamp(0.83em, 4cqw, 1em);
+	font-size: 0.85rem;
+	font-size: clamp(0.8rem, 4.5cqw, 0.9rem);
 	line-height: 1.25;
 	background-color: color-mix(in srgb, var(--accent) 33%, transparent);
 	box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.33);
@@ -1109,8 +1109,8 @@ table {
 	container-type: inline-size;
 	width: 100%;
 	margin-bottom: calc(var(--xs) * 2vh); /*8px*/
-	font-size: 0.75em;
-	font-size: clamp(0.67em, 4.5cqw, 1em);
+	font-size: 0.85em;
+	font-size: clamp(0.8em, 4.5cqw, 0.9em);
 	line-height: 1.33; /*clamp(1.275em, 4.5cqw, 1.325em);*/
 	/*border-collapse: collapse;*/
 	border-spacing: 0;
