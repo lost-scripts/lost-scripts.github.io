@@ -427,26 +427,27 @@ body {
 		& > section, #view {
 			container: view / inline-size;
 			position: relative;
-			width: unset;
+			/*width: unset;*/
+			min-width: var(--main-w-min); /* 20250511: Moved here cause the addition of `container: view / inline-size;` nullifies #view-main's `min-width` */
 			flex: 3;
-			background-color: var(--gray-C3);
+			overflow: hidden;
 			/*box-shadow: inset 2px 4px 6px 0 rgba(0, 0, 0, 0.3);*/
+			background-color: var(--gray-C3);
 			z-index: 1;
 
 			& > main, #view-main {
 				container: main / inline-size;
-				min-width: var(--main-w-min);
+				min-width: inherit;
 				padding-block: clamp(0.75rem, calc(var(--m) * 1.5vh), 1.25rem);
 				padding-inline: clamp(1rem, calc(var(--s-res) * var(--w-factor, 1)), 10rem);
 				transition: padding-inline var(--short) ease-in-out;
 				z-index: 1;
 			}
-			&::before {
+			&::before { /* Drop shadow */
 				content: '';
 				position: absolute;
 				top: 0;
 				left: 0;
-				right: 0;
 				height: 8px;
 				width: 100%;
 				background: linear-gradient(to bottom, rgba(0, 0, 0, 0.33), transparent);
@@ -1115,7 +1116,6 @@ table {
 	border-spacing: 0;
 	border-radius: var(--round);
 	border: 1px solid var(--gray-A5);
-	overflow: hidden;
 
 	& tr:nth-child(odd), th td {
 		background-color: rgba(128, 128, 128, 0.1);
@@ -1978,7 +1978,7 @@ input:not(input:checked) + .label {
 		opacity: 0.9;
 	}
 
-	&::before { /* The heading gradient */
+	&::before { /* The footer gradient */
 		content: '';
 		position: absolute;
 		bottom: -6px;
@@ -2148,7 +2148,6 @@ input:not(input:checked) + .label {
 	margin-bottom: 0;
 	padding-top: 4px;
 	border: none;
-	overflow: visible;
 	background: none;
 
 	&::before { /* The heading gradient */
@@ -2219,8 +2218,8 @@ input:not(input:checked) + .label {
 }
 
 .card {
-	background: rgba(128, 128, 128, 0.1);
 	box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.33);
+	background: rgba(128, 128, 128, 0.1);
 
 	& tr {
 		& > th {
@@ -2727,6 +2726,12 @@ input:not(input:checked) + .label {
 
 @media (hover: none) { /* No pointer that can hover (e.g. a pure touch device) */
 	
+}
+
+@-moz-document url-prefix() { /* Firefox only (general) */
+	#view-main > table:first-of-type:first-child {
+		overflow: hidden; /*NOTE: Patch to avoid weird container overflow on Firefox! */
+	}
 }
 
 @keyframes blink {
