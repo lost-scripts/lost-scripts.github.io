@@ -12,7 +12,7 @@
 			<ul>
 				{{- range .Ancestors.Reverse -}}
 					<li>
-						<a href="{{ if .IsHome }}/{{ else }}{{ .RelPermalink }}{{ end }}">
+						<a href="{{ if .IsHome }}/{{ else }}{{ .RelPermalink }}{{ end }}" class="{{ if .IsHome }}undecorate{{ end }}">
 							{{- if .IsHome -}}
 								{{- /* i18n "home" | default "Home" */ -}}
 								{{- /* with page.Params.prefix */ -}}

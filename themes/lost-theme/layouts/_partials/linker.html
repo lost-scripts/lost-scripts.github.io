@@ -4,7 +4,7 @@
 	{{- range sort .Site.Params.links "order" "desc" -}}
 		{{- $index = add $index 1 -}}
 		{{- $zIndex := sub $itemCount (sub $index 1) -}}
-		<a href="{{ .href }}" target="_blank" id="link-{{ $index }}" class="link" style="anchor-name: --link-{{ $index }}; z-index: {{ $zIndex }};" draggable="false" aria-label="{{ i18n .start }} {{ ` ` }} {{ i18n .title | default .title }} {{ ` ` }} {{ i18n .end }}">
+		<a href="{{ .href }}" target="_blank" id="link-{{ $index }}" class="link undecorate" style="anchor-name: --link-{{ $index }}; z-index: {{ $zIndex }};" draggable="false" aria-label="{{ i18n .start }} {{ ` ` }} {{ i18n .title | default .title }} {{ ` ` }} {{ i18n .end }}">
 			{{- if .src -}}
 				<img src="{{ .src }}" class="link-icon colorize" alt="{{ .alt }}">
 			{{- else if .icon -}}

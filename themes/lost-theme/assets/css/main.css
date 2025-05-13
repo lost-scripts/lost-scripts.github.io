@@ -689,6 +689,7 @@ nav ul li details summary a {
 	outline-offset: -2px;
 	overflow: hidden;
 	mask-image: linear-gradient(to left, transparent, black 0.5em); -webkit-mask-image: linear-gradient(to left, transparent, black 0.5em);
+	/*background-size: 0% !important;*/ /* Explicitly excluded from animated link underlining */
 
 	& picture {
 		width: 2em;
@@ -912,12 +913,14 @@ a {
 	&:visited {
 		color: var(--a-visited);
 	}
-	&:hover {
+	&:hover, &:focus {
 		color: var(--a-hover);
-		text-decoration: underline;
-		
+
 		&:has(.fa) {
 			text-decoration: none;
+		}
+		&:not(.undecorate) { /* More rules can be added (also bellow!) e.g. `&:not(.undecorate):not(.whatever)` (SOURCE: dannyguo.com/blog/animated-multiline-link-underlines-with-css) */
+			background-size: 100% 2px;
 		}
 	}
 	&:active {
@@ -932,25 +935,14 @@ a {
 	& .fa {
 		text-decoration: none; /* Un-underline elements with the class `fa` within links */
 	}
+	&:not(.undecorate) {
+		background-image: linear-gradient(currentColor, currentColor);
+		background-position: 0% 100%;
+		background-repeat: no-repeat;
+		background-size: 0% 2px;
+		transition: background-size calc(var(--shorter) + (var(--shorter) / 2));
+	}
 } /* NOTE: LoVe-HAte (Never forget...) */
-
-/*
-a:not(.anchor):not(.link-button):not(.link-image):not(.ais-Pagination-link) {
-	background-image: linear-gradient(currentColor, currentColor);
-	background-position: 0% 100%;
-	background-repeat: no-repeat;
-	background-size: 0% 8px;
-	transition: background-size 0.3s;
-}
-
-a:not(.anchor):not(.link-button):not(.link-image):not(
-	.ais-Pagination-link
-	):hover,
-a:not(.anchor):not(.link-button):not(.link-image):not(
-	.ais-Pagination-link
-	):focus {
-	background-size: 100% 2px;
-}*//* 20250315-0155: TODO! Animated link underline on hover (SOURCE: dannyguo.com, adapted from https://codepen.io/shshaw/details/pdyJBW). The ais exclusion is for Algolia pagination links. */
 
 blockquote {
 	width: 100%;

@@ -1,7 +1,8 @@
-{{/*  partial "menu.html" (dict "menuID" "main" "page" .) */}}
+{{- /*  partial "menu.html" (dict "menuID" "main" "page" .) */ -}}
+
 <div id="header-left" class="wrap">
 	<hgroup id="logos" class="shadowize">
-		<a href="{{ .Site.BaseURL | relLangURL }}" title="{{ site.Title }}">
+		<a href="{{ .Site.BaseURL | relLangURL }}" class="undecorate" title="{{ site.Title }}">
 			<img src="/icons/logo.png" height="44px" class="colorize" id="logo">
 			<img src="/icons/logo_alt.png" height="44px" class="colorize" id="logo-alt">
 		</a>

@@ -13,7 +13,7 @@
 <li class="nav-item {{ if .isActive }}active{{ end }}" data-tags="{{- range $i, $t := $tagNames -}} {{- if $i -}}, {{- end -}}{{- $t -}}{{- end -}}">
 	<details name="topic">
 		<summary tabindex="-1">
-			<a href="{{ .page.RelPermalink }}">
+			<a href="{{ .page.RelPermalink }}" class="undecorate">
 				<picture name="nav-item-icon">
 					{{- $iconPathBase := replace (path.Clean .page.File.Path) ".md" "" -}}
 					{{- $iconPathSVG := printf "%s.svg" $iconPathBase | relURL -}} {{- /* $iconPathSVG := path.Clean (replace .page.File.Path ".md" ".svg") | relURL */ -}}

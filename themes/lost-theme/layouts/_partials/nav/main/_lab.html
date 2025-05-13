@@ -1,7 +1,7 @@
 <li class="{{ if .isActive }}active{{ end }}">
 	<details name="topic">
 		<summary tabindex="-1">
-			<a href="{{ .page.RelPermalink }}">
+			<a href="{{ .page.RelPermalink }}" class="undecorate">
 				<picture>
 					{{- $iconPathBase := replace (path.Clean .page.File.Path) ".md" "" -}}
 					{{- $iconPathSVG := printf "%s.svg" $iconPathBase | relURL -}} {{- /* $iconPathSVG := path.Clean (replace .page.File.Path ".md" ".svg") | relURL */ -}}
