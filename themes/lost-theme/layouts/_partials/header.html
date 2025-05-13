@@ -2,10 +2,6 @@
 <div id="header-left" class="wrap">
 	<hgroup id="logos" class="shadowize">
 		<a href="{{ .Site.BaseURL | relLangURL }}" title="{{ site.Title }}">
-			<!--<h1>{{ site.Title }}</h1>-->
-			<!--<small>{{ site.Params.subtitle }}</small>-->
-			<!--<img src="/icons/logo.png" height="44px" class="colorize">-->
-
 			<img src="/icons/logo.png" height="44px" class="colorize" id="logo">
 			<img src="/icons/logo_alt.png" height="44px" class="colorize" id="logo-alt">
 		</a>
@@ -15,29 +11,12 @@
 
 	{{ partial "filterer.html" . }}
 </div>
-<!--
-<div id="header-center" class="wrap">
-	{{ partial "linker.html" . }}
 
-	{{- if.Site.Params.banner -}}
-		<div id="banner" class="banner">
-			<span class="blinker">{{ i18n `under_construction` }}</span>
-		</div>
-	{{- end -}}
-</div>
--->
 <div id="header-right" class="wrap">
 	<div id="linker" class="unbar">
 		{{ partial "linker.html" . }}
 	</div>
 
-	<!--
-	{{- if .Site.Params.banner -}}
-		<div id="banner" class="banner">
-			<span class="blinker">{{ i18n `under_construction` }}</span>
-		</div>
-	{{- end -}}
-	-->
 	<div id="banner" class="banner" style="{{ if not .Site.Params.banner }}display: none;{{ end }}">
 		<span class="blinker">{{ i18n `under_construction` }}</span>
 	</div>
@@ -48,10 +27,9 @@
 		<audio id="switcher2" src="assets/switch.wav"></audio>
 		<button onmousedown="let audio = document.getElementById('switcher2'); audio.volume = 0.33; audio.play()">Click Me</button>
 		-->
-
 		<button id="resetter" title="{{ i18n `Reset Pinhole [?]` }}"></button>
 		<dialog id="resetDialog">
-			<p>{{ i18n "reset_reload" }}</p> <!--The reset pinhole resets all preferences to default and reloads. Continue?-->
+			<p>{{ i18n "reset_reload" }}</p>
 			<hr>
 			<form method="dialog">
 				<button id="cancelButton">{{ i18n "cancel" }}</button>
@@ -66,8 +44,6 @@
 		<label id="darker-label" class="toggle-label" title="{{ i18n `light_switch` }}" data-light="{{ i18n `go_light` }}" data-dark="{{ i18n `go_dark` }}" data-auto="{{ i18n `_auto` }}">
 			<input type="checkbox" id="darker" class="toggle darked audio" aria-label="Theme toggler">
 		</label>
-
-		<!--<input id="searcher" type="text" onkeyup="myFunction()" placeholder="🔍">-->
 
 		{{- partial "i18ner.html" . -}}
 	</div>

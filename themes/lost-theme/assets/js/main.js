@@ -19,14 +19,13 @@ const accentDarkDef = styles.getPropertyValue("--accent-dark");
 switchTheme(storedTheme !== null ? storedTheme === "true" : darkThemeOn.matches);
 
 // OS changes listener
-darkThemeOn.addEventListener("change", (evt) => storedTheme === null && switchTheme(evt.matches)); //darkThemeOn.addEventListener("change", (evt) => switchTheme(evt.matches));
+darkThemeOn.addEventListener("change", (evt) => storedTheme === null && switchTheme(evt.matches));
 
 // Toggles the "darked" class and applies stored accent color
 function switchTheme(state) {
 	document.documentElement.classList.toggle("darked", state);
 	document.documentElement.setAttribute('data-theme', state ? 'dark' : 'light');
 	darkThemeState = state;
-	//darker.classList.toggle('active', state); // Actualiza el estado del toggle
 	applyStoredAccent();
 	updateIcons();
 }
@@ -118,7 +117,6 @@ function scrollToOpacity(scrollTop, start, end) {
 // Update icons (colorized images)
 function updateIcons() {
 	document.querySelectorAll('.colorize').forEach(function(container) {
-		//const imgB64 = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAoCAYAAAC4h3lxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAPVJREFUeNrsWe0OwyAI9Bbe/5XZsqSJMY6B1YoKSX/UNgJyx0cLZk4ryystLuHAbCHhmTdy4EwIAfhe2vvOJ47tOQChDgQHZmch0fMHhY+tAzaAAirOfDgH5X5J06dFBConDwnL2fvo0QmT0dgLBuNypbEomhzIDZcU1RzUGlbq+HdYtzjgYRhyQ+IyQtqI0Qi8apX3aAJJo6QGlWsNFSsKHPNICJ5RB6Rs8GvdUB8iAs3ktWJ4RNptcsDTxzAauPcjc0R0o4ZJKrJQswMzSKvVuT8HhEprzkKa5i3rsaaT2M1Exp6L2dYcwAoOxC+mcOCmvAUYAO4xVoP1fPWcAAAAAElFTkSuQmCC';
 		const src = container.getAttribute('src');
 		const imgSty = container.style.getPropertyValue('--url');
 		const imgSrc = urlToPath(imgSty) || src || '/icons/icon_unknown.png';
@@ -211,7 +209,7 @@ const headerLeft = document.getElementById('header-left');
 
 //// THEME:
 
-const darker = document.getElementById('darker'); // document.querySelector('#darker');
+const darker = document.getElementById('darker');
 const darkerLabel = darker.parentElement.tagName === 'LABEL' ? darker.parentElement : darker;
 const highlighter = document.getElementById('highlighter');
 const highlighterLabel = highlighter.parentElement.tagName === 'LABEL' ? highlighter.parentElement : highlighter;
@@ -220,7 +218,7 @@ const storedAccentDark = localStorage.getItem('accentDark');
 
 // Obtain and apply the stored highlight color (NEW!)
 const curTheme = root.classList.contains('darked') ? 'dark' : 'light';
-const curAccent = curTheme === 'dark' ? storedAccentDark || accentDarkDef : storedAccentLight || accentLightDef; //const accent = themeAccent(styles.getPropertyValue("--accent"));
+const curAccent = curTheme === 'dark' ? storedAccentDark || accentDarkDef : storedAccentLight || accentLightDef;
 
 // Apply the stored color if it's different from current one (NEW!)
 const appliedAccent = getComputedStyle(root).getPropertyValue('--accent').trim();
@@ -235,9 +233,7 @@ darker.addEventListener('click', function() {
 	switchTheme(darkThemeState);
 	localStorage.setItem("darked", darkThemeState); //storeTheme(darkThemeState);
 	darkerLabel.title = (darkThemeState ? getData(darkerLabel, 'data-light') : getData(darkerLabel, 'data-dark')) + (localStorage.getItem("darked") === null ? getData(darkerLabel, 'data-auto') : '');
-	//darkerLabel.title = (darkThemeState ? 'Go light!' : 'Go dark!') + (localStorage.getItem("darked") === null ? ' (AUTO)' : '');
 	highlighterLabel.title = (darkThemeState ? getData(highlighterLabel, 'data-dark-hl') : getData(highlighterLabel, 'data-light-hl'));
-	//highlighterLabel.title = (darkThemeState ? 'Dark mode highlights' : 'Light mode highlights')
 	highlighter.value = getCSSVarValue('--accent');
 	updatePseudoStyles(getCSSVarValue('--accent'));
 	updateIcons();
@@ -245,9 +241,8 @@ darker.addEventListener('click', function() {
 	audioFeedback(this); // Or use: const audio = document.getElementById('other-audio');
 });
 
-// Esto puedes colocarlo directamente al inicio, antes de que se cargue Giscus (o en main.js si se ejecuta antes de entrar en viewport)
+// This can be placed directly at startup, before giscus is loaded (or in main.js if it's executed before entering the viewport)
 const giscusScript = document.querySelector('script[src*="giscus.app"]');
-
 if (giscusScript) {
 	const darked = localStorage.getItem('darked'); // null = auto
 	const theme = darked === 'true' ? giscusScript.dataset.themeDark || 'dark'
@@ -291,9 +286,7 @@ highlighter.parentElement.addEventListener('dblclick', function() {
 });
 
 darkerLabel.title = (darkThemeState ? getData(darkerLabel, 'data-light') : getData(darkerLabel, 'data-dark')) + (localStorage.getItem("darked") === null ? getData(darkerLabel, 'data-auto') : '');
-//darkerLabel.title = (darkThemeState ? 'Go light!' : 'Go dark!') + (localStorage.getItem("darked") === null ? ' (AUTO)' : '');
 highlighterLabel.title = (darkThemeState ? getData(highlighterLabel, 'data-dark-hl') : getData(highlighterLabel, 'data-light-hl'));
-//highlighterLabel.title = (darkThemeState ? 'Dark mode highlights' : 'Light mode highlights');
 
 // Update accent color
 function updateAccentColor(color) {
@@ -308,9 +301,8 @@ function updateAccentColor(color) {
 	});
 }
 
-// Update accent color for pseudo-styles
+// Update accent color for pseudo-styles (collects all elements with pseudoclasses in a single NodeList, e.g. ('.toggle, .another-class, .yet-another-class'))
 function updatePseudoStyles(color) {
-	// Collect all elements with pseudoclasses in a single NodeList, e.g. ('.toggle, .another-class, .yet-another-class')
 	const hasPseudoclasses = document.querySelectorAll('.toggle');
 	hasPseudoclasses.forEach(element => {
 		element.style.setProperty('--accent', color);
@@ -601,41 +593,8 @@ lifter.addEventListener("click", function () { //main.scrollTo({ top: 0, behavio
 // Initial update of icons
 updateIcons();
 
-/*
-window.addEventListener('load', () => {
-	darker.checked = darkThemeState;
-});
-*/
 
-//console.log('This site was generated by Hugo.');
-
-//// ICONS:
-
-/* 20241019-0530: TEST...
-document.querySelectorAll('.colorize').forEach(function(container) {
-let backgroundImage = window.getComputedStyle(container).backgroundImage;
-let imageUrl = backgroundImage.match(/url\(["']?([^"']*)["']?\)/)[1]; console.log(imageUrl); // Extrae la URL
-
-let img = new Image();
-img.onload = function() {
-	let naturalWidth = img.width;
-	let naturalHeight = img.height;
-
-	let aspectRatio = naturalWidth / naturalHeight;
-	container.style.setProperty('--aspect-ratio', aspectRatio);
-
-	// Opcional: si la imagen no tiene dimensiones especificadas, usa sus dimensiones naturales
-	if (!container.style.width || !container.style.height) {
-		container.style.width = naturalWidth + 'px';
-		container.style.height = naturalHeight + 'px';
-	}
-};
-
-img.src = imageUrl;
-});
-*/
-
-/* 20241019-0410: DEPRECATED in favor of pure CSS solution...
+/*// ICONS: 20241019-0410: DEPRECATED in favor of pure CSS solution...
 document.querySelectorAll('.colorize').forEach(function(container) {
 	//let colorize = container.querySelector('.colorize');
 	let imgSrc = container.src; //console.log(imgSrc);
@@ -660,5 +619,6 @@ document.querySelectorAll('.colorize').forEach(function(container) {
 	container.style.backgroundImage = `url(${imgSrc})`;
 	//container.setAttribute('width', clientWidth);
 	//container.setAttribute('height', clientHeight);
-});
-*/
+});*/
+
+//console.log('This site was generated by Hugo.');

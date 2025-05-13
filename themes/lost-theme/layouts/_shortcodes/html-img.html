@@ -1,4 +1,5 @@
 {{- /* E.G.: {{< html-img src="index.png" alt="Picture" class="center" >}} */ -}}
+
 {{- $src := .Page.Resources.GetMatch (.Get "src") -}}
 <img src="{{ $src.RelPermalink }}" alt="{{ .Get `alt` }}" class="{{ .Get `class` }}" style="{{ .Get `style` }}">
 

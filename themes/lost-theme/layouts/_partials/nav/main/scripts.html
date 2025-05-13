@@ -1,57 +1,6 @@
 {{- /* partial "menu.html" (dict "menuID" "main" "page" .) */ -}}
 
-{{- /*
 <ul class="nav-articles">
-	{{- $currentPage := . -}}
-	{{- range .Site.RegularPages -}}
-		{{- if or (eq .Section "scripts") (eq .Type "script") -}} <!--{{- if or (eq (path.Dir .File.Path) "scripts") (eq .Type "script") -}}-->
-			{{- $isActive := eq $currentPage.RelPermalink .RelPermalink -}}
-			{{- partial "nav/main/_script" (dict "page" . "isActive" $isActive) -}}
-		{{- end -}}
-	{{- end -}}
-</ul>
-*/ -}}
-
-{{- /*
-<ul class="nav-articles">
-	{{- $currentPage := . -}}
-	{{- $homepage := site.Params.homepage | urlize -}}
-	{{- range .Site.RegularPages -}}
-		{{- if or (eq .Section "scripts") (eq .Type "script") -}}
-			{{- $isActive := or (eq $currentPage.RelPermalink .RelPermalink) (and (eq .RelPermalink $homepage) (eq $currentPage.RelPermalink "/")) -}}
-			{{- partial "nav/main/_script" (dict "page" . "isActive" $isActive) -}}
-		{{- end -}}
-	{{- end -}}
-</ul>
-*/ -}}
-
-{{- /* <!-- Discarded in favor to bellow to preserve Hugo's default ordering! -->
-<ul class="nav-articles">
-	{{- $currentPage := . -}}
-	{{- $homepage := (site.Params.homepage | default "/") | urlize -}}
-	{{- $allPages := where .Site.AllPages "Kind" "page" -}}
-
-	{{- $pageByTranslationKey := newScratch -}}
-	{{- range $allPages -}}
-		{{- $pageByTranslationKey.Add .TranslationKey (slice .) -}}
-	{{- end -}}
-
-	{{- $preferredPages := newScratch -}}
-	{{- range $key, $pages := $pageByTranslationKey.Values -}}
-		{{- $preferredPage := index (where $pages "Language.Lang" $.Page.Language.Lang | default $pages) 0 -}}
-		{{- $preferredPages.Add "pages" (slice $preferredPage) -}}
-	{{- end -}}
-
-	{{- range $preferredPages.Get "pages" -}}
-		{{- if or (eq .Section "scripts") (eq .Type "script") -}}
-			{{- $isActive := or (eq $currentPage.RelPermalink .RelPermalink) (and (eq .RelPermalink $homepage) (eq $currentPage.RelPermalink "/")) -}}
-			{{- partial "nav/main/_script" (dict "page" . "isActive" $isActive) -}}
-		{{- end -}}
-	{{- end -}}
-</ul>
-*/ -}}
-
-<ul class="nav-items">
 	{{- $currentPage := . -}}
 	{{- $homepage := (site.Params.homepage | default "/") | urlize -}}
 	{{- $allPages := where .Site.AllPages "Kind" "page" -}}
@@ -71,28 +20,7 @@
 		{{- $preferredPage := index (where $pages "page.Language.Lang" $.Page.Language.Lang | default $pages) 0 -}} <!-- Find preferred page according to language -->
 		{{- $preferredPages.Add "pages" (slice $preferredPage) -}} <!-- Add preferred page to the map -->
 	{{- end -}}
-	<!--
-	<table style="font-size: 67%;">
-		<thead>
-			<tr>
-				<th>Key</th>
-				<th>Preferred Pages</th>
-			</tr>
-		</thead>
-		<tbody>
-			{{- range $key, $entries := $preferredPages.Values -}}
-			<tr>
-				<td>{{ $key }}</td>
-				<td>
-					{{- range $entries -}}
-						{{ printf "Page: %s, Order: %d" .page.RelPermalink .order }}<br>
-					{{- end -}}
-				</td>
-			</tr>
-			{{- end -}}
-		</tbody>
-	</table>
-	-->
+
 	{{- range (sort ($preferredPages.Get "pages") "order") -}}
 		{{- if or (eq .page.Section "scripts") (eq .page.Type "script") -}}
 			{{- $isActive := or (eq $currentPage.RelPermalink .page.RelPermalink) (and (eq .page.RelPermalink $homepage) (eq $currentPage.RelPermalink "/")) -}}

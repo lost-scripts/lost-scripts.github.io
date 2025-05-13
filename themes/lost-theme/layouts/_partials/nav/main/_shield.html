@@ -1,11 +1,3 @@
-{{- with .page.Params.shields -}}
-	{{- range . -}}
-		<div class="shield-wrap">
-			<img class="shield" src="{{ .src }}" alt="{{ .alt }}">
-		</div>
-	{{- end -}}
-{{- end -}}
-
 {{- /* 
 {{- with .page.Params.shields -}}
 	{{- $shields := . -}}
@@ -15,3 +7,11 @@
 	{{- end -}}
 {{- end -}}
 */ -}}
+
+{{- with .page.Params.shields -}}
+	{{- range . -}}
+		<div class="shield-wrap">
+			<img class="shield" src="{{ .src }}" alt="{{ .alt }}">
+		</div>
+	{{- end -}}
+{{- end -}}

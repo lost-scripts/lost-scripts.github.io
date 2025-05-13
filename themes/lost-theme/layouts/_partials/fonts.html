@@ -1,3 +1,5 @@
+{{- /* A global resource isn't published unless you invoke its Publish/Permalink/RelPermalink method (discourse.gohugo.io/t/cannot-get-font-awesome-fonts-to-appear/52505/10) */ -}}
+
 {{- range resources.Match "fa/webfonts/**" -}}
-  {{- .Publish -}}
+	{{- .Publish -}}
 {{- end -}}

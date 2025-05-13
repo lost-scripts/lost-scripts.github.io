@@ -1,7 +1,9 @@
+{{- /* Template to render a list of terms */ -}}
+
 {{- define "main" -}}
 	<h1>{{ .Title }}</h1>
 	{{- .Content -}}
-	<div id="tag-container"> <!-- WIP! (Improve styling in main.css) -->
+	<div id="tag-container">
 		{{- range sort (sort .Data.Terms.Alphabetical) "Page.Weight" "asc" -}}
 			<span>
 				<h3><a href="{{ .Page.RelPermalink }}">&hairsp;{{ .Page.LinkTitle }}</a> <sup>({{ .Count }})</sup></h3>

@@ -38,14 +38,14 @@
 	--nav-w-def: 33.3%;
 	--nav-w: var(--nav-w-def, 33.3%);
 	--nav-w-max: 384px;
-	--nav-w-min: calc(var(--nav-w-max) / 3.33); /*128px*/
+	--nav-w-min: calc(var(--nav-w-max) / 3.33);
 	--tab-h: 32px;
 	--aside-w-def: calc(var(--nav-w-def) / 2);
 	--aside-w: var(--aside-w-def, 16.6%);
 	--aside-w-max: calc(var(--nav-w-max) / 2);
 	--widget-h: 1.5; /* Unit-less */
-	--widget-h-px: calc(var(--widget-h) * 16px); /* To pixels (24px) */
-	--widget-h-rem: calc(var(--widget-h) * 1rem); /* To rem (1.5rem) */
+	--widget-h-px: calc(var(--widget-h) * 16px);
+	--widget-h-rem: calc(var(--widget-h) * 1rem);
 	--card-lines: 3;
 
 	/* Alpha values */
@@ -78,21 +78,21 @@
 	--longest: 3s;
 
 	/* Colors */
-	--gray: #808080;
-	--gray-F0: #FFF;
+	--gray-F0: #FFF; /* WHITE*/
 	--gray-E1: #EEE;
 	--gray-D2: #DDD;
 	--gray-C3: #CCC;
 	--gray-B4: #BBB;
 	--gray-A5: #AAA;
 	--gray-87: #888;
+	--gray: #808080; /* MIDGRAY */
 	--gray-69: #666;
 	--gray-5A: #555;
 	--gray-4B: #444;
 	--gray-3C: #333;
 	--gray-2D: #222;
 	--gray-1E: #111;
-	--gray-0F: #000;
+	--gray-0F: #000; /* BLACK */
 
 	/*
 	--gray-F0: light-dark(#FFF, #000);
@@ -238,13 +238,12 @@
 	--gray-2D: #DDD;
 	--gray-1E: #EEE;
 	--gray-0F: #FFF;
-	/*box-shadow: none;*/
 
 	--docsearch-searchbox-focus-background: color-mix(in srgb, var(--bg) 50%, transparent) !important;
 	--docsearch-modal-container-background: color-mix(in srgb, var(--bg) 75%, transparent) !important;
 
 	iframe, img, video {
-		/*filter: brightness(0.33);*/
+		filter: brightness(0.9);
 	}
 	span.nav-indicator {
 		background-color: #ACD6FF !important;
@@ -431,7 +430,6 @@ body {
 			min-width: var(--main-w-min); /* 20250511: Moved here cause the addition of `container: view / inline-size;` nullifies #view-main's `min-width` */
 			flex: 3;
 			overflow: hidden;
-			/*box-shadow: inset 2px 4px 6px 0 rgba(0, 0, 0, 0.3);*/
 			background-color: var(--gray-C3);
 			z-index: 1;
 
@@ -489,7 +487,7 @@ body, main, section, .section {
 
 header, .header {
 	display: flex;
-	flex: 0 1 auto; /* flex: 0 1 64x */
+	flex: 0 1 auto;
 	justify-content: space-between;
 	align-items: center;
 	background-color: inherit;
@@ -541,8 +539,6 @@ footer, .footer {
 	white-space: nowrap;
 	container-type: inline-size;
 	background-color: inherit;
-	/*background: linear-gradient(to top, var(--gray-C3) 33%, transparent);*/ /*background: linear-gradient(to bottom, transparent, inherit 33%);*/ /*linear-gradient(to top, transparent, rgba(0, 0, 0, 1) 33%);*/
-
 
 	&.sticky { /* WIP */
 		position: sticky;
@@ -585,14 +581,14 @@ nav, .nav {
 	max-width: var(--nav-w-max);
 	overflow: hidden; /*overflow-y: auto;*/
 	background-color: var(--gray-D2) !important;
-	box-shadow: inset 8px 0px 4px -6px rgba(0, 0, 0, 0.33); /*box-shadow: 4px 0 6px rgba(0, 0, 0, 0.3);*/
+	box-shadow: inset 8px 0px 4px -6px rgba(0, 0, 0, 0.33);
 
 	& #nav-footer {
 		background-color: transparent;
 
 		& span {
-			margin: 0 auto; /* NOTE: Allows centering even 1 element with space-between */
-			font-size: 0.5em; /* fallback for unsupported browsers ↴ */
+			margin: 0 auto; /* NOTE: Allows centering even only 1 element with space-between */
+			font-size: 0.5em; /* Fallback for unsupported browsers ↴ */
 			font-size: clamp(0.5em, 4.5cqw, 0.67em);
 			color: color-mix(in srgb, var(--text) 67%, transparent);
 			text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.33);
@@ -618,11 +614,11 @@ nav ul li {
 		border-radius: 2px;
 		background-color: var(--gray-C3);
 		box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.33);
-		cursor: copy; /* Alternatives: help, context-menu */
+		cursor: copy;
 		scroll-snap-align: start;
 		scroll-margin: 0px;
 		overflow: hidden;
-		user-select: none; /* Avoids contents get selected sometimes at unfoldeing */
+		user-select: none; /* NOTE: Avoids contents get selected sometimes at unfoldeing */
 		transition: background-color var(--shorter) ease;
 
 		&:hover, &:focus-within {
@@ -635,8 +631,8 @@ nav ul li {
 			justify-content: center;
 			height: 24px;
 			min-width: 24px;
-			margin-right: 1.75%; /*0.2em;*/
-			padding-left: 1.5%; /*0.1em*/
+			margin-right: 1.75%;
+			padding-left: 1.5%;
 			font-size: 1.25em;
 			color: var(--gray-5A);
 			border-left: 1px solid rgb(128, 128, 128, 0.25);
@@ -655,7 +651,7 @@ nav ul li {
 		*/
 	}
 	& details {
-		container-type: inline-size; /* defines the element as a container */
+		container-type: inline-size;
 
 		& p {
 			margin: 2px 6px 6px 6px;
@@ -665,7 +661,7 @@ nav ul li {
 			hyphenate-limit-chars: 6;
 			font-size: smaller;
 			font-size: clamp(0.75em, 4.5cqw, 0.85em);
-			line-height: clamp(1.2em, 4.5cqw, 1.3em); /*1.35*/
+			line-height: clamp(1.2em, 4.5cqw, 1.3em);
 		}
 		&:focus-within {
 			border-radius: 2px;
@@ -675,7 +671,7 @@ nav ul li {
 		&[open] > summary::after {
 			color: var(--accent);
 			cursor: default;
-			transform: scaleY(-1); /*transform: rotate(180deg);*/
+			transform: scaleY(-1);
 		}
 	}
 }
@@ -732,7 +728,7 @@ nav ul li details summary a {
 		transform: translateX(1px) translateY(1px);
 	}
 	&:focus-visible {
-		outline: 0px solid var(--accent);
+		outline: 0 solid var(--accent);
 	}
 	/*
 	&::after {
@@ -815,24 +811,24 @@ nav ul li details summary a {
 	padding: 4px 8px 0px 4px;
 	overflow: hidden;
 	pointer-events: none;
-}
 
-.shields:hover > * {
-	opacity: 0.5;
-	filter: blur(1.5px);
+	&:hover > * {
+		opacity: 0.5;
+		filter: blur(1.5px);
 
-	& img {
-		min-height: 16px;
+		& img {
+			min-height: 16px;
+		}
 	}
-}
-.shields:hover > *:hover {
-	opacity: 1;
-	filter: blur(0px);
-	z-index: 1;
+	&:hover > *:hover {
+		opacity: 1;
+		filter: blur(0px);
+		z-index: 1;
 
-	& img {
-		width: auto;
-		max-height: 16px;
+		& img {
+			width: auto;
+			max-height: 16px;
+		}
 	}
 }
 
@@ -850,8 +846,7 @@ nav ul li details summary a {
 	}
 }
 
- /* Allows hover (along with `pointer-events: auto` bellow) ignore paddings/gaps! */
- /*
+/*
 .shields {
 	display: flex;
 	flex-wrap: nowrap;
@@ -891,7 +886,7 @@ nav ul li details summary a {
 		transform-origin: right top;
 	}
 }
-*/
+*//* Allows hover (along with `pointer-events: auto`) ignore paddings/gaps! */
 
 aside, .aside {
 	flex: 0.33 1 var(--aside-w);
@@ -939,7 +934,23 @@ a {
 	}
 } /* NOTE: LoVe-HAte (Never forget...) */
 
+/*
+a:not(.anchor):not(.link-button):not(.link-image):not(.ais-Pagination-link) {
+	background-image: linear-gradient(currentColor, currentColor);
+	background-position: 0% 100%;
+	background-repeat: no-repeat;
+	background-size: 0% 8px;
+	transition: background-size 0.3s;
+}
 
+a:not(.anchor):not(.link-button):not(.link-image):not(
+	.ais-Pagination-link
+	):hover,
+a:not(.anchor):not(.link-button):not(.link-image):not(
+	.ais-Pagination-link
+	):focus {
+	background-size: 100% 2px;
+}*//* 20250315-0155: TODO! Animated link underline on hover (SOURCE: dannyguo.com, adapted from https://codepen.io/shshaw/details/pdyJBW). The ais exclusion is for Algolia pagination links. */
 
 blockquote {
 	width: 100%;
@@ -1051,13 +1062,15 @@ details {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin-bottom: calc(var(--xs) * 2vh); /*8px*/
+	margin-bottom: calc(var(--xs) * 2vh);
 	font-family: 'Josefin Sans', sans-serif; /*font-family: 'Bree Serif', serif;*/
 	color: var(--accent);
 }
 
 h1 {
-	font-size: 2.5rem;
+	font-size: 2rem;
+	text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.33);
+	z-index: 1;
 }
 
 hgroup {
@@ -1090,25 +1103,15 @@ li {
 }
 
 p {
-	margin-bottom: calc(var(--xs) * 2vh); /*8px*/
+	margin-bottom: calc(var(--xs) * 2vh);
 	font-size: 1rem;
 	line-height: 1.33;
-}
-
-select {
-	/*
-	appearance: base-select;
-
-	&::picker(select) {
-	appearance: base-select;
-	}
-	*/
 }
 
 table {
 	container-type: inline-size;
 	width: 100%;
-	margin-bottom: calc(var(--xs) * 2vh); /*8px*/
+	margin-bottom: calc(var(--xs) * 2vh);
 	font-size: 0.85em;
 	font-size: clamp(0.8em, 4.5cqw, 0.9em);
 	line-height: 1.33; /*clamp(1.275em, 4.5cqw, 1.325em);*/
@@ -1204,7 +1207,7 @@ table {
 		background-image: repeating-linear-gradient(-45deg, rgb(from var(--text-inv) r g b / 50%) 0 10px, rgb(from var(--accent) r g b / 50%) 10px 20px);
 
 		& span {
-			font-size: small; /* fallback for unsupported browsers ↴ */
+			font-size: small;
 			font-size: clamp(0.45em, 9cqw, 0.9em);
 			font-weight: bold;
 			white-space: wrap;
@@ -1466,7 +1469,6 @@ table {
 	/*max-height: calc(var(--header-h) - 16px);*/
 	aspect-ratio: 1/1;
 	border-radius: 50%;
-	/*border: 2px solid var(--text);*/
 	outline-offset: 0;
 	outline-color: transparent;
 	overflow: hidden;
@@ -1489,12 +1491,11 @@ table {
 		font-size: 100%;
 		color: var(--accent);
 	}
-	&:hover, &:focus-visible { /* NOTE: Look `@media (pointer: coarse)` if weirdness! */
+	&:hover, &:focus-visible { /* NOTE: Look `@media (pointer: coarse)` should weirdness happen! */
 		scale: var(--item-scale);
-		outline: 2px solid var(--accent);
-		/*border: calc(var(--item-count, 9) * 1px) solid red;*/ /* Visual Tester */
+		outline: 2px solid var(--accent); /* For visual testing: `calc(var(--item-count, 9) * 1px) solid red;`*/
 		box-shadow: -1px 2px 2px 1px rgb(0, 0, 0, 0.33);
-		background-image: linear-gradient(to bottom, rgb(from var(--gray-A5) r g b / 50%)); /*background: linear-gradient(rgb(0, 0, 0, 0.33)), var(--text-inv);*/
+		background-image: linear-gradient(to bottom, rgb(from var(--gray-A5) r g b / 50%));
 		z-index: var(--item-count, 9) !important;
 
 		&:not(:focus-visible) + .link-tip {
@@ -1504,20 +1505,19 @@ table {
 			opacity: 1; /*visibility: visible;*/
 		}
 	}
-}
-
-.link:before {
-	content: '';
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	scale: 1.1; /* Try to counteract aliasing */
-	display: inline-block;
-	align-items: center;
-	vertical-align: middle;
-	border-radius: 50%;
-	box-shadow: inset -0.5px 1px 2px 1px rgba(0, 0, 0, 0.67);
-	z-index: inherit;
+	&:before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		scale: 1.1; /* Try to counteract aliasing */
+		display: inline-block;
+		align-items: center;
+		vertical-align: middle;
+		border-radius: 50%;
+		box-shadow: inset -0.5px 1px 2px 1px rgba(0, 0, 0, 0.67);
+		z-index: inherit;
+	}
 }
 
 .link-tip {
@@ -1544,7 +1544,7 @@ table {
 		transform: translateX(-50%);
 		border-width: 0 5px 5px 5px; /* Adjust the edges to create the tail pointing upwards */
 		border-style: solid;
-		border-color: transparent transparent var(--gray-D2) transparent; /* Cambia los colores del borde */
+		border-color: transparent transparent var(--gray-D2) transparent;
 		filter: drop-shadow(0 -1px 0 var(--accent)) drop-shadow(0 -0.1px 0 var(--accent));
 	}
 
@@ -1606,25 +1606,6 @@ table {
 	}
 }
 
-/* Animated link underline on hover (SOURCE: dannyguo.com, adapted from https://codepen.io/shshaw/details/pdyJBW). The ais exclusion is for Algolia pagination links. */
-/* 20250315-0155: TODO!
-a:not(.anchor):not(.link-button):not(.link-image):not(.ais-Pagination-link) {
-	background-image: linear-gradient(currentColor, currentColor);
-	background-position: 0% 100%;
-	background-repeat: no-repeat;
-	background-size: 0% 8px;
-	transition: background-size 0.3s;
-}
-
-a:not(.anchor):not(.link-button):not(.link-image):not(
-	.ais-Pagination-link
-	):hover,
-a:not(.anchor):not(.link-button):not(.link-image):not(
-	.ais-Pagination-link
-	):focus {
-	background-size: 100% 2px;
-}*/
-
 .highlight {
 	position: relative;
 	border: 2px solid var(--gray-D2);
@@ -1638,7 +1619,7 @@ a:not(.anchor):not(.link-button):not(.link-image):not(
 		background-color: var(--gray-D2) !important;
 	}
 	& code {
-		filter: invert(0.67) hue-rotate(60deg) saturate(5); /* dirty code block light mode? */
+		filter: invert(0.67) hue-rotate(60deg) saturate(5); /* Dirty code block light mode? */
 	}
 }
 
@@ -1682,7 +1663,7 @@ a:not(.anchor):not(.link-button):not(.link-image):not(
 
 .label {
 	--gap: 1px;
-	flex: 1 0 calc(100% / var(--tab-count, 3)); /*calc(100% / var(--tab-count, 3) - (var(--gap) * (var(--tab-count, 3) - 1)))*/
+	flex: 1 0 calc(100% / var(--tab-count, 3));
 	position: sticky;
 	top: 0;
 	height: var(--tab-h);
@@ -1741,14 +1722,12 @@ a:not(.anchor):not(.link-button):not(.link-image):not(
 .input:checked + .label {
 	color: var(--gray-0F);
 	font-weight: 800;
-	/*mask-image: linear-gradient(to top, transparent, rgba(0, 0, 0, 1) 33%);*/ /* Not necesary anymore... */
-	/*backdrop-filter: blur(8px);*/ /* It doesn't seem to work with mask! */
 	background: var(--gray-D2);
 	box-shadow: inset 2px 4px 4px 0 rgba(0, 0, 0, 0.33);
 }
 
 .input:checked + .label + .panel {
-	display: flex 1; /* block */
+	display: flex 1;
 	top: 0; /* dispensable? */
 	height: calc(100% - var(--tab-h, 32px));
 	padding-top: 8px; /* Added to solve dissapearing colorized images issue! */
@@ -1770,7 +1749,7 @@ input:not(input:checked) + .label {
 	visibility: hidden;
 	height: 0;
 	width: 100%;
-	padding: 0 2px 0 4px; /* 8px 2px 2px 4px */
+	padding: 0 2px 0 4px;
 	scroll-snap-type: y mandatory;
 	background: unset;
 
@@ -1778,7 +1757,7 @@ input:not(input:checked) + .label {
 		& img:not([src$=".svg"]) { /* Bitmap rules */
 			/*transform: scale(0.9) translateY(-2px);*/
 		}
-		& img[src$=".svg"] { /* SVG Rules */
+		& img[src$=".svg"] { /* SVG rules */
 			max-height: 1.25em;
 			margin-bottom: 0.25em;
 		}
@@ -1829,7 +1808,7 @@ input:not(input:checked) + .label {
 	overflow: hidden;
 	font-size: 0.85rem;
 	white-space: nowrap;
-	text-overflow: ellipsis; /* Not necessary anymore?*/
+	text-overflow: ellipsis; /* Not necessary anymore? */
 	mask-image: linear-gradient(to left, transparent, black 8px);
 }
 
@@ -1910,8 +1889,8 @@ input:not(input:checked) + .label {
 #i18ner {
 	display: inline-block;
 	position: relative;
-	height: var(--widget-h-rem, 1.5rem); /*1.65rem*/
-	width: calc(var(--widget-h-rem) * 2); /*2.75rem*/
+	height: var(--widget-h-rem, 1.5rem);
+	width: calc(var(--widget-h-rem) * 2);
 	align-items: center;
 	vertical-align: middle;
 
@@ -1922,9 +1901,10 @@ input:not(input:checked) + .label {
 		color: var(--text);
 		font-size: 90%;
 		font-weight: bold;
-		vertical-align: top; /* Avoids font size realted displacement?? */
+		vertical-align: top; /* Avoids font size related displacement?? */
 		border: none;
 		border-radius: var(--widget-h-rem);
+		user-select: none;
 		box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.67) inset;
 		background: rgba(0, 0, 0, 0.25); /*var(--gray-2D);*/
 
@@ -2053,7 +2033,7 @@ input:not(input:checked) + .label {
 	align-items: end;
 	justify-content: space-between;
 	container-type: inline-size;
-	font-size: 0.5em; /* fallback for unsupported browsers ↴ */
+	font-size: 0.5em;
 	font-size: clamp(0.33em, 3.33cqw, 0.75em);
 
 	& span {
@@ -2100,7 +2080,7 @@ input:not(input:checked) + .label {
 	}
 }
 
-.hs, .hs1, .hs2, .hs3 { /* Horizontal Separator*/
+.hs, .hs1, .hs2, .hs3 { /* Horizontal separators */
 	display: block;
 	height: 2px;
 	width: 2px;
@@ -2187,13 +2167,11 @@ input:not(input:checked) + .label {
 			overflow-x: auto;
 			mask-image: linear-gradient(to left, transparent, black 0.5rem, black calc(100% - 0.5rem), transparent 100%);
 			-webkit-mask-image: linear-gradient(to left, transparent, black 0.5rem, black calc(100% - 0.5rem), transparent 100%);
-			/*mask-image: linear-gradient(to right, transparent, black 0.5rem, black calc(100% - 0.5rem), transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent, black 0.5rem, black calc(100% - 0.5rem), transparent 100%);*/
 
 			&::-webkit-scrollbar {
 				height: calc(var(--scroll) / 1.5);
 			}
-			/*
-			display: flex;
+			/*display: flex;
 			width: 100%;
 			flex-wrap: nowrap;
 			flex: 0 1 auto;
@@ -2201,9 +2179,6 @@ input:not(input:checked) + .label {
 			justify-content: flex-end;
 			align-items: center;
 			*/
-			/*text-align: center;*/
-			/*vertical-align: middle;*/
-
 			& img {
 				height: 20px;
 				width: auto;
@@ -2246,16 +2221,14 @@ input:not(input:checked) + .label {
 				&::-webkit-scrollbar {
 					height: calc(var(--scroll) / 2);
 				}
-				/*
-				& div {
+				/*& div {
 					display: flex;
 					flex-wrap: nowrap;
 					flex: 0 1 auto;
 					gap: 3px;
 					justify-content: flex-end;
 					align-items: center;
-				}
-				*/
+				}*/
 				& img {
 					height: 20px;
 					width: auto;
@@ -2327,11 +2300,10 @@ input:not(input:checked) + .label {
 }
 
 .forbid {
-	pointer-events: none;
+	pointer-events: none; /* Moved here from `.grayed, .greyed` to can avoid limitations */
 }
 
 .grayed, .greyed {
-	/*pointer-events: none;*/ /* Moved to .forbidto to can avoid limitations */
 	filter: saturate(33%);
 	opacity: 0.67;
 }
@@ -2418,8 +2390,6 @@ input:not(input:checked) + .label {
 			box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.5);
 			background: color-mix(in srgb, var(--accent) 67%, transparent); /*var(--gray-1E)*/
 			transition: cubic-bezier(0.3, 1.5, 0.7, 1) var(--short);
-			/*opacity: 0;*/
-			/*transition: opacity var(--shorter);*/
 			animation: fadeIn var(--shorter) ease-in;
 		}
 	}
@@ -2488,8 +2458,6 @@ input:not(input:checked) + .label {
 		overflow: hidden;
 		border: none;
 		border-radius: 50%;
-		/*outline: 16px solid var(--gray-C3);*/
-		/*outline-offset: -16px;*/
 		outline-offset: -12px;
 		outline-width: 4px;
 		animation: fadeIn var(--shorter) ease-in;
@@ -2521,7 +2489,7 @@ input:not(input:checked) + .label {
 	}
 }
 
-/* Nav modes */
+/* Nav modes test... */
 /*nav > section {
 	--nav-width: 0;
 	&[data-nav-mode="auto"] { --nav-mode: auto; }

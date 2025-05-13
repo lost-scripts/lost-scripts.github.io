@@ -63,21 +63,5 @@
 				document.getElementById(`tab-${lastActiveTab}`).checked = true;
 			}
 		});
-		/*
-		document.addEventListener("DOMContentLoaded", function() {
-			const tabs = document.querySelectorAll(".label"); // Selecciona todas las tabs (labels)
-			
-			tabs.forEach(tab => {
-				tab.addEventListener("mousedown", function(event) {
-					if (event.button === 1) { // Verifica si el clic fue con el botón central (botón 1)
-						const sectionId = this.htmlFor.substring(4); // Obtén el ID de la sección desde el atributo "for"
-						const sectionUrl = `/${sectionId}/`; // Genera la URL relativa de la sección
-
-						window.location.replace(sectionUrl); //window.open(sectionUrl, "_blank");
-					}
-				});
-			});
-		});
-		*/
 	</script>
 </div>
