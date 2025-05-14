@@ -243,7 +243,7 @@
 	--docsearch-modal-container-background: color-mix(in srgb, var(--bg) 75%, transparent) !important;
 
 	iframe, img, video {
-		filter: brightness(0.9);
+		/*filter: brightness(0.9);*/
 	}
 	span.nav-indicator {
 		background-color: #ACD6FF !important;
@@ -1463,7 +1463,7 @@ table {
 	border-radius: 50%;
 	outline-offset: 0;
 	outline-color: transparent;
-	overflow: hidden;
+	overflow: visible;
 	user-select: none; -moz-user-drag: none; -webkit-user-drag: none;
 	background-color: color-mix(in srgb, var(--gray-C3) 75%, black);
 	transition: scale 250ms, outline-color 250ms;
@@ -1485,10 +1485,10 @@ table {
 	}
 	&:hover, &:focus-visible { /* NOTE: Look `@media (pointer: coarse)` should weirdness happen! */
 		scale: var(--item-scale);
-		outline: 2px solid var(--accent); /* For visual testing: `calc(var(--item-count, 9) * 1px) solid red;`*/
-		box-shadow: -1px 2px 2px 1px rgb(0, 0, 0, 0.33);
+		/*outline: 2px solid var(--accent);*/ /* Old unanimated way... */
+		box-shadow: -1px 2px 2px 1px rgb(0, 0, 0, 0.5);
 		background-image: linear-gradient(to bottom, rgb(from var(--gray-A5) r g b / 50%));
-		z-index: var(--item-count, 9) !important;
+		z-index: var(--item-count, 9) !important; /* For visual testing e.g. `calc(var(--item-count, 9) * 1px) solid red;`*/
 
 		&:not(:focus-visible) + .link-tip {
 			opacity: 1; /*visibility: visible;*/
@@ -1497,18 +1497,32 @@ table {
 			opacity: 1; /*visibility: visible;*/
 		}
 	}
-	&:before {
+	&:before { /* The inner shadow */
 		content: '';
 		position: absolute;
 		height: 100%;
 		width: 100%;
-		scale: 1.1; /* Try to counteract aliasing */
-		display: inline-block;
-		align-items: center;
-		vertical-align: middle;
+		scale: 1; /* Try to counteract aliasing */
 		border-radius: 50%;
-		box-shadow: inset -0.5px 1px 2px 1px rgba(0, 0, 0, 0.67);
+		box-shadow: inset -0.5px 1px 2px 1px rgba(0, 0, 0, 0.33);
 		z-index: inherit;
+	}
+	&:after { /* The animated border */
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		transform: translateY(calc(var(--widget-h-rem) * -1)) scale(1.1);
+		transform-origin: center;
+		border-radius: 50%;
+		outline-offset: -2px;
+		outline: 4px solid var(--accent);
+		mask-image: conic-gradient(black var(--link-fill), transparent var(--link-fill));
+		z-index: inherit;
+		transition: --link-fill calc(var(--shorter) * 2) ease-out;
+	}
+	&:hover:after {
+		--link-fill: 100%;
 	}
 }
 
@@ -1556,6 +1570,11 @@ table {
 	.link:focus-visible + span + .link, .link:has(+ span + .link:focus-visible) { /*.link:focus-visible + .link, .link:has(+ .link:focus-visible)*/
 		scale: calc(var(--item-scale) * 0.75);
 	}
+}
+@property --link-fill {
+	syntax: '<percentage>';
+	inherits: true;
+	initial-value: -100%;
 }
 
 .tagger {
@@ -2021,12 +2040,12 @@ input:not(input:checked) + .label {
 	display: flex;
 	flex: 1 0 auto;
 	gap: 8px;
-	overflow: hidden;
 	align-items: end;
 	justify-content: space-between;
 	container-type: inline-size;
 	font-size: 0.5em;
 	font-size: clamp(0.33em, 3.33cqw, 0.75em);
+	overflow: hidden;
 
 	& span {
 		align-items: center;
@@ -2681,6 +2700,10 @@ input:not(input:checked) + .label {
 		.link:hover + span + .link, .link:has(+ span + .link:hover) {
 			scale: 1;
 		}
+	}
+
+	.pager {
+		padding-bottom: 6px;
 	}
 }
 
