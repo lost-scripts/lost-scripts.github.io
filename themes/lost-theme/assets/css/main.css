@@ -1514,15 +1514,17 @@ table {
 		width: 100%;
 		transform: translateY(calc(var(--widget-h-rem) * -1)) scale(1.1);
 		transform-origin: center;
+		opacity: 0;
 		border-radius: 50%;
 		outline-offset: -2px;
-		outline: 4px solid var(--accent);
+		outline: 2px solid var(--accent);
 		mask-image: conic-gradient(black var(--link-fill), transparent var(--link-fill));
 		z-index: inherit;
-		transition: --link-fill calc(var(--shorter) * 2) ease-out;
+		transition: --link-fill calc(var(--shorter) * 2) ease-out, opacity calc(var(--shorter) * 1.5) ease-in;
 	}
-	&:hover:after {
+	&:hover:after, &:focus-visible:after {
 		--link-fill: 100%;
+		opacity: 1;
 	}
 }
 
@@ -2703,7 +2705,7 @@ input:not(input:checked) + .label {
 	}
 
 	.pager {
-		padding-bottom: 6px;
+		padding-bottom: 2px;
 	}
 }
 
