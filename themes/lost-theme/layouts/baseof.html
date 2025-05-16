@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}" dir="{{ .Site.Language.LanguageDirection | default `ltr` }}">
+<html lang="{{ .Site.Language.Lang }}" dir="{{ .Site.Language.LanguageDirection | default `ltr` }}" style="{{- partial `styler.html` . | safeCSS -}}">
 
 <head>
 	{{- .Store.Set "isHome" (eq .Page.RelPermalink .Site.Params.homepage) -}}
@@ -13,7 +13,7 @@
 
 	<section id="section"> <!-- <main> base -> <section> -->
 		<nav id="nav" class="section">
-			<section id="nav-main" class="section" style="--nav-mode: {{ .Site.Params.navMode | default `auto` }};">
+			<section id="nav-main" class="section">
 				{{- partial "nav/main.html" . -}}
 			</section>
 
@@ -36,7 +36,7 @@
 				{{- partial "main/footer.html" . -}}
 			</footer>
 		</section>
-		<aside id="aside" class="section responsive" style="{{ if not .Site.Params.aside }}display: none;{{ end }}">
+		<aside id="aside" class="section responsive"> <!--style="{{ if not .Site.Params.aside }}display: none;{{ end }}"-->
 			<section id="aside-main">
 				{{- partial "aside.html" . -}}
 			</section>

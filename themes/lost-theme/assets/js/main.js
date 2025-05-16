@@ -590,6 +590,14 @@ lifter.addEventListener("click", function () { //main.scrollTo({ top: 0, behavio
 	}, intervalTime);
 });
 
+// Ensure heading icon is always colorized (Special K's)
+const img = document.querySelector('#view-main > table:first-of-type:first-child th > img'); /*document.querySelector('#view-main > table:first-of-type:first-child th > img')?.classList.add('colorize');*/
+if (img) {
+	img.classList.add('colorize');
+	//img.style.removeProperty('filter'); // To remove property
+	//img.style.height = '96px'; // To add or modify property
+}
+
 // Initial update of icons
 updateIcons();
 

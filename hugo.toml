@@ -78,6 +78,10 @@ disableFastRender = true # Enables full re-renders on changes (commented cause t
 [params]
 homepage = '/scripts/ls/'
 homeIcon = 'house'
+subtitle = 'The Lost (Moho® Scripts) Ark'
+author = { name = 'Rai López', homepage = 'https://lost-scripts.github.io/' }
+copyrightAlt = '© 2025 · Rai López · ARR'
+since = 2024
 navMode = 'auto' # auto (default) / tabbed / accordion
 comments = true
 commentsRepo = 'lost-scripts/lost-scripts.github.io'
@@ -88,11 +92,8 @@ commentsThemeDark = 'catppuccin_frappe'
 aside = false
 banner = false
 ribbon = true
-subtitle = 'The Lost (Moho® Scripts) Ark'
-author = { name = 'Rai López', homepage = 'https://lost-scripts.github.io/' }
-copyrightAlt = '© 2025 · Rai López · ARR'
-since = 2024
 faStyle = 'solid'
+headingIconSize = 1.5
 
 # Social Networking and Contact Links (use e.g. `order = 1`, etc. for override ordering)
 links = [ 
