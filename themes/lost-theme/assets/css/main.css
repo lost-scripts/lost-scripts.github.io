@@ -301,6 +301,7 @@
 	/*mask-image: var(--url);*/
 	mask-size: 100% 100%;
 	opacity: 0;
+	image-rendering: crisp-edges;
 	transition: opacity var(--shorter);
 }
 
@@ -2173,7 +2174,7 @@ input:not(input:checked) + .label {
 			filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.33));
 
 			& img {
-				height: calc(48px * var(--heading-icon-size, 1));
+				height: calc(40px * var(--heading-icon-size, 1));
 				width: auto;
 			}
 		}

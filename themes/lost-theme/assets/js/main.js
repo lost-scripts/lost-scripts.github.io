@@ -390,9 +390,15 @@ function getCSSVarValue(variable, element = root) {
 }
 
 // Add/Remove a CSS class of a given element (e.g. cssClass(icon, 'colorize');)
-function cssClass(element, className) {
+function cssClass(element, className, action) {
 	if (!element) return;
-	element.classList.toggle(className);
+	if (action === true) {
+		element.classList.add(className);
+	} else if (action === false) {
+		element.classList.remove(className);
+	} else {
+		element.classList.toggle(className);
+	}
 }
 
 // Add/Remove an inline CSS property of a given element (e.g. ADD: `cssProp(icon, 'height', '8px');` REMOVE: `cssProp(icon, 'filter');`)
@@ -608,7 +614,8 @@ lifter.addEventListener("click", function () { //main.scrollTo({ top: 0, behavio
 
 // Heading icon custom styling (Special K's)
 const headingIcon = document.querySelector('#view-main > table:first-of-type:first-child th > img');
-getCSSVarValue('--heading-icon-tint') === 'true' && cssClass(headingIcon, 'colorize');
+getCSSVarValue('--heading-icon-tint') === 'true' && cssClass(headingIcon, 'colorize', true);
+
 
 // Initial update of icons
 updateIcons();
