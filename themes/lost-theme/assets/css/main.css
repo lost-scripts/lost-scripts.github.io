@@ -2170,11 +2170,11 @@ input:not(input:checked) + .label {
 			line-height: 0;
 			border: none;
 			user-select: none;
+			filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.33));
 
 			& img {
 				height: calc(48px * var(--heading-icon-size, 1));
 				width: auto;
-				filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.33));
 			}
 		}
 		& th:nth-child(2) { /* Shields Cell */

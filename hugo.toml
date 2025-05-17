@@ -93,7 +93,8 @@ aside = false
 banner = false
 ribbon = true
 faStyle = 'solid'
-headingIconSize = 1.5
+headingIconSize = 1 # Size multiplier (default: 48px)
+headingIconTint = true
 
 # Social Networking and Contact Links (use e.g. `order = 1`, etc. for override ordering)
 links = [ 

@@ -384,9 +384,25 @@ dynamicElements.forEach(element => { // Iterates over all attributes of the elem
 	});
 });
 
-// Function to get the current value of a CSS variable from a specific element
+// Get the current value of a CSS variable from a specific element
 function getCSSVarValue(variable, element = root) {
 	return getComputedStyle(element).getPropertyValue(variable).trim();
+}
+
+// Add/Remove a CSS class of a given element (e.g. cssClass(icon, 'colorize');)
+function cssClass(element, className) {
+	if (!element) return;
+	element.classList.toggle(className);
+}
+
+// Add/Remove an inline CSS property of a given element (e.g. ADD: `cssProp(icon, 'height', '8px');` REMOVE: `cssProp(icon, 'filter');`)
+function cssProp(element, property, value) {
+	if (!element) return;
+	if (value) {
+		element.style.setProperty(property, value);
+	} else {
+		element.style.removeProperty(property);
+	}
 }
 
 // Listener for reset button click to open dialog
@@ -590,13 +606,9 @@ lifter.addEventListener("click", function () { //main.scrollTo({ top: 0, behavio
 	}, intervalTime);
 });
 
-// Ensure heading icon is always colorized (Special K's)
-const img = document.querySelector('#view-main > table:first-of-type:first-child th > img'); /*document.querySelector('#view-main > table:first-of-type:first-child th > img')?.classList.add('colorize');*/
-if (img) {
-	img.classList.add('colorize');
-	//img.style.removeProperty('filter'); // To remove property
-	//img.style.height = '96px'; // To add or modify property
-}
+// Heading icon custom styling (Special K's)
+const headingIcon = document.querySelector('#view-main > table:first-of-type:first-child th > img');
+getCSSVarValue('--heading-icon-tint') === 'true' && cssClass(headingIcon, 'colorize');
 
 // Initial update of icons
 updateIcons();
