@@ -188,7 +188,6 @@ function isTouchDevice() {
 	return matchMedia("(pointer: coarse)").matches;
 }
 
-
 // Execute code blocks depending on the value of 'data-context'
 if (context === "head") {
 	// DOM-independent logic...
@@ -269,6 +268,11 @@ highlighter.addEventListener('input', function() {
 	}
 	updateAccentColor(newColor);
 	updatePseudoStyles(newColor);
+});
+
+// Listener for assigning correct datalist when color picker opens
+highlighter.addEventListener("focus", function() {
+	highlighter.setAttribute("list", "swatch-" + (darkThemeState ? "dark" : "light")); //(root.classList.contains("darked") ? "dark" : "light")
 });
 
 // Listener for double click to reset color of current theme (reconsider after adding reset pinhole?)

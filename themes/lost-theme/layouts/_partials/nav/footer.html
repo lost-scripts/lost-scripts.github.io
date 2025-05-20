@@ -1,2 +1,8 @@
 <span class="copyright long">{{ site.Copyright }}</span>
 <span class="copyright short">{{ site.Params.copyrightAlt }}</span>
+
+{{- if.Site.Params.hugo -}}
+	<a href="https://gohugo.io" target="_blank" class="undecorate" title="Made with HUGO...">
+		<img src="/icons/hugo.svg" class="icon" alt="HUGO Icon">
+	</a>
+{{- end -}}

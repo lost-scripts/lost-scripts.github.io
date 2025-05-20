@@ -92,7 +92,10 @@ commentsThemeDark = 'catppuccin_frappe'
 aside = false
 banner = false
 ribbon = true
+hugo = true
 faStyle = 'solid'
+swatchLight = ['#98403A', '#8A7F05', '#088C34', '#3F67A6', '#9F1D7D']
+swatchDark = ['#F75447', '#E8CF28', '#8FD938', '#40BAEB', '#BE6DDF']
 headingIconSize = 1 # Size multiplier (default: 48px)
 headingIconTint = true
 

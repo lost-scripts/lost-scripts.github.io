@@ -39,7 +39,8 @@
 		</dialog>
 
 		<label id="highlighter-label" class="swatch-label" aria-label="Current mode highlights"  title="{{i18n `mode_highlights` }}" data-light-hl="{{ i18n `light_highlights` }}" data-dark-hl="{{ i18n `dark_highlights` }}">
-			<input type="color" id="highlighter">
+			<input type="color" id="highlighter" list="colors">
+			{{ partial "swatcher.html" . }}
 		</label>
 		
 		<label id="darker-label" class="toggle-label" title="{{ i18n `light_switch` }}" data-light="{{ i18n `go_light` }}" data-dark="{{ i18n `go_dark` }}" data-auto="{{ i18n `_auto` }}">

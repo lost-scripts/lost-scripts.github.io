@@ -1,0 +1,20 @@
+{{- /* Partial for customized color swatches */ -}}
+
+<datalist id="swatch-light">
+	{{ if .Site.Params.swatchLight }}
+		{{ range .Site.Params.swatchLight }}
+			<option value="{{ . }}"></option>
+		{{ end }}
+	{{ else }}
+		<option value="colors"></option>
+	{{ end }}
+</datalist>
+<datalist id="swatch-dark">
+	{{ if .Site.Params.swatchDark }}
+		{{ range .Site.Params.swatchDark }}
+			<option value="{{ . }}"></option>
+		{{ end }}
+	{{ else }}
+		<option value="colors"></option>
+	{{ end }}
+</datalist>
