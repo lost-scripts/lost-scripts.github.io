@@ -1,5 +1,7 @@
-<span class="copyright long">{{ site.Copyright }}</span>
-<span class="copyright short">{{ site.Params.copyrightAlt }}</span>
+<span>
+	<span class="copyright long">{{ site.Copyright | safeHTML }}</span>
+	<span class="copyright short">{{ site.Params.copyrightAlt | safeHTML }}</span>
+</span>
 
 {{- if.Site.Params.hugo -}}
 	<a href="https://gohugo.io" target="_blank" class="undecorate" title="Made with HUGO...">

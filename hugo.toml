@@ -80,7 +80,7 @@ homepage = '/scripts/ls/'
 homeIcon = 'house'
 subtitle = 'The Lost (Moho® Scripts) Ark'
 author = { name = 'Rai López', homepage = 'https://lost-scripts.github.io/' }
-copyrightAlt = '© 2025 · Rai López · ARR'
+copyrightAlt = '© 2025 · Rai López · <abbr title="All Rights Reserved">ARR</abbr>'
 since = 2024
 navMode = 'auto' # auto (default) / tabbed / accordion
 comments = true
