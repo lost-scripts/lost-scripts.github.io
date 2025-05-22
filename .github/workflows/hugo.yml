@@ -28,9 +28,18 @@ jobs:
         with:
           path: ./docs
 
-  deploy:
+  report-build-status:
     runs-on: ubuntu-latest
     needs: build
+    steps:
+      - name: Report deployment status
+        run: gh api -X POST "repos/$GITHUB_REPOSITORY/pages/telemetry" -F github_run_id="$GITHUB_RUN_ID" -F conclusion="success"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build, report-build-status]
     permissions:
       id-token: write # Required for GitHub OIDC
       contents: read
