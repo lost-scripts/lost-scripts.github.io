@@ -20,4 +20,4 @@ comments = false
 	{ src="https://img.shields.io/github/downloads/repo-size/lost-scripts/ls/latest/total", alt="GitHub downloads"}]
 +++
 
-# LS Experimental Window!
+# LS Experimental Window!!!
