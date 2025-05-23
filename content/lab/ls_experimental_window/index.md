@@ -8,16 +8,16 @@ description = "Supposedly, a persistent info palette plus helpers for better man
 comments = false
 
 [params]
-    Labels = ['script', 'experiment'] # Dispensable?
-    Author = 'Rai López'
-    Version = '0.0.0'
-    Build = '19780811-0600'
-    Flags = [] # NEW! UPD! WIP! TODO BETA ALPHA
-    Stage = ''
+	Labels = ['script', 'experiment'] # Dispensable?
+	Author = 'Rai López'
+	Version = '0.0.0'
+	Build = '19780811-0600'
+	Flags = [] # NEW! UPD! WIP! TODO BETA ALPHA
+	Stage = ''
 	Shields = [
 	{ src="https://img.shields.io/github/v/release/lost-scripts/ls?color=yellow", alt="GitHub version" },
 	{ src="https://img.shields.io/github/v/tag/lost-scripts/ls", alt="GitHub tag"},
 	{ src="https://img.shields.io/github/downloads/repo-size/lost-scripts/ls/latest/total", alt="GitHub downloads"}]
 +++
 
-# LS Experimental Window
+# LS Experimental Window!
