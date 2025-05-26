@@ -366,6 +366,22 @@ updatePseudoStyles(curAccent);
 	Array.prototype.forEach.call(highlightBlocks, addCopyButton);
 })();
 
+// Make link (specially in linker) not to be opened but its URL copied to clipboard instead
+window.copyToClipboard = function(event) {
+	event.preventDefault();
+	const link = event.currentTarget; // Moved outer block bellow to avoid `undefined` error (https://stackoverflow.com/a/73426689/2805176)
+	const linkData = link.getAttribute("data-copied") || "RSS link copied to clipboard!";
+	const linkHref = link.getAttribute('href');
+	const linkUrl = linkHref.startsWith("/") ? window.location.origin + linkHref : linkHref; // Ensure the URL is absolute
+	const linkTip = link.nextElementSibling;
+
+	navigator.clipboard.writeText(linkUrl).then(() => {
+		console.log("URL correctly copied to clipboard:", linkUrl);
+		linkTip.textContent = linkData;
+		setTimeout(() => linkTip.textContent = link.getAttribute("aria-label"), 2000);
+	}).catch(err => console.error("Error copying URL to clipboard:", err));
+};
+
 const resetButton = document.getElementById('resetter');
 const resetDialog = document.getElementById('resetDialog');
 const cancelButton = document.getElementById('cancelButton');

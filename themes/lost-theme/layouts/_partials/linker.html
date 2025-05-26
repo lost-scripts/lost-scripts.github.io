@@ -1,10 +1,16 @@
+{{- /* Construct the linker element */ -}}
+
 {{- $itemCount := len .Site.Params.links | default 3 -}}
 <div id="links" class="links" style="--item-count: {{ $itemCount }};">
 	{{- $index := 0 -}}
 	{{- range sort .Site.Params.links "order" "desc" -}}
 		{{- $index = add $index 1 -}}
 		{{- $zIndex := sub $itemCount (sub $index 1) -}}
-		<a href="{{ .href }}" target="_blank" id="link-{{ $index }}" class="link undecorate" style="anchor-name: --link-{{ $index }}; z-index: {{ $zIndex }};" draggable="false" aria-label="{{ i18n .start }} {{ ` ` }} {{ i18n .title | default .title }} {{ ` ` }} {{ i18n .end }}">
+		{{- $target := cond (hasPrefix .href "/") "_self" "_blank" -}}
+		{{- $ariaLabel := printf "%s %s %s" (i18n .start) (i18n .title | default .title) (i18n .end) -}}
+		{{- $copyTypes := slice "application/rss+xml" -}} {{- /* For more types just add'em: "application/special-type" "another-type..." */ -}}
+		{{- $onclick := cond (in $copyTypes .type) `copyToClipboard(event)` `` | safeJS -}}
+		<a href="{{ .href }}" onclick="{{ $onclick }}" target="{{ $target }}" id="link-{{ $index }}" class="link undecorate" style="anchor-name: --link-{{ $index }}; z-index: {{ $zIndex }};" aria-label="{{ $ariaLabel }}" data-copied="{{ i18n `rss_copied` }}" draggable="false">
 			{{- if .src -}}
 				<img src="{{ .src }}" class="link-icon colorize" alt="{{ .alt }}">
 			{{- else if .icon -}}
@@ -13,6 +19,6 @@
 				<i class="link-icon fa-regular fa-circle-question" aria-hidden="true" alt="{{ .alt }}"></i>
 			{{- end -}}
 		</a>
-		<span class="link-tip" style="position-anchor: --link-{{ $index }};" aria-hidden="true">{{ i18n .start }} {{ ` ` }} {{ i18n .title | default .title }} {{ ` ` }} {{ i18n .end }}</span>
+		<span class="link-tip" id="link-{{ $index }}-tip" style="position-anchor: --link-{{ $index }};" aria-hidden="true">{{ $ariaLabel }}</span>
 	{{- end -}}
 </div>

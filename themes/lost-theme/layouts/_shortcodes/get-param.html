@@ -5,7 +5,15 @@ E.G. (array param): {{< get-param `array` 0 >}}
 E.G. (specify a default value at the end): {{< get-param `unDefinedParam` `` `NOT FOUND!` >}}
 */ -}}
 
-{{- $root := index .Site.Params (index .Params 0) -}}
+{{- $param := index .Params 0 -}} <!-- Adds the chance to also get some settings (with the drawback that names must not collide!) -->
+{{- $siteGlobals := dict
+	"baseURL" .Site.BaseURL
+	"copyright" .Site.Copyright
+	"languageCode" .Site.LanguageCode
+	"title" .Site.Title
+-}}
+{{- $root := index $siteGlobals $param | default (index .Site.Params $param) -}} {{- /* {{- $root := index .Site.Params (index .Params 0) -}} */ -}}
+
 {{- if $root -}}
 	{{- if eq (len .Params) 2 -}}
 		{{- with index $root (index .Params 1) -}}

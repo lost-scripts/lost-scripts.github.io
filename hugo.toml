@@ -103,9 +103,10 @@ headingIconTint = true
 links = [ 
 { href = 'https://github.com/lost-scripts', icon = 'fa-brands fa-github', alt = 'GitHub', title = 'GitHub...'},
 { href = 'mailto:rai.lopez@outlook.com', icon = 'fa-solid fa-envelope', alt = 'Email', title = 'Email...'},
-{ href = '/index.xml', icon = 'fa-solid fa-rss', alt = 'Subscribe', title = 'Subscribe...', rel= 'alternate', type = 'application/rss+xml'},
+{ href = '/index.xml', icon = 'fa-solid fa-rss', alt = 'Subscribe?', title = 'Subscribe?', rel= 'alternate', type = 'application/rss+xml'},
 { href = 'https://instagram.com/Lost_Scripts', icon = 'fa-brands fa-instagram', alt = 'Instagram', title = 'Instagram...'},
 { href = 'https://mohoscripting.com/', src = '/icons/icon_ms_logo.svg', alt = 'Moho Scripting', start = 'Other Links:', title = 'Moho Scripting...'},
+{ href = '/about', icon = 'fa-solid fa-circle-info', alt = 'About', title = 'About'},
 ]
 
 # Other Links...
