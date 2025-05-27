@@ -115,6 +115,15 @@ other = 'Sin descripción.'
 [OK]
 other = 'OK'
 
+[recently_added]
+other = 'Recién añadidas'
+
+[recently_updated]
+other = 'Recien actualizadas'
+
+[reset_filters]
+other = 'Limpiar filtros'
+
 [reset_reload]
 other = 'Restablecer todas las preferencias y recargar?'
 
@@ -126,6 +135,9 @@ other = '¿Suscribirse?'
 
 [Tag]
 other = 'Etiqueta'
+
+[Tags]
+other = 'Etiquetas'
 
 [translate]
 other = 'Traduce!'

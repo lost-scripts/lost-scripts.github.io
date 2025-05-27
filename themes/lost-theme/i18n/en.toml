@@ -115,6 +115,15 @@ other = 'No description.'
 [OK]
 other = 'OK'
 
+[recently_added]
+other = 'Recently added'
+
+[recently_updated]
+other = 'Recently updated'
+
+[reset_filters]
+other = 'Reset filters'
+
 [reset_reload]
 other = 'Reset all preferences and reload?'
 
@@ -126,6 +135,9 @@ other = 'Subscribe?'
 
 [Tag]
 other = 'Tag'
+
+[Tags]
+other = 'Tags'
 
 [translate]
 other = 'Translate!'

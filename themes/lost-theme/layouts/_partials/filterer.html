@@ -3,7 +3,7 @@
 	<ul>
 		<!-- Group of Buttons/anchors -->
 		<li>
-			<button onclick="location.href='/tags'" name="filter-tags" title="{{ i18n `go_to_tags` }}..."><strong>Tags...</strong><span>({{ len .Site.Taxonomies.tags }})</span></button>
+			<button onclick="location.href='/tags'" name="filter-tags" title="{{ i18n `go_to_tags` }}..."><strong>{{ i18n `Tags` }}...</strong><span>({{ len .Site.Taxonomies.tags }})</span></button>
 			<!--<a href="/tags"><strong>All Tags...</strong><span>({{ len .Site.Taxonomies.tags }})</span></a>--> <!-- Anchor based version -->
 		</li>
 		<hr>
@@ -23,12 +23,12 @@
 		<div style="cursor: not-allowed;"> 
 			<li class="grayed">
 				<label title="Show recently added only (WIP!)">
-					<input type="radio" name="filter-date" value="{{ .Page.Date }}" class="filter-entry" disabled>Recently added
+					<input type="radio" name="filter-date" value="{{ .Page.Date }}" class="filter-entry" disabled>{{ i18n `recently_added` }}
 				</label>
 			</li>
 			<li class="grayed">
 				<label title="Show recently updated only (WIP!)">
-					<input type="radio" name="filter-lastmod" value="{{ .Page.Lastmod }}" class="filter-entry" disabled>Recently updated
+					<input type="radio" name="filter-lastmod" value="{{ .Page.Lastmod }}" class="filter-entry" disabled>{{ i18n `recently_updated` }}
 				</label>
 			</li>
 		</div>
@@ -36,7 +36,7 @@
 
 		<!-- Group of Buttons/anchors for other actions -->
 		<li>
-			<button onclick="resetFilters()" name="filter-reset" title="Clear all filters (show all)">Reset filters<span></span></button>
+			<button onclick="resetFilters()" name="filter-reset" title="Clear all filters (show all)">{{ i18n `reset_filters` }}<span></span></button>
 		</li>
 	</ul>
 </details>

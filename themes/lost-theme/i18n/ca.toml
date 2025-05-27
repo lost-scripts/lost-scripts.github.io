@@ -115,6 +115,15 @@ other = 'Sense descripció.'
 [OK]
 other = 'OK'
 
+[recently_added]
+other = 'Recent afegides'
+
+[recently_updated]
+other = 'Recent actualizats'
+
+[reset_filters]
+other = 'Netejar filtres'
+
 [reset_reload]
 other = 'Restablecer totes les preferències i recarregar?'
 
@@ -126,6 +135,9 @@ other = "Subscriure's?"
 
 [Tag]
 other = 'Etiqueta'
+
+[Tags]
+other = 'Etiquetes'
 
 [translate]
 other = 'Tradueix!'
