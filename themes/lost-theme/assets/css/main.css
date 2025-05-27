@@ -1989,10 +1989,10 @@ input:not(input:checked) + .label {
 .commenter {
 	position: relative;
 	width: 100%;
-	margin: 0 auto;
 	padding-top: 1rem;
 
 	.giscus {
+		margin: 0 auto;
 		opacity: 0.9;
 	}
 

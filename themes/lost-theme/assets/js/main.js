@@ -6,7 +6,6 @@ const root = document.documentElement;
 const body = document.body;
 const styles = getComputedStyle(root);
 const context = document.currentScript.getAttribute('data-context');
-const shorter = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--shorter")) * 1000 || 1600; // Convierte a ms con fallback
 
 
 //// THEME:
@@ -413,11 +412,11 @@ dynamicElements.forEach(element => { // Iterates over all attributes of the elem
 });
 
 // Get the current value of a CSS variable from a specific element and adapt (it if necessary)
-function getCssVarValue(variable, { el = root, def = null, mult = 1 } = {}) {
-	const baseRoot = root || document.documentElement;
+function getCssVarValue(variable, root, { el = root, def = null, mult = 1 } = {}) {
+	root = root || document.documentElement;
+	el = el || root;
 	const value = getComputedStyle(el).getPropertyValue(variable).trim();
 	let result;
-	el = el || baseRoot;
 
 	if (!value) {
 		return def;
@@ -430,7 +429,7 @@ function getCssVarValue(variable, { el = root, def = null, mult = 1 } = {}) {
 	} else if (value.endsWith("px")) {
 		result = parseFloat(value);
 	} else if (value.endsWith("rem")) {
-		result = parseFloat(value) * parseFloat(getComputedStyle(baseRoot).fontSize);
+		result = parseFloat(value) * parseFloat(getComputedStyle(root).fontSize);
 	} else if (value.endsWith("%")) {
 		result = parseFloat(value) / 100;
 	} else {

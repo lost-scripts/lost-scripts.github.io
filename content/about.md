@@ -14,7 +14,4 @@ description = 'About Lost Scripts...'
 
 <br>
 
-<small>
-	<div align="center">{{< get-param `copyright` >}}</div>
-	<div align="center">· Made with <a href="https://gohugo.io/" title="Go to Hugo site...">Hugo</a> <strong><a href="https://github.com/gohugoio/hugo/releases/tag/v{{< version >}}" title="Go to release page...">v{{< version >}}</a></strong> & <a href="https://github.com/lost-scripts/lost-theme" title="Go to repo...">Lost Theme</a> ·</div>
-</small>
+{{< info >}}
