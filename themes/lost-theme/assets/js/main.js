@@ -414,22 +414,30 @@ dynamicElements.forEach(element => { // Iterates over all attributes of the elem
 
 // Get the current value of a CSS variable from a specific element and adapt (it if necessary)
 function getCssVarValue(variable, { el = root, def = null, mult = 1 } = {}) {
-	el = el || document.documentElement;
+	const root = root || document.documentElement;
 	const value = getComputedStyle(el).getPropertyValue(variable).trim();
+	el = el || root;
+
 	let result;
 
 	if (!value) {
 		return def;
+	} else if (value === 'true') {
+		return true;
+	} else if (value === 'false') {
+		return false;
 	} else if (value.endsWith("s")) {
 		result = parseFloat(value) * 1000;
 	} else if (value.endsWith("px")) {
 		result = parseFloat(value);
+	} else if (value.endsWith("rem")) {
+		result = parseFloat(value) * parseFloat(getComputedStyle(root).fontSize);
 	} else if (value.endsWith("%")) {
 		result = parseFloat(value) / 100;
 	} else {
 		result = value;
 	}
-	return result * mult;
+	return typeof result === "number" ? result * mult : result;
 }
 
 // Add/Remove a CSS class of a given element (e.g. cssClass(icon, 'colorize');)
@@ -657,8 +665,7 @@ lifter.addEventListener("click", function () { //main.scrollTo({ top: 0, behavio
 
 // Heading icon custom styling (Special K's)
 const headingIcon = document.querySelector('#view-main > table:first-of-type:first-child th > img');
-getCssVarValue('--heading-icon-tint') === 'true' && cssClass(headingIcon, 'colorize', true);
-
+getCssVarValue('--heading-icon-tint') === true && cssClass(headingIcon, 'colorize', true);
 
 // Initial update of icons
 updateIcons();

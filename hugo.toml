@@ -96,7 +96,7 @@ hugo = true
 faStyle = 'solid'
 swatchLight = ['#98403A', '#8A7F05', '#088C34', '#3F67A6', '#9F1D7D']
 swatchDark = ['#F75447', '#E8CF28', '#8FD938', '#40BAEB', '#BE6DDF']
-headingIconSize = 1 # Size multiplier (default: 48px)
+headingIconSize = 1 # Size multiplier (default: 40px)
 headingIconTint = true
 
 # Social Networking and Contact Links (use e.g. `order = 1`, etc. for override ordering)

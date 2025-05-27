@@ -49,7 +49,7 @@
 	--card-lines: 3;
 
 	/* Params (Not add here display related ones like `--aside: block;`, use its fallback value instead!) */
-	--heading-icon-size: 48px;
+	--heading-icon-size: 40px;
 	--nav-mode: auto;
 
 	/* Alpha values */
