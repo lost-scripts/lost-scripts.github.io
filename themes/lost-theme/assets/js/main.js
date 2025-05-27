@@ -414,11 +414,10 @@ dynamicElements.forEach(element => { // Iterates over all attributes of the elem
 
 // Get the current value of a CSS variable from a specific element and adapt (it if necessary)
 function getCssVarValue(variable, { el = root, def = null, mult = 1 } = {}) {
-	const root = root || document.documentElement;
+	const baseRoot = root || document.documentElement;
 	const value = getComputedStyle(el).getPropertyValue(variable).trim();
-	el = el || root;
-
 	let result;
+	el = el || baseRoot;
 
 	if (!value) {
 		return def;
@@ -431,7 +430,7 @@ function getCssVarValue(variable, { el = root, def = null, mult = 1 } = {}) {
 	} else if (value.endsWith("px")) {
 		result = parseFloat(value);
 	} else if (value.endsWith("rem")) {
-		result = parseFloat(value) * parseFloat(getComputedStyle(root).fontSize);
+		result = parseFloat(value) * parseFloat(getComputedStyle(baseRoot).fontSize);
 	} else if (value.endsWith("%")) {
 		result = parseFloat(value) / 100;
 	} else {
