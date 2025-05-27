@@ -6,6 +6,8 @@ const root = document.documentElement;
 const body = document.body;
 const styles = getComputedStyle(root);
 const context = document.currentScript.getAttribute('data-context');
+const shorter = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--shorter")) * 1000 || 1600; // Convierte a ms con fallback
+
 
 //// THEME:
 
@@ -233,8 +235,8 @@ darker.addEventListener('click', function() {
 	localStorage.setItem("darked", darkThemeState); //storeTheme(darkThemeState);
 	darkerLabel.title = (darkThemeState ? getData(darkerLabel, 'data-light') : getData(darkerLabel, 'data-dark')) + (localStorage.getItem("darked") === null ? getData(darkerLabel, 'data-auto') : '');
 	highlighterLabel.title = (darkThemeState ? getData(highlighterLabel, 'data-dark-hl') : getData(highlighterLabel, 'data-light-hl'));
-	highlighter.value = getCSSVarValue('--accent');
-	updatePseudoStyles(getCSSVarValue('--accent'));
+	highlighter.value = getCssVarValue('--accent');
+	updatePseudoStyles(getCssVarValue('--accent'));
 	updateIcons();
 	setGiscusTheme();
 	audioFeedback(this); // Or use: const audio = document.getElementById('other-audio');
@@ -378,6 +380,12 @@ window.copyToClipboard = function(event) {
 	navigator.clipboard.writeText(linkUrl).then(() => {
 		console.log("URL correctly copied to clipboard:", linkUrl);
 		linkTip.textContent = linkData;
+
+		if (getComputedStyle(linkTip).opacity === "0") {
+			linkTip.style.setProperty("opacity", "1", "important"); // NOTE: The way to actually override `!important` properties!
+			setTimeout(() => linkTip.style.opacity = "0", getCssVarValue("--shorter", { def: 1600, mult: 10 }));
+		}
+
 		setTimeout(() => linkTip.textContent = link.getAttribute("aria-label"), 2000);
 	}).catch(err => console.error("Error copying URL to clipboard:", err));
 };
@@ -404,9 +412,24 @@ dynamicElements.forEach(element => { // Iterates over all attributes of the elem
 	});
 });
 
-// Get the current value of a CSS variable from a specific element
-function getCSSVarValue(variable, element = root) {
-	return getComputedStyle(element).getPropertyValue(variable).trim();
+// Get the current value of a CSS variable from a specific element and adapt (it if necessary)
+function getCssVarValue(variable, { el = root, def = null, mult = 1 } = {}) {
+	el = el || document.documentElement;
+	const value = getComputedStyle(el).getPropertyValue(variable).trim();
+	let result;
+
+	if (!value) {
+		return def;
+	} else if (value.endsWith("s")) {
+		result = parseFloat(value) * 1000;
+	} else if (value.endsWith("px")) {
+		result = parseFloat(value);
+	} else if (value.endsWith("%")) {
+		result = parseFloat(value) / 100;
+	} else {
+		result = value;
+	}
+	return result * mult;
 }
 
 // Add/Remove a CSS class of a given element (e.g. cssClass(icon, 'colorize');)
@@ -443,7 +466,7 @@ cancelButton.addEventListener('click', function() {
 
 // Listener for confirm button click to reset color and clear localStorage
 confirmButton.addEventListener('click', function() {
-	const curAccent = getCSSVarValue('--accent'); // Get default accent color for the current mode
+	const curAccent = getCssVarValue('--accent'); // Get default accent color for the current mode
 	
 	sessionStorage.clear();
 	localStorage.clear();
@@ -634,7 +657,7 @@ lifter.addEventListener("click", function () { //main.scrollTo({ top: 0, behavio
 
 // Heading icon custom styling (Special K's)
 const headingIcon = document.querySelector('#view-main > table:first-of-type:first-child th > img');
-getCSSVarValue('--heading-icon-tint') === 'true' && cssClass(headingIcon, 'colorize', true);
+getCssVarValue('--heading-icon-tint') === 'true' && cssClass(headingIcon, 'colorize', true);
 
 
 // Initial update of icons

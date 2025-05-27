@@ -1,9 +1,20 @@
 <div class="pager">
 	{{- $isHome := .Store.Get "isHome" -}}
 
+	{{- /* <!-- Commented for now just in case ⤵ fail! -->
 	{{- with .NextInSection -}}
 		<span id="next-item" title="{{ i18n `previous` | default `Previous` }}"><a class="next" href="{{ .RelPermalink }}"><i class='fa fa-caret-left'></i> {{ .Title }}</a></span>
 	{{- else -}}
+		<span class="grayed" title="{{ i18n `no_previous` | default `No previous...` }}"><i class='fa fa-backward-step'></i>&nbsp;</span>
+	{{- end -}}
+	*/ -}}
+
+	{{- with .NextInSection -}}
+		{{- if not .Params.hidden -}}
+		<span id="next-item" title="{{ i18n `previous` | default `Previous` }}"><a class="next" href="{{ .RelPermalink }}"><i class='fa fa-caret-left'></i> {{ .Title }}</a></span>
+		{{- end }}
+	{{- end -}}
+	{{- if or (not .NextInSection ) ( .NextInSection.Params.hidden ) -}}
 		<span class="grayed" title="{{ i18n `no_previous` | default `No previous...` }}"><i class='fa fa-backward-step'></i>&nbsp;</span>
 	{{- end -}}
 
@@ -36,8 +47,19 @@
 	{{- end -}}
 
 	{{- with .PrevInSection -}}
+		{{- if not .Params.hidden -}}
+			<span id="prev-item" title="{{ i18n `next` | default `Next` }}"><a class="prev" href="{{ .RelPermalink }}">{{ .Title }} <i class='fa fa-caret-right'></i></a></span>
+		{{- end }}
+	{{- end -}}
+	{{- if or (not .PrevInSection ) ( .PrevInSection.Params.hidden ) -}}
+		<span class="grayed" title="{{ i18n `no_next` | default `No next...` }}">&nbsp;<i class='fa fa-forward-step'></i></span>
+	{{- end -}}
+
+	{{- /*  <!-- Commented for now just in case ⤴ fail! -->
+	{{- with .PrevInSection -}}
 		<span id="prev-item" title="{{ i18n `next` | default `Next` }}"><a class="prev" href="{{ .RelPermalink }}">{{ .Title }} <i class='fa fa-caret-right'></i></a></span>
 	{{- else -}}
 		<span class="grayed" title="{{ i18n `no_next` | default `No next...` }}">&nbsp;<i class='fa fa-forward-step'></i></span>
 	{{- end -}}
+	*/ -}}
 </div>

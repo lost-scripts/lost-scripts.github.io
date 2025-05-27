@@ -1,7 +1,6 @@
 +++
 title = 'Info'
 layout = 'page'
-draft = false
 description = 'Sobre Lost Scripts...'
 +++
 
