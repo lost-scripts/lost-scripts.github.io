@@ -1,20 +1,19 @@
-+++
-Title = 'LS Project'
-Categories = ['Project']
-Tags = ['utilities', 'resources']
-Date = 2023-10-17T04:24:43+02:00
-LastMod = 2024-02-09T00:54:00+02:00
-Description = "Te brinda todos los módulos y recursos para que puedas usar (e incluso desarrollar) Lost Scripts™. Si algo no funciona como esperabas... ¡comprueba que esté actualizado!"
-Weight = -1
-
-[params]
-	Author = 'Rai López'
-	Version = '0.0.1'
-	Build = '20250114-0005'
-	Flags = ['UPD!'] # NEW! UPD! WIP! TODO BETA ALPHA
-	Prefix = 'house'
-	Suffix = ''
-+++
+---
+Title: LS Project
+Description: Recursos comunes/compatidos del proyecto Lost Scripts.
+Params:
+  Author: Rai López
+  Version: 0.0.1
+  Build: 20250114-0005
+  Flags:
+    - UPD! # NEW! UPD! WIP! TODO BETA ALPHA
+Tags:
+  - utilities
+  - resources
+Date: 2023-10-17T4:24:43
+LastMod: 2024-02-09T00:54:00
+Weight: -1
+---
 
 <table width="100%" border="0">
 	<tr>

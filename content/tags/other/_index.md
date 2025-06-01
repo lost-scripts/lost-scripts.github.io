@@ -1,6 +1,6 @@
-+++
-title = 'Other...'
-date = 2025-03-08T02:03:30+02:00
-description = "Everything else..."
-weight = 999
-+++
+---
+Title: Other...
+Description: Everything else...
+Date: 2025-03-08T02:03:30
+Weight: 999
+---

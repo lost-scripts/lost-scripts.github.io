@@ -1,8 +1,8 @@
-+++
-title = 'Info'
-layout = 'page'
-description = 'Sobre Lost Scripts...'
-+++
+---
+Title: Info
+Layout: page
+Description: Sobre Lost Scripts...
+---
 
 <br>
 

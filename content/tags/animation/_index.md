@@ -1,5 +1,5 @@
-+++
-title = 'Animation'
-date = 2025-03-08T01:18:30+02:00
-description = "General animation tools & helpers"
-+++
+---
+Title: Animation
+Description: General animation tools & helpers
+Date: 2025-03-07T23:18:30
+---

@@ -1,15 +1,16 @@
-+++
-title = 'Installation'
-categories = ['documentation']
-tags = ['other']
-description = "How to install scripts in Moho..."
-date = 2025-03-25T17:15:30+02:00
-draft = true
-weight = -1
-
-[params]
-    Author = 'Rai López'
-+++
+---
+Title: Installation
+Description: Cómo instalar scripts en Moho...
+Params:
+  Author: Rai López
+Tags:
+  - other
+Categories:
+  - documentation
+Date: 2025-03-25T15:15:30
+Draft: true
+Weight: -1
+---
 
 <br>
 

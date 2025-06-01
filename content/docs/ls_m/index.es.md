@@ -1,20 +1,23 @@
-+++
-title = 'LS.M'
-#type = 'doc'
-categories = ['module']
-tags = ['scripting']
-description = "Documentación del módulo LS.M (no disponible)."
-date = 2024-08-19T04:26:11+02:00
-weight = 3
-
-[params]
-    Labels = ['document', 'module'] # Dispensable?
-    Author = 'Rai López'
-    Version = '0.0.0'
-    Build = '19780811-0600'
-    Flags = ['WIP!'] # NEW! UPD! WIP! TODO BETA ALPHA
-    Stage = 'todo'
-+++
+---
+Title: LS.M
+Description: Documentación del módulo LS.M (no disponible).
+Params:
+  Labels:
+    - document
+    - module
+  Author: Rai López
+  Version: 0.0.0
+  Build: 20250114-005
+  Flags:
+    - WIP!
+  Stage: todo
+Tags:
+  - scripting
+Categories:
+  - module
+Date: 2024-08-19T02:26:11.000Z
+Weight: 3
+---
 
 <br>
 

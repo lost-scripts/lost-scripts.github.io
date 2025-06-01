@@ -1,5 +1,5 @@
-+++
-title = 'Animació'
-date = 2025-03-08T01:18:30+02:00
-description = "Eines i ajudants per a animació en general"
-+++
+---
+Title: Animació
+Description: Eines i ajudants per a animació en general
+Date: 2025-03-07T23:18:30
+---

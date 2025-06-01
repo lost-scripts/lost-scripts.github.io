@@ -1,20 +1,24 @@
-+++
-title = 'LS'
-#type = 'doc'
-categories = ['module']
-tags = ['scripting']
-description = "The LS Module Documentation (currently unavailable)."
-date = 2024-08-17T04:25:40+02:00
-weight = 1
-
-[params]
-    Labels = ['document', 'module'] # Dispensable?
-    Author = 'Rai López'
-    Version = '0.0.0'
-    Build = '20250110-005'
-    Flags = ['WIP!'] # NEW! UPD! WIP! TODO BETA ALPHA
-    Stage = 'todo'
-+++
+---
+Title: LS
+Description: The LS Module Documentation (currently unavailable).
+Params:
+  Author: Rai López
+  Version: 0.0.0
+  Build: 20250110-005
+  Flags:
+    - WIP!
+  Stage: todo
+  Labels:
+    - document
+    - module
+Tags:
+  - scripting
+Categories:
+  - module
+#Type: doc
+Date: 2024-08-17T02:25:40
+Weight: 1
+---
 
 <br>
 

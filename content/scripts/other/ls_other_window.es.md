@@ -1,22 +1,27 @@
-+++
-title = 'LS Other Window'
-tags = ['other']
-categories = ['tool']
-date = 2023-07-24T13:35:40+02:00
-description = "Placeholder para otro Lost Script destinado a cumplir algunos menesteres relacionados con Moho®."
-comments = false
-
-[params]
-    Author = 'Rai López'
-    Version = '0.0.0'
-    Build = '19780811-0600'
-    Flags = [] # NEW! UPD! WIP! TODO BETA ALPHA
-    Stage = ''
-	Shields = [
-	{ src="https://img.shields.io/github/v/release/lost-scripts/ls?color=yellow", alt="GitHub version" },
-	{ src="https://img.shields.io/github/v/tag/lost-scripts/ls", alt="GitHub tag"},
-	{ src="https://img.shields.io/github/downloads/repo-size/lost-scripts/ls/latest/total", alt="GitHub downloads"}]
-+++
+---
+Title: LS Other Window
+Description: Placeholder para otro Lost Script destinado a cumplir algunos menesteres relacionados con Moho®?
+Params:
+  Author: Rai López
+  Version: 0.0.0
+  Build: 19780811-0600
+  Flags:
+    - TODO # NEW! UPD! WIP! TODO BETA ALPHA
+  Stage: ""
+  Shields:
+    - src: https://img.shields.io/github/v/release/lost-scripts/ls?color=yellow
+      alt: GitHub version
+    - src: https://img.shields.io/github/v/tag/lost-scripts/ls
+      alt: GitHub tag
+    - src: https://img.shields.io/github/downloads/repo-size/lost-scripts/ls/latest/total
+      alt: GitHub downloads
+Tags:
+  - other
+Categories:
+  - tool
+Date: 2023-07-24T11:35:40.000Z
+Comments: false
+---
 
 | ![Icon](index@2x.png "Icon") | [![h-1i]][h-1a] [![h-2i]][h-2a] [![h-3i]][h-3a] |
 | :--------------------------- | ----------------------------------------------: |

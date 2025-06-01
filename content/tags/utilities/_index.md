@@ -1,5 +1,5 @@
-+++
-title = 'Utilities'
-date = 2025-03-14T15:30:30+02:00
-description = "Common/Shared utilities"
-+++
+---
+Title: Utilities
+Description: Common/Shared utilities
+Date: 2025-03-14T15:30:30
+---

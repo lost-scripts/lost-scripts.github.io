@@ -1,22 +1,25 @@
-+++
-title = 'LS Wiggle Window'
-#type = 'script'
-tags = ['animation', 'mocap']
-categories = ['window']
-#category = 'Script'
-date = 2025-03-03T04:22:58+02:00
-draft = true
-description = "Supposedly, a persistent window that will provide real mouse capture plus audio wiggling over any Moho® element."
-
-[params]
-    Labels = ['script', 'experiment'] # Dispensable?
-    Author = 'Rai López'
-    Version = '0.0.0'
-    build = '20240926-2302'
-    Flags = ['TODO'] # NEW! UPD! WIP! TODO BETA ALPHA
-    Stage = 'alpha'
-+++
+---
+Title: LS Wiggle Window
+Description: Supposedly, a persistent window that will provide real mouse capture plus audio wiggling over any Moho® element.
+Params:
+  Author: Rai López
+  Version: 0.0.0
+  build: 20240926-2302
+  Flags:
+    - TODO
+  Stage: alpha
+  Labels:
+    - script
+    - experiment
+Tags:
+  - animation
+  - mocap
+Categories:
+  - window
+Date: 2025-03-03T02:22:58.000Z
+Draft: true
+---
 
 # LS Wiggle Window
 
-This is just a placeholder for the *LS Wiggle Window* homepage.
+This is just a placeholder for the contingent *LS Wiggle Window* homepage.

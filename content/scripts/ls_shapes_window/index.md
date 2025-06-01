@@ -1,33 +1,41 @@
-+++
-title = 'LS Shapes Window'
-tags = ['vectors', 'shapes']
-categories = ['window', 'experiment']
-category = 'Script'
-subcategory = 'Index'
-date = 2023-10-20T19:29:50+02:00
-lastmod = 2024-02-09T00:54:00+02:00
-description = "A persistent shape palette plus helpers for better management of Moho® vectors in general and Liquid Shapes in particular."
-commentsRepo = 'lost-scripts/ls_shapes_window'
-commentsRepoId = 'R_kgDOMXYNXw'
-commentsCategoryId = 'DIC_kwDOMXYNX84CpZZs'
-
-[params]
-	Author = 'Rai López'
-	Version = '0.3.0'
-	Build = '20240926-2302'
-	Flags = ['UPD!', 'BETA'] # NEW! UPD! WIP! TODO BETA ALPHA
-	Shields = [
-	{ src="https://img.shields.io/github/v/release/lost-scripts/ls_shapes_window?color=yellow", alt="GitHub version" },
-	{ src="https://img.shields.io/github/v/tag/lost-scripts/ls_shapes_window", alt="GitHub tag"},
-	{ src="https://img.shields.io/github/downloads/repo-size/lost-scripts/ls_shapes_window/latest/total", alt="GitHub downloads"}]
-+++
+---
+Title: LS Shapes Window
+Description: Persistent shape palette plus helpers for better management of Moho® vectors...
+Params:
+  Author: Rai López
+  Version: 0.3.0
+  Build: 20240926-2302
+  Flags:
+    - UPD!
+    - BETA
+  Shields:
+    - src: https://img.shields.io/github/v/release/lost-scripts/ls_shapes_window?color=yellow
+      alt: GitHub version
+    - src: https://img.shields.io/github/v/tag/lost-scripts/ls_shapes_window
+      alt: GitHub tag
+    - src: https://img.shields.io/github/downloads/repo-size/lost-scripts/ls_shapes_window/latest/total
+      alt: GitHub downloads
+Tags:
+  - vectors
+  - shapes
+Categories:
+  - window
+  - experiment
+Category: Script
+Subcategory: Index
+Date: 2023-10-20T17:29:50.000Z
+Lastmod: 2024-02-08T22:54:00.000Z
+CommentsRepo: lost-scripts/ls_shapes_window
+CommentsRepoId: R_kgDOMXYNXw
+CommentsCategoryId: DIC_kwDOMXYNX84CpZZs
+---
 
 | ![Icon](index@2x.png "Icon") | [![h-1i]][h-1a] [![h-2i]][h-2a] [![h-3i]][h-3a] |
 | :--------------------------- | ----------------------------------------------: |
 
 # LS Shapes Window
 
-A versatile tool that helps you manage and manipulate shapes in Moho® with ease. This script provides a user-friendly interface for performing complex shape operations effortlessly.
+Persistent shape palette plus helpers for better management of Moho® vectors in general and *Liquid Shapes* in particular. This script provides a visual and user-friendly interface for performing complex shape operations effortlessly.
 
 <br>
 
