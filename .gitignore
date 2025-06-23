@@ -11,7 +11,7 @@
 # FOLDERS #
 ###########
 
-#/docs/
+/docs/
 /public/
 /resources/
 /themes/*

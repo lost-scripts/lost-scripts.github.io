@@ -662,7 +662,7 @@ lifter.addEventListener("click", function () { //main.scrollTo({ top: 0, behavio
 });
 
 // Heading icon custom styling (Special K's)
-const headingIcon = document.querySelector('#view-main > table:first-of-type:first-child th > img');
+const headingIcon = document.querySelector('#view-main > table:first-of-type:first-child th img, #view-main > table:first-of-type:first-child td img');
 getCssVarValue('--heading-icon-tint') === true && cssClass(headingIcon, 'colorize', true);
 
 // Initial update of icons

@@ -3,8 +3,9 @@
 	<span class="copyright short">{{ site.Params.copyrightAlt | safeHTML }}</span>
 </span>
 
-{{- if.Site.Params.hugo -}}
-	<a href="https://gohugo.io" target="_blank" tabindex="-1" class="undecorate" title="Made with Hugo v{{ hugo.Version }}">
+{{- if .Site.Params.hugo -}}
+	{{- $debug := cond (isset site.Params "debug") (printf " (Debug: %s)" (cond site.Params.debug "ON" "OFF")) "" -}}
+	<a href="https://gohugo.io" target="_blank" tabindex="-1" class="undecorate" title="Made with Hugo v{{ hugo.Version }}{{ $debug }}">
 		<img src="/icons/hugo.svg" class="icon" alt="Hugo Icon">
 	</a>
 {{- end -}}

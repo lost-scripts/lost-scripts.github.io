@@ -1,0 +1,10 @@
+Author: Rai López
+Version: 0.3.0
+Build: 20240926-2302
+Flags:
+  - BETA
+  - UPD!
+Giscus:
+  repo: lost-scripts/ls_shapes_window
+  repoId: R_kgDOO4wZiQ
+  categoryId: DIC_kwDOO4wZic4CrvVY

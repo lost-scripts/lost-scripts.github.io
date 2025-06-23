@@ -31,6 +31,47 @@ services:
 #   CONTENT   #
 ###############
 
+# Navigation tabs
+menus:
+  nav:
+    - name: Scripts
+      pre: fa-file-code #'/icons/fa-file-code-solid.svg' #'📄'
+      title: Scripts
+      identifier: scripts
+      url: /scripts/
+      weight: 1
+      params:
+        item: Script
+
+    - name: Docs
+      pre: fa-book #'/icons/fa-book-solid.svg' #'📚'
+      title: Documentation
+      identifier: docs
+      url: /docs/
+      weight: 2
+      params:
+        item: Document
+        #comments = false
+
+    - name: Lab
+      pre: fa-flask #'/icons/fa-flask-solid.svg' #'🧪'
+      title: Lab!
+      identifier: lab
+      url: /lab/
+      weight: 3
+      params:
+        item: Experiment
+
+    - name: Blog
+      pre: fa-blog #'/icons/fa-blog-solid.svg' #'🅱'
+      title: Blog
+      identifier: posts
+      url: /posts/
+      weight: 4
+      params:
+        item: Post
+        hidden: true
+
 languages:
   en:
     title: Here be Lost Scripts
@@ -92,11 +133,12 @@ params:
   since: 2024
   navMode: auto # auto (default) / tabbed / accordion
   comments: true
-  commentsRepo: lost-scripts/lost-scripts.github.io
-  commentsRepoId: R_kgDOONd4Hw
-  commentsCategoryId: DIC_kwDOONd4H84CpGLA
-  commentsThemeLight: catppuccin_latte
-  commentsThemeDark: catppuccin_frappe
+  giscus:
+    repo: lost-scripts/lost-scripts.github.io
+    repoId: R_kgDOONd4Hw
+    categoryId: DIC_kwDOONd4H84CpGLA
+    themeLight: catppuccin_latte
+    themeDark: catppuccin_frappe
   aside: false
   banner: false
   ribbon: true
@@ -116,6 +158,7 @@ params:
     - "#BE6DDF"
   headingIconSize: 1 # Size multiplier (default: 40px)
   headingIconTint: true
+  debug: false
 
   # Social Networking and Contact Links (use e.g. `order = 1`, etc. for override ordering)
   links:
@@ -151,44 +194,3 @@ params:
   linksAlt:
     hosting: https://pages.github.com/
     hostingStatus: https://www.githubstatus.com/
-
-# Navigation tabs
-menus:
-  nav:
-    - name: Scripts
-      pre: fa-file-code #'/icons/fa-file-code-solid.svg' #'📄'
-      title: Scripts
-      identifier: scripts
-      url: /scripts/
-      weight: 1
-      params:
-        item: Script
-
-    - name: Docs
-      pre: fa-book #'/icons/fa-book-solid.svg' #'📚'
-      title: Documentation
-      identifier: docs
-      url: /docs/
-      weight: 2
-      params:
-        item: Document
-        #comments = false
-
-    - name: Lab
-      pre: fa-flask #'/icons/fa-flask-solid.svg' #'🧪'
-      title: Lab!
-      identifier: lab
-      url: /lab/
-      weight: 3
-      params:
-        item: Experiment
-
-    - name: Blog
-      pre: fa-blog #'/icons/fa-blog-solid.svg' #'🅱'
-      title: Blog
-      identifier: posts
-      url: /posts/
-      weight: 4
-      params:
-        item: Post
-        hidden: true

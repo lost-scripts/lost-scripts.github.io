@@ -16,7 +16,7 @@ Tags:
   - mocap
 Categories:
   - window
-Date: 2025-03-03T02:22:58.000Z
+Date: 2025-03-03 02:22:58
 Draft: true
 ---
 

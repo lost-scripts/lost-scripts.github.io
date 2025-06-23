@@ -14,34 +14,47 @@
 	{{- end -}}
 {{- end -}}
 
-{{- if and (eq (.Site.Params.comments | default true) true) (eq (.Params.comments | default true) true) $showComments -}}
-	{{- $repo := .Params.commentsRepo | default .Site.Params.commentsRepo -}}
-	{{- $catId := .Params.commentsCategoryId | default .Site.Params.commentsCategoryId -}}
+{{- if and (eq (.Site.Params.comments | default true) true) (eq (.Params.comments | default true) true) (eq (partial "parammerger.html" (dict "context" . "key" "comments") | default true) true) $showComments -}}
+	{{- $giscus := partial "parammerger.html" (dict "context" . "key" "giscus") -}}
+	{{- $giscusParam := .Params.giscus | default dict -}}
+	{{- $giscusSite := .Site.Params.giscus | default dict -}}
+
+	{{- $repo := $giscusParam.repo | default $giscus.repo | default $giscusSite.repo -}}
+	{{- $repoId := $giscusParam.repoId | default $giscus.repoId | default $giscusSite.repoId -}}
+	{{- $category := $giscusParam.category | default $giscus.category | default $giscusSite.category | default "Announcements" -}}
+	{{- $catId := $giscusParam.categoryId | default $giscus.categoryId | default $giscusSite.categoryId | default `DIC_kwDOONd4H84CpGLA` -}}
+
+	<!--DEBUG>
+	{{- partial "debugger.html" (dict "context" . "keys" "comments" "force" true) -}}
+	{{- partial "debugger.html" (dict "context" . "keys" (slice "giscus") "force" true) -}}
+	{{- partial "debugger.html" (dict "context" . "keys" (slice "shields")) -}}
+	{{- partial "debugger.html" (dict "context" . "keys" (slice "flags" "author" "version" "build")) -}}
+	</DEBUG-->
 
 	{{- if or (not $repo) (eq $repo "") (not $catId) (eq $catId "") -}}
-			<blockquote style="margin-top: 1.5rem;">
-				<p>ℹ <strong>{{ i18n `INFO` }}:</strong> Comments could not be loaded because there is no <a href="https://giscus.app/#repository" title="Go to giscus.app"><em>giscus</em> repository</a> specified in the <code>params.commentsRepo</code> custom parameter of your Hugo project's <em>config.toml</em> file... Please check that!</p>
-			</blockquote>
+		<blockquote style="margin-top: 1.5rem;">
+			<p>ℹ <strong>{{ i18n `INFO` }}:</strong> Comments could not be loaded because there is no <a href="https://giscus.app/#repository" title="Go to giscus.app"><em>giscus</em> repository</a> specified in the <code>params.commentsRepo</code> custom parameter of your Hugo project's <em>config.toml</em> file... Please check that!</p>
+		</blockquote>
 	{{- else -}}
 		<div class="commenter">
 			<script src="https://giscus.app/client.js"
 				data-repo="{{ $repo }}"
-				data-repo-id="{{ .Params.commentsRepoId | default .Site.Params.commentsRepoId -}}"
-				data-category="{{ .Params.commentsCategory | default .Site.Params.commentsCategory | default `Announcements` -}}"
-				data-category-id="{{ .Params.commentsCategoryId | default .Site.Params.commentsCategoryId | default `DIC_kwDOONd4H84CpGLA` -}}"
-				data-mapping="{{ .Site.Params.commentsMapping | default `pathname` }}"
-				data-strict="{{ .Site.Params.commentsStrict | default `1` }}"
-				data-reactions-enabled="{{ .Site.Params.commentsReactions | default `1` }}"
-				data-emit-metadata="{{ .Site.Params.commentsEmitMetadata | default `0` }}"
-				data-input-position="{{ .Site.Params.commentsInputPosition | default `bottom` }}"
+				data-repo-id="{{ $repoId -}}"
+				data-category="{{ $category -}}"
+				data-category-id="{{ $catId -}}"
+				data-mapping="{{ $giscusSite.mapping | default `pathname` }}"
+				data-strict="{{ $giscusSite.strict | default `1` }}"
+				data-reactions-enabled="{{ $giscusSite.reactions | default `1` }}"
+				data-emit-metadata="{{ $giscusSite.emitMetadata | default `0` }}"
+				data-input-position="{{ $giscusSite.inputPosition | default `bottom` }}"
 				data-theme="preferred_color_scheme"
-				data-theme-light="{{ .Site.Params.commentsThemeLight | default `light` }}" 
-				data-theme-dark="{{ .Site.Params.commentsThemeDark | default `dark` }}"
+				data-theme-light="{{ $giscusSite.themeLight | default `light` }}" 
+				data-theme-dark="{{ $giscusSite.themeDark | default `dark` }}"
 				data-lang="{{ .Lang | default .Site.Language.Lang | default `en` }}"
-				data-loading="{{ .Site.Params.commentsLoading | default `lazy` }}"
+				data-loading="{{ $giscusSite.loading | default `lazy` }}"
 				crossorigin="anonymous"
 				async>
 			</script>
 		</div>
-	{{- end }}
-{{- end }}
+	{{- end -}}
+{{- end -}}

@@ -2,23 +2,30 @@
 Title: LS Project
 Description: Lost Scripts project's common/shared resources.
 Params:
-  Author: Rai López
-  Version: 0.0.1
-  Build: 20250114-0005
   Flags:
     - UPD! # NEW! UPD! WIP! TODO BETA ALPHA
 Tags:
   - utilities
   - resources
-Date: 2023-10-17T4:24:43
-LastMod: 2024-02-09T00:54:00
+Date: 2023-10-17 4:24:43Z
+LastMod: 2024-02-09 00:54:00Z
 Weight: -1
 ---
 
+<!-- mIxEd style head (quite simple and full width in GitHub) -->
+<table width="100%" border="0"><tr><td align="left" valign="middle" width="96">
+
+[![Icon](index@2x.png)](#! "Icon")
+</td><td align="right" valign="middle" width="1920" nowrap>
+
+[![h-shield1-i]][h-shield1-a] [![h-shield2-i]][h-shield2-a] [![h-shield3-i]][h-shield3-a]
+</td></tr></table>
+
+<!-- Pure HTML style head (full width in GitHub, but comboluted...)
 <table width="100%" border="0">
 	<tr>
-		<th align="left" valign="middle" width="72">
-			<img src="index@2x.png" title="Icon" class="colorize">
+		<th align="center" valign="middle" width="96">
+			<a href="#!" style="cursor: default;"><img src="index@2x.png" title="Icon" class="colorize"></a>
 		</th>
 		<th align="right" valign="middle" width="1920" nowrap>
 			<a href="https://moho.lostmarble.com/" title="Go to Moho website"><img height="20px" src="https://img.shields.io/badge/For-Moho_Pro_14.3+-orange" alt="Moho version"></a>
@@ -27,10 +34,11 @@ Weight: -1
 		</th>
 	</tr>
 </table>
+-->
 
-<!-- Pure Markdown style head...
-| ![Icon](index@2x.png "Icon") | [![h-1i]][h-1a] [![h-2i]][h-2a] [![h-3i]][h-3a] |
-| :--------------------------- | ----------------------------------------------: |
+<!-- Pure Markdown style head (simplest, but not full width in GitHub)
+| ![Icon](index@2x.png "Icon") | [![h-shield1-i]][h-shield1-a] [![h-shield2-i]][h-shield2-a] [![h-shield3-i]][h-shield3-a] |
+| :--------------------------- | ----------------------------------------------------------------------------------------: |
 -->
 
 # LS Project
@@ -74,7 +82,7 @@ Provides all the necessary shared/common resources and helpers that [Moho®](htt
 		</td>
 		<td width="1920" valign="middle">
 			<div>
-				A persistent shape palette plus many other helpers for better management of Moho® vectors in general and <i>Liquid Shapes</i> in particular... That's all!
+				A persistent shape palette plus many other helpers for better management of Moho® vectors in general and <em>Liquid Shapes</em> in particular!
 			</div>
 		</td>
 	</tr>
@@ -111,7 +119,7 @@ More than user-facing features, *LS Project* works under the hood not only to me
 
 ## Installation
 
-Starting from you have already unzipped the downloaded file, you actually have two different installation methods...
+~~Download~~ the file, unzip it, and proceed with the installation method of your choice...
 
 <table width="100%" align="center" valign="top" border="2">
 	<tr>
@@ -172,12 +180,20 @@ Suggestions and bugs can be reported in the [<i>Issues</i>](https://github.com/l
 
 <p align="center" style="display: none;">Copyright © 2024 · Rai López · All Rights Reserved</p>
 
-[h-1i]: https://img.shields.io/github/v/release/lost-scripts/ls?color=yellow
-[h-1a]: https://github.com/lost-scripts/ls "Release"
-[h-2i]: https://img.shields.io/github/v/tag/lost-scripts/ls "LS"
-[h-2a]: https://github.com/lost-scripts/ls "LS"
-[h-3i]: https://img.shields.io/github/downloads/repo-size/lost-scripts/ls/latest/total "Downloads"
-[h-3a]: https://github.com/lost-scripts/ls/latest "Downloads"
+[h-shield1-i]: https://img.shields.io/github/downloads/lost-scripts/ls/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZjhmOGY4IiBkPSJNMjg4IDMyYzAtMTcuNy0xNC4zLTMyLTMyLTMycy0zMiAxNC4zLTMyIDMybDAgMjQyLjctNzMuNC03My40Yy0xMi41LTEyLjUtMzIuOC0xMi41LTQ1LjMgMHMtMTIuNSAzMi44IDAgNDUuM2wxMjggMTI4YzEyLjUgMTIuNSAzMi44IDEyLjUgNDUuMyAwbDEyOC0xMjhjMTIuNS0xMi41IDEyLjUtMzIuOCAwLTQ1LjNzLTMyLjgtMTIuNS00NS4zIDBMMjg4IDI3NC43IDI4OCAzMnpNNjQgMzUyYy0zNS4zIDAtNjQgMjguNy02NCA2NGwwIDMyYzAgMzUuMyAyOC43IDY0IDY0IDY0bDM4NCAwYzM1LjMgMCA2NC0yOC43IDY0LTY0bDAtMzJjMC0zNS4zLTI4LjctNjQtNjQtNjRsLTEwMS41IDAtNDUuMyA0NS4zYy0yNSAyNS02NS41IDI1LTkwLjUgMEwxNjUuNSAzNTIgNjQgMzUyem0zNjggNTZhMjQgMjQgMCAxIDEgMCA0OCAyNCAyNCAwIDEgMSAwLTQ4eiIvPjwvc3ZnPg==&color=inactive&logoColor=white
+[h-shield1-a]: https://github.com/lost-scripts/ls_shapes_window/releases/latest/download/ls_v#.#.#-beta#_########-####.zip "Download latest version... (Currently unavailable)"
+
+[h-shield2-i]: https://img.shields.io/github/release/lost-scripts/ls
+[h-shield2-a]: https://github.com/lost-scripts/ls/releases/latest "Go to release in GitHub..."
+
+[h-shield3-i]: https://img.shields.io/badge/for-Moho_Pro_14.3+-orange
+[h-shield3-a]: https://moho.lostmarble.com/ "Go to Moho® website..."
+
+[c1-shield1-i]: https://img.shields.io/github/downloads/repo-size/lost-scripts/ls/latest/total "Downloads"
+[c1-shield1-a]: https://github.com/lost-scripts/ls/latest "Downloads"
 
 [3-1a]: https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3
 [3-2a]: https://manual.lostmarble.com/app/page/1IOuEOfMa7kUwqYPi2ABDhwoWE_KXB1OBCC5ib__iyIE?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3
+
+<!--?logo=github-->
+<!--?logo=moodle-->

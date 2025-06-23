@@ -1128,7 +1128,7 @@ p {
 table {
 	container-type: inline-size;
 	width: 100%;
-	margin-bottom: calc(var(--xs) * 2vh);
+	margin: calc(var(--xs) * 1.5vh) 0 calc(var(--xs) * 3vh) 0;
 	font-size: 0.85em;
 	font-size: clamp(0.8em, 4.5cqw, 0.9em);
 	line-height: 1.33; /*clamp(1.275em, 4.5cqw, 1.325em);*/
@@ -1986,6 +1986,64 @@ input:not(input:checked) + .label {
 	}
 }
 
+#debugger {
+	position: fixed;
+	bottom: 1.5rem;
+	right: 1.5rem;
+	max-height: 50vh;
+	max-width: 33.3vw;
+	padding-bottom: 0.25rem;
+	overflow-x: hidden;
+	overflow-y: auto;
+	color: var(--accent);
+	font: 0.75rem monospace;
+	border-radius: var(--round);
+	box-shadow: 2px 2px 6px rgb(0, 0, 0, 0.75);
+	background: rgb(from var(--text-inv) r g b / 85%);
+	z-index: 9999;
+
+	& div {
+		padding-inline: 0.5rem 0.25rem;
+
+		&:first-of-type {
+			position: sticky;
+			top: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			margin-bottom: 0.5em;
+			color: var(--text);
+			font-weight: bold;
+			user-select: none;
+			box-shadow: 0 2px 4px rgb(0, 0, 0, 0.5);
+			background-color: rgb(from var(--gray-C3) r g b / 67%);
+
+			& span {
+				padding-inline: 0.75em 0.5em;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				user-select: text;
+				font-size: 0.67rem;
+				opacity: 0.67;
+			}
+			& button {
+				scale: 0.67;
+				opacity: 0.9;
+			}
+		}
+	}
+	hr {
+		height: 1px;
+		margin: 0.25rem 0.5rem;
+
+		&:first-of-type {
+			display: none;
+		}
+	}
+}
+
 .commenter {
 	position: relative;
 	width: 100%;
@@ -2184,35 +2242,39 @@ input:not(input:checked) + .label {
 		pointer-events: none;
 		background: linear-gradient(calc(180deg - 3.3deg), rgb(from var(--text-inv) r g b / 33.3%) 0%, rgb(from var(--text-inv) r g b / 0%) 66.7%);
 	}
-	
+
 	& tr {
 		background: none;
 
-		& th { /* Icon Cell */
-			padding-right: 0.1rem;
+		& p {
+			all: unset; /* Necessary to manage when Hugo wraps in <p> MD content inside HTML! */
+		}
+		& th, td {
+			vertical-align: middle;
 			font-size: 0px; /* Remove img spacings ↴ */
 			line-height: 0;
 			border: none;
 			user-select: none;
 			filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.33));
+		}
+		& th:first-child, td:first-child { /* Icon Cell */
+			width: 48px;
+			padding-right: 0.1rem;
+			cursor: default;
+			pointer-events: none;
 
 			& img {
 				height: calc(40px * var(--heading-icon-size, 1));
 				width: auto;
 			}
 		}
-		& th:nth-child(2) { /* Shields Cell */
+		& th:nth-child(2), td:nth-child(2) { /* Shields Cell */
 			height: 20px;
 			padding-inline: 0.5rem;
 			white-space: nowrap;
-			vertical-align: middle;
 			overflow-x: auto;
 			mask-image: linear-gradient(to left, transparent, black 0.5rem, black calc(100% - 0.5rem), transparent 100%);
 			-webkit-mask-image: linear-gradient(to left, transparent, black 0.5rem, black calc(100% - 0.5rem), transparent 100%);
-
-			&::-webkit-scrollbar {
-				height: calc(var(--scroll) / 1.5);
-			}
 			/*display: flex;
 			width: 100%;
 			flex-wrap: nowrap;
@@ -2222,13 +2284,16 @@ input:not(input:checked) + .label {
 			align-items: center;
 			*/
 			& img {
-				height: 20px;
+				height: 22px;
 				width: auto;
 				max-width: 100%; /* Unlocks cell overflow & scrolling! But squashes images wider than container... */
 				padding: 1px 0;
 			}
-			& >:not(:last-child) {
+			& >:not(:last-child), p >:not(:last-child) {
 				margin-right: 0.33rem;
+			}
+			&::-webkit-scrollbar {
+				height: calc(var(--scroll) / 1.5);
 			}
 		}
 	}

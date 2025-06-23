@@ -1,20 +1,6 @@
 ---
 Title: LS Shapes Window
 Description: Persistent shape palette plus helpers for better management of Moho® vectors...
-Params:
-  Author: Rai López
-  Version: 0.3.0
-  Build: 20240926-2302
-  Flags:
-    - UPD!
-    - BETA
-  Shields:
-    - src: https://img.shields.io/github/v/release/lost-scripts/ls_shapes_window?color=yellow
-      alt: GitHub version
-    - src: https://img.shields.io/github/v/tag/lost-scripts/ls_shapes_window
-      alt: GitHub tag
-    - src: https://img.shields.io/github/downloads/repo-size/lost-scripts/ls_shapes_window/latest/total
-      alt: GitHub downloads
 Tags:
   - vectors
   - shapes
@@ -23,41 +9,23 @@ Categories:
   - experiment
 Category: Script
 Subcategory: Index
-Date: 2023-10-20T17:29:50.000Z
-Lastmod: 2024-02-08T22:54:00.000Z
-CommentsRepo: lost-scripts/ls_shapes_window
-CommentsRepoId: R_kgDOMXYNXw
-CommentsCategoryId: DIC_kwDOMXYNX84CpZZs
+Date: 2023-10-20 17:29:50
+Lastmod: 2024-02-08 22:54:00
 ---
 
-| ![Icon](index@2x.png "Icon") | [![h-1i]][h-1a] [![h-2i]][h-2a] [![h-3i]][h-3a] |
-| :--------------------------- | ----------------------------------------------: |
+<table width="100%" border="0"><tr><td align="left" valign="middle" width="96">
+
+[![Icon](index@2x.png)](#! "Icon")
+</td><td align="right" valign="middle" width="1920" nowrap>
+
+[![h-shield1-i]][h-shield1-a] [![h-shield2-i]][h-shield2-a] [![h-shield3-i]][h-shield3-a]
+</td></tr></table>
 
 # LS Shapes Window
 
 Persistent shape palette plus helpers for better management of Moho® vectors in general and *Liquid Shapes* in particular. This script provides a visual and user-friendly interface for performing complex shape operations effortlessly.
 
 <br>
-
-<!--
-| SW | ![Release](https://img.shields.io/github/v/release/lost-scripts/ls?color=yellow) ![LS](https://img.shields.io/github/v/tag/lost-scripts/ls) ![Downloads](https://img.shields.io/github/downloads/repo-size/lost-scripts/ls/latest/total) |
-| :---: | :---: |
-| ![LS Shapes Window UI](index.png) | A versatile tool that helps you manage and manipulate shapes in Moho® with ease. This script provides a user-friendly interface for performing complex shape operations effortlessly. |
--->
-
-<!--
-<center>
-	<img src="index.png" alt="LS Shapes Window Icon" style="width: 100px; height: 100px;">
-	<br>
-	<img src="https://img.shields.io/github/v/release/lost-scripts/ls?color=yellow" alt="GitHub version">
-	<img src="https://img.shields.io/github/v/tag/lost-scripts/ls" alt="GitHub tag">
-	<img src="https://img.shields.io/github/downloads/repo-size/lost-scripts/ls/latest/total" alt="GitHub downloads">
-</center>
--->
-
-<!--
-{{< html-img src="index.png" class="center" >}}
--->
 
 ## Gallery
 
@@ -99,7 +67,7 @@ Persistent shape palette plus helpers for better management of Moho® vectors in
 
 ## Installation
 
-Starting from you have already unzipped the downloaded file, you actually have two different installation methods...
+[**Download**][h-shield1-a] the file, unzip it, and proceed with the installation method of your choice...
 
 | MANUAL                        | ASSISTED                      |
 | ----------------------------- | ----------------------------- |
@@ -125,11 +93,6 @@ Starting from you have already unzipped the downloaded file, you actually have t
 Suggestions and bugs can be reported in the [<i>Issues</i>](https://github.com/lost-scripts/ls_shapes_window/issues "Go to ''Issues'' section") section (preferably) or in the corresponding topic, if any, in [<i>Scripting</i>](https://www.lostmarble.com/forum/viewforum.php?f=12 "Go to Lost Marble Forum's ''Scripting'' section") section of the [<i>Lost Marble Forum</i>](https://www.lostmarble.com/forum "Go to the ''Lost Marble Forum''").
 
 <br>
-<!--
-## Other...
-| [👉 Go to the Lost Scripts™ website...](https://lost-scripts.github.io/scripts/ls_shapes_window) | [👉 Go to Lost Marble Forum topic...](https://www.lostmarble.com/forum/viewtopic.php?t=36508) |
-| :---: | :---: |
--->
 
 ## Other...
 
@@ -138,12 +101,14 @@ Suggestions and bugs can be reported in the [<i>Issues</i>](https://github.com/l
 
 ---
 
-[h-1i]: https://img.shields.io/github/v/release/lost-scripts/ls_shapes_window?color=yellow
-[h-1a]: https://github.com/lost-scripts/ls_shapes_window "Release"
-[h-2i]: https://img.shields.io/github/v/tag/lost-scripts/ls_shapes_window "LS Shapes Window"
-[h-2a]: https://github.com/lost-scripts/ls_shapes_window "LS Shapes Window"
-[h-3i]: https://img.shields.io/github/downloads/repo-size/lost-scripts/ls_shapes_window/latest/total "Downloads"
-[h-3a]: https://github.com/lost-scripts/ls_shapes_window/latest "Downloads"
+[h-shield1-i]: https://img.shields.io/github/downloads/lost-scripts/ls_shapes_window/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZjhmOGY4IiBkPSJNMjg4IDMyYzAtMTcuNy0xNC4zLTMyLTMyLTMycy0zMiAxNC4zLTMyIDMybDAgMjQyLjctNzMuNC03My40Yy0xMi41LTEyLjUtMzIuOC0xMi41LTQ1LjMgMHMtMTIuNSAzMi44IDAgNDUuM2wxMjggMTI4YzEyLjUgMTIuNSAzMi44IDEyLjUgNDUuMyAwbDEyOC0xMjhjMTIuNS0xMi41IDEyLjUtMzIuOCAwLTQ1LjNzLTMyLjgtMTIuNS00NS4zIDBMMjg4IDI3NC43IDI4OCAzMnpNNjQgMzUyYy0zNS4zIDAtNjQgMjguNy02NCA2NGwwIDMyYzAgMzUuMyAyOC43IDY0IDY0IDY0bDM4NCAwYzM1LjMgMCA2NC0yOC43IDY0LTY0bDAtMzJjMC0zNS4zLTI4LjctNjQtNjQtNjRsLTEwMS41IDAtNDUuMyA0NS4zYy0yNSAyNS02NS41IDI1LTkwLjUgMEwxNjUuNSAzNTIgNjQgMzUyem0zNjggNTZhMjQgMjQgMCAxIDEgMCA0OCAyNCAyNCAwIDEgMSAwLTQ4eiIvPjwvc3ZnPg==&color=blue&logoColor=white&logoWidth=24
+[h-shield1-a]: https://github.com/lost-scripts/ls_shapes_window/releases/latest/download/ls_shapes_window_v0.3.0-beta3_20240209-0054.zip "Download latest version..."
+
+[h-shield2-i]: https://img.shields.io/github/release/lost-scripts/ls_shapes_window
+[h-shield2-a]: https://github.com/lost-scripts/ls_shapes_window/releases/latest "Go to release in GitHub..."
+
+[h-shield3-i]: https://img.shields.io/badge/for-Moho_Pro_14.3+-orange
+[h-shield3-a]: https://moho.lostmarble.com/ "Go to Moho® website..."
 
 [3-1a]: https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3
 [3-2a]: https://manual.lostmarble.com/app/page/1IOuEOfMa7kUwqYPi2ABDhwoWE_KXB1OBCC5ib__iyIE?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3

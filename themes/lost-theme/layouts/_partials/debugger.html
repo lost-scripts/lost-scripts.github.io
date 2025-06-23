@@ -1,0 +1,95 @@
+{{- /*
+Description: Partial for inline debugging of in-use page params (via parammerger.html), either a single key (string): "author" or multiple ones (slice): slice "flags" "author" "version".
+
+Usage (see commenter.html partial for more examples):
+	{{ partial "debugger.html" (dict "context" . "keys" "comments" "force" true) }}
+	{{ partial "debugger.html" (dict "context" . "keys" (slice "flags" "author") "force" true) }} (append `"force" true` for showing up even in production!)
+*/ -}}
+
+{{- if and (site.Params.debug) (or (eq hugo.Environment "development") .force) -}}
+	<script>
+		(function () {
+			const id = 'debugger';
+			const el = document.getElementById(id) || (function () {
+				const div = document.createElement('div');
+				const title = document.createElement('div');
+				const close = document.createElement('button');
+
+				title.textContent = "Debugger";
+				div.appendChild(title);
+
+				if (!title.dataset.source) {
+					title.dataset.source = "{{ .context.File.Path }}";
+					const info = document.createElement('span');
+					info.title = 'From: {{ .context.File.Path }} (first call)';
+					info.textContent = "<{{ .context.File.Path }}>";
+					title.appendChild(info);
+				}
+
+				close.textContent = '×';
+				close.title = 'Close';
+				close.addEventListener('click', () => div.remove());
+				title.appendChild(close);
+
+				div.id = id;
+				document.body.appendChild(div);
+				return div;
+			})();
+
+			const hr = document.createElement('hr');
+			el.appendChild(hr);
+
+			const lines = [
+			{{- $ctx := .context -}}
+			{{- $keys := .keys -}}
+			{{- $vals := slice -}}
+			{{- $entries := (slice) -}}
+
+			{{- if reflect.IsSlice $keys -}}
+				{{- range $keys }}
+					{{- $val := partial "parammerger.html" (dict "context" $ctx "key" .) -}}
+					{{- $str := "" -}}
+					{{- if reflect.IsMap $val -}}
+						{{- $pairs := slice -}}
+						{{- range $k, $v := $val }}
+							{{- $pairs = $pairs | append (printf "%s: %v" $k $v) -}}
+						{{- end }}
+						{{- $str = delimit $pairs ", " | printf "{%s}" -}}
+						{{- else if reflect.IsSlice $val -}}
+							{{- $str = printf "[%s]" (delimit $val ", ") -}}
+						{{- else -}}
+							{{- $str = printf "%v" $val -}}
+					{{- end }}
+					{{- $entries = $entries | append (printf "%s: %s" . $str) -}}
+				{{- end }}
+			{{- else -}}
+				{{- $val := partial "parammerger.html" (dict "context" $ctx "key" $keys) -}}
+				{{- $str := "" -}}
+				{{- if reflect.IsMap $val -}}
+					{{- $pairs := slice -}}
+					{{- range $k, $v := $val }}
+						{{- $pairs = $pairs | append (printf "%s: %v" $k $v) -}}
+					{{- end }}
+					{{- $str = delimit $pairs ", " | printf "{%s}" -}}
+					{{- else if reflect.IsSlice $val -}}
+						{{- $str = printf "[%s]" (delimit $val ", ") -}}
+					{{- else -}}
+						{{- $str = printf "%v" $val -}}
+				{{- end }}
+				{{- $entries = $entries | append (printf "%s: %s" $keys $str) -}}
+			{{- end }}
+
+			{{- range $entries }}
+				"{{ . }}",
+			{{- end }}
+			];
+
+			for (const line of lines) {
+				const p = document.createElement('div');
+				p.textContent = '> ' + line;
+				p.title = 'From: {{ .context.File.Path }}';
+				el.appendChild(p);
+			}
+		})();
+	</script>
+{{- end -}}

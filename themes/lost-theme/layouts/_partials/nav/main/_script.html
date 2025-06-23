@@ -40,9 +40,12 @@
 				</picture>
 				<span name="nav-item-text">{{ .page.Title }}</span>
 				<div name="nav-item-flags" class="flags">
-					{{- range .page.Params.flags -}}
+					{{- $fromParams := isset .page.Params "flags" -}}
+					{{- $flags := cond $fromParams (.page.Params.flags) (partial "parammerger.html" (dict "context" .page "key" "flags")) -}}
+
+					{{- range $flags }}
 						<span class="{{ lower . }}" title="{{ i18n . }}">{{ . }}</span>
-					{{- end -}}
+					{{- end }}
 				</div>
 			</a>
 		</summary>

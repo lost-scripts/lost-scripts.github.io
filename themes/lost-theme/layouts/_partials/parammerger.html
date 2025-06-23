@@ -1,0 +1,50 @@
+{{- /*
+Description: Partial for fetching/merging external params. Returns a value from: 1. .Params / 2. index.(yaml|toml|json) (as page resource) / 3. .Site.Params
+
+Supports: scalars (e.g. "author" > "Rai López"), lists (e.g. "flags" > [BETA, UPD!]), dicts (e.g. "giscus" > {...}), booleans (stringified or real).
+
+Usage examples:
+	{{ partial "parammerger.html" (dict "context" . "key" "author") }}
+	{{ range (partial "parammerger.html" (dict "context" . "key" "flags")) }}...{{ end }}
+	{{ with partial "parammerger.html" (dict "context" . "key" "giscus") }}...{{ end }}
+
+⚠ Warning: Only works for bundle-type pages (with .Resources).
+*/ -}}
+
+{{- $ctx := .context -}}
+{{- $key := .key | lower -}}
+
+{{- $params := $ctx.Params | default dict -}}
+{{- $hasParam := isset $params $key -}}
+{{- $val := cond $hasParam (index $params $key) nil -}}
+
+{{- if not $hasParam -}}
+	{{- $res := false -}}
+	{{- range slice "yaml" "yml" "toml" "tml" "json" -}}
+		{{- if not $res -}}
+			{{- $res = $ctx.Resources.GetMatch (printf "index.%s" .) -}}
+		{{- end -}}
+	{{- end -}}
+
+	{{- if $res -}}
+		{{- $data := transform.Unmarshal $res | default dict -}}
+		{{- $hasData := or (isset $data $key) (isset $data (title $key)) -}}
+		{{- if $hasData -}}
+			{{- $val = or (index $data $key) (index $data (title $key)) -}}
+		{{- end -}}
+	{{- end -}}
+
+	{{- if eq $val nil -}}
+		{{- $siteParams := $ctx.Site.Params | default dict -}}
+		{{- if isset $siteParams $key -}}
+			{{- $val = index $siteParams $key -}}
+		{{- end -}}
+	{{- end -}}
+{{- end -}}
+
+{{- $vstr := printf "%v" $val | lower -}}
+{{- if in (slice "true" "false") $vstr -}}
+	{{- $val = eq $vstr "true" -}}
+{{- end -}}
+
+{{- return $val -}}
