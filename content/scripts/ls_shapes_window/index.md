@@ -15,7 +15,8 @@ Lastmod: 2024-02-08 22:54:00
 
 <table width="100%" border="0"><tr><td align="left" valign="middle" width="96">
 
-[![Icon](index@2x.png)](#! "Icon")
+[![Icon](index@2x.png "Icon")](#! "Icon")
+
 </td><td align="right" valign="middle" width="1920" nowrap>
 
 [![h-shield1-i]][h-shield1-a] [![h-shield2-i]][h-shield2-a] [![h-shield3-i]][h-shield3-a]
@@ -30,13 +31,40 @@ Persistent shape palette plus helpers for better management of Moho® vectors in
 ## Gallery
 
 <details align="center" width="100%" class="gallery-holder" style="cursor:pointer; user-select: none;">
+<summary title="Click to expand/collapse image gallery"><a inert href="#!" align="center">Expand/Collapse<br><br>
+
+![Icon](docs/index_gallery.png)
+
+</a></summary>
+<br>
+<table align="center" border="0" class="gallery"><tr>
+<td width="178" valign="top"><!-- width="1024px" for full width container-->
+
+![SHAPE Mode](docs/index_gallery_1.png "SHAPE Mode for shape managing")
+</td><td width="178" valign="top">
+
+![Style Mode](docs/index_gallery_2.png "STYLE Mode for style managing")
+</td><td width="144" valign="top">
+
+![TWEAK Menu](docs/index_gallery_3.png "TWEAK Menu for shape tweaking &amp; utils")
+</td><td width="264" valign="top">
+
+![LIVE Swatches](docs/index_gallery_4.gif "Live/Scrollable (plus customizable) Swatches")
+</td><td width="178" valign="top">
+
+![COMPACT Mode](docs/index_gallery_5.png "Or just keep it compact...")
+
+</td></tr></table>
+</details>
+<!--
+<details align="center" width="100%" class="gallery-holder" style="cursor:pointer; user-select: none;">
 	<summary title="Click the arrow to expand/collapse image gallery">
 		<a inert href="#!"><img align="center" height="96px" src="docs/index_gallery.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" alt="Script UI" style="vertical-align: middle;"></a>&ensp;&ensp;
 	</summary>
 	<br>
 	<table align="center" border="0" class="gallery">
 		<tr>
-			<td nowrap><!-- width="1024px" for full width container-->
+			<td nowrap data-comment="Use width='1024px' for full width container">
 				<img src="docs/index_gallery_1.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="SHAPE Mode for shape managing" height="512px" align="top">&ensp;
 				<img src="docs/index_gallery_2.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="STYLE Mode for style managing" height="512px" align="top">&ensp;
 				<img src="docs/index_gallery_3.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="TWEAK Menu for shape tweaking &amp; utils" height="512px" align="top">&ensp;
@@ -47,7 +75,7 @@ Persistent shape palette plus helpers for better management of Moho® vectors in
 		</tr>
 	</table>
 </details>
-
+-->
 <br>
 
 ## Features
@@ -102,7 +130,7 @@ Suggestions and bugs can be reported in the [<i>Issues</i>](https://github.com/l
 ---
 
 [h-shield1-i]: https://img.shields.io/github/downloads/lost-scripts/ls_shapes_window/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZjhmOGY4IiBkPSJNMjg4IDMyYzAtMTcuNy0xNC4zLTMyLTMyLTMycy0zMiAxNC4zLTMyIDMybDAgMjQyLjctNzMuNC03My40Yy0xMi41LTEyLjUtMzIuOC0xMi41LTQ1LjMgMHMtMTIuNSAzMi44IDAgNDUuM2wxMjggMTI4YzEyLjUgMTIuNSAzMi44IDEyLjUgNDUuMyAwbDEyOC0xMjhjMTIuNS0xMi41IDEyLjUtMzIuOCAwLTQ1LjNzLTMyLjgtMTIuNS00NS4zIDBMMjg4IDI3NC43IDI4OCAzMnpNNjQgMzUyYy0zNS4zIDAtNjQgMjguNy02NCA2NGwwIDMyYzAgMzUuMyAyOC43IDY0IDY0IDY0bDM4NCAwYzM1LjMgMCA2NC0yOC43IDY0LTY0bDAtMzJjMC0zNS4zLTI4LjctNjQtNjQtNjRsLTEwMS41IDAtNDUuMyA0NS4zYy0yNSAyNS02NS41IDI1LTkwLjUgMEwxNjUuNSAzNTIgNjQgMzUyem0zNjggNTZhMjQgMjQgMCAxIDEgMCA0OCAyNCAyNCAwIDEgMSAwLTQ4eiIvPjwvc3ZnPg==&color=blue&logoColor=white&logoWidth=24
-[h-shield1-a]: https://github.com/lost-scripts/ls_shapes_window/releases/latest/download/ls_shapes_window_v0.3.0-beta3_20240209-0054.zip "Download latest version..."
+[h-shield1-a]: https://github.com/lost-scripts/ls_shapes_window/releases/latest/download/ls_shapes_window.zip "Download latest version..."
 
 [h-shield2-i]: https://img.shields.io/github/release/lost-scripts/ls_shapes_window
 [h-shield2-a]: https://github.com/lost-scripts/ls_shapes_window/releases/latest "Go to release in GitHub..."

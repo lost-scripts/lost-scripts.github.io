@@ -1,0 +1,53 @@
+{{- /* Single page template (formerly called 'single.html') for also creating README.html files */ -}}
+
+{{- $createReadme := false -}}
+{{- $createByDefault := false -}}
+{{- $sectionPage := site.GetPage .Section -}}
+
+{{- if and $sectionPage (isset $sectionPage.Params "readmes") -}}
+	{{- $createReadme = $sectionPage.Params.readmes -}} <!--<p>_INDEX {{ $createReadme }} _INDEX</p>-->
+{{- else -}}
+	{{- $menus := where site.Menus.nav "Identifier" .Section -}}
+	{{- $menu := index $menus 0 -}}
+
+	{{- if and $menu (isset $menu.Params "readmes") -}}
+		{{- $createReadme = $menu.Params.readmes -}} <!--<p>CONFIG {{ $createReadme }} CONFIG</p>-->
+	{{- end -}}
+{{- end -}}
+
+{{- /* if and (eq (.Site.Params.readmes | default false) true) (eq (.Params.readmes | default true) true) (eq (partial "parammerger.html" (dict "context" . "key" "readmes") | default false) true) $createReadme */ -}}
+{{- if and (eq (.Site.Params.readmes | default false) true) (or (eq (.Params.readmes | default false) true) (eq (partial "parammerger.html" (dict "context" . "key" "readmes") | default false) true)) $createReadme -}}
+	<!DOCTYPE html>
+	<html lang="{{ .Lang }}">
+	<head>
+		<meta charset="utf-8">
+		<title>{{ .Title }} - README</title>
+		{{- with resources.GetMatch "/css/github-markdown.css" | minify -}}
+			<style>
+				{{- .Content | safeCSS -}}
+			</style>
+			<style> /* Place for GitHub flavored README.html files customizations ↴ */
+				body > table:first-of-type:first-child {
+					& tr {
+						& th:first-child, td:first-child { /* Icon Cell */
+							& a[title="Icon"], img[title="Icon"] {
+								cursor: default !important;
+								pointer-events: none !important;
+							}
+						}
+					}
+				}
+				/*
+				th, td > * {
+					vertical-align: top;
+				}
+				*/
+			</style>
+		{{- end -}}
+	</head>
+
+	<body class="markdown-body" style="margin: 0; padding: 10%; font-family: sans-serif;">
+		{{ .Content }}
+	</body>
+	</html>
+{{- end -}}

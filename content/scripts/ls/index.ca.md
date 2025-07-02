@@ -1,9 +1,6 @@
 ---
 Title: LS Project
 Description: Recursos comuns/compartits del projecte Lost Scripts.
-Params:
-  Flags:
-    - UPD! # NEW! UPD! WIP! TODO BETA ALPHA
 Tags:
   - utilities
   - resources

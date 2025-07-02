@@ -1,0 +1,13 @@
+{{- /* Leave paths of markdown-style inserted images relative and as-is */ -}}
+
+{{- $isRemote := strings.HasPrefix .Destination "http" -}}
+{{- $img := .Page.Resources.GetMatch .Destination -}}
+
+{{- if and (not $isRemote) (not $img) -}}
+	{{- range .Page.AllTranslations -}}
+		{{- $img = .Resources.GetMatch $.Destination -}}
+		{{- if $img }}{{ break }}{{ end -}}
+	{{- end -}}
+{{- end -}}
+
+<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Title }}" />

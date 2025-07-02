@@ -12,6 +12,8 @@ defaultContentLanguage: en
 defaultContentLanguageInSubdir: false
 enableMissingTranslationPlaceholder: true
 publishDir: docs # Use `hugo server --destination public` (or alias `hs` if configured) for previewing and `hugo --destination docs` (or `h`) for final generation.
+relativeURLs: true
+uglyURLs: false
 
 
 ###############
@@ -42,6 +44,7 @@ menus:
       weight: 1
       params:
         item: Script
+        #readmes: true
 
     - name: Docs
       pre: fa-book #'/icons/fa-book-solid.svg' #'📚'
@@ -51,7 +54,7 @@ menus:
       weight: 2
       params:
         item: Document
-        #comments = false
+        #comments: false
 
     - name: Lab
       pre: fa-flask #'/icons/fa-flask-solid.svg' #'🧪'
@@ -96,26 +99,42 @@ markup:
       unsafe: true # Allow HTML in md files (WARNING: make sure content is under your control!)
     renderHooks:
       image:
-        enableDefault: true
+        enableDefault: true # 20250629-1130: Changed to false cause it messed MD relative image paths!  
     parser:
       autoIDType: github
       autoHeadingID: true
+      wrapStandAloneImageWithinParagraph: false
       attribute:
-        block: true
         title: true
+        block: true
   highlight:
     lineNoStart: 1
     lineNos: true
     lineNumbersInTable: false
     style: monokai
-    #noClasses = false
-    #hl_Lines = '1 4-6'
+    #noClasses: false
+    #hl_Lines: '1 4-6'
+
+mediaTypes:
+  application/x-readme:
+    suffixes: ["html"] # Aunque sea un archivo HTML, le damos un tipo MIME único para Hugo
 
 outputs:
   home:
     - html
     - json
     - rss
+  page:
+    - html
+    - README
+
+outputFormats:
+  README:
+    mediaType: "application/x-readme"
+    baseName: "README"
+    is: true
+    isPlainText: false
+    noUgly: true
 
 
 ###############
@@ -132,6 +151,7 @@ params:
   copyrightAlt: © 2025 · Rai López · <abbr title="All Rights Reserved">ARR</abbr>
   since: 2024
   navMode: auto # auto (default) / tabbed / accordion
+  readmes: true
   comments: true
   giscus:
     repo: lost-scripts/lost-scripts.github.io
@@ -158,9 +178,9 @@ params:
     - "#BE6DDF"
   headingIconSize: 1 # Size multiplier (default: 40px)
   headingIconTint: true
-  debug: false
+  #debug: true
 
-  # Social Networking and Contact Links (use e.g. `order = 1`, etc. for override ordering)
+  # Social Networking and Contact Links (use e.g. `order: 1`, etc. for override ordering)
   links:
     - href: https://github.com/lost-scripts
       icon: fa-brands fa-github

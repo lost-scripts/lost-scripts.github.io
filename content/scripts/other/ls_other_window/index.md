@@ -1,15 +1,11 @@
 ---
 Title: LS Other Window
 Description: Placeholder for another Lost Script intended to accomplish some Moho® related purposes?
-Params:
-  Author: Rai López
-  Version: 0.0.0
-  Build: 19780811-0600
 Tags:
   - other
 Categories:
   - tool
-Date: 2023-07-24 11:35:40
+Date: 2023-02-24 11:35:40
 ---
 
 <table width="100%" border="0"><tr><td align="left" valign="middle" width="96">

@@ -3,18 +3,20 @@
 {{- define "main" -}}
 	<h1>{{ .Title }}</h1>
 	{{ .Content }}
-	{{- range .Pages -}}
-		<h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-		{{- $text := "" -}}
-		{{- if .Description -}}
-			{{- $text = .Description -}}
-		{{- else if and (isset .Params "summary") (ne .Params.summary "") -}}
-			{{- /* partial "_markup/adjust-paths.html" . */ -}}
-			{{- $text = .Summary -}}
-		{{- else -}}
-			{{- $text = i18n "no_desc" -}}
+	{{- range .Pages.GroupBy "Weight" -}}
+		{{- range .Pages.ByDate.Reverse -}}
+			<h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+			{{- $text := "" -}}
+			{{- if .Description -}}
+				{{- $text = .Description -}}
+			{{- else if and (isset .Params "summary") (ne .Params.summary "") -}}
+				{{- /* partial "_markup/adjust-paths.html" . */ -}}
+				{{- $text = .Summary -}}
+			{{- else -}}
+				{{- $text = i18n "no_desc" -}}
+			{{- end -}}
+			{{- $text | truncate 128 "..." | safeHTML -}}
 		{{- end -}}
-		{{- $text | truncate 128 "..." | safeHTML -}}
 	{{- end -}}
 
 	{{- /*

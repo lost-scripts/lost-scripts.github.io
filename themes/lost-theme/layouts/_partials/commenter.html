@@ -14,7 +14,8 @@
 	{{- end -}}
 {{- end -}}
 
-{{- if and (eq (.Site.Params.comments | default true) true) (eq (.Params.comments | default true) true) (eq (partial "parammerger.html" (dict "context" . "key" "comments") | default true) true) $showComments -}}
+{{- /* if and (eq (.Site.Params.comments | default true) true) (eq (.Params.comments | default true) true) (eq (partial "parammerger.html" (dict "context" . "key" "comments") | default true) true) $showComments */ -}}
+{{- if and (eq (.Site.Params.comments | default true) true) (or (eq (.Params.comments | default false) true) (eq (partial "parammerger.html" (dict "context" . "key" "comments") | default true) true)) $showComments -}}
 	{{- $giscus := partial "parammerger.html" (dict "context" . "key" "giscus") -}}
 	{{- $giscusParam := .Params.giscus | default dict -}}
 	{{- $giscusSite := .Site.Params.giscus | default dict -}}
@@ -24,12 +25,14 @@
 	{{- $category := $giscusParam.category | default $giscus.category | default $giscusSite.category | default "Announcements" -}}
 	{{- $catId := $giscusParam.categoryId | default $giscus.categoryId | default $giscusSite.categoryId | default `DIC_kwDOONd4H84CpGLA` -}}
 
+	{{- /*
 	<!--DEBUG>
 	{{- partial "debugger.html" (dict "context" . "keys" "comments" "force" true) -}}
 	{{- partial "debugger.html" (dict "context" . "keys" (slice "giscus") "force" true) -}}
 	{{- partial "debugger.html" (dict "context" . "keys" (slice "shields")) -}}
 	{{- partial "debugger.html" (dict "context" . "keys" (slice "flags" "author" "version" "build")) -}}
 	</DEBUG-->
+	*/ -}}
 
 	{{- if or (not $repo) (eq $repo "") (not $catId) (eq $catId "") -}}
 		<blockquote style="margin-top: 1.5rem;">

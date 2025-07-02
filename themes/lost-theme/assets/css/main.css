@@ -2378,24 +2378,50 @@ input:not(input:checked) + .label {
 	}
 }
 
+.gallery-holder {
+	text-align: center;
+
+	& summary {
+		& img {
+			min-width: 33.3%;
+			max-width: 50%;
+			object-fit: scale-down;
+		}
+	}
+}
+
 .gallery {
+	--gap: 12px;
+	display: block;
 	position: relative;
 	width: 100%;
 	border: none;
+	background-color: rgb(from var(--text-inv) r g b / 16.66%);
 
-	& tr {
-		& > td {
-			max-width: 0;
-			padding: 12px 12px 6px 12px;
-			overflow-x: auto;
-			white-space: nowrap;
-			font-size: smaller;
-			background-color: rgb(from var(--text-inv) r g b / 16.66%);
+	tbody {
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: min-content;
+		gap: var(--gap);
+		padding: 12px 12px 6px 12px;
+		justify-content: space-around;
+		overflow-x: auto;
 
-			& img {
-				max-width: 100%; /* Unlocks cell overflow & scrolling! But squashes images wider than container... */
-				vertical-align: top;
-				box-shadow: -1px 1px 2px 1px rgb(0, 0, 0, 0.33);
+		& tr {
+			/*display: contents;*/ /* Uncomment if you want gap to work plus real space-arround distribution! */
+			background-color: transparent !important;
+
+			& th, td {
+				font-size: smaller;
+				border: none;
+				background-color: transparent;
+
+				& img {
+					object-fit: contain;
+					max-height: min(75vh, 720px);
+					vertical-align: top;
+					box-shadow: -1px 1px 2px 1px rgb(0, 0, 0, 0.33);
+				}
 			}
 		}
 	}
