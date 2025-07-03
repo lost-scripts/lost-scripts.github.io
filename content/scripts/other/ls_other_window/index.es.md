@@ -6,11 +6,19 @@ Tags:
 Categories:
   - tool
 Date: 2023-07-24 11:35:40
+Params:
+  Shields:
+    - src: https://img.shields.io/github/v/release/lost-scripts/ls_other_window?color=yellow
+      alt: GitHub version
+    - src: https://img.shields.io/github/v/tag/lost-scripts/ls_other_window
+      alt: GitHub tag
+    - src: https://img.shields.io/github/downloads/repo-size/lost-scripts/ls_other_window/latest/total
+      alt: GitHub downloads
 ---
 
 <table width="100%" border="0"><tr><td align="left" valign="middle" width="96">
 
-[![Icon](index@2x.png)](#! "Icon")
+[![Icon](docs/index@2x.png)](#! "Icon")
 </td><td align="right" valign="middle" width="1920" nowrap>
 
 [![h-shield1-i]][h-shield1-a] [![h-shield2-i]][h-shield2-a] [![h-shield3-i]][h-shield3-a]

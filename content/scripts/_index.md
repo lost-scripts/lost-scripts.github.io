@@ -1,7 +1,7 @@
 ---
 Title: Scripts
 Description: All script items
-Date: 2025-01-01T08:30:00
+Date: 2025-01-01 08:30:00
 Readmes: true
 ---
 

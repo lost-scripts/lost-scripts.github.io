@@ -2383,6 +2383,7 @@ input:not(input:checked) + .label {
 
 	& summary {
 		& img {
+			margin-top: 0.33em;
 			min-width: 33.3%;
 			max-width: 50%;
 			object-fit: scale-down;

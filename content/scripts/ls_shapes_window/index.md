@@ -1,22 +1,16 @@
 ---
 Title: LS Shapes Window
-Description: Persistent shape palette plus helpers for better management of Moho® vectors...
+Description: Shape palette plus helpers for better Moho® vectors management
 Tags:
   - vectors
   - shapes
-Categories:
-  - window
-  - experiment
-Category: Script
-Subcategory: Index
 Date: 2023-10-20 17:29:50
 Lastmod: 2024-02-08 22:54:00
 ---
 
 <table width="100%" border="0"><tr><td align="left" valign="middle" width="96">
 
-[![Icon](index@2x.png "Icon")](#! "Icon")
-
+[![Icon](docs/index@2x.png "Icon")](#! "Icon")
 </td><td align="right" valign="middle" width="1920" nowrap>
 
 [![h-shield1-i]][h-shield1-a] [![h-shield2-i]][h-shield2-a] [![h-shield3-i]][h-shield3-a]
@@ -31,7 +25,7 @@ Persistent shape palette plus helpers for better management of Moho® vectors in
 ## Gallery
 
 <details align="center" width="100%" class="gallery-holder" style="cursor:pointer; user-select: none;">
-<summary title="Click to expand/collapse image gallery"><a inert href="#!" align="center">Expand/Collapse<br><br>
+<summary title="Click to expand/collapse image gallery"><a href="#!" align="center" inert>UI <sub><sup>(Expand/Collapse)</sup></sub><br>
 
 ![Icon](docs/index_gallery.png)
 
@@ -43,7 +37,7 @@ Persistent shape palette plus helpers for better management of Moho® vectors in
 ![SHAPE Mode](docs/index_gallery_1.png "SHAPE Mode for shape managing")
 </td><td width="178" valign="top">
 
-![Style Mode](docs/index_gallery_2.png "STYLE Mode for style managing")
+![STYLE Mode](docs/index_gallery_2.png "STYLE Mode for style managing")
 </td><td width="144" valign="top">
 
 ![TWEAK Menu](docs/index_gallery_3.png "TWEAK Menu for shape tweaking &amp; utils")

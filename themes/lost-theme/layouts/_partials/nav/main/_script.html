@@ -15,25 +15,55 @@
 		<summary tabindex="-1">
 			<a href="{{ .page.RelPermalink }}" class="undecorate">
 				<picture name="nav-item-icon">
-					{{- $iconPathBase := replace (path.Clean .page.File.Path) ".md" "" -}}
-					{{- $iconPathSVG := printf "%s.svg" $iconPathBase | relURL -}} {{- /* $iconPathSVG := path.Clean (replace .page.File.Path ".md" ".svg") | relURL */ -}}
-					{{- $iconPathPNG := printf "%s.png" $iconPathBase | relURL -}}
-					{{- $iconPathJPG := printf "%s.jpg" $iconPathBase | relURL -}}
+					{{- $fileName := .page.File.BaseFileName -}}
+					{{- $baseName := $fileName -}}
 
-					{{- /* <!-- Debugging: Show generated routes in HTML -->
-					<span style="font-size: 0.5em; color: red; display: block;">
-						SVG: {{- $iconPathSVG -}}<br>
-						PNG: {{- $iconPathPNG -}}<br>
-						JPG: {{- $iconPathJPG -}}
+					{{- if .page.Lang -}}
+						{{- $langSuffix := printf ".%s" .page.Lang -}}
+						{{- if hasSuffix $baseName $langSuffix -}}
+							{{- $baseName = substr $baseName 0 (sub (len $baseName) (len $langSuffix)) -}}
+						{{- end -}}
+					{{- end -}}
+
+					{{- $fileDir := .page.File.Dir -}}
+
+					{{- $iconPathBase := path.Join $fileDir $baseName -}}
+					{{- $iconPathSVG := printf "%s.svg" $iconPathBase -}}
+					{{- $iconPathP2x := printf "%s@2x.png" $iconPathBase -}}
+					{{- $iconPathPNG := printf "%s.png" $iconPathBase -}}
+					{{- $iconPathJPG := printf "%s.jpg" $iconPathBase -}}
+
+					{{- $iconPathBaseDocs := path.Join $fileDir "docs" $baseName -}}
+					{{- $iconPathDocsSVG := printf "%s.svg" $iconPathBaseDocs -}}
+					{{- $iconPathDocsP2x := printf "%s@2x.png" $iconPathBaseDocs -}}
+					{{- $iconPathDocsPNG := printf "%s.png" $iconPathBaseDocs -}}
+					{{- $iconPathDocsJPG := printf "%s.jpg" $iconPathBaseDocs -}}
+
+					{{- /*<!-- Debugging: Show generated routes in HTML -->
+					<span style="font-size: 0.67em; color: red; display: block;">
+						SVG: {{- if fileExists $iconPathSVG }}{{ $iconPathSVG }}{{ else if fileExists $iconPathDocsSVG }}{{ $iconPathDocsSVG }}{{ end }}<br>
+						P2x: {{- if fileExists $iconPathP2x }}{{ $iconPathP2x }}{{ else if fileExists $iconPathDocsP2x }}{{ $iconPathDocsP2x }}{{ end }}<br>
+						PNG: {{- if fileExists $iconPathPNG }}{{ $iconPathPNG }}{{ else if fileExists $iconPathDocsPNG }}{{ $iconPathDocsPNG }}{{ end }}<br>
+						JPG: {{- if fileExists $iconPathJPG }}{{ $iconPathJPG }}{{ else if fileExists $iconPathDocsJPG }}{{ $iconPathDocsJPG }}{{ end }}
 					</span>
 					*/ -}}
 
 					{{- if (fileExists $iconPathSVG) -}}
-						<img src="{{ $iconPathSVG }}" class="icon colorize" alt="{{ .page.Title }} icon">
+						<img src="{{ $iconPathSVG | relURL }}" class="icon colorize" alt="{{ .page.Title }} icon">
+					{{- else if (fileExists $iconPathP2x) -}}
+						<img src="{{ $iconPathP2x | relURL }}" class="icon colorize" alt="{{ .page.Title }} icon">
 					{{- else if (fileExists $iconPathPNG) -}}
-						<img src="{{ $iconPathPNG }}" class="icon colorize" alt="{{ .page.Title }} icon">
+						<img src="{{ $iconPathPNG | relURL }}" class="icon colorize" alt="{{ .page.Title }} icon">
 					{{- else if (fileExists $iconPathJPG) -}}
-						<img src="{{ $iconPathJPG }}" class="icon colorize" alt="{{ .page.Title }} icon">
+						<img src="{{ $iconPathJPG | relURL }}" class="icon colorize" alt="{{ .page.Title }} icon">
+					{{- else if (fileExists $iconPathDocsSVG) -}}
+						<img src="{{ $iconPathDocsSVG | relURL }}" class="icon colorize" alt="{{ .page.Title }} icon">
+					{{- else if (fileExists $iconPathDocsP2x) -}}
+						<img src="{{ $iconPathDocsP2x | relURL }}" class="icon colorize" alt="{{ .page.Title }} icon">
+					{{- else if (fileExists $iconPathDocsPNG) -}}
+						<img src="{{ $iconPathDocsPNG | relURL }}" class="icon colorize" alt="{{ .page.Title }} icon">
+					{{- else if (fileExists $iconPathDocsJPG) -}}
+						<img src="{{ $iconPathDocsJPG | relURL }}" class="icon colorize" alt="{{ .page.Title }} icon">
 					{{- else -}}
 						<img src="/icons/icon_unknown.png" class="icon colorize" alt="❌">
 					{{- end -}}
@@ -49,8 +79,10 @@
 				</div>
 			</a>
 		</summary>
-		{{- if .page.Params.shields -}}
-			<div class="shields">{{ partial "nav/main/_shield" . }}</div>
+		{{- $fromParams = isset .page.Params "shields" -}}
+		{{- $shields := cond $fromParams (.page.Params.shields) (partial "parammerger.html" (dict "context" .page "key" "shields")) -}}
+		{{- with $shields -}}
+			{{- partial "nav/main/shielder.html" . -}}
 		{{- end -}}
 
 		{{- if .page.Params.description -}}

@@ -2,9 +2,6 @@
 Title: LS.M
 Description: The LS.M Module Documentation (currently unavailable).
 Params:
-  Labels:
-    - document
-    - module
   Author: Rai López
   Version: 0.0.0
   Build: 20250114-005
@@ -15,7 +12,7 @@ Tags:
   - scripting
 Categories:
   - module
-Date: 2024-08-19T02:26:11.000Z
+Date: 2024-08-19 02:26:11.000Z
 Weight: 3
 ---
 

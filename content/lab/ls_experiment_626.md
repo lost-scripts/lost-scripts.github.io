@@ -9,17 +9,17 @@ Params:
     - script
     - experiment
   Shields:
-    - src: https://img.shields.io/github/v/release/lost-scripts/ls?color=yellow
+    - src: https://img.shields.io/github/v/release/lost-scripts/ls_experiment_626?color=yellow
       alt: GitHub version
-    - src: https://img.shields.io/github/v/tag/lost-scripts/ls
+    - src: https://img.shields.io/github/v/tag/lost-scripts/ls_experiment_626
       alt: GitHub tag
-    - src: https://img.shields.io/github/downloads/repo-size/lost-scripts/ls/latest/total
+    - src: https://img.shields.io/github/downloads/repo-size/lost-scripts/ls_experiment_626/latest/total
       alt: GitHub downloads
 Tags:
   - other
 Categories:
   - tool
-Date: 2002-06-21T14:00:00.000Z
+Date: 2002-06-21 14:00:00
 Comments: false
 ---
 

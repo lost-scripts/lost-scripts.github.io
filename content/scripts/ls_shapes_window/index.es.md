@@ -1,17 +1,9 @@
 ---
 Title: LS Shapes Window
-Description: Paleta persistente de formas y utilidades para una mejor gestión de vectores Moho®...
-Params:
-  Flags:
-    - UPD!
-    - BETA
+Description: Paleta de formas y utilidades para una mejor gestión de vectores Moho®
 Tags:
   - vectors
   - shapes
-Categories:
-  - window
-  - experiment
-Category: Script
 Subcategory: Index
 Date: 2023-10-20 17:29:00
 Lastmod: 2024-02-08 22:54:00
@@ -19,7 +11,7 @@ Lastmod: 2024-02-08 22:54:00
 
 <table width="100%" border="0"><tr><td align="left" valign="middle" width="96">
 
-[![Icono](index@2x.png "Icon")](#! "Icon")
+[![Icon](docs/index@2x.png "Icon")](#! "Icon")
 </td><td align="right" valign="middle" width="1920" nowrap>
 
 [![h-shield1-i]][h-shield1-a] [![h-shield2-i]][h-shield2-a] [![h-shield3-i]][h-shield3-a]
@@ -34,7 +26,7 @@ Paleta persistente de formas y utilidades para una mejor gestión de vectores Mo
 ## Galería
 
 <details align="center" width="100%" class="gallery-holder" style="cursor:pointer; user-select: none;">
-<summary title="Haz clic para expandir/colapsar la galería"><a inert href="#!" align="center">Expand/Collapse<br><br>
+<summary title="Haz clic para expandir/colapsar la galería"><a href="#!" align="center" inert>UI <sub><sup>(Expandir/Contraer)</sup></sub><br>
 
 ![Icon](docs/index_gallery.png)
 
@@ -43,13 +35,13 @@ Paleta persistente de formas y utilidades para una mejor gestión de vectores Mo
 <table align="center" border="0" class="gallery"><tr>
 <td width="178" valign="top"><!-- width="1024px" for full width container-->
 
-![SHAPE Mode](docs/index_gallery_1.png "SHAPE Mode para la gestión de formas")
+![Modo SHAPES](docs/index_gallery_1.png "SHAPE Mode para la gestión de formas")
 </td><td width="178" valign="top">
 
-![STYLE Mode](docs/index_gallery_2.png "STYLE Mode para la gestión de estilos")
+![Modo STYLES](docs/index_gallery_2.png "STYLE Mode para la gestión de estilos")
 </td><td width="144" valign="top">
 
-![TWEAK Menu](docs/index_gallery_3.png "TWEAK Menu para retoques y utilidades")
+![Menú TWEAK](docs/index_gallery_3.png "TWEAK Menu para retoques y utilidades")
 </td><td width="264" valign="top">
 
 ![PALETAS Vivas](docs/index_gallery_4.gif "PALETAS vivas/scrollables (amén de personalizables)")

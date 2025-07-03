@@ -5,3 +5,10 @@ Flags:
   - TODO
 Readmes: false
 Comments: false
+Shields:
+  - src: https://img.shields.io/github/v/release/lost-scripts/ls_other_window?color=yellow
+    alt: GitHub version
+  - src: https://img.shields.io/github/v/tag/lost-scripts/ls_other_window
+    alt: GitHub tag
+  - src: https://img.shields.io/github/downloads/repo-size/lost-scripts/ls_other_window/latest/total
+    alt: GitHub downloads

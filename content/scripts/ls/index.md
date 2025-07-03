@@ -4,6 +4,7 @@ Description: Lost Scripts project's common/shared resources.
 Tags:
   - utilities
   - resources
+Subcategory: Index
 Date: 2023-10-17 4:24:43Z
 LastMod: 2024-02-09 00:54:00Z
 Weight: -1
@@ -12,7 +13,7 @@ Weight: -1
 <!-- mIxEd style head (quite simple and full width in GitHub) -->
 <table width="100%" border="0"><tr><td align="left" valign="middle" width="96">
 
-[![Icon](index@2x.png)](#! "Icon")
+[![Icon](docs/index@2x.png "Icon")](#! "Icon")
 </td><td align="right" valign="middle" width="1920" nowrap>
 
 [![h-shield1-i]][h-shield1-a] [![h-shield2-i]][h-shield2-a] [![h-shield3-i]][h-shield3-a]
@@ -75,7 +76,7 @@ Provides all the necessary shared/common resources and helpers that [Moho®](htt
 	</tr>
 	<tr>
 		<td width="96" align="center" valign="middle">
-			<a inert href="#!" style="cursor: default;"><img src="/scripts/ls_shapes_window/index@2x.png" alt="Icon" width="50%" class="colorize"></a>
+			<a inert href="#!" style="cursor: default;"><img src="/scripts/ls_shapes_window/docs/index@2x.png" alt="Icon" width="50%" class="colorize"></a>
 		</td>
 		<td width="1920" valign="middle">
 			<div>

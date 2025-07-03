@@ -6,5 +6,7 @@
 		{{- partial "nav/main/docs.html" $currentPage -}}
 	{{- else if eq .Identifier "lab" -}}
 		{{- partial "nav/main/lab.html" $currentPage -}}
+	{{- else if eq .Identifier "posts" -}}
+		{{- partial "nav/main/posts.html" $currentPage -}}
 	{{- end -}}
 </div>

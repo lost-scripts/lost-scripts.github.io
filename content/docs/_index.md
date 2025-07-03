@@ -1,7 +1,7 @@
 ---
 Title: Docs
 Description: All documentation articles
-Date: 2025-02-28T16:30:00
+Date: 2025-02-28 16:30:00
 Comments: false
 ---
 

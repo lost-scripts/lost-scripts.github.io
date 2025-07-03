@@ -1,0 +1,15 @@
+{{- /* E.g. {{- with $shields -}}{{- partial "nav/main/shielder.html" . -}}{{- end -}} */ -}}
+
+<div class="shields">
+	{{- range . -}}
+		<div class="shield-wrap">
+			{{- if .url -}}
+				<a href="{{ .url }}" {{- with .alt }}title="{{ . }}" aria-label="{{ . }}"{{ end -}}{{- if not .ddl }} target="_blank" rel="noopener noreferrer"{{ end -}}>
+					<img class="shield" src="{{ .src }}" alt="{{ .alt }}">
+				</a>
+			{{- else -}}
+				<img class="shield" src="{{ .src }}" {{- with .alt }}alt="{{ . }}"{{ end -}} >
+			{{- end -}}
+		</div>
+	{{- end -}}
+</div>
