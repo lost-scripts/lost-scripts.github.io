@@ -981,8 +981,8 @@ blockquote {
 	text-wrap: pretty;
 	hyphens: auto;
 	hyphenate-limit-chars: 6;
-	font-size: 0.85rem;
-	font-size: clamp(0.8rem, 4.5cqw, 0.9rem);
+	font-size: 0.8em;
+	font-size: clamp(0.75em, 4.25cqw, 0.85em);
 	line-height: 1.25;
 	background-color: color-mix(in srgb, var(--accent) 33%, transparent);
 	box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.33);
@@ -2379,14 +2379,15 @@ input:not(input:checked) + .label {
 }
 
 .gallery-holder {
-	text-align: center;
+	text-align: center; /* Required by Firefox */
 
 	& summary {
 		& img {
-			margin-top: 0.33em;
+			margin-top: -1em;
 			min-width: 33.3%;
 			max-width: 50%;
 			object-fit: scale-down;
+			pointer-events: none;
 		}
 	}
 }

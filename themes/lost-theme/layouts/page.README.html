@@ -27,15 +27,19 @@
 				{{- .Content | safeCSS -}}
 			</style>
 			<style> /* Place for GitHub flavored README.html files customizations ↴ */
-				body > table:first-of-type:first-child {
-					& tr {
-						& th:first-child, td:first-child { /* Icon Cell */
-							& a[title="Icon"], img[title="Icon"] {
-								cursor: default !important;
-								pointer-events: none !important;
-							}
+				body > table:first-of-type:first-child tr {
+					user-select: none;
+
+					& th:first-child, td:first-child { /* Icon Cell */
+						& a[title="Icon"], img[title="Icon"] {
+							cursor: default !important;
+							pointer-events: none !important;
 						}
 					}
+				}
+				.gallery-holder summary img {
+					margin-top: -1em;
+					pointer-events: none;
 				}
 				/*
 				th, td > * {

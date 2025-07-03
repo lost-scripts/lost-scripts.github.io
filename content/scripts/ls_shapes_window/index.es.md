@@ -23,33 +23,32 @@ Paleta persistente de formas y utilidades para una mejor gestión de vectores Mo
 
 <br>
 
-## Galería
+## Gallery
 
-<details align="center" width="100%" class="gallery-holder" style="cursor:pointer; user-select: none;">
-<summary title="Haz clic para expandir/colapsar la galería"><a href="#!" align="center" inert>UI <sub><sup>(Expandir/Contraer)</sup></sub><br>
+<details align="center" width="100%" class="gallery-holder" style="cursor: pointer; user-select: none;">
+<summary title="Click here to expand/collapse image gallery">UI <sub><sup>(Expand/Collapse)</sup></sub><br><br>
 
-![Icon](docs/index_gallery.png)
+[![UI](docs/index_gallery.png "UI")](#! "UI")
+</summary><br>
 
-</a></summary>
-<br>
 <table align="center" border="0" class="gallery"><tr>
 <td width="178" valign="top"><!-- width="1024px" for full width container-->
 
-![Modo SHAPES](docs/index_gallery_1.png "SHAPE Mode para la gestión de formas")
+![SHAPE Mode](docs/index_gallery_1.png "SHAPE Mode for shape managing")
 </td><td width="178" valign="top">
 
-![Modo STYLES](docs/index_gallery_2.png "STYLE Mode para la gestión de estilos")
+![STYLE Mode](docs/index_gallery_2.png "STYLE Mode for style managing")
 </td><td width="144" valign="top">
 
-![Menú TWEAK](docs/index_gallery_3.png "TWEAK Menu para retoques y utilidades")
+![TWEAK Menu](docs/index_gallery_3.png "TWEAK Menu for shape tweaking &amp; utils")
 </td><td width="264" valign="top">
 
-![PALETAS Vivas](docs/index_gallery_4.gif "PALETAS vivas/scrollables (amén de personalizables)")
+![LIVE Swatches](docs/index_gallery_4.gif "Live/Scrollable (plus customizable) Swatches")
 </td><td width="178" valign="top">
 
-![Modo COMPACTO](docs/index_gallery_5.png "O simplemente déjalo compacto...")
-
-</td></tr></table>
+![COMPACT Mode](docs/index_gallery_5.png "Or just keep it compact...")
+</td>
+</tr></table>
 </details>
 <!--
 <details align="center" width="100%" class="gallery-holder" style="cursor:pointer; user-select: none;">
@@ -92,11 +91,13 @@ Paleta persistente de formas y utilidades para una mejor gestión de vectores Mo
 
 [**Descarga**][h-shield1-a] el archivo, descomprímelo, y procede con el método de instalación que prefieras...
 
-| MANUAL                        | ASISTIDA                      |
-| ----------------------------- | ----------------------------- |
-| 1. Obtendrás una o varias de las siguientes carpetas: `Menu / ScriptResources / Tool / Utility`.               | 1. Desde el menú principal de Moho, ve a "Guiones -> Instalar Guiones..." y aparecerá una ventana de información.  | 
-| 2. Arrástra y suelta (o copia y pega) todas ellas en la carpeta *Scripts* de tu [Carpeta de contenido personalizado][3-1a]. | 2. Pulsa el botón *Selecciona una carpeta de Guion*, ve a la carpeta recién descomprimida (e.g. ls_shapes_window) y selecciónala. |
-| 3. Reinicia Moho® o presiona `Alt + Shift + Ctrl + L` para *Recargar Herramientas y Pinceles* y el script debería aparecer en la paleta *Herramientas* y/o en el menú *Guiones*. | 3. Hecho eso, el script debería aparecer en la paleta de *Herramientas* y/o en el menú *Guiones*. Consulta el capítulo [23.17 Instalar guion...][3-2a] del manual de usuario de Moho® para más detalles. |
+| MANUAL                                                                              | ASISTIDA                                                                                  |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| 1. Obtendrás algunas de estas carpetas: `Menu / ScriptResources / Tool / Utility`.  | 1. En Moho, ve a "Guiones > Instalar Guiones..." para abrir el asistente de instalación * | 
+| 2. Ponlas en la carpeta *Scripts* de tu [Carpeta de contenido personalizado][3-1a]. | 2. Presiona *Selecciona una carpeta de Guion*, ve y **selecciona** la que descomprimiste. |
+| 3. Reinicia Moho (o `Alt+Shift+Ctrl + L` para *Recargar Herramientas y Pinceles*).  | * Para más detalles, ve en la sección [23.17 Instalar guion...][3-2a] del manual de Moho. |
+
+Y eso es todo! El script debería aparecer en la paleta *Herramientas* y/o dentro del menú *Guiones*.
 
 > ⚠ **ADVERTENCIA:** Por favor, asegúrate de que has desinstalado todo *Lost Script* en tu sistema antes de eliminar cualquier recurso compartido o podrían empezar a dar errores o dejar de funcionar. Para desinstalar un script, simplemente elimina cualquier archivo y carpeta que coincida con su nombre y reinicia Moho® o *Recarga herramientas y pinceles* si es necesario.
 

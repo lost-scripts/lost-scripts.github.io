@@ -24,13 +24,12 @@ Persistent shape palette plus helpers for better management of Moho® vectors in
 
 ## Gallery
 
-<details align="center" width="100%" class="gallery-holder" style="cursor:pointer; user-select: none;">
-<summary title="Click to expand/collapse image gallery"><a href="#!" align="center" inert>UI <sub><sup>(Expand/Collapse)</sup></sub><br>
+<details align="center" width="100%" class="gallery-holder" style="cursor: pointer; user-select: none;">
+<summary title="Click here to expand/collapse image gallery">UI <sub><sup>(Expand/Collapse)</sup></sub><br><br>
 
-![Icon](docs/index_gallery.png)
+[![UI](docs/index_gallery.png "UI")](#! "UI")
+</summary><br>
 
-</a></summary>
-<br>
 <table align="center" border="0" class="gallery"><tr>
 <td width="178" valign="top"><!-- width="1024px" for full width container-->
 
@@ -47,8 +46,8 @@ Persistent shape palette plus helpers for better management of Moho® vectors in
 </td><td width="178" valign="top">
 
 ![COMPACT Mode](docs/index_gallery_5.png "Or just keep it compact...")
-
-</td></tr></table>
+</td>
+</tr></table>
 </details>
 <!--
 <details align="center" width="100%" class="gallery-holder" style="cursor:pointer; user-select: none;">
@@ -89,13 +88,15 @@ Persistent shape palette plus helpers for better management of Moho® vectors in
 
 ## Installation
 
-[**Download**][h-shield1-a] the file, unzip it, and proceed with the installation method of your choice...
+[**Download**][h-shield1-a] the file, **unzip** it, and proceed with the installation method of your choice...
 
-| MANUAL                        | ASSISTED                      |
-| ----------------------------- | ----------------------------- |
-| 1. You'll get one or more of the following folders: `Menu / ScriptResources / Tool / Utility`.           | 1. From Moho's main menus, go to "Scripts -> Install Script..." and a window with some info will appear.           | 
-| 2. Drag & Drop (or Copy & Paste) them all into the Scripts folder of your [Custom Content Folder][3-1a]. | 2. Press *Select A Script Folder* button, browse to the just uzipped folder (e.g. ls_shapes_window) and select it. |
-| 3. Restart Moho® or press `Alt + Shift + Ctrl + L` to *Reload Tools And Brushes* and the script should appear in *Tools* palette and/or under *Scripts* menu.   | 3. That done, the script should appear in *Tools* palette and/or under *Scripts* menu. See chapter [23.17 Install Script...][3-2a] of Moho® user's manual for further details.     |
+| MANUAL                                                                           | ASSISTED                                                                         |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| 1. You'll get some of these folders: `Menu / ScriptResources / Tool / Utility`.  | 1. In Moho, go to "Scripts > Install Script..." to open the installation wizard. |
+| 2. Place'em all into the *Scripts* folder of your [Custom Content Folder][3-1a]. | 2. Click *Select A Script Folder*, browse to the uzipped folder & **select it**. |
+| 3. Restart Moho or press `Alt + Shift + Ctrl + L` to *Reload Tools And Brushes*. | * More details in chapter [23.17 Install Script...][3-2a] of Moho user's manual. |
+
+And that's all! The script should appear in *Tools* palette and/or under *Scripts* menu.
 
 > ⚠ **WARNING:** Please, make sure you have uninstalled every Lost Script on your system before removing any of these shared resources or they may start throwing errors or stop working. For uninstalling a script, just remove any file and folder matching its name and restart Moho® or Reload Tools And Brushes if necessary.
 
