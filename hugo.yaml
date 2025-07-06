@@ -77,17 +77,14 @@ menus:
 
 languages:
   en:
-    title: Here be Lost Scripts
     languageCode: en
     languageName: English
     weight: 1
   es:
-    title: Aquí hay Lost Scripts
     languageCode: es
     languageName: Español
     weight: 2
   ca:
-    title: Aquí hi ha Lost Scripts
     languageCode: ca
     languageName: Català
     weight: 3
@@ -145,15 +142,20 @@ params:
   homepage: /scripts/ls/
   homeIcon: house
   subtitle: The Lost (Moho® Scripts) Ark
+  subtitleAlt: Here be Lost Scripts
   author:
     name: Rai López
     homepage: https://lost-scripts.github.io/
+  github:
+    href: https://github.com/
+    user: lost-scripts
   copyrightAlt: © 2025 · Rai López · <abbr title="All Rights Reserved">ARR</abbr>
   since: 2024
   navMode: auto # auto (default) / tabbed / accordion
   readmes: true
   comments: true
   giscus:
+    app: https://giscus.app/
     repo: lost-scripts/lost-scripts.github.io
     repoId: R_kgDOONd4Hw
     categoryId: DIC_kwDOONd4H84CpGLA
@@ -178,11 +180,16 @@ params:
     - "#BE6DDF"
   headingIconSize: 1 # Size multiplier (default: 40px)
   headingIconTint: true
+  app:
+    name: Moho
+    version: 14.3
+    company: Lost Marble LLC
+    link: https://moho.lostmarble.com/
   #debug: true
 
   # Social Networking and Contact Links (use e.g. `order: 1`, etc. for override ordering)
   links:
-    - href: https://github.com/lost-scripts
+    - href: https://github.com/lost-scripts/
       icon: fa-brands fa-github
       alt: GitHub
       title: GitHub...
@@ -196,7 +203,7 @@ params:
       title: Subscribe?
       rel: alternate
       type: application/rss+xml
-    - href: https://instagram.com/Lost_Scripts
+    - href: https://instagram.com/Lost_Scripts/
       icon: fa-brands fa-instagram
       alt: Instagram
       title: Instagram...

@@ -1,13 +1,25 @@
+{{/* 
+Archetype template for the Lost Scripts™ project so, although highly customizable via params, it's strongly tied to Moho® and the conventions/structure of Lost Scripts ecosystem... Customize or override in your own Hugo project as needed.
+
+⚠️ NOTE: After generating a new project bundle, e.g. `hugo new --kind project scripts/ls`, manually remove the ".md" extension from the "index.yaml.md" file.
+*/}}
+
+{{- $name1 := upper (index (split .Name "_") 0) -}}
+{{- $name2 := replace (substr .Name (add (len $name1) 1)) "_" " " | title -}}
+{{- $name3 := "Project" -}}
+{{- $name := printf "%s %s" $name1 $name2 -}}
+
 ---
-Title: LS Project
-Description: Lost Scripts project's common/shared resources.
+Title: {{ $name1 }} {{ $name3 }}
+Description: {{ $name3 }}'s common/shared resources.
 Tags:
   - utilities
   - resources
 Subcategory: Index
-Date: 2023-10-17 4:24:43Z
-Modified: 2024-02-09 00:54:00Z
+Date: {{ .Date }}
+Modified: {{ .Date }}
 Weight: -1
+Draft: false
 ---
 
 <!-- mIxEd style head (quite simple and full width in GitHub) -->
@@ -41,7 +53,7 @@ Weight: -1
 
 # LS Project
 
-Provides all the necessary shared/common resources and helpers that [Moho®](https://moho.lostmarble.com/) needs for the well functioning of *Lost Scripts™* and derivatives. If something didn't work as expected... check it's up to date!
+Provides all the necessary shared/common resources and helpers that [{{ site.Params.app.name }}®]({{ site.Params.app.link }}) needs for the well functioning of *{{ site.Title }}* and derivatives. If something didn't work as expected... check it's up to date!
 
 <br>
 
@@ -111,7 +123,7 @@ Provides all the necessary shared/common resources and helpers that [Moho®](htt
 
 ## Features
 
-More than user-facing features, *LS Project* works under the hood not only to meet the development requirements of *Lost Scripts™* like the ones just bellow, but also to extend (within the possible) the scripting possibilities of the program with *new* kind of functions, methods, UI widgets and more...
+More than user-facing features, *{{ $name1 }} {{ $name3 }}* works under the hood not only to meet the development requirements of *{{ site.Title }}* like the ones just bellow, but also to extend (within the possible) the scripting possibilities of the program with *new* kind of functions, methods, UI widgets and more...
 
 <br>
 
@@ -119,21 +131,48 @@ More than user-facing features, *LS Project* works under the hood not only to me
 
 ~~Download~~ the file, unzip it, and proceed with the installation method of your choice...
 
-| MANUAL                                                                           | ASSISTED                                                                         |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| 1. You'll get some of these folders:  `Menu / ScriptResources / Tool / Utility`. | 1. In Moho, go to "Scripts > Install Script..." to open the installation wizard. |
-| 2. Place'em all into the *Scripts* folder of your [Custom Content Folder][3-1a]. | 2. Click *Select A Script Folder*, browse to the uzipped folder & **select it**. |
-| 3. Restart Moho or press `Alt + Shift + Ctrl + L` to *Reload Tools And Brushes*. | * More details in chapter [23.17 Install Script...][3-2a] of Moho user's manual. |
+<table width="100%" align="center" valign="top" border="2">
+	<tr>
+		<th scope="col" nowrap width="50%">
+			MANUAL
+		</th>
+		<th scope="col" nowrap width="50%">
+			ASSISTED
+		</th>
+	</tr>
+	<tr valign="top">
+		<td>
+			1. You'll get one or more of the following folders: <code>Menu / ScriptResources / Tool / Utility</code>.
+		</td>
+		<td>
+			1. From Moho's main menus, go to "Scripts -> Install Script..." and a window with some info will appear.
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			2. Drag & Drop (or Copy & Paste) them all into the <em>Scripts</em> folder of your <a href="https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3" title="Go to Moho manual">Custom Content Folder</a>.
+		</td>
+		<td>
+			2. Press <em>Select A Script Folder</em> button, browse to the just uzipped folder (e.g. ls_shapes_window) and select it.
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			3. Restart Moho® or press <kbd>Alt + Shift + Ctrl + L</kbd> to <em>Reload Tools And Brushes</em> and the script should appear in <em>Tools</em> palette and/or under <em>Scripts</em> menu.
+		</td>
+		<td>
+			3. That done, the script should appear in <em>Tools</em> palette and/or under <em>Scripts</em> menu. See chapter <a href="https://manual.lostmarble.com/app/page/1IOuEOfMa7kUwqYPi2ABDhwoWE_KXB1OBCC5ib__iyIE?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3" title="Go to Moho manual">23.17 Install Script...</a> of Moho® user's manual for further details.
+		</td>
+	</tr>
+</table>
 
-And that's all! The script should appear in *Tools* palette and/or under *Scripts* menu.
-
-> ⚠ **WARNING:** Please, make sure you have uninstalled every *Lost Script* on your system before removing any shared resource or they may start throwing errors or stop working. For uninstalling a script, just remove any file and folder matching its name and restart Moho® or *Reload Tools And Brushes* if necessary.
+> ⚠ **WARNING:** Please, make sure you have uninstalled every *{{ site.Title | singularize }}* on your system before removing any shared resource or they may start throwing errors or stop working. For uninstalling a script, just remove any file and folder matching its name and restart Moho® or *Reload Tools And Brushes* if necessary.
 
 <br>
 
 ## Usage
 
-As a regular Moho® user, you will not normally have to interact with this set of utilities beyond applying updates when available or required. As a script developer, **in the future** (WIP!) you will be able to make use of the modules and facilities it provides in a similar way as you would with official ones.
+As a regular {{ site.Params.app.name }}® user, you will not normally have to interact with this set of utilities beyond applying updates when available or required. As a script developer, **in the future** (WIP!) you will be able to make use of the modules and facilities it provides in a similar way as you would with official ones.
 
 <br>
 
@@ -145,23 +184,20 @@ Suggestions and bugs can be reported in the [<i>Issues</i>](https://github.com/l
 
 ## Other...
 
-- <a href="https://lost-scripts.github.io/scripts/ls" data-alt-href="https://github.com/lost-scripts/ls" data-alt-textContent="LS repository" data-alt-title="Go to the LS repository...">LS webpage</a>
+- <a href="https://lost-scripts.github.io/scripts/{{ .Name }}" data-alt-href="https://github.com/lost-scripts/{{ .Name }}" data-alt-textContent="{{ $name }} repository" data-alt-title="Go to the {{ $name }} repository...">{{ $name }} webpage</a>
 
 ---
 
 <p align="center" style="display: none;">Copyright © 2024 · Rai López · All Rights Reserved</p>
 
-[h-shield1-i]: https://img.shields.io/github/downloads/lost-scripts/ls_shapes_window/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue
-[h-shield1-a]: https://github.com/lost-scripts/ls_shapes_window/releases/latest/download/ls.zip "Download latest version... (Currently unavailable)"
+[h-shield1-i]: https://img.shields.io/github/downloads/lost-scripts/{{.Name}}/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue
+[h-shield1-a]: https://github.com/lost-scripts/{{.Name}}/releases/latest/download/{{.Name}}.zip "Download latest version..."
 
-[h-shield2-i]: https://img.shields.io/github/release/lost-scripts/ls
-[h-shield2-a]: https://github.com/lost-scripts/ls/releases/latest "Go to release in GitHub..."
+[h-shield2-i]: https://img.shields.io/github/release/lost-scripts/{{.Name}}
+[h-shield2-a]: https://github.com/lost-scripts/{{.Name}}/releases/latest "Go to release in GitHub..."
 
-[h-shield3-i]: https://img.shields.io/badge/for-Moho_Pro_14.3+-orange
-[h-shield3-a]: https://moho.lostmarble.com/ "Go to Moho® website..."
-
-[c1-shield1-i]: https://img.shields.io/github/downloads/repo-size/lost-scripts/ls/latest/total "Downloads"
-[c1-shield1-a]: https://github.com/lost-scripts/ls/latest "Downloads"
+[h-shield3-i]: https://img.shields.io/badge/for-{{site.Params.app.name}}_Pro_{{site.Params.app.version}}+-orange
+[h-shield3-a]: {{site.Params.app.link}} "Go to {{site.Params.app.name}}® website..."
 
 [3-1a]: https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3
 [3-2a]: https://manual.lostmarble.com/app/page/1IOuEOfMa7kUwqYPi2ABDhwoWE_KXB1OBCC5ib__iyIE?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3

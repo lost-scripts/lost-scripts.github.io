@@ -5,7 +5,7 @@ Tags:
   - vectors
   - shapes
 Date: 2023-10-20 17:29:50
-Lastmod: 2024-02-08 22:54:00
+Modified: 2024-02-08 22:54:00
 ---
 
 <table width="100%" border="0"><tr><td align="left" valign="middle" width="96">
@@ -92,7 +92,7 @@ Persistent shape palette plus helpers for better management of Moho® vectors in
 
 | MANUAL                                                                           | ASSISTED                                                                         |
 | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| 1. You'll get some of these folders: `Menu / ScriptResources / Tool / Utility`.  | 1. In Moho, go to "Scripts > Install Script..." to open the installation wizard. |
+| 1. You'll get some of these folders:  `Menu / ScriptResources / Tool / Utility`. | 1. In Moho, go to "Scripts > Install Script..." to open the installation wizard. |
 | 2. Place'em all into the *Scripts* folder of your [Custom Content Folder][3-1a]. | 2. Click *Select A Script Folder*, browse to the uzipped folder & **select it**. |
 | 3. Restart Moho or press `Alt + Shift + Ctrl + L` to *Reload Tools And Brushes*. | * More details in chapter [23.17 Install Script...][3-2a] of Moho user's manual. |
 
@@ -107,7 +107,7 @@ And that's all! The script should appear in *Tools* palette and/or under *Script
 1. **Opening**: Open *Shapes Window* from Moho's *Tools* palette or via its entry in the *Scripts* menu.
 2. **Operating**: Now you can have it permanently open to perform various shape operations.
 3. **Customizing**: Unfold Window's main menu: 🔽 (at top left of the window) to access different settings & actions.
-4. **Tooltips**: Hold the cursor over the different elements to get a hint of their functionality...
+4. **Tooltips**: If *Beginners Mode* is checked, holding the cursor over the different elements will give a hint of their functionality...
 
 <br>
 
@@ -124,7 +124,7 @@ Suggestions and bugs can be reported in the [<i>Issues</i>](https://github.com/l
 
 ---
 
-[h-shield1-i]: https://img.shields.io/github/downloads/lost-scripts/ls_shapes_window/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZjhmOGY4IiBkPSJNMjg4IDMyYzAtMTcuNy0xNC4zLTMyLTMyLTMycy0zMiAxNC4zLTMyIDMybDAgMjQyLjctNzMuNC03My40Yy0xMi41LTEyLjUtMzIuOC0xMi41LTQ1LjMgMHMtMTIuNSAzMi44IDAgNDUuM2wxMjggMTI4YzEyLjUgMTIuNSAzMi44IDEyLjUgNDUuMyAwbDEyOC0xMjhjMTIuNS0xMi41IDEyLjUtMzIuOCAwLTQ1LjNzLTMyLjgtMTIuNS00NS4zIDBMMjg4IDI3NC43IDI4OCAzMnpNNjQgMzUyYy0zNS4zIDAtNjQgMjguNy02NCA2NGwwIDMyYzAgMzUuMyAyOC43IDY0IDY0IDY0bDM4NCAwYzM1LjMgMCA2NC0yOC43IDY0LTY0bDAtMzJjMC0zNS4zLTI4LjctNjQtNjQtNjRsLTEwMS41IDAtNDUuMyA0NS4zYy0yNSAyNS02NS41IDI1LTkwLjUgMEwxNjUuNSAzNTIgNjQgMzUyem0zNjggNTZhMjQgMjQgMCAxIDEgMCA0OCAyNCAyNCAwIDEgMSAwLTQ4eiIvPjwvc3ZnPg==&color=blue&logoColor=white&logoWidth=24
+[h-shield1-i]: https://img.shields.io/github/downloads/lost-scripts/ls_shapes_window/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue
 [h-shield1-a]: https://github.com/lost-scripts/ls_shapes_window/releases/latest/download/ls_shapes_window.zip "Download latest version..."
 
 [h-shield2-i]: https://img.shields.io/github/release/lost-scripts/ls_shapes_window

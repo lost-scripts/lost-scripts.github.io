@@ -1,6 +1,6 @@
 ---
 Title: LS
-Description: Documentación del módulo LS (no disponible)..
+Description: Documentación del módulo LS (no disponible).
 Params:
   Author: Rai López
   Version: 0.0.0

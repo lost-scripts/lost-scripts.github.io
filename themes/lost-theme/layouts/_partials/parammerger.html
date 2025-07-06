@@ -8,7 +8,7 @@ Usage examples:
 	{{ range (partial "parammerger.html" (dict "context" . "key" "flags")) }}...{{ end }}
 	{{ with partial "parammerger.html" (dict "context" . "key" "giscus") }}...{{ end }}
 
-⚠ Warning: Only works for bundle-type pages (with .Resources).
+⚠ Warning: Only works for bundle-type pages (IOW, with .Resources).
 */ -}}
 
 {{- $ctx := .context -}}
@@ -17,16 +17,20 @@ Usage examples:
 {{- $params := $ctx.Params | default dict -}}
 {{- $hasParam := isset $params $key -}}
 {{- $val := cond $hasParam (index $params $key) nil -}}
+{{- $name := "parammerger" -}} 
 
 {{- if not $hasParam -}}
 	{{- $res := false -}}
-	{{- range slice "yaml" "yml" "toml" "tml" "json" -}}
+	{{- range slice "yaml" "yaml.md" "toml" "toml.md" "json" "json.md" -}}
 		{{- if not $res -}}
 			{{- $res = $ctx.Resources.GetMatch (printf "index.%s" .) -}}
 		{{- end -}}
 	{{- end -}}
 
 	{{- if $res -}}
+		{{- if in $res.Name ".yaml.md" }}
+			{{ warnf "%s: Remove \".%s\" extension from %q to avoid these warnings..." $name $res.File.Ext (replace $res.File.Path `\` `/`) }}
+		{{- end -}}
 		{{- $data := transform.Unmarshal $res | default dict -}}
 		{{- $hasData := or (isset $data $key) (isset $data (title $key)) -}}
 		{{- if $hasData -}}

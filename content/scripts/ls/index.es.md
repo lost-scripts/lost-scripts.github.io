@@ -6,7 +6,7 @@ Tags:
   - resources
 Subcategory: Index
 Date: 2023-10-17T4:24:43Z
-LastMod: 2024-02-09T00:54:00Z
+Modified: 2024-02-09T00:54:00Z
 Weight: -1
 ---
 
@@ -117,42 +117,15 @@ Más que características de cara al usuario, «LS Project» trabaja de forma in
 
 ## Instalación
 
-<del>Descarga</del> el archivo, descomprímelo, y procede con el método de instalación que prefieras...
+[**Descarga**][h-shield1-a] el archivo, **descomprímelo**, y procede con el método de instalación que prefieras...
 
-<table width="100%" align="center" valign="top" border="2">
-	<tr>
-		<th scope="col" nowrap width="50%">
-			MANUAL
-		</th>
-		<th scope="col" nowrap width="50%">
-			ASISTIDA
-		</th>
-	</tr>
-	<tr valign="top">
-		<td>
-			1. Obtendrás una o varias de las siguientes carpetas: <code>Menu / ScriptResources / Tool / Utility</code>.
-		</td>
-		<td>
-			1. Desde el menú principal de Moho, ve a "Guiones -> Instalar Guiones..." y aparecerá una ventana de información.
-		</td>
-	</tr>
-	<tr valign="top">
-		<td>
-			2. Arrástra y suelta (o copia y pega) todas ellas en la carpeta <em>Scripts</em> de tu <a href="https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3" title="Ir al manual de Moho">Carpeta de contenido personalizado.</a>.
-		</td>
-		<td>
-			2. Pulsa el botón <em>Selecciona una carpeta de Guion</em>, ve a la carpeta recién descomprimida (e.g. ls_shapes_window) y selecciónala.
-		</td>
-	</tr>
-	<tr valign="top">
-		<td>
-			3. Reinicia Moho® o presiona <kbd>Alt + Shift + Ctrl + L</kbd> para <em>Recargar Herramientas y Pinceles</em> y el script debería aparecer en la paleta <em>Herramientas</em> y/o en el menú <em>Guiones</em>.
-		</td>
-		<td>
-			3. Hecho eso, el script debería aparecer en la paleta de <em>Herramientas</em> y/o en el menú <em>Guiones</em>. Consulta el capítulo <a href="https://manual.lostmarble.com/app/page/1IOuEOfMa7kUwqYPi2ABDhwoWE_KXB1OBCC5ib__iyIE?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3" title="Go to Moho manual">23.17 Instalar guion...</a> del manual de usuario de Moho® para más detalles.
-		</td>
-	</tr>
-</table>
+| MANUAL                                                                              | ASISTIDA                                                                                  |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| 1. Obtendrás algunas de estas carpetas:  `Menu / ScriptResources / Tool / Utility`. | 1. En Moho, ve a "Guiones > Instalar Guiones..." para abrir el asistente de instalación * | 
+| 2. Ponlas en la carpeta *Scripts* de tu [Carpeta de contenido personalizado][3-1a]. | 2. Presiona *Selecciona una carpeta de Guion*, ve y **selecciona** la que descomprimiste. |
+| 3. Reinicia Moho  (o `Alt+Shift+Ctrl + L` para *Recargar Herramientas y Pinceles*). | * Para más detalles, ve en la sección [23.17 Instalar guion...][3-2a] del manual de Moho. |
+
+Y eso es todo! El script debería aparecer en la paleta *Herramientas* y/o dentro del menú *Guiones*.
 
 > ⚠ **ADVERTENCIA:** Por favor, asegúrate de que has desinstalado todo *Lost Script* en tu sistema antes de eliminar los recursos compartidos o podrían empezar a dar errores o dejar de funcionar. Para desinstalar un script, simplemente elimina cualquier archivo y carpeta que coincida con su nombre y reinicia Moho® o *Recarga herramientas y pinceles* si es necesario.
 
@@ -178,8 +151,8 @@ Las sugerencias y *bugs* pueden ser reportados en la sección [*Issues*](https:/
 
 <p align="center" style="display: none;">Copyright © 2024 · Rai López · All Rights Reserved</p>
 
-[h-shield1-i]: https://img.shields.io/github/downloads/lost-scripts/ls/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZjhmOGY4IiBkPSJNMjg4IDMyYzAtMTcuNy0xNC4zLTMyLTMyLTMycy0zMiAxNC4zLTMyIDMybDAgMjQyLjctNzMuNC03My40Yy0xMi41LTEyLjUtMzIuOC0xMi41LTQ1LjMgMHMtMTIuNSAzMi44IDAgNDUuM2wxMjggMTI4YzEyLjUgMTIuNSAzMi44IDEyLjUgNDUuMyAwbDEyOC0xMjhjMTIuNS0xMi41IDEyLjUtMzIuOCAwLTQ1LjNzLTMyLjgtMTIuNS00NS4zIDBMMjg4IDI3NC43IDI4OCAzMnpNNjQgMzUyYy0zNS4zIDAtNjQgMjguNy02NCA2NGwwIDMyYzAgMzUuMyAyOC43IDY0IDY0IDY0bDM4NCAwYzM1LjMgMCA2NC0yOC43IDY0LTY0bDAtMzJjMC0zNS4zLTI4LjctNjQtNjQtNjRsLTEwMS41IDAtNDUuMyA0NS4zYy0yNSAyNS02NS41IDI1LTkwLjUgMEwxNjUuNSAzNTIgNjQgMzUyem0zNjggNTZhMjQgMjQgMCAxIDEgMCA0OCAyNCAyNCAwIDEgMSAwLTQ4eiIvPjwvc3ZnPg==&color=inactive&logoColor=white
-[h-shield1-a]: https://github.com/lost-scripts/ls_shapes_window/releases/latest/download/ls_v#.#.#-beta#_########-####.zip "Download latest version... (No disponible actualmente)"
+[h-shield1-i]: https://img.shields.io/github/downloads/lost-scripts/ls_shapes_window/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue
+[h-shield1-a]: https://github.com/lost-scripts/ls_shapes_window/releases/latest/download/ls.zip "Download latest version... (No disponible actualmente)"
 
 [h-shield2-i]: https://img.shields.io/github/release/lost-scripts/ls
 [h-shield2-a]: https://github.com/lost-scripts/ls/releases/latest "Go to release in GitHub..."
