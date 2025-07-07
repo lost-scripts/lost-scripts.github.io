@@ -203,10 +203,6 @@ params:
       title: Subscribe?
       rel: alternate
       type: application/rss+xml
-    - href: https://instagram.com/Lost_Scripts/
-      icon: fa-brands fa-instagram
-      alt: Instagram
-      title: Instagram...
     - href: https://mohoscripting.com/
       src: /icons/icon_ms_logo.svg
       alt: Moho Scripting

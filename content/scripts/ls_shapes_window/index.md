@@ -25,7 +25,7 @@ Persistent shape palette plus helpers for better management of Moho® vectors in
 ## Gallery
 
 <details align="center" width="100%" class="gallery-holder" style="cursor: pointer; user-select: none;">
-<summary title="Click here to expand/collapse image gallery">UI <sub><sup>(Expand/Collapse)</sup></sub><br><br>
+<summary title="Click here to expand/collapse image gallery"><strong>UI</strong> <sub><sup>(Expand/Collapse)</sup></sub><br><br>
 
 [![UI](docs/index_gallery.png "UI")](#! "UI")
 </summary><br>
@@ -114,6 +114,20 @@ And that's all! The script should appear in *Tools* palette and/or under *Script
 ## Collab & Support
 
 Suggestions and bugs can be reported in the [<i>Issues</i>](https://github.com/lost-scripts/ls_shapes_window/issues "Go to ''Issues'' section") section (preferably) or in the corresponding topic, if any, in [<i>Scripting</i>](https://www.lostmarble.com/forum/viewforum.php?f=12 "Go to Lost Marble Forum's ''Scripting'' section") section of the [<i>Lost Marble Forum</i>](https://www.lostmarble.com/forum "Go to the ''Lost Marble Forum''").
+
+<br>
+
+## Acknowledgments
+
+My sincere thanks to...
+
+- **Stanislav Zuliy** (Stan), for all his contributions & generosity.
+- **Lukas Krepel**, for paving the *modeless* way 🙂
+- **Mike Kelley**, for allowing me use the guts of his great *Adjust Colors* script.
+- **Wes** (synthsin75), **Paul** (hayasidist) & **Sam** (SimplSam), for their support at the [LM forums](https://www.lostmarble.com/forum).
+- **Copilot** & **ChatGPT**, for... erm... Why not? 🤷‍♂️
+
+And, of course, to **Lost Marble** and the talented Moho® team for all the hard work and for making this all possible (again).
 
 <br>
 

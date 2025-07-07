@@ -111,7 +111,7 @@ El núcleo que te proporciona todos los módulos y recursos que [Moho®](https:/
 
 ## Características
 
-Más que características de cara al usuario, «LS Project» trabaja de forma interna no sólo para satisfacer los requisitos de desarrollo de *Lost Scripts™* como los que se acaban de mencionar, sino también para ampliar (dentro de lo posible) las posibilidades de scripting del programa con *nuevos* tipos de funciones, métodos, widgets de interfaz de usuario y mucho más...
+Más que características de cara al usuario, «LS Project» trabaja de forma interna no sólo para satisfacer los requisitos de desarrollo de *Lost Scripts™* como los arriba expuestos, sino también para ampliar (dentro de lo posible) las posibilidades de scripting del programa con *nuevos* tipos de funciones, métodos, widgets de interfaz de usuario y mucho más...
 
 <br>
 

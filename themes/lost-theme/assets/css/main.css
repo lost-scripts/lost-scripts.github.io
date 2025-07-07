@@ -589,6 +589,128 @@ nav, .nav {
 	box-shadow: inset 8px 0px 4px -6px rgba(0, 0, 0, 0.33);
 	background-color: var(--gray-D2) !important;
 
+	& ul {
+		margin: 0;
+
+		& li {
+			margin: 0 0 4px 0;
+			list-style-type: none;
+
+			& summary {
+				display: flex;
+				align-items: center;
+				min-height: 32px;
+				border-radius: 2px;
+				background-color: var(--gray-C3);
+				box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.33);
+				cursor: copy;
+				scroll-snap-align: start;
+				scroll-margin: 0px;
+				overflow: hidden;
+				user-select: none; /* NOTE: Avoids contents get selected sometimes at unfoldeing */
+				transition: background-color var(--shorter) ease;
+
+				&:hover, &:focus-within {
+					background-color: var(--gray-B4);
+				}
+				&::after {
+					content: '▾'; /*▾▿⇣*/
+					display:flex;
+					align-items: center;
+					justify-content: center;
+					height: 24px;
+					min-width: 24px;
+					margin-right: 1.75%;
+					padding-left: 1.5%;
+					font-size: 1.25em;
+					color: var(--gray-5A);
+					border-left: 1px solid rgb(128, 128, 128, 0.25);
+					transition: var(--shorter);
+				}
+			}
+			& details {
+				container-type: inline-size;
+
+				summary a {
+					display: flex;
+					flex-grow: 1;
+					align-self: stretch; /* Prevents <details> from interfering at the top & bottom! */
+					padding: 2px 0px;
+					align-items: center;
+					color: var(--text);
+					text-decoration: none;
+					font-weight: 600;
+					font-size: small;
+					outline-offset: -2px;
+					overflow: hidden;
+					mask-image: linear-gradient(to left, transparent, black 0.5em); -webkit-mask-image: linear-gradient(to left, transparent, black 0.5em);
+					/*background-size: 0% !important;*/ /* Explicitly excluded from animated link underlining */
+
+					& picture {
+						width: 2em;
+						margin-right: 0.25em;
+						filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.33));
+
+						& img {
+							width: inherit;
+							max-height: 2em;
+							vertical-align: middle;
+						}
+					}
+					& > span {
+						display: inline-block; /* One can only apply ellipsis to a block kind of element! */
+						flex-grow: 1; /*width: fit-content;*/
+						min-width: 10ch; /*min-width: 50%;*/
+						padding-right: 0.15em;
+						overflow: hidden;
+						font-size: clamp(0.75em, 6cqw, 1em);
+						white-space: nowrap;
+						text-overflow: ellipsis;
+					}
+					&:link {
+						text-decoration: none; 
+					}
+					&:visited {
+						color: inherit; /*color: color-mix(in srgb, var(--gray-5A) 33%, transparent);*/ /*#ee80ff*/
+					}
+					&:hover, &:focus-within {
+						color: var(--gray-0F);
+						font-weight: bold;
+						text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.33);
+					}
+					&:active {
+						color: inherit;
+						margin: -1px 0; /* Avoids translation bellow exposes details area at top! */
+						transform: translateX(1px) translateY(1px);
+					}
+					&:focus-visible {
+						outline: 0 solid var(--accent);
+					}
+				}
+				& p {
+					margin: 2px 6px 6px 6px;
+					text-align: justify;
+					text-wrap: pretty;
+					hyphens: auto;
+					hyphenate-limit-chars: 6;
+					font-size: smaller;
+					font-size: clamp(0.75em, 4.5cqw, 0.85em);
+					line-height: clamp(1.2em, 4.5cqw, 1.3em);
+				}
+				&:focus-within {
+					border-radius: 2px;
+					outline: 2px solid var(--accent);
+					outline-offset: 0;
+				}
+				&[open] > summary::after {
+					color: var(--accent);
+					cursor: default;
+					transform: scaleY(-1);
+				}
+			}
+		}
+	}
+
 	& #nav-footer {
 		display: flex;
 		align-items: center;
@@ -625,145 +747,6 @@ nav, .nav {
 			display: inline;
 		}
 	}
-}
-
-nav ul li {
-	margin: 0 0 4px 0;
-	/*padding: 2px 0 2px 0px;*/
-	list-style-type: none;
-
-	& summary {
-		display: flex;
-		align-items: center;
-		min-height: 32px;
-		border-radius: 2px;
-		background-color: var(--gray-C3);
-		box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.33);
-		cursor: copy;
-		scroll-snap-align: start;
-		scroll-margin: 0px;
-		overflow: hidden;
-		user-select: none; /* NOTE: Avoids contents get selected sometimes at unfoldeing */
-		transition: background-color var(--shorter) ease;
-
-		&:hover, &:focus-within {
-			background-color: var(--gray-B4);
-		}
-		&::after {
-			content: '▾'; /*▾▿⇣*/
-			display:flex;
-			align-items: center;
-			justify-content: center;
-			height: 24px;
-			min-width: 24px;
-			margin-right: 1.75%;
-			padding-left: 1.5%;
-			font-size: 1.25em;
-			color: var(--gray-5A);
-			border-left: 1px solid rgb(128, 128, 128, 0.25);
-			transition: var(--shorter);
-			/*
-			height: 5px;
-			width: 9px;
-			background: url('/icons/fa-angle-down-solid.svg') no-repeat;
-			background-size: cover;
-			*/
-		}
-		/*
-		&::marker {
-			content: "▾";
-		}
-		*/
-	}
-	& details {
-		container-type: inline-size;
-
-		& p {
-			margin: 2px 6px 6px 6px;
-			text-align: justify;
-			text-wrap: pretty;
-			hyphens: auto;
-			hyphenate-limit-chars: 6;
-			font-size: smaller;
-			font-size: clamp(0.75em, 4.5cqw, 0.85em);
-			line-height: clamp(1.2em, 4.5cqw, 1.3em);
-		}
-		&:focus-within {
-			border-radius: 2px;
-			outline: 2px solid var(--accent);
-			outline-offset: 0;
-		}
-		&[open] > summary::after {
-			color: var(--accent);
-			cursor: default;
-			transform: scaleY(-1);
-		}
-	}
-}
-
-nav ul li details summary a {
-	display: flex;
-	flex-grow: 1;
-	align-self: stretch; /* Prevents <details> from interfering at the top & bottom! */
-	padding: 2px 0px;
-	align-items: center;
-	color: var(--text);
-	text-decoration: none;
-	font-weight: 600;
-	font-size: small;
-	outline-offset: -2px;
-	overflow: hidden;
-	mask-image: linear-gradient(to left, transparent, black 0.5em); -webkit-mask-image: linear-gradient(to left, transparent, black 0.5em);
-	/*background-size: 0% !important;*/ /* Explicitly excluded from animated link underlining */
-
-	& picture {
-		width: 2em;
-		margin-right: 0.25em;
-		filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.33));
-
-		& img {
-			width: inherit;
-			max-height: 2em;
-			vertical-align: middle;
-		}
-	}
-	& > span {
-		display: inline-block; /* One can only apply ellipsis to a block kind of element! */
-		flex-grow: 1; /*width: fit-content;*/
-		min-width: 10ch; /*min-width: 50%;*/
-		padding-right: 0.15em;
-		overflow: hidden;
-		font-size: clamp(0.75em, 6cqw, 1em);
-		white-space: nowrap;
-		text-overflow: ellipsis;
-	}
-	&:link {
-		text-decoration: none; 
-	}
-	&:visited {
-		color: inherit; /*color: color-mix(in srgb, var(--gray-5A) 33%, transparent);*/ /*#ee80ff*/
-	}
-	&:hover, &:focus-within {
-		color: var(--gray-0F);
-		font-weight: bold;
-		text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.33);
-	}
-	&:active {
-		color: inherit;
-		margin: -1px 0; /* Avoids translation bellow exposes details area at top! */
-		transform: translateX(1px) translateY(1px);
-	}
-	&:focus-visible {
-		outline: 0 solid var(--accent);
-	}
-	/*
-	&::after {
-		content: '';
-		height: 67%;
-		border: 1px solid rgb(128, 128, 128, 0.67);
-		pointer-events: none;
-		touch-action: none;
-	}*/
 }
 
 .resizer {
@@ -973,7 +956,7 @@ blockquote {
 	width: 100%;
 	margin-top: 8px;
 	margin-bottom: calc(var(--xs) * 2vh);
-	padding: 0.2em 0.6em;
+	padding: 0.33em 0.67em 0.67em 0.5em;
 	container: inline-size;
 	border-radius: var(--round);
 	border-left: 4px solid var(--accent);
@@ -1110,12 +1093,22 @@ hr {
 	background-color: var(--veiled);
 }
 
-li {
-	list-style-type: "• "; /* "● ", "◦ ", "•\002009" */
-	/*list-style-position: inside;*/
+ol, ul {
+	margin-bottom: calc(var(--xs) * 3vh);
+	list-style-position: outside;
 
-	&::marker {
-		color: var(--accent);
+	& ol {
+		font-weight: bolder;
+	}
+	& ul {
+		list-style-type: disc; /* "● ", "◦ ", "•\002009" */
+	}
+	& li {
+		margin-left: 0.1rem;
+
+		&::marker {
+			color: var(--accent);
+		}
 	}
 }
 
@@ -1123,6 +1116,14 @@ p {
 	margin-bottom: calc(var(--xs) * 2vh);
 	font-size: 1rem;
 	line-height: 1.33;
+
+	& + ol, + ul {
+		margin-left: 1rem; /* Or your full margin: 0.2rem 0 0.6rem 1.2rem; */
+
+		& li {
+			margin-left: 1rem;
+		}
+	}
 }
 
 table {
@@ -2380,14 +2381,17 @@ input:not(input:checked) + .label {
 
 .gallery-holder {
 	text-align: center; /* Required by Firefox */
-
+	
 	& summary {
+		& a {
+			display: block;
+			pointer-events: none;
+		}
 		& img {
 			margin-top: -1em;
 			min-width: 33.3%;
 			max-width: 50%;
 			object-fit: scale-down;
-			pointer-events: none;
 		}
 	}
 }

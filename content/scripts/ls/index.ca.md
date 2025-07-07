@@ -111,7 +111,7 @@ El nucli que et proporciona tots els mòduls i recursos que [Moho®](https://moh
 
 ## Característiques
 
-Més que característiques de cara a l'usuari, «LS Project» treballa de forma interna no només per satisfer els requisits de desenvolupament de *Lost Scripts™* com els que s'acaben d'esmentar, sinó també per ampliar (dins del possible) les possibilitats de scripting del programa amb *nous* tipus de funcions, mètodes, widgets d'interfície d'usuari i molt més.
+Més que característiques de cara a l'usuari, «LS Project» treballa de forma interna no només per satisfer els requisits de desenvolupament de *Lost Scripts™* com els exposats més amunt, sinó també per ampliar (dins del possible) les possibilitats de scripting del programa amb *nous* tipus de funcions, mètodes, widgets d'interfície d'usuari i molt més.
 
 <br>
 

@@ -123,7 +123,7 @@ Provides all the necessary shared/common resources and helpers that [Moho®](htt
 
 ## Features
 
-More than user-facing features, *LS Project* works under the hood not only to meet the development requirements of *Lost Scripts™* like the ones just bellow, but also to extend (within the possible) the scripting possibilities of the program with *new* kind of functions, methods, UI widgets and more...
+More than user-facing features, *LS Project* works under the hood not only to meet the development requirements of *Lost Scripts™* like the ones just above, but also to extend (within the possible) the scripting possibilities of the program with *new* kind of functions, methods, UI widgets and more...
 
 <br>
 

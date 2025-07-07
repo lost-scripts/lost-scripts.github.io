@@ -23,10 +23,10 @@ Paleta persistente de formas y utilidades para una mejor gestión de vectores Mo
 
 <br>
 
-## Gallery
+## Gallería
 
 <details align="center" width="100%" class="gallery-holder" style="cursor: pointer; user-select: none;">
-<summary title="Click here to expand/collapse image gallery">UI <sub><sup>(Expand/Collapse)</sup></sub><br><br>
+<summary title="Haz clic aquí para expandir/contraer la galería de imágenes"><strong>UI</strong> <sub><sup>(Expandir/Contraer)</sup></sub><br><br>
 
 [![UI](docs/index_gallery.png "UI")](#! "UI")
 </summary><br>
@@ -34,25 +34,25 @@ Paleta persistente de formas y utilidades para una mejor gestión de vectores Mo
 <table align="center" border="0" class="gallery"><tr>
 <td width="178" valign="top"><!-- width="1024px" for full width container-->
 
-![SHAPE Mode](docs/index_gallery_1.png "SHAPE Mode for shape managing")
+![SHAPE Mode](docs/index_gallery_1.png "SHAPE Mode para la gestión de formas")
 </td><td width="178" valign="top">
 
-![STYLE Mode](docs/index_gallery_2.png "STYLE Mode for style managing")
+![STYLE Mode](docs/index_gallery_2.png "STYLE Mode para la gestión de estilos")
 </td><td width="144" valign="top">
 
-![TWEAK Menu](docs/index_gallery_3.png "TWEAK Menu for shape tweaking &amp; utils")
+![TWEAK Menu](docs/index_gallery_3.png "TWEAK Menu para retoques y utilidades")
 </td><td width="264" valign="top">
 
-![LIVE Swatches](docs/index_gallery_4.gif "Live/Scrollable (plus customizable) Swatches")
+![LIVE Swatches](docs/index_gallery_4.gif "Live/Scrollable (amén de personalizables) Swatches")
 </td><td width="178" valign="top">
 
-![COMPACT Mode](docs/index_gallery_5.png "Or just keep it compact...")
+![COMPACT Mode](docs/index_gallery_5.png "O simplemente déjala compacta...")
 </td>
 </tr></table>
 </details>
 <!--
 <details align="center" width="100%" class="gallery-holder" style="cursor:pointer; user-select: none;">
-	<summary title="Clica la flecha para mostrar/ocultar la galería de imágenes">
+	<summary title="Haz clic aquí para expandir/contraer la galería de imágenes">
 		<a inert href="#!"><img align="center" height="96px" src="docs/index_gallery.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" alt="Script UI" style="vertical-align: middle;"></a>&ensp;&ensp;
 	</summary>
 	<br>
@@ -110,12 +110,25 @@ Y eso es todo! El script debería aparecer en la paleta *Herramientas* y/o dentr
 3. **Personalizar**: Despliega el menú principal de la ventana 🔽 (en la parte superior izquierda) para acceder a diferentes ajustes y acciones.
 4. **Tooltips**: Mantén el cursor sobre los diferentes elementos para obtener pistas sobre sus funciones...
 
-
 <br>
 
 ## Collab & Soporte
 
 Las sugerencias y *bugs* pueden ser reportados en la sección [*Issues*](https://github.com/lost-scripts/ls_shapes_window/issues "Ir a la sección ''Issues''") (preferiblemente) o en el hilo correspondiente, si lo hay, en la sección [*Scripting*](https://www.lostmarble.com/forum/viewforum.php?f=12 "Ir a la sección ''Scripting'' del foro Lost Marble") del [*foro Lost Marble*](https://www.lostmarble.com/forum "Ir al foro Lost Marble").
+
+<br>
+
+## Agradecimientos
+
+Mi más sincero agradecimiento a...
+
+- **Stanislav Zuliy** (Stan), por todas sus contribuciones y generosidad.
+- **Lukas Krepel**, por allanar el camino *modeless* 🙂
+- **Mike Kelley**, por permitirme usar las entrañas de su genial script *Adjust Colors*.
+- **Wes** (synthsin75), **Paul** (hayasidist) y **Sam** (SimplSam), por su apoyo en los [foros de LM](https://www.lostmarble.com/forum).
+- **Copilot** y **ChatGPT**, por... erm... ¿Por qué no? 🤷‍♂️
+
+Y, por supuesto, a **Lost Marble** y al talentoso equipo de Moho® por todo el trabajo duro y por hacer todo esto posible (otra vez).
 
 <br>
 

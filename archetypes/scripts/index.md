@@ -35,7 +35,7 @@ Summary or overview of what the script does and its main purpose.
 ## Gallery
 
 <details align="center" width="100%" class="gallery-holder" style="cursor: pointer; user-select: none;">
-<summary title="Click here to expand/collapse image gallery">UI <sub><sup>(Expand/Collapse)</sup></sub><br><br>
+<summary title="Click here to expand/collapse image gallery"><strong>UI</strong> <sub><sup>(Expand/Collapse)</sup></sub><br><br>
 
 [![UI](docs/index_gallery.png "UI")](#! "UI")
 </summary><br>
