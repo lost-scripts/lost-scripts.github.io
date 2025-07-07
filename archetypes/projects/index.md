@@ -1,7 +1,7 @@
 {{/* 
 Archetype template for the Lost Scripts™ project so, although highly customizable via params, it's strongly tied to Moho® and the conventions/structure of Lost Scripts ecosystem... Customize or override in your own Hugo project as needed.
 
-⚠️ NOTE: After generating a new project bundle, e.g. `hugo new --kind project scripts/ls`, manually remove the ".md" extension from the "index.yaml.md" file.
+⚠️ NOTE: After generating a new project bundle, e.g. `hugo new --kind project scripts/ls`, you'll have to manually remove the ".md" extension from the "index.yaml.md" file.
 */}}
 
 {{- $name1 := upper (index (split .Name "_") 0) -}}
@@ -19,7 +19,7 @@ Subcategory: Index
 Date: {{ .Date }}
 Modified: {{ .Date }}
 Weight: -1
-Draft: false
+Draft: true
 ---
 
 <!-- mIxEd style head (quite simple and full width in GitHub) -->
@@ -81,9 +81,15 @@ Provides all the necessary shared/common resources and helpers that [{{ site.Par
 			<a href="/scripts/ls_shapes_window/" title="Go to ''Shapes Window'' page..."><img src="https://img.shields.io/badge/Shapes%20Window-blue.svg" width="96" height="20"></a>
 		</th>
 		<th align="right" valign="middle" nowrap>
-			<a href="https://moho.lostmarble.com/" title="Go to Moho website"><img height="20px" src="https://img.shields.io/badge/For-Moho_Pro_14.3+-orange" alt="Moho version"></a>
-			<a href="https://github.com/lost-scripts/ls_shapes_window/releases/latest" title="Go to download page"><img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls_shapes_window?logo=github" alt="GitHub version"></a>
-			<a href="#!" style="cursor: default;"><img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls_shapes_window/total.svg?color=yellow" alt="GitHub downloads"></a>
+			<a href="https://github.com/lost-scripts/ls_shapes_window/releases/latest/download/ls_shapes_window.zip" title="Download latest version...">
+				<img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls_shapes_window/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue" alt="GitHub downloads">
+			</a>
+			<a href="https://github.com/lost-scripts/ls_shapes_window/releases/latest" title="Go to release in GitHub...">
+				<img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls_shapes_window?logo=github" alt="GitHub version">
+			</a>
+			<a href="https://moho.lostmarble.com/" title="Go to Moho® website...">
+				<img height="20px" src="https://img.shields.io/badge/for-Moho_Pro_14.3+-orange" alt="Moho version">
+			</a>
 		</th>
 	</tr>
 	<tr>
@@ -104,9 +110,15 @@ Provides all the necessary shared/common resources and helpers that [{{ site.Par
 			<a href="/scripts/other/ls_other_window/" title="Go to Script page..."><img src="https://img.shields.io/badge/Other%20Window%3F-red.svg" width="96" height="20"></a>
 		</th>
 		<th align="right" valign="middle" nowrap>
-			<a href="https://moho.lostmarble.com/" title="Go to Moho website"><img height="20px" src="https://img.shields.io/badge/For-Moho_Pro_14.3+-orange" alt="Moho version"></a>
-			<a href="https://github.com/lost-scripts/ls7_script/releases/latest" title="Go to download page"><img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls7_script?logo=github" alt="GitHub version"></a>
-			<a href="#!" style="cursor: default;"><img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls7_script/total.svg?color=yellow" alt="GitHub downloads"></a>
+			<a href="#!" style="cursor: default;" title="Download latest version...">
+				<img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls_other_window/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue" alt="GitHub downloads">
+			</a>
+			<a href="#!" style="cursor: default;" title="Go to release in GitHub...">
+				<img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls7_script?logo=github" alt="GitHub version">
+			</a>
+			<a href="https://moho.lostmarble.com/" title="Go to Moho® website...">
+				<img height="20px" src="https://img.shields.io/badge/For-Moho_Pro_14.3+-orange" alt="Moho version">
+			</a>
 		</th>
 	</tr>
 	<tr>
@@ -129,42 +141,15 @@ More than user-facing features, *{{ $name1 }} {{ $name3 }}* works under the hood
 
 ## Installation
 
-~~Download~~ the file, unzip it, and proceed with the installation method of your choice...
+~~Download~~ the file, **unzip** it, and proceed with the installation method of your choice...
 
-<table width="100%" align="center" valign="top" border="2">
-	<tr>
-		<th scope="col" nowrap width="50%">
-			MANUAL
-		</th>
-		<th scope="col" nowrap width="50%">
-			ASSISTED
-		</th>
-	</tr>
-	<tr valign="top">
-		<td>
-			1. You'll get one or more of the following folders: <code>Menu / ScriptResources / Tool / Utility</code>.
-		</td>
-		<td>
-			1. From Moho's main menus, go to "Scripts -> Install Script..." and a window with some info will appear.
-		</td>
-	</tr>
-	<tr valign="top">
-		<td>
-			2. Drag & Drop (or Copy & Paste) them all into the <em>Scripts</em> folder of your <a href="https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3" title="Go to Moho manual">Custom Content Folder</a>.
-		</td>
-		<td>
-			2. Press <em>Select A Script Folder</em> button, browse to the just uzipped folder (e.g. ls_shapes_window) and select it.
-		</td>
-	</tr>
-	<tr valign="top">
-		<td>
-			3. Restart Moho® or press <kbd>Alt + Shift + Ctrl + L</kbd> to <em>Reload Tools And Brushes</em> and the script should appear in <em>Tools</em> palette and/or under <em>Scripts</em> menu.
-		</td>
-		<td>
-			3. That done, the script should appear in <em>Tools</em> palette and/or under <em>Scripts</em> menu. See chapter <a href="https://manual.lostmarble.com/app/page/1IOuEOfMa7kUwqYPi2ABDhwoWE_KXB1OBCC5ib__iyIE?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3" title="Go to Moho manual">23.17 Install Script...</a> of Moho® user's manual for further details.
-		</td>
-	</tr>
-</table>
+| MANUAL                                                                           | ASSISTED                                                                         |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| 1. You'll get some of these folders:  `Menu / ScriptResources / Tool / Utility`. | 1. In Moho, go to "Scripts > Install Script..." to open the installation wizard. |
+| 2. Place'em all into the *Scripts* folder of your [Custom Content Folder][3-1a]. | 2. Click *Select A Script Folder*, browse to the uzipped folder & **select it**. |
+| 3. Restart Moho or press `Alt + Shift + Ctrl + L` to *Reload Tools And Brushes*. | * More details in chapter [23.17 Install Script...][3-2a] of Moho user's manual. |
+
+And that's all! The script should appear in *Tools* palette and/or under *Scripts* menu.
 
 > ⚠ **WARNING:** Please, make sure you have uninstalled every *{{ site.Title | singularize }}* on your system before removing any shared resource or they may start throwing errors or stop working. For uninstalling a script, just remove any file and folder matching its name and restart Moho® or *Reload Tools And Brushes* if necessary.
 

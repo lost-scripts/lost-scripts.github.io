@@ -56,7 +56,7 @@ Partiendo de que ya has descargado y **descomprimido** el archivo, procede con e
 			3. Reinicia Moho® o presiona <kbd>Alt + Shift + Ctrl + L</kbd> para <em>Recargar Herramientas y Pinceles</em> y el script debería aparecer en la paleta <em>Herramientas</em> y/o en el menú <em>Guiones</em>.
 		</td>
 		<td>
-			3. Hecho eso, el script debería aparecer en la paleta de <em>Herramientas</em> y/o en el menú <em>Guiones</em>. Consulta el capítulo <a href="https://manual.lostmarble.com/app/page/1IOuEOfMa7kUwqYPi2ABDhwoWE_KXB1OBCC5ib__iyIE?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3" title="Go to Moho manual">23.17 Instalar guion...</a> del manual de usuario de Moho® para más detalles.
+			3. Hecho eso, el script debería aparecer en la paleta de <em>Herramientas</em> y/o en el menú <em>Guiones</em>. Consulta el capítulo <a href="https://manual.lostmarble.com/app/page/1IOuEOfMa7kUwqYPi2ABDhwoWE_KXB1OBCC5ib__iyIE?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3" title="Ir al manual de Moho">23.17 Instalar guion...</a> del manual de usuario de Moho® para más detalles.
 		</td>
 	</tr>
 </table>
@@ -68,5 +68,5 @@ Partiendo de que ya has descargado y **descomprimido** el archivo, procede con e
 
 ---
 
-[3-1a]: https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3
-[3-2a]: https://manual.lostmarble.com/app/page/1IOuEOfMa7kUwqYPi2ABDhwoWE_KXB1OBCC5ib__iyIE?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3
+[3-1a]: https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3 "Ir al manual de Moho"
+[3-2a]: https://manual.lostmarble.com/app/page/1IOuEOfMa7kUwqYPi2ABDhwoWE_KXB1OBCC5ib__iyIE?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3 "Ir al manual de Moho"

@@ -1,7 +1,7 @@
 {{/* 
 Archetype template for Moho-related scripts used within the Lost Scripts™ project so, although highly customizable via params, it's tightly coupled to Lost Scripts' conventions and folder structure... Customize or override in your own Hugo project as needed.
 
-⚠️ NOTE: After generating a new script bundle, e.g. `hugo new scripts/ls_new_script`, manually remove the ".md" extension from the "index.yaml.md" file.
+⚠️ NOTE: After generating a new script bundle, e.g. `hugo new scripts/ls_new_script`, you'll have to manually remove the ".md" extension from the "index.yaml.md" file.
 */}}
 
 {{- $name1 := upper (index (split .Name "_") 0) -}}
@@ -15,7 +15,7 @@ Tags:
   - untagged
 Date: {{ .Date }}
 Modified: {{ .Date }}
-Draft: false
+Draft: true
 ---
 
 <table width="100%" border="0"><tr><td align="left" valign="middle" width="96">
@@ -53,6 +53,8 @@ Summary or overview of what the script does and its main purpose.
 
 <br>
 
+{{ partial "blocker.html" (dict "name" "installation" "vars" (dict "app" site.Params.app.name "title" (site.Title | singularize))) }}
+
 ## Features
 
 - Feature 1
@@ -73,7 +75,7 @@ Summary or overview of what the script does and its main purpose.
 
 And that's all! The script should appear in *Tools* palette and/or under *Scripts* menu.
 
-> ⚠ **WARNING:** Please, make sure you have uninstalled every Lost Script on your system before removing any of these shared resources or they may start throwing errors or stop working. For uninstalling a script, just remove any file and folder matching its name and restart Moho® or Reload Tools And Brushes if necessary.
+> ⚠ **WARNING:** Please, make sure you have uninstalled every *{{ site.Title | singularize }}* on your system before removing any shared resource or they may start throwing errors or stop working. For uninstalling a script, just remove any file and folder matching its name and restart Moho® or *Reload Tools And Brushes* if necessary.
 
 <br>
 

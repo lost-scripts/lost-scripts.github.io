@@ -1,0 +1,26 @@
+{{- /*
+Description: injects content from "archetypes/blocks/<name>.md" into generated content, e.g. `{{ partial "blocker.html" (dict "name" "installation") }}`
+Optional: use .vars to replace placeholders like {{title}}, {{ script }}, e.g. `{{ partial "blocker.html" (dict "name" "installation" "vars" (dict "title" site.Title "script" .Name)) }}`
+
+⚠ WARNING: Call without dashes to avoid breaking line breaks: {{ partial ... }}
+*/ -}}
+
+{{- $name := .name -}}
+{{- $vars := .vars | default dict -}}
+{{- $path := printf "archetypes/blocks/%s.md" $name -}}
+{{- $content := readFile $path -}}
+
+{{- /* Replace placeholders (both {{x}} and {{ x }}) */ -}}
+{{- range $k, $v := $vars -}}
+	{{- $content = replace $content (printf "{{%s}}" $k) (printf "%v" $v) -}}
+	{{- $content = replace $content (printf "{{ %s }}" $k) (printf "%v" $v) -}}
+{{- end -}}
+
+{{- /* Remove standalone Go-style comment/template lines */ -}}
+{{- $content = replaceRE `(?m)^\s*{{-?\s*[^{}]+\s*-?}}\s*$\n?` "" $content -}}
+
+{{- /* Normalize line endings and trim final newlines */ -}}
+{{- $content = replaceRE `\r\n?` "\n" $content -}}
+{{- $content = replaceRE `\n+$` "" $content -}}
+
+{{- return $content -}} {{- /* Or `return printf "\n%s\n" $content` to wrap with ONE extra line before & after */ -}}

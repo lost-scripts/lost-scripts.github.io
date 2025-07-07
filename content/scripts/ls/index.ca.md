@@ -117,42 +117,15 @@ Més que característiques de cara a l'usuari, «LS Project» treballa de forma 
 
 ## Instal·lació
 
-<del>Baixeu</del> el fitxer, descomprimiu-lo i procediu amb el mètode d'instal·lació que trieu...
+~~Baixeu~~ el fitxer, descomprimiu-lo i procediu amb el mètode d'instal·lació que trieu...
 
-<table width="100%" align="center" valign="top" border="2">
-	<tr>
-		<th scope="col" nowrap width="50%">
-			MANUAL
-		</th>
-		<th scope="col" nowrap width="50%">
-			ASSISTIDA
-		</th>
-	</tr>
-	<tr valign="top">
-		<td>
-			1. Obtindràs una o diverses de les carpetes següents: <code>Menu / ScriptResources / Tool / Utility</code>.
-		</td>
-		<td>
-			1. Des del menú principal de Moho, aneu a "Guions -> Instal·lar Guions..." i apareixerà una finestra d'informació.
-		</td>
-	</tr>
-	<tr valign="top">
-		<td>
-			2. Arràstra i solta (o copia i pega) totes elles a la carpeta Scripts de la teva <a href="https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3" title="Anar al manual de Moho">Carpeta de contingut personalitzat.</a>.
-		</td>
-		<td>
-			2. Premeu el botó "Selecciona una carpeta de Guió", aneu a la carpeta recentment descomprimida (e.g. ls_shapes_window) i seleccioneu-la.
-		</td>
-	</tr>
-	<tr valign="top">
-		<td>
-			3. Reinicieu Moho® o premeu <kbd>Alt + Shift + Ctrl + L</kbd> per a <em>Recarregar Eines i Pinzells</em> i l'script hauria d'aparèixer a la paleta <em>Eines</em> i/o al menú <em>Guions</em>.
-		</td>
-		<td>
-			3. Fet això, l'script hauria d'aparèixer a la paleta de <em>Eines</em> i/o al menú <em>Guions</em>. Consulta el capítol <a href="https://manual.lostmarble.com/app/page/1IOuEOfMa7kUwqYPi2ABDhwoWE_KXB1OBCC5ib__iyIE?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3" title="Anar al manual de Moho">23.17 Instal·lar guió...</a> del manual d'usuari de Moho® per a més detalls.
-		</td>
-	</tr>
-</table>
+| MANUAL                                                                                | ASSISTIDA                                                                                  |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| 1. Obtindreu algunes d'aquestes carpetes:  `Menu / ScriptResources / Tool / Utility`. | 1. A Moho, aneu a "Guions > Instal·lar Guiones..." per obrir l'assistent d'instal·lació *  |
+| 2. Posa-les a la carpeta *Scripts* de la teva [Carpeta de contingut personal.][3-1a]. | 2. Prem *Selecciona una carpeta de Guió*, vés i **selecciona** la que vas descomprimir.    |
+| 3. Reinicieu Moho® o premeu `Alt+Shift+Ctrl + L` per a *Recarregar Eines i Pinzells*. | *  Per a més detalls, mireu la secció [23.17 Instal·lar guió...][3-2a] del manual de Moho. |
+
+I això és tot! L'script hauria d'aparèixer a la paleta *Eines* i/o dins del menú *Guiones*.
 
 > ⚠ **ADVERTÈNCIA:** Si us plau, assegureu-vos que heu desinstal·lat tot *Lost Script* al vostre sistema abans d'eliminar els recursos compartits o podrien començar a donar errors o deixar de funcionar. Per desinstal·lar un script, simplement elimina qualsevol fitxer i carpeta que coincideixi amb el seu nom i reinicia Moho® o *Recarregar eines i pinzells* si cal.
 
@@ -178,8 +151,8 @@ Els suggeriments i *bugs* poden ser reportats a la secció [*Issues*](https://gi
 
 <p align="center" style="display: none;">Copyright © 2024 · Rai López · Tots els drets reservats</p>
 
-[h-shield1-i]: https://img.shields.io/github/downloads/lost-scripts/ls_shapes_window/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue
-[h-shield1-a]: https://github.com/lost-scripts/ls_shapes_window/releases/latest/download/ls.zip "Download latest version... (Actualment no disponible)"
+[h-shield1-i]: https://img.shields.io/github/downloads/lost-scripts/ls/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue
+[h-shield1-a]: https://github.com/lost-scripts/ls/releases/latest/download/ls.zip "Download latest version... (Actualment no disponible)"
 
 [h-shield2-i]: https://img.shields.io/github/release/lost-scripts/ls
 [h-shield2-a]: https://github.com/lost-scripts/ls/releases/latest "Go to release in GitHub..."
@@ -190,5 +163,5 @@ Els suggeriments i *bugs* poden ser reportats a la secció [*Issues*](https://gi
 [c1-shield1-i]: https://img.shields.io/github/downloads/repo-size/lost-scripts/ls/latest/total "Downloads"
 [c1-shield1-a]: https://github.com/lost-scripts/ls/latest "Downloads"
 
-[3-1a]: https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3
-[3-2a]: https://manual.lostmarble.com/app/page/1IOuEOfMa7kUwqYPi2ABDhwoWE_KXB1OBCC5ib__iyIE?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3
+[3-1a]: https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3 "Anar al manual de Moho"
+[3-2a]: https://manual.lostmarble.com/app/page/1IOuEOfMa7kUwqYPi2ABDhwoWE_KXB1OBCC5ib__iyIE?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3 "Anar al manual de Moho"

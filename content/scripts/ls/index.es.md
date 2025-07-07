@@ -117,13 +117,13 @@ Más que características de cara al usuario, «LS Project» trabaja de forma in
 
 ## Instalación
 
-[**Descarga**][h-shield1-a] el archivo, **descomprímelo**, y procede con el método de instalación que prefieras...
+~~Descarga~~ el archivo, **descomprímelo**, y procede con el método de instalación que prefieras...
 
 | MANUAL                                                                              | ASISTIDA                                                                                  |
 | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | 1. Obtendrás algunas de estas carpetas:  `Menu / ScriptResources / Tool / Utility`. | 1. En Moho, ve a "Guiones > Instalar Guiones..." para abrir el asistente de instalación * | 
 | 2. Ponlas en la carpeta *Scripts* de tu [Carpeta de contenido personalizado][3-1a]. | 2. Presiona *Selecciona una carpeta de Guion*, ve y **selecciona** la que descomprimiste. |
-| 3. Reinicia Moho  (o `Alt+Shift+Ctrl + L` para *Recargar Herramientas y Pinceles*). | * Para más detalles, ve en la sección [23.17 Instalar guion...][3-2a] del manual de Moho. |
+| 3. Reinicia Moho® (o `Alt+Shift+Ctrl + L` para *Recargar Herramientas y Pinceles*). | *  Para más detalles, ve a la sección [23.17 Instalar guion...][3-2a] del manual de Moho. |
 
 Y eso es todo! El script debería aparecer en la paleta *Herramientas* y/o dentro del menú *Guiones*.
 
@@ -151,8 +151,8 @@ Las sugerencias y *bugs* pueden ser reportados en la sección [*Issues*](https:/
 
 <p align="center" style="display: none;">Copyright © 2024 · Rai López · All Rights Reserved</p>
 
-[h-shield1-i]: https://img.shields.io/github/downloads/lost-scripts/ls_shapes_window/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue
-[h-shield1-a]: https://github.com/lost-scripts/ls_shapes_window/releases/latest/download/ls.zip "Download latest version... (No disponible actualmente)"
+[h-shield1-i]: https://img.shields.io/github/downloads/lost-scripts/ls/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue
+[h-shield1-a]: https://github.com/lost-scripts/ls/releases/latest/download/ls.zip "Download latest version... (No disponible actualmente)"
 
 [h-shield2-i]: https://img.shields.io/github/release/lost-scripts/ls
 [h-shield2-a]: https://github.com/lost-scripts/ls/releases/latest "Go to release in GitHub..."
