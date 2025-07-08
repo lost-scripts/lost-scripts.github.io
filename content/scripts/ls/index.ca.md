@@ -119,11 +119,11 @@ Més que característiques de cara a l'usuari, «LS Project» treballa de forma 
 
 ~~Baixeu~~ el fitxer, descomprimiu-lo i procediu amb el mètode d'instal·lació que trieu...
 
-| MANUAL                                                                                | ASSISTIDA                                                                                  |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| 1. Obtindreu algunes d'aquestes carpetes:  `Menu / ScriptResources / Tool / Utility`. | 1. A Moho, aneu a "Guions > Instal·lar Guiones..." per obrir l'assistent d'instal·lació *  |
-| 2. Posa-les a la carpeta *Scripts* de la teva [Carpeta de contingut personal.][3-1a]. | 2. Prem *Selecciona una carpeta de Guió*, vés i **selecciona** la que vas descomprimir.    |
-| 3. Reinicieu Moho® o premeu `Alt+Shift+Ctrl + L` per a *Recarregar Eines i Pinzells*. | *  Per a més detalls, mireu la secció [23.17 Instal·lar guió...][3-2a] del manual de Moho. |
+| MANUAL                                                                                | ASSISTIDA                                                                               |
+| ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| 1. Obtindreu algunes d'aquestes carpetes:  `Menu / ScriptResources / Tool / Utility`. | 1. A Moho, aneu a "Guions > Instal·lar Guiones…" per obrir l'assistent d'instal·lació * |
+| 2. Posa-les a la carpeta *Scripts* de la teva [Carpeta de contingut personal.][3-1a]. | 2. Prem *Selecciona una carpeta de Guió*, vés i **selecciona** la que vas descomprimir. |
+| 3. Reinicieu Moho® o premeu `Alt+Shift+Ctrl + L` per a *Recarregar Eines i Pinzells*. | * Per a més detalls, mireu la secció [23.17 Instal·lar guió…][3-2a] del manual de Moho. |
 
 I això és tot! L'script hauria d'aparèixer a la paleta *Eines* i/o dins del menú *Guiones*.
 

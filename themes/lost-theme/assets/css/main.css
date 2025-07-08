@@ -1039,7 +1039,7 @@ dialog::backdrop {
 
 details {
 	&::details-content {
-		overflow: visible;
+		overflow: hidden;
 		block-size: 0;
 		transition: block-size var(--shorter), content-visibility var(--shorter);
 		transition-behavior: allow-discrete;
@@ -2384,19 +2384,8 @@ input:not(input:checked) + .label {
 .gallery-holder {
 	text-align: center; /* Required by Firefox */
 
-	& summary {
-		& a {
-			display: block;
-			pointer-events: none;
-		}
-		& img {
-			margin-top: -1em;
-			max-height: 192px;
-			min-width: 33.3%;
-			max-width: 50%;
-			object-fit: scale-down;
-			transition: max-height var(--shorter) ease-in-out;
-		}
+	&::details-content {
+		overflow: visible; /* Allows content to overlap summary */
 	}
 	&:is([open]) {
 		& summary {
@@ -2412,6 +2401,20 @@ input:not(input:checked) + .label {
 	&:not([open]) {
 		> summary::marker {
 			animation: blink var(--longer) ease-in-out infinite;
+		}
+	}
+	& > summary {
+		& a {
+			display: block;
+			pointer-events: none;
+		}
+		& img {
+			margin-top: -1em;
+			max-height: 192px;
+			min-width: 33.3%;
+			max-width: 50%;
+			object-fit: scale-down;
+			transition: max-height var(--shorter) ease-in-out;
 		}
 	}
 }

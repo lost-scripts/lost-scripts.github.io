@@ -133,9 +133,9 @@ More than user-facing features, *LS Project* works under the hood not only to me
 
 | MANUAL                                                                           | ASSISTED                                                                         |
 | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| 1. You'll get some of these folders:  `Menu / ScriptResources / Tool / Utility`. | 1. In Moho, go to "Scripts > Install Script..." to open the installation wizard. |
+| 1. You'll get some of these folders:  `Menu / ScriptResources / Tool / Utility`. | 1. In Moho, go to "Scripts > Install Script…" to open the installation wizard *  |
 | 2. Place'em all into the *Scripts* folder of your [Custom Content Folder][3-1a]. | 2. Click *Select A Script Folder*, browse to the uzipped folder & **select it**. |
-| 3. Restart Moho or press `Alt + Shift + Ctrl + L` to *Reload Tools And Brushes*. | * More details in chapter [23.17 Install Script...][3-2a] of Moho user's manual. |
+| 3. Restart Moho or press `Alt + Shift + Ctrl + L` to *Reload Tools And Brushes*. | *  More details in chapter [23.17 Install Script…][3-2a] of Moho® user's manual. |
 
 And that's all! The script should appear in *Tools* palette and/or under *Scripts* menu.
 

@@ -119,11 +119,11 @@ Más que características de cara al usuario, «LS Project» trabaja de forma in
 
 ~~Descarga~~ el archivo, **descomprímelo**, y procede con el método de instalación que prefieras...
 
-| MANUAL                                                                              | ASISTIDA                                                                                  |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| 1. Obtendrás algunas de estas carpetas:  `Menu / ScriptResources / Tool / Utility`. | 1. En Moho, ve a "Guiones > Instalar Guiones..." para abrir el asistente de instalación * | 
-| 2. Ponlas en la carpeta *Scripts* de tu [Carpeta de contenido personalizado][3-1a]. | 2. Presiona *Selecciona una carpeta de Guion*, ve y **selecciona** la que descomprimiste. |
-| 3. Reinicia Moho® (o `Alt+Shift+Ctrl + L` para *Recargar Herramientas y Pinceles*). | *  Para más detalles, ve a la sección [23.17 Instalar guion...][3-2a] del manual de Moho. |
+| MANUAL                                                                              | ASISTIDA                                                                                |
+| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| 1. Obtendrás algunas de estas carpetas:  `Menu / ScriptResources / Tool / Utility`. | 1. En Moho, ve a "Guiones > Instalar Guiones…" para abrir el asistente de instalación * |
+| 2. Ponlas en la carpeta *Scripts* de tu [Carpeta de contenido personalizado][3-1a]. | 2. Pulsa *Selecciona una carpeta de Guion*, ve y **selecciona** la que descomprimiste.  |
+| 3. Reinicia Moho® (o `Alt+Shift+Ctrl + L` para *Recargar Herramientas y Pinceles*). | *  Para más detalles, ve a la sección [23.17 Instalar guion…][3-2a] del manual de Moho. |
 
 Y eso es todo! El script debería aparecer en la paleta *Herramientas* y/o dentro del menú *Guiones*.
 
