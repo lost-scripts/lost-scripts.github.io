@@ -1039,7 +1039,7 @@ dialog::backdrop {
 
 details {
 	&::details-content {
-		overflow: hidden;
+		overflow: visible;
 		block-size: 0;
 		transition: block-size var(--shorter), content-visibility var(--shorter);
 		transition-behavior: allow-discrete;
@@ -1054,11 +1054,13 @@ details {
 			color: var(--accent);
 		}
 	}
+	/* Moved to `.gallery-holder`
 	&:has(.gallery):not([open]) {
 		> summary::marker {
 			animation: blink var(--longer) ease-in-out infinite;
 		}
 	}
+	*/
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2381,7 +2383,7 @@ input:not(input:checked) + .label {
 
 .gallery-holder {
 	text-align: center; /* Required by Firefox */
-	
+
 	& summary {
 		& a {
 			display: block;
@@ -2389,9 +2391,27 @@ input:not(input:checked) + .label {
 		}
 		& img {
 			margin-top: -1em;
+			max-height: 192px;
 			min-width: 33.3%;
 			max-width: 50%;
 			object-fit: scale-down;
+			transition: max-height var(--shorter) ease-in-out;
+		}
+	}
+	&:is([open]) {
+		& summary {
+			& img {
+				max-height: 96px;
+				mask-image: linear-gradient(to top, transparent 24px, black 75%);
+			}
+		}
+		& table {
+			margin-top: -48px;
+		}
+	}
+	&:not([open]) {
+		> summary::marker {
+			animation: blink var(--longer) ease-in-out infinite;
 		}
 	}
 }
@@ -2403,6 +2423,7 @@ input:not(input:checked) + .label {
 	width: 100%;
 	border: none;
 	background-color: rgb(from var(--text-inv) r g b / 16.66%);
+	z-index: 999;
 
 	tbody {
 		display: grid;
