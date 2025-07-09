@@ -16,7 +16,7 @@ Params:
       alt: GitHub downloads
 ---
 
-<table width="100%" border="0"><tr><td align="left" valign="middle" width="96">
+<table id="top" width="100%" border="0"><tr><td align="left" valign="middle" width="96">
 
 [![Icon](docs/index@2x.png)](#! "Icon")
 </td><td align="right" valign="middle" width="1920" nowrap>

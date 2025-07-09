@@ -2226,7 +2226,7 @@ input:not(input:checked) + .label {
 	}
 }
 
-#view-main > table:first-of-type:first-child {
+#view-main > table:first-of-type:first-child { /* The page table heading */
 	position: relative;
 	margin-bottom: 0;
 	padding-top: 4px;
@@ -2299,6 +2299,16 @@ input:not(input:checked) + .label {
 				height: calc(var(--scroll) / 1.5);
 			}
 		}
+	}
+}
+
+h2 + p:has(a) + table, h2 + p:has(del) + table, h2 + p:has(strong) + table { /* Try to select the "Installation" table */
+	width: 100%;
+	table-layout: fixed;
+
+	thead tr, tbody tr {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); /* Or: 1fr 1fr; */
 	}
 }
 
