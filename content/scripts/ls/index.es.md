@@ -52,35 +52,41 @@ El núcleo que te proporciona todos los módulos y recursos que [Moho®](https:/
 | :---------------: | ------------------------------------------------------------------------------ |
 | [![m1-2i]][m1-1a] | A persistent shape palette plus helpers for better management of Moho® vectors in general and Liquid Shapes in particular. |
 
-[m1-1i]: https://img.shields.io/badge/Shapes%20Window-blue.svg
-[m1-1a]: /scripts/ls_shapes_window "Go to Shapes Window webpage..."
-[m1-2i]: /scripts/ls_shapes_window/index@2x.png
-[m1-3i]: https://img.shields.io/github/v/release/lost-scripts/ls_shapes_window?color=yellow
-[m1-3a]: https://github.com/lost-scripts/ls_shapes_window "Release"
-[m1-4i]: https://img.shields.io/github/v/tag/lost-scripts/ls_shapes_window "Shapes Window"
-[m1-4a]: https://github.com/lost-scripts/ls_shapes_window "Release"
-[m1-5i]: https://img.shields.io/github/v/release/lost-scripts/ls_shapes_window?color=yellow
-[m1-5a]: https://github.com/lost-scripts/ls_shapes_window "Release"
+[m1-1i]: https://img.shields.io/badge/Shapes-blue.svg
+[m1-1a]: /scripts/ls_shapes "Go to Shapes Window webpage..."
+[m1-2i]: /scripts/ls_shapes/index@2x.png
+[m1-3i]: https://img.shields.io/github/v/release/lost-scripts/ls_shapes?color=yellow
+[m1-3a]: https://github.com/lost-scripts/ls_shapes "Release"
+[m1-4i]: https://img.shields.io/github/v/tag/lost-scripts/ls_shapes "Shapes Window"
+[m1-4a]: https://github.com/lost-scripts/ls_shapes "Release"
+[m1-5i]: https://img.shields.io/github/v/release/lost-scripts/ls_shapes?color=yellow
+[m1-5a]: https://github.com/lost-scripts/ls_shapes "Release"
 -->
 
 <table width="100%" border="2" class="card">
 	<tr>
 		<th width="96" valign="top">
-			<a href="https://lost-scripts.github.io/ls_shapes_window/" title="Go to ''Shapes Window'' page..."><img src="https://img.shields.io/badge/Shapes%20Window-blue.svg" width="96" height="20"></a>
+			<a href="/scripts/ls_shapes/" title="Go to ''Shapes Window'' page..."><img src="https://img.shields.io/badge/Shapes-blue.svg" width="96" height="20"></a>
 		</th>
 		<th align="right" valign="middle" nowrap>
-			<a href="https://moho.lostmarble.com/" title="Go to Moho website"><img height="20px" src="https://img.shields.io/badge/For-Moho_Pro_14.3+-orange" alt="Moho version"></a>
-			<a href="https://github.com/lost-scripts/ls_shapes_window/releases/latest" title="Go to download page"><img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls_shapes_window?logo=github" alt="GitHub version"></a>
-			<a href="#!" style="cursor: default;"><img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls_shapes_window/total.svg?color=yellow" alt="GitHub downloads"></a>
+			<a href="https://github.com/lost-scripts/ls_shapes/releases/latest/download/ls_shapes.zip" title="Download latest version...">
+				<img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls_shapes/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue" alt="GitHub downloads">
+			</a>
+			<a href="https://github.com/lost-scripts/ls_shapes/releases/latest" title="Go to release in GitHub...">
+				<img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls_shapes?logo=github" alt="GitHub version">
+			</a>
+			<a href="https://moho.lostmarble.com/" title="Go to Moho® website...">
+				<img height="20px" src="https://img.shields.io/badge/for-Moho_Pro_14.3+-orange" alt="Moho version">
+			</a>
 		</th>
 	</tr>
 	<tr>
 		<td width="96" align="center" valign="middle">
-			<a inert href="#!" style="cursor: default;"><img src="/scripts/ls_shapes_window/docs/index@2x.png" alt="Icon" width="50%" class="colorize"></a>
+			<a inert href="#!" style="cursor: default;"><img src="/scripts/ls_shapes/docs/index@2x.png" alt="Icon" width="50%" class="colorize"></a>
 		</td>
 		<td width="1920" valign="middle">
 			<div>
-				Paleta de formas persistente y muchas otras utilidades para una mejor gestión de los vectores Moho® en general y las <i>Formas Líquidas</i> en particular... Eso es todo!
+				Paleta de formas persistente más otras muchas utilidades para una mejor gestión en Moho® de vectores en general y <em>Formas Líquidas</em> en particular.
 			</div>
 		</td>
 	</tr>
@@ -89,12 +95,18 @@ El núcleo que te proporciona todos los módulos y recursos que [Moho®](https:/
 <table width="100%" border="2" class="card">
 	<tr>
 		<th width="96" valign="top">
-			<a href="https://lost-scripts.github.io/ls/" title="Go to Script page..."><img src="https://img.shields.io/badge/Other%20Window%3F-red.svg" width="96" height="20"></a>
+			<a href="/scripts/other/ls_other_window/" title="Go to Script page..."><img src="https://img.shields.io/badge/Other%20Window%3F-red.svg" width="96" height="20"></a>
 		</th>
 		<th align="right" valign="middle" nowrap>
-			<a href="https://moho.lostmarble.com/" title="Go to Moho website"><img height="20px" src="https://img.shields.io/badge/For-Moho_Pro_14.3+-orange" alt="Moho version"></a>
-			<a href="https://github.com/lost-scripts/ls7_script/releases/latest" title="Go to download page"><img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls7_script?logo=github" alt="GitHub version"></a>
-			<a href="#!" style="cursor: default;"><img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls7_script/total.svg?color=yellow" alt="GitHub downloads"></a>
+			<a href="#!" style="cursor: default;" title="Download latest version...">
+				<img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls_other_window/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue" alt="GitHub downloads">
+			</a>
+			<a href="#!" style="cursor: default;" title="Go to release in GitHub...">
+				<img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls7_script?logo=github" alt="GitHub version">
+			</a>
+			<a href="https://moho.lostmarble.com/" title="Go to Moho® website...">
+				<img height="20px" src="https://img.shields.io/badge/For-Moho_Pro_14.3+-orange" alt="Moho version">
+			</a>
 		</th>
 	</tr>
 	<tr>
@@ -119,11 +131,11 @@ Más que características de cara al usuario, «LS Project» trabaja de forma in
 
 ~~Descarga~~ el archivo, **descomprímelo**, y procede con el método de instalación que prefieras...
 
-| MANUAL                                                                              | ASISTIDA                                                                                |
-| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| 1. Obtendrás algunas de estas carpetas:  `Menu / ScriptResources / Tool / Utility`. | 1. En Moho, ve a "Guiones > Instalar Guiones…" para abrir el asistente de instalación * |
-| 2. Ponlas en la carpeta *Scripts* de tu [Carpeta de contenido personalizado][3-1a]. | 2. Pulsa *Selecciona una carpeta de Guion*, ve y **selecciona** la que descomprimiste.  |
-| 3. Reinicia Moho® (o `Alt+Shift+Ctrl + L` para *Recargar Herramientas y Pinceles*). | *  Para más detalles, ve a la sección [23.17 Instalar guion…][3-2a] del manual de Moho. |
+| MANUAL                                                                             | ASISTIDA                                                                               |
+| ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| 1. Obtendrás algunas de estas carpetas:  `Menu / ScriptResources / Tool / Utility` | 1. En Moho, ve a "Guiones > Instalar Guiones…" para abrir el asistente de instalación* |
+| 2. Ponlas en la carpeta *Scripts* de tu [Carpeta de contenido personalizado][3-1a] | 2. Pulsa *Selecciona una carpeta de Guion*, ve y **selecciona** la que descomprimiste  |
+| 3. Reinicia Moho® (o `Alt+Shift+Ctrl + L` para *Recargar Herramientas y Pinceles*) | *  Para más detalles, ve a la sección [23.17 Instalar guion…][3-2a] del manual de Moho |
 
 Y eso es todo! El script debería aparecer en la paleta *Herramientas* y/o dentro del menú *Guiones*.
 

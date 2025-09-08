@@ -50,7 +50,7 @@ I això és tot! L'script hauria d'aparèixer a la paleta *Eines* i/o dins del m
 			2. Arràstra i solta (o copia i pega) totes elles a la carpeta Scripts de la teva <a href="https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3" title="Anar al manual de Moho">Carpeta de contingut personalitzat.</a>.
 		</td>
 		<td>
-			2. Premeu el botó "Selecciona una carpeta de Guió", aneu a la carpeta recentment descomprimida (e.g. ls_shapes_window) i seleccioneu-la.
+			2. Premeu el botó "Selecciona una carpeta de Guió", aneu a la carpeta recentment descomprimida (e.g. ls_shapes) i seleccioneu-la.
 		</td>
 	</tr>
 	<tr valign="top">

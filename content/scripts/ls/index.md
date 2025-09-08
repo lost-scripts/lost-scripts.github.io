@@ -52,28 +52,28 @@ Provides all the necessary shared/common resources and helpers that [Moho®](htt
 | :---------------: | ------------------------------------------------------------------------------ |
 | [![m1-2i]][m1-1a] | A persistent shape palette plus helpers for better management of Moho® vectors in general and Liquid Shapes in particular. |
 
-[m1-1i]: https://img.shields.io/badge/Shapes%20Window-blue.svg
-[m1-1a]: /scripts/ls_shapes_window "Go to Shapes Window webpage..."
-[m1-2i]: /scripts/ls_shapes_window/index@2x.png
-[m1-3i]: https://img.shields.io/github/v/release/lost-scripts/ls_shapes_window?color=yellow
-[m1-3a]: https://github.com/lost-scripts/ls_shapes_window "Release"
-[m1-4i]: https://img.shields.io/github/v/tag/lost-scripts/ls_shapes_window "Shapes Window"
-[m1-4a]: https://github.com/lost-scripts/ls_shapes_window "Release"
-[m1-5i]: https://img.shields.io/github/v/release/lost-scripts/ls_shapes_window?color=yellow
-[m1-5a]: https://github.com/lost-scripts/ls_shapes_window "Release"
+[m1-1i]: https://img.shields.io/badge/Shapes-blue.svg
+[m1-1a]: /scripts/ls_shapes "Go to Shapes Window webpage..."
+[m1-2i]: /scripts/ls_shapes/index@2x.png
+[m1-3i]: https://img.shields.io/github/v/release/lost-scripts/ls_shapes?color=yellow
+[m1-3a]: https://github.com/lost-scripts/ls_shapes "Release"
+[m1-4i]: https://img.shields.io/github/v/tag/lost-scripts/ls_shapes "Shapes Window"
+[m1-4a]: https://github.com/lost-scripts/ls_shapes "Release"
+[m1-5i]: https://img.shields.io/github/v/release/lost-scripts/ls_shapes?color=yellow
+[m1-5a]: https://github.com/lost-scripts/ls_shapes "Release"
 -->
 
 <table width="100%" border="2" class="card">
 	<tr>
 		<th width="96" valign="top">
-			<a href="/scripts/ls_shapes_window/" title="Go to ''Shapes Window'' page..."><img src="https://img.shields.io/badge/Shapes%20Window-blue.svg" width="96" height="20"></a>
+			<a href="/scripts/ls_shapes/" title="Go to ''Shapes Window'' page..."><img src="https://img.shields.io/badge/Shapes-blue.svg" width="96" height="20"></a>
 		</th>
 		<th align="right" valign="middle" nowrap>
-			<a href="https://github.com/lost-scripts/ls_shapes_window/releases/latest/download/ls_shapes_window.zip" title="Download latest version...">
-				<img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls_shapes_window/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue" alt="GitHub downloads">
+			<a href="https://github.com/lost-scripts/ls_shapes/releases/latest/download/ls_shapes.zip" title="Download latest version...">
+				<img height="20px" src="https://img.shields.io/github/downloads/lost-scripts/ls_shapes/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue" alt="GitHub downloads">
 			</a>
-			<a href="https://github.com/lost-scripts/ls_shapes_window/releases/latest" title="Go to release in GitHub...">
-				<img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls_shapes_window?logo=github" alt="GitHub version">
+			<a href="https://github.com/lost-scripts/ls_shapes/releases/latest" title="Go to release in GitHub...">
+				<img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls_shapes?logo=github" alt="GitHub version">
 			</a>
 			<a href="https://moho.lostmarble.com/" title="Go to Moho® website...">
 				<img height="20px" src="https://img.shields.io/badge/for-Moho_Pro_14.3+-orange" alt="Moho version">
@@ -82,7 +82,7 @@ Provides all the necessary shared/common resources and helpers that [Moho®](htt
 	</tr>
 	<tr>
 		<td width="96" align="center" valign="middle">
-			<a inert href="#!" style="cursor: default;"><img src="/scripts/ls_shapes_window/docs/index@2x.png" alt="Icon" width="50%" class="colorize"></a>
+			<a inert href="#!" style="cursor: default;"><img src="/scripts/ls_shapes/docs/index@2x.png" alt="Icon" width="50%" class="colorize"></a>
 		</td>
 		<td width="1920" valign="middle">
 			<div>
@@ -131,11 +131,11 @@ More than user-facing features, *LS Project* works under the hood not only to me
 
 ~~Download~~ the file, **unzip** it, and proceed with the installation method of your choice...
 
-| MANUAL                                                                           | ASSISTED                                                                         |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| 1. You'll get some of these folders:  `Menu / ScriptResources / Tool / Utility`. | 1. In Moho, go to "Scripts > Install Script…" to open the installation wizard *  |
-| 2. Place'em all into the *Scripts* folder of your [Custom Content Folder][3-1a]. | 2. Click *Select A Script Folder*, browse to the uzipped folder & **select it**. |
-| 3. Restart Moho or press `Alt + Shift + Ctrl + L` to *Reload Tools And Brushes*. | *  More details in chapter [23.17 Install Script…][3-2a] of Moho® user's manual. |
+| MANUAL                                                                          | ASSISTED                                                                        |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| 1. You'll get some of these folders:  `Menu / ScriptResources / Tool / Utility` | 1. In Moho®, go to "Scripts > Install Script…" to open the installation wizard* |
+| 2. Place'em all into the *Scripts* folder of your [Custom Content Folder][3-1a] | 2. Click *Select A Script Folder*, browse to the uzipped folder & **select it** |
+| 3. Restart Moho or press `Alt + Shift + Ctrl + L` to *Reload Tools And Brushes* | *  More details in chapter [23.17 Install Script…][3-2a] of Moho® user's manual |
 
 And that's all! The script should appear in *Tools* palette and/or under *Scripts* menu.
 
