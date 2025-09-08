@@ -1,23 +1,18 @@
 ---
 Title: LS
 Description: The LS Module Documentation (currently unavailable).
+#Type: doc
+Tags: [scripting]
+Categories: [module]
+Date: 2024-08-17 02:25:40
+Weight: 1
 Params:
   Author: Rai López
   Version: 0.0.0
-  Build: 20250110-005
-  Flags:
-    - WIP!
+  Build: 20250110-0005
+  Flags: [WIP!]
   Stage: todo
-  Labels:
-    - document
-    - module
-Tags:
-  - scripting
-Categories:
-  - module
-#Type: doc
-Date: 2024-08-17 02:25:40
-Weight: 1
+  Labels: [document, module]
 ---
 
 <br>

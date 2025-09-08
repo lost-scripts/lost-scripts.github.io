@@ -1,16 +1,14 @@
 ---
 Title: Instalación
 Description: Cómo instalar scripts de Moho...
-Params:
-  Author: Rai López
-Tags:
-  - other
-Categories:
-  - document
+Tags: [other]
+Categories: [document]
 Date: 2025-03-25 15:15:30
 Comments: false
 Weight: -1
 Draft: true
+Params:
+  Author: Rai López
 ---
 
 <br>

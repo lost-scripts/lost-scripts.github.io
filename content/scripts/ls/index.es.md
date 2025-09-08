@@ -1,9 +1,7 @@
 ---
 Title: LS Project
 Description: Recursos comunes/compatidos del proyecto Lost Scripts.
-Tags:
-  - utilities
-  - resources
+Tags: [utilities, resources]
 Subcategory: Index
 Date: 2023-10-17T4:24:43Z
 Modified: 2024-02-09T00:54:00Z

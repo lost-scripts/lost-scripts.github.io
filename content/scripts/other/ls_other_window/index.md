@@ -1,10 +1,8 @@
 ---
 Title: LS Other Window
 Description: Placeholder for another Lost Script intended to accomplish some Moho® related purposes?
-Tags:
-  - other
-Categories:
-  - tool
+Tags: [other]
+Categories: [tool]
 Date: 2023-02-24 11:35:40
 ---
 

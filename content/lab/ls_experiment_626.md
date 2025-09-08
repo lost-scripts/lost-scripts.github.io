@@ -1,13 +1,15 @@
 ---
 Title: LS Experiment 626
 Description: Placeholder for the Lost Script experiment number 626.
+Tags: [other]
+Categories: [tool]
+Date: 2002-06-21 14:00:00
+Comments: false
 Params:
   Author: Rai López
   Version: 0.0.0
   Build: 20020621-1600
-  Labels:
-    - script
-    - experiment
+  Labels: [script, experiment]
   Shields:
     - src: https://img.shields.io/github/v/release/lost-scripts/ls_experiment_626?color=yellow
       alt: GitHub version
@@ -15,12 +17,6 @@ Params:
       alt: GitHub tag
     - src: https://img.shields.io/github/downloads/repo-size/lost-scripts/ls_experiment_626/latest/total
       alt: GitHub downloads
-Tags:
-  - other
-Categories:
-  - tool
-Date: 2002-06-21 14:00:00
-Comments: false
 ---
 
 # LS Experiment 626

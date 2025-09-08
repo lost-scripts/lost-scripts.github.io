@@ -1,11 +1,10 @@
 ---
 Title: LS Shapes Window
 Description: Paleta de formas y utilidades para una mejor gestión de vectores Moho®
-Tags:
-  - vectors
-  - shapes
+Tags: [vectors, shapes]
 Date: 2023-10-20 17:29:00
 Modified: 2024-02-08 22:54:00
+Aliases: [/scripts/ls_shapes_window/]
 ---
 
 <table id="top" width="100%" border="0"><tr><td align="left" valign="middle" width="96">
