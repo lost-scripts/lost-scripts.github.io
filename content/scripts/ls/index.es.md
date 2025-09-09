@@ -64,7 +64,7 @@ El núcleo que te proporciona todos los módulos y recursos que [Moho®](https:/
 <table width="100%" border="2" class="card">
 	<tr>
 		<th width="96" valign="top">
-			<a href="/scripts/ls_shapes/" title="Go to ''Shapes Window'' page..."><img src="https://img.shields.io/badge/Shapes-blue.svg" width="96" height="20"></a>
+			<a href="/scripts/ls_shapes/" title="Go to ''Shapes Window'' page..."><img src="https://img.shields.io/badge/Shapes%20Window-blue.svg" width="96" height="20"></a>
 		</th>
 		<th align="right" valign="middle" nowrap>
 			<a href="https://github.com/lost-scripts/ls_shapes/releases/latest/download/ls_shapes.zip" title="Download latest version...">
