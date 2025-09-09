@@ -1,12 +1,8 @@
 ---
 Title: LS Wiggle Window
 Description: Potentially, a persistent window that will provide real mouse capture plus audio wiggling over any Moho® element.
-Tags:
-  - animation
-  - mocap
-Categories:
-  - window
-  - experiment
+Tags: [animation, mocap]
+Categories: [window, experiment]
 Category: Script
 Date: 2023-03-03 02:22:58
 Modified: 2025-03-03 02:22:58

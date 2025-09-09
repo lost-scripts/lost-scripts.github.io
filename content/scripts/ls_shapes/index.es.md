@@ -1,12 +1,10 @@
 ---
 Title: LS Shapes Window
 Description: Paleta de formas y utilidades para una mejor gestión de vectores Moho®
-Tags:
-  - vectors
-  - shapes
-Subcategory: Index
+Tags: [vectors, shapes]
 Date: 2023-10-20 17:29:00
 Modified: 2024-02-08 22:54:00
+Aliases: [/scripts/ls_shapes_window/]
 ---
 
 <table id="top" width="100%" border="0"><tr><td align="left" valign="middle" width="96">
@@ -91,11 +89,11 @@ Paleta persistente de formas y utilidades para una mejor gestión de vectores Mo
 
 [**Descarga**][h-shield1-a] el archivo, **descomprímelo**, y procede con el método de instalación que prefieras...
 
-| MANUAL                                                                              | ASISTIDA                                                                                |
-| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| 1. Obtendrás algunas de estas carpetas:  `Menu / ScriptResources / Tool / Utility`. | 1. En Moho, ve a "Guiones > Instalar Guiones…" para abrir el asistente de instalación * |
-| 2. Ponlas en la carpeta *Scripts* de tu [Carpeta de contenido personalizado][3-1a]. | 2. Pulsa *Selecciona una carpeta de Guion*, ve y **selecciona** la que descomprimiste.  |
-| 3. Reinicia Moho® (o `Alt+Shift+Ctrl + L` para *Recargar Herramientas y Pinceles*). | *  Para más detalles, ve a la sección [23.17 Instalar guion…][3-2a] del manual de Moho. |
+| MANUAL                                                                             | ASISTIDA                                                                               |
+| ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| 1. Obtendrás algunas de estas carpetas:  `Menu / ScriptResources / Tool / Utility` | 1. En Moho, ve a "Guiones > Instalar Guiones…" para abrir el asistente de instalación* |
+| 2. Ponlas en la carpeta *Scripts* de tu [Carpeta de contenido personalizado][3-1a] | 2. Pulsa *Selecciona una carpeta de Guion*, ve y **selecciona** la que descomprimiste  |
+| 3. Reinicia Moho® (o `Alt+Shift+Ctrl + L` para *Recargar Herramientas y Pinceles*) | *  Para más detalles, ve a la sección [23.17 Instalar guion…][3-2a] del manual de Moho |
 
 Y eso es todo! El script debería aparecer en la paleta *Herramientas* y/o dentro del menú *Guiones*.
 
@@ -114,7 +112,7 @@ Y eso es todo! El script debería aparecer en la paleta *Herramientas* y/o dentr
 
 ## Collab & Soporte
 
-Las sugerencias y *bugs* pueden ser reportados en la sección [*Issues*](https://github.com/lost-scripts/ls_shapes_window/issues "Ir a la sección ''Issues''") (preferiblemente) o en el hilo correspondiente, si lo hay, en la sección [*Scripting*](https://www.lostmarble.com/forum/viewforum.php?f=12 "Ir a la sección ''Scripting'' del foro Lost Marble") del [*foro Lost Marble*](https://www.lostmarble.com/forum "Ir al foro Lost Marble").
+Las sugerencias y *bugs* pueden ser reportados en la sección [*Issues*](https://github.com/lost-scripts/ls_shapes/issues "Ir a la sección ''Issues''") (preferiblemente) o en el hilo correspondiente, si lo hay, en la sección [*Scripting*](https://www.lostmarble.com/forum/viewforum.php?f=12 "Ir a la sección ''Scripting'' del foro Lost Marble") del [*foro Lost Marble*](https://www.lostmarble.com/forum "Ir al foro Lost Marble").
 
 <br>
 
@@ -134,16 +132,16 @@ Y, por supuesto, a **Lost Marble** y al talentoso equipo de Moho® por todo el t
 
 ## Otros...
 
-- <a href="https://lost-scripts.github.io/scripts/ls_shapes_window" data-alt-href="https://github.com/lost-scripts/ls_shapes_window" data-alt-textContent="Repositorio de Shapes window" data-alt-title="Ir al repositorio de Shapes Window...">Página web de Shapes Window</a>
+- <a href="https://lost-scripts.github.io/scripts/ls_shapes" data-alt-href="https://github.com/lost-scripts/ls_shapes" data-alt-textContent="Repositorio de Shapes window" data-alt-title="Ir al repositorio de Shapes Window...">Página web de Shapes Window</a>
 - [Lost Marble Forum topic](https://www.lostmarble.com/forum/viewtopic.php?t=36508 "Go to the Lost Marble Forum topic...")
 
 ---
 
-[h-shield1-i]: https://img.shields.io/github/downloads/lost-scripts/ls_shapes_window/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue
-[h-shield1-a]: https://github.com/lost-scripts/ls_shapes_window/releases/latest/download/ls_shapes_window.zip "Descarga la última versión..."
+[h-shield1-i]: https://img.shields.io/github/downloads/lost-scripts/ls_shapes/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue
+[h-shield1-a]: https://github.com/lost-scripts/ls_shapes/releases/latest/download/ls_shapes.zip "Descarga la última versión..."
 
-[h-shield2-i]: https://img.shields.io/github/release/lost-scripts/ls_shapes_window
-[h-shield2-a]: https://github.com/lost-scripts/ls_shapes_window/releases/latest "Ir a al lanzamiento en GitHub..."
+[h-shield2-i]: https://img.shields.io/github/release/lost-scripts/ls_shapes
+[h-shield2-a]: https://github.com/lost-scripts/ls_shapes/releases/latest "Ir a al lanzamiento en GitHub..."
 
 [h-shield3-i]: https://img.shields.io/badge/for-Moho_Pro_14.3+-orange
 [h-shield3-a]: https://moho.lostmarble.com/ "Ir al sito web de Moho®..."

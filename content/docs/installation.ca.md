@@ -1,16 +1,14 @@
 ---
 Title: Instal·lació
 Description: Com instal·lar scripts de Moho...
-Params:
-  Author: Rai López
-Tags:
-  - other
-Categories:
-  - document
+Tags: [other]
+Categories: [document]
 Date: 2025-03-25 15:15:30
 Comments: false
 Weight: -1
 Draft: true
+Params:
+  Author: Rai López
 ---
 
 <br>
@@ -50,7 +48,7 @@ I això és tot! L'script hauria d'aparèixer a la paleta *Eines* i/o dins del m
 			2. Arràstra i solta (o copia i pega) totes elles a la carpeta Scripts de la teva <a href="https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3" title="Anar al manual de Moho">Carpeta de contingut personalitzat.</a>.
 		</td>
 		<td>
-			2. Premeu el botó "Selecciona una carpeta de Guió", aneu a la carpeta recentment descomprimida (e.g. ls_shapes_window) i seleccioneu-la.
+			2. Premeu el botó "Selecciona una carpeta de Guió", aneu a la carpeta recentment descomprimida (e.g. ls_shapes) i seleccioneu-la.
 		</td>
 	</tr>
 	<tr valign="top">

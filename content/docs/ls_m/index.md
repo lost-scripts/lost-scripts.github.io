@@ -1,19 +1,16 @@
 ---
 Title: LS.M
 Description: The LS.M Module Documentation (currently unavailable).
+Tags: [scripting]
+Categories: [module]
+Date: 2024-08-19 02:26:11.000Z
+Weight: 3
 Params:
   Author: Rai López
   Version: 0.0.0
-  Build: 20250114-005
-  Flags:
-    - WIP!
+  Build: 20250114-0005
+  Flags: [WIP!]
   Stage: todo
-Tags:
-  - scripting
-Categories:
-  - module
-Date: 2024-08-19 02:26:11.000Z
-Weight: 3
 ---
 
 <br>
