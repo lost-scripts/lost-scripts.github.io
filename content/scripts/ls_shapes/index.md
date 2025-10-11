@@ -3,7 +3,7 @@ Title: LS Shapes Window
 Description: Shape palette plus helpers for better Moho® vectors management
 Tags: [vectors, shapes]
 Date: 2023-10-20 17:29:50
-Modified: 2024-02-08 22:54:00
+Modified: 2025-10-11 22:15:00
 Aliases: [/scripts/ls_shapes_window/]
 ---
 
@@ -32,19 +32,22 @@ Persistent shape palette plus helpers for better management of Moho® vectors in
 <table align="center" border="0" class="gallery"><tr>
 <td width="178" valign="top"><!-- width="1024px" for full width container-->
 
-![SHAPE Mode](docs/index_gallery_1.png "SHAPE Mode for shape managing")
+![SHAPE Mode](docs/index_gallery_mode_1.png "SHAPE Mode for shape management")
 </td><td width="178" valign="top">
 
-![STYLE Mode](docs/index_gallery_2.png "STYLE Mode for style managing")
-</td><td width="144" valign="top">
+![STYLE Mode](docs/index_gallery_mode_2.png "STYLE Mode for style management")
+</td><td width="178" valign="top">
 
-![TWEAK Menu](docs/index_gallery_3.png "TWEAK Menu for shape tweaking &amp; utils")
+![STYLE Mode](docs/index_gallery_mode_3.png "GROUP Mode for point group management")
+</td><td width="178" valign="top">
+
+![TWEAK Menu](docs/index_gallery_tweak_menu.png "TWEAK Menu for shape tweaking &amp; utils")
 </td><td width="264" valign="top">
 
-![LIVE Swatches](docs/index_gallery_4.gif "Live/Scrollable (plus customizable) Swatches")
+![LIVE Swatches](docs/index_gallery_view_swatches.gif "Live/Scrollable (plus customizable) Swatches")
 </td><td width="178" valign="top">
 
-![COMPACT Mode](docs/index_gallery_5.png "Or just keep it compact...")
+![COMPACT Mode](docs/index_gallery_window_compact.png "Or just keep it compact...")
 </td>
 </tr></table>
 </details>
@@ -57,11 +60,12 @@ Persistent shape palette plus helpers for better management of Moho® vectors in
 	<table align="center" border="0" class="gallery">
 		<tr>
 			<td nowrap data-comment="Use width='1024px' for full width container">
-				<img src="docs/index_gallery_1.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="SHAPE Mode for shape managing" height="512px" align="top">&ensp;
-				<img src="docs/index_gallery_2.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="STYLE Mode for style managing" height="512px" align="top">&ensp;
-				<img src="docs/index_gallery_3.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="TWEAK Menu for shape tweaking &amp; utils" height="512px" align="top">&ensp;
-				<img src="docs/index_gallery_4.gif" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="Live/Scrollable (plus customizable) Swatches" height="512px" align="top">&ensp;
-				<img src="docs/index_gallery_5.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="Or just keep it compact..." align="top">
+				<img src="docs/index_gallery_1.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="SHAPE Mode for shape management" height="512px" align="top">&ensp;
+				<img src="docs/index_gallery_2.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="STYLE Mode for style management" height="512px" align="top">&ensp;
+				<img src="docs/index_gallery_3.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="GROUP Mode for point group management" height="512px" align="top">&ensp;
+				<img src="docs/index_gallery_4.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="TWEAK Menu for shape tweaking &amp; utils" height="512px" align="top">&ensp;
+				<img src="docs/index_gallery_5.gif" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="Live/Scrollable (plus customizable) Swatches" height="512px" align="top">&ensp;
+				<img src="docs/index_gallery_6.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="Or just keep it compact..." align="top">
 				<br>
 			</td>
 		</tr>
@@ -78,6 +82,7 @@ Persistent shape palette plus helpers for better management of Moho® vectors in
 - New ways of shape creation independently of selected tool.
 - Shape selection helpers: Select all, Inverse, Similar, Identical...
 - Improved *Style* management, picking and modification.
+- Improved *Point Group* management, reordering and modification.
 - Many interactive "live" Swatches (and you can easily make your own).
 - Recoloring features plus other helpers.
 - Several window display modes to better suit your needs.
@@ -143,7 +148,7 @@ And, of course, to **Lost Marble** and the talented Moho® team for all the hard
 [h-shield2-i]: https://img.shields.io/github/release/lost-scripts/ls_shapes?logo=github
 [h-shield2-a]: https://github.com/lost-scripts/ls_shapes/releases/latest "Go to release in GitHub..."
 
-[h-shield3-i]: https://img.shields.io/badge/for-Moho_Pro_14.3+-orange
+[h-shield3-i]: https://img.shields.io/badge/for-Moho_Pro_14.3+_(Win)-orange
 [h-shield3-a]: https://moho.lostmarble.com/ "Go to Moho® website..."
 
 [3-1a]: https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3

@@ -96,7 +96,7 @@ markup:
       unsafe: true # Allow HTML in md files (WARNING: make sure content is under your control!)
     renderHooks:
       image:
-        enableDefault: true # 20250629-1130: Changed to false cause it messed MD relative image paths!  
+        useEmbedded: fallback #enableDefault: true # 20250629-1130: Changed to false cause it messed MD relative image paths! (Deprecated in 0.1.48.0)
     parser:
       autoIDType: github
       autoHeadingID: true

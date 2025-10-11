@@ -74,7 +74,7 @@ Provides all the necessary shared/common resources and helpers that [Moho®](htt
 				<img height="20px" src="https://img.shields.io/github/v/release/lost-scripts/ls_shapes?logo=github" alt="GitHub version">
 			</a>
 			<a href="https://moho.lostmarble.com/" title="Go to Moho® website...">
-				<img height="20px" src="https://img.shields.io/badge/for-Moho_Pro_14.3+-orange" alt="Moho version">
+				<img height="20px" src="https://img.shields.io/badge/for-Moho_Pro_14.3+_(Win)-orange" alt="Moho version">
 			</a>
 		</th>
 	</tr>

@@ -15,6 +15,6 @@ Shields:
   - src: https://img.shields.io/github/release/lost-scripts/ls_shapes
     url: https://github.com/lost-scripts/ls_shapes/releases/latest
     alt: Go to release in GitHub...
-  - src: https://img.shields.io/badge/for-Moho_Pro_14.3+-orange
+  - src: https://img.shields.io/badge/for-Moho_Pro_14.3+_(Win)-orange
     url: https://moho.lostmarble.com/
     alt: Go to Moho® website...
