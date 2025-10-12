@@ -1,6 +1,7 @@
 Author: Rai López
-Version: 0.3.0
-Build: 20240926-2302
+Version: 0.4.2
+Build: 20251011-2117
+Images: ["/scripts/ls_shapes/docs/index@2x.png"]
 Flags: [BETA, UPD!]
 Readmes: true
 Giscus:

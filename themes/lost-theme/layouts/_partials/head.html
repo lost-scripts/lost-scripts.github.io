@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
 <meta name="keywords" content="Moho, Animation, 2D, LostMarble, LM, LostScripts, LS, Scripting, Script, Lua, Programming, Tools, Utility, Utilities">
-<meta name="description" content="A place where find lost scripting related Moho stuff...">
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <link rel="icon" href="{{ `favicon.svg` | absURL }}" sizes="any" type="image/svg+xml">
 <link rel="stylesheet" crossorigin href="/assets/index-C1z1vz3D.css">
 <!--<link rel="stylesheet" crossorigin href="/assets/hint.min.css">-->
@@ -26,6 +26,13 @@
 
 {{- with .OutputFormats.Get "rss" -}}
 	{{- printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML -}}
+{{- end -}}
+
+{{- partial "opengraph.html" . -}} {{- $ogImage := partial "parammerger.html" (dict "context" . "key" "images") -}}
+{{- with $ogImage -}}
+    {{- $imageURL := (index . 0) | absURL -}}
+    <meta property="og:image" content="{{ $imageURL }}">
+    <meta property="og:image:url" content="{{ $imageURL }}">
 {{- end -}}
 
 {{- partialCached "fonts.html" . -}}
