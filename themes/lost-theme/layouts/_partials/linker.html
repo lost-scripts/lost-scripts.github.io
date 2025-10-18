@@ -8,9 +8,11 @@
 		{{- $zIndex := sub $itemCount (sub $index 1) -}}
 		{{- $target := cond (hasPrefix .href "/") "_self" "_blank" -}}
 		{{- $ariaLabel := printf "%s %s %s" (i18n .start) (i18n .title | default .title) (i18n .end) -}}
-		{{- $copyTypes := slice "application/rss+xml" -}} {{- /* For more types just add'em: "application/special-type" "another-type..." */ -}}
+		{{- $copyTypes := slice "application/rss+xml" "mailto" -}} {{- /* For more types just add'em: "application/special-type" "another-type..." */ -}}
 		{{- $onclick := cond (in $copyTypes .type) `copyToClipboard(event)` `` | safeJS -}}
-		<a href="{{ .href }}" onclick="{{ $onclick }}" target="{{ $target }}" id="link-{{ $index }}" class="link undecorate" style="anchor-name: --link-{{ $index }}; z-index: {{ $zIndex }};" aria-label="{{ $ariaLabel }}" data-copied="{{ i18n `rss_copied` }}" draggable="false">
+		{{- $finalHref := cond (hasPrefix .href "/") (.href | absURL) .href -}}
+		{{- $finalTooltip := i18n (.tooltip | default "copied") | default "Copied to clipboard!" -}}
+		<a href="{{ $finalHref }}" onclick="{{ $onclick }}" target="{{ $target }}" id="link-{{ $index }}" class="link undecorate" style="anchor-name: --link-{{ $index }}; z-index: {{ $zIndex }};" aria-label="{{ $ariaLabel }}" data-copied="{{ $finalTooltip }}" draggable="false">
 			{{- if .src -}}
 				<img src="{{ .src }}" class="link-icon colorize" alt="{{ .alt }}">
 			{{- else if .icon -}}

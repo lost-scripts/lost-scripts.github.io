@@ -30,9 +30,9 @@
 
 {{- partial "opengraph.html" . -}} {{- $ogImage := partial "parammerger.html" (dict "context" . "key" "images") -}}
 {{- with $ogImage -}}
-    {{- $imageURL := (index . 0) | absURL -}}
-    <meta property="og:image" content="{{ $imageURL }}">
-    <meta property="og:image:url" content="{{ $imageURL }}">
+	{{- $imageURL := (index . 0) | absURL -}}
+	<meta property="og:image" content="{{ $imageURL }}">
+	<meta property="og:image:url" content="{{ $imageURL }}">
 {{- end -}}
 
 {{- partialCached "fonts.html" . -}}

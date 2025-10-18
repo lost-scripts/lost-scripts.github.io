@@ -127,6 +127,12 @@ other = 'Netejar filtres'
 [reset_reload]
 other = 'Restablecer totes les preferències i recarregar?'
 
+[copied]
+other = 'Copiat al porta-retalls!'
+
+[email_copied]
+other = 'Email copiat!'
+
 [rss_copied]
 other = 'Enllaç RSS copiat!'
 

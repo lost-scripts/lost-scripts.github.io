@@ -371,10 +371,14 @@ updatePseudoStyles(curAccent);
 window.copyToClipboard = function(event) {
 	event.preventDefault();
 	const link = event.currentTarget; // Moved outer block bellow to avoid `undefined` error (https://stackoverflow.com/a/73426689/2805176)
-	const linkData = link.getAttribute("data-copied") || "RSS link copied to clipboard!";
+	const linkData = link.getAttribute("data-copied") || "Copied to clipboard!";
 	const linkHref = link.getAttribute('href');
-	const linkUrl = linkHref.startsWith("/") ? window.location.origin + linkHref : linkHref; // Ensure the URL is absolute
+	let linkUrl = linkHref.startsWith("/") ? window.location.origin + linkHref : linkHref; // Ensure the URL is absolute
 	const linkTip = link.nextElementSibling;
+
+	if (linkUrl.startsWith("mailto:")) {
+		linkUrl = linkUrl.substring("mailto:".length); // Remove the prefix "mailto:"
+	}
 
 	navigator.clipboard.writeText(linkUrl).then(() => {
 		console.log("URL correctly copied to clipboard:", linkUrl);

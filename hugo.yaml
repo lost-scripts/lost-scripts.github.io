@@ -197,12 +197,15 @@ params:
       icon: fa-solid fa-envelope
       alt: Email
       title: Email...
+      type: mailto
+      tooltip: email_copied
     - href: /index.xml
       icon: fa-solid fa-rss
       alt: Subscribe?
       title: Subscribe?
       rel: alternate
       type: application/rss+xml
+      tooltip: rss_copied
     - href: https://mohoscripting.com/
       src: /icons/icon_ms_logo.svg
       alt: Moho Scripting

@@ -127,6 +127,12 @@ other = 'Reset filters'
 [reset_reload]
 other = 'Reset all preferences and reload?'
 
+[copied]
+other = 'Copied to clipboard!'
+
+[email_copied]
+other = 'Email copied to clipboard!'
+
 [rss_copied]
 other = 'RSS link copied to clipboard!'
 

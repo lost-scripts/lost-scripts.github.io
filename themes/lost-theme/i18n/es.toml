@@ -127,6 +127,12 @@ other = 'Limpiar filtros'
 [reset_reload]
 other = 'Restablecer todas las preferencias y recargar?'
 
+[copied]
+other = '¡Copiado al portapapeles!'
+
+[email_copied]
+other = '¡Email copiado!'
+
 [rss_copied]
 other = '¡Enlace RSS copiado!'
 
