@@ -1,6 +1,6 @@
 ---
 Title: LS.GUI
-Description: The LS.GUI Module Documentation (currently unavailable)..
+Description: The LS.GUI Module Documentation (currently unavailable).
 Tags: [scripting]
 Categories: [module]
 Date: 2024-08-18 02:25:59.000Z

@@ -63,6 +63,8 @@ local stitch = [[
 
 <br>
 
+**[*](https://lostastools.blogspot.com/2012/02/lost-wiggle-tool.html "Temp link for demo purposes...")**
+
 ---
 
 <p align="center" style="display: none;">Copyright © 2024 · Rai López · All Rights Reserved</p>
