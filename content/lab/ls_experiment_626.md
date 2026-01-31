@@ -63,7 +63,7 @@ local stitch = [[
 
 <br>
 
-**[*](https://lostastools.blogspot.com/2012/02/lost-wiggle-tool.html "Temp link for demo purposes...")**
+**[*](https://lostastools.blogspot.com/2012/02/lost-wiggle-tool.html "Temp link to LWT for demo purposes...")** | **[*](https://es.scribd.com/document/81405362/The-Lost-Wiggle-Tool-Users-Manual "Temp alt. link to LWT user manual...")**
 
 ---
 
