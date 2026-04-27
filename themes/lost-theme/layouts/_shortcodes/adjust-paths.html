@@ -9,5 +9,3 @@
 
 {{- $content = $content | replaceRE `(src|href|srcset|poster|data-[\w-]+)=['"](([^'"/]+|./[^'"]+))['"]` (printf "$1=\"%s$2\"" .Page.RelPermalink) -}}
 {{- $content | safeHTML -}}
-
-

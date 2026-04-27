@@ -30,7 +30,7 @@
 			{{- $dateHuman := .Date | time.Format ":date_long" -}}
 			<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
 		{{- end -}}
-	
+
 		{{ .Content }}
 		{{- partial "terms.html" (dict "taxonomy" "tags" "page" .) -}}
 	{{- end -}}
