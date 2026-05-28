@@ -9,7 +9,7 @@ E.G. (specify a default value at the end): {{< get-param `unDefinedParam` `` `NO
 {{- $siteGlobals := dict
 	"baseURL" .Site.BaseURL
 	"copyright" .Site.Copyright
-	"languageCode" .Site.LanguageCode
+	"languageCode" .Site.Language.Locale
 	"title" .Site.Title
 -}}
 {{- $root := index $siteGlobals $param | default (index .Site.Params $param) -}} {{- /* {{- $root := index .Site.Params (index .Params 0) -}} */ -}}

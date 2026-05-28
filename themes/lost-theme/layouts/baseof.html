@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}" dir="{{ .Site.Language.LanguageDirection | default `ltr` }}" style="{{- partial `styler.html` . | safeCSS -}}">
+<html lang="{{ .Site.Language.Lang }}" dir="{{ .Site.Language.Direction | default `ltr` }}" style="{{- partial `styler.html` . | safeCSS -}}">
 
 <head>
 	{{- .Store.Set "isHome" (eq .Page.RelPermalink .Site.Params.homepage) -}}

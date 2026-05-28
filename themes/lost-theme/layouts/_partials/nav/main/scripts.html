@@ -3,7 +3,12 @@
 <ul class="nav-articles">
 	{{- $currentPage := . -}}
 	{{- $homepage := (site.Params.homepage | default "/") | urlize -}}
-	{{- $allPages := where .Site.AllPages "Kind" "page" -}}
+	{{- $allPages := slice -}}
+	{{- range hugo.Sites -}}
+		{{- $allPages = $allPages | append (where .Pages "Kind" "page") -}}
+	{{- end -}}
+
+	{{- $pageByTranslationKey := newScratch -}}
 
 	{{- $pageByTranslationKey := newScratch -}}
 	{{- $orderCounter := 0 -}}

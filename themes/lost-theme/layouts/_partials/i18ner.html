@@ -1,27 +1,27 @@
 {{- /* Partial for constructing the language selector */ -}}
 
-{{- if gt (len .Site.Languages) 1 -}}
+{{- if gt (len hugo.Sites) 1 -}}
 	<div id="i18ner">
 		{{- if .IsTranslated -}}
 			{{- if lt (len .Translations) 2 -}}
 				<!-- Button for less than three languages -->
 				{{- range .Translations -}}
 					<button id="i18ner-but" onclick="location.href='{{ .Permalink }}'"  title="{{ i18n `translate` }}">
-						{{ .Language.LanguageCode | strings.FirstUpper }}
+						{{ .Language.Locale | strings.FirstUpper }}
 					</button>
 				{{- end -}}
 			{{- else -}}
 				<!-- Dropdown for more than two languages -->
 				<select id="i18ner-sel" type="select" onchange="location = this.value;" title="{{ i18n `translate` }} ({{ add (len .Translations) 1 }})">
-					<option value="{{ $.Permalink }}" title="{{ $.Site.Language.LanguageName }}" {{ if eq $.Page.Language.Lang $.Site.Language.Lang }}selected{{ end }}>{{ $.Site.Language.LanguageCode | strings.FirstUpper }}</option>
+					<option value="{{ $.Permalink }}" title="{{ $.Site.Language.Label }}" {{ if eq $.Page.Language.Lang $.Site.Language.Lang }}selected{{ end }}>{{ $.Site.Language.Locale | strings.FirstUpper }}</option>
 					{{- range .Translations -}}
-						<option value="{{ .Permalink }}" title="{{ .Language.LanguageName }}" {{ if eq .Lang $.Page.Language.Lang }}selected{{ end }}>{{ .Language.LanguageCode | strings.FirstUpper }}</option>
+						<option value="{{ .Permalink }}" title="{{ .Language.Label }}" {{ if eq .Lang $.Page.Language.Lang }}selected{{ end }}>{{ .Language.Locale | strings.FirstUpper }}</option>
 					{{- end -}}
 				</select>
 			{{- end -}}
 		{{- else -}}
 			<button id="i18ner-dis" class="disabled" disabled>
-				{{ $.Site.Language.LanguageCode | strings.FirstUpper }}
+				{{ $.Site.Language.Locale | strings.FirstUpper }}
 			</button>
 		{{- end -}}
 	</div>
