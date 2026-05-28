@@ -21,18 +21,18 @@
 					{{- $iconPathPNG := printf "%s.png" $iconPathBase -}}
 					{{- $iconPathJPG := printf "%s.jpg" $iconPathBase -}}
 
-					{{- $iconPathBaseDocs := path.Join $fileDir "docs" $baseName -}}
-					{{- $iconPathDocsSVG := printf "%s.svg" $iconPathBaseDocs -}}
-					{{- $iconPathDocsP2x := printf "%s@2x.png" $iconPathBaseDocs -}}
-					{{- $iconPathDocsPNG := printf "%s.png" $iconPathBaseDocs -}}
-					{{- $iconPathDocsJPG := printf "%s.jpg" $iconPathBaseDocs -}}
+					{{- $iconPathBaseAssets := path.Join $fileDir "assets" "icon" -}} {{- /* $baseName -> "icon" (to match Monorepo) */ -}}
+					{{- $iconPathAssetsSVG := printf "%s.svg" $iconPathBaseAssets -}}
+					{{- $iconPathAssetsP2x := printf "%s@2x.png" $iconPathBaseAssets -}}
+					{{- $iconPathAssetsPNG := printf "%s.png" $iconPathBaseAssets -}}
+					{{- $iconPathAssetsJPG := printf "%s.jpg" $iconPathBaseAssets -}}
 
 					{{- /*<!-- Debugging: Show generated routes in HTML -->
 					<span style="font-size: 0.67em; color: red; display: block;">
-						SVG: {{- if fileExists $iconPathSVG }}{{ $iconPathSVG }}{{ else if fileExists $iconPathDocsSVG }}{{ $iconPathDocsSVG }}{{ end }}<br>
-						P2x: {{- if fileExists $iconPathP2x }}{{ $iconPathP2x }}{{ else if fileExists $iconPathDocsP2x }}{{ $iconPathDocsP2x }}{{ end }}<br>
-						PNG: {{- if fileExists $iconPathPNG }}{{ $iconPathPNG }}{{ else if fileExists $iconPathDocsPNG }}{{ $iconPathDocsPNG }}{{ end }}<br>
-						JPG: {{- if fileExists $iconPathJPG }}{{ $iconPathJPG }}{{ else if fileExists $iconPathDocsJPG }}{{ $iconPathDocsJPG }}{{ end }}
+						SVG: {{- if fileExists $iconPathSVG }}{{ $iconPathSVG }}{{ else if fileExists $iconPathAssetsSVG }}{{ $iconPathAssetsSVG }}{{ end }}<br>
+						P2x: {{- if fileExists $iconPathP2x }}{{ $iconPathP2x }}{{ else if fileExists $iconPathAssetsP2x }}{{ $iconPathAssetsP2x }}{{ end }}<br>
+						PNG: {{- if fileExists $iconPathPNG }}{{ $iconPathPNG }}{{ else if fileExists $iconPathAssetsPNG }}{{ $iconPathAssetsPNG }}{{ end }}<br>
+						JPG: {{- if fileExists $iconPathJPG }}{{ $iconPathJPG }}{{ else if fileExists $iconPathAssetsJPG }}{{ $iconPathAssetsJPG }}{{ end }}
 					</span>
 					*/ -}}
 
@@ -44,14 +44,14 @@
 						<img src="{{ $iconPathPNG | relURL }}" class="icon colorize" alt="{{ .page.Title }} icon">
 					{{- else if (fileExists $iconPathJPG) -}}
 						<img src="{{ $iconPathJPG | relURL }}" class="icon colorize" alt="{{ .page.Title }} icon">
-					{{- else if (fileExists $iconPathDocsSVG) -}}
-						<img src="{{ $iconPathDocsSVG | relURL }}" class="icon colorize" alt="{{ .page.Title }} icon">
-					{{- else if (fileExists $iconPathDocsP2x) -}}
-						<img src="{{ $iconPathDocsP2x | relURL }}" class="icon colorize" alt="{{ .page.Title }} icon">
-					{{- else if (fileExists $iconPathDocsPNG) -}}
-						<img src="{{ $iconPathDocsPNG | relURL }}" class="icon colorize" alt="{{ .page.Title }} icon">
-					{{- else if (fileExists $iconPathDocsJPG) -}}
-						<img src="{{ $iconPathDocsJPG | relURL }}" class="icon colorize" alt="{{ .page.Title }} icon">
+					{{- else if (fileExists $iconPathAssetsSVG) -}}
+						<img src="{{ $iconPathAssetsSVG | relURL }}" class="icon colorize" alt="{{ .page.Title }} icon">
+					{{- else if (fileExists $iconPathAssetsP2x) -}}
+						<img src="{{ $iconPathAssetsP2x | relURL }}" class="icon colorize" alt="{{ .page.Title }} icon">
+					{{- else if (fileExists $iconPathAssetsPNG) -}}
+						<img src="{{ $iconPathAssetsPNG | relURL }}" class="icon colorize" alt="{{ .page.Title }} icon">
+					{{- else if (fileExists $iconPathAssetsJPG) -}}
+						<img src="{{ $iconPathAssetsJPG | relURL }}" class="icon colorize" alt="{{ .page.Title }} icon">
 					{{- else -}}
 						<img src="/icons/icon_unknown.png" class="icon colorize" alt="❌">
 					{{- end -}}

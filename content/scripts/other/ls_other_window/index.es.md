@@ -16,7 +16,7 @@ Params:
 
 <table id="top" width="100%" border="0"><tr><td align="left" valign="middle" width="96">
 
-[![Icon](docs/index@2x.png)](#! "Icon")
+[![Icon](assets/icon.png)](#! "Icon")
 </td><td align="right" valign="middle" width="1920" nowrap>
 
 [![h-shield1-i]][h-shield1-a] [![h-shield2-i]][h-shield2-a] [![h-shield3-i]][h-shield3-a]

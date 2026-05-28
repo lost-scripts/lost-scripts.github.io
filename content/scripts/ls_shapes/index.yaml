@@ -1,7 +1,7 @@
 Author: Rai López
 Version: 0.4.2
 Build: 20251011-2117
-Images: ["/scripts/ls_shapes/docs/index@2x.png"]
+Images: ["/scripts/ls_shapes/assets/icon.png"]
 Flags: [BETA, UPD!]
 Readmes: true
 Giscus:

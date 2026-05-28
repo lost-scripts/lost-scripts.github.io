@@ -9,7 +9,7 @@ Aliases: [/scripts/ls_shapes_window/]
 
 <table id="top" width="100%" border="0"><tr><td align="left" valign="middle" width="96">
 
-[![Icon](docs/index@2x.png "Icon")](#! "Icon")
+[![Icon](assets/icon.png "Icon")](#! "Icon")
 </td><td align="right" valign="middle" width="1920" nowrap>
 
 [![h-shield1-i]][h-shield1-a] [![h-shield2-i]][h-shield2-a] [![h-shield3-i]][h-shield3-a]
@@ -26,46 +26,46 @@ Paleta persistente de formas y utilidades para una mejor gestión de vectores Mo
 <details align="center" width="100%" class="gallery-holder" style="cursor: pointer; user-select: none;">
 <summary title="Haz clic aquí para expandir/contraer la galería de imágenes"><strong>UI</strong> <sub><sup>(Expandir/Contraer)</sup></sub><br><br>
 
-[![UI](docs/index_gallery.png "UI")](#! "UI")
+[![UI](assets/image_gallery.png "UI")](#! "UI")
 </summary><br>
 
 <table align="center" border="0" class="gallery"><tr>
 <td width="178" valign="top"><!-- width="1024px" for full width container-->
 
-![SHAPE Mode](docs/index_gallery_mode_1.png "SHAPE Mode para la gestión de formas")
+![SHAPE Mode](assets/image_gallery_mode_1.png "SHAPE Mode para la gestión de formas")
 </td><td width="178" valign="top">
 
-![STYLE Mode](docs/index_gallery_mode_2.png "STYLE Mode para la gestión de estilos")
+![STYLE Mode](assets/image_gallery_mode_2.png "STYLE Mode para la gestión de estilos")
 </td><td width="178" valign="top">
 
-![STYLE Mode](docs/index_gallery_mode_3.png "GROUP Mode para la gestión de grupos de puntos")
+![STYLE Mode](assets/image_gallery_mode_3.png "GROUP Mode para la gestión de grupos de puntos")
 </td><td width="178" valign="top">
 
-![TWEAK Menu](docs/index_gallery_tweak_menu.png "TWEAK Menu para retoques y utilidades")
+![TWEAK Menu](assets/image_gallery_tweak_menu.png "TWEAK Menu para retoques y utilidades")
 </td><td width="264" valign="top">
 
-![LIVE Swatches](docs/index_gallery_view_swatches.gif "Live/Scrollable (amén de personalizables) Swatches")
+![LIVE Swatches](assets/image_gallery_view_swatches.gif "Live/Scrollable (amén de personalizables) Swatches")
 </td><td width="178" valign="top">
 
-![COMPACT Mode](docs/index_gallery_window_compact.png "O simplemente déjala compacta...")
+![COMPACT Mode](assets/image_gallery_window_compact.png "O simplemente déjala compacta...")
 </td>
 </tr></table>
 </details>
 <!--
 <details align="center" width="100%" class="gallery-holder" style="cursor:pointer; user-select: none;">
 	<summary title="Click the arrow to expand/collapse image gallery">
-		<a inert href="#!"><img align="center" height="96px" src="docs/index_gallery.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" alt="Script UI" style="vertical-align: middle;"></a>&ensp;&ensp;
+		<a inert href="#!"><img align="center" height="96px" src="assets/image_gallery.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" alt="Script UI" style="vertical-align: middle;"></a>&ensp;&ensp;
 	</summary>
 	<br>
 	<table align="center" border="0" class="gallery">
 		<tr>
 			<td nowrap data-comment="Use width='1024px' for full width container">
-				<img src="docs/index_gallery_1.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="SHAPE Mode for shape management" height="512px" align="top">&ensp;
-				<img src="docs/index_gallery_2.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="STYLE Mode for style management" height="512px" align="top">&ensp;
-				<img src="docs/index_gallery_3.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="GROUP Mode for point group management" height="512px" align="top">&ensp;
-				<img src="docs/index_gallery_4.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="TWEAK Menu for shape tweaking &amp; utils" height="512px" align="top">&ensp;
-				<img src="docs/index_gallery_5.gif" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="Live/Scrollable (plus customizable) Swatches" height="512px" align="top">&ensp;
-				<img src="docs/index_gallery_6.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="Or just keep it compact..." align="top">
+				<img src="assets/image_gallery_1.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="SHAPE Mode for shape management" height="512px" align="top">&ensp;
+				<img src="assets/image_gallery_2.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="STYLE Mode for style management" height="512px" align="top">&ensp;
+				<img src="assets/image_gallery_3.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="GROUP Mode for point group management" height="512px" align="top">&ensp;
+				<img src="assets/image_gallery_4.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="TWEAK Menu for shape tweaking &amp; utils" height="512px" align="top">&ensp;
+				<img src="assets/image_gallery_5.gif" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="Live/Scrollable (plus customizable) Swatches" height="512px" align="top">&ensp;
+				<img src="assets/image_gallery_6.png" onerror="this.onerror=null; this.src=this.getAttribute('src').split('/').pop();" title="Or just keep it compact..." align="top">
 				<br>
 			</td>
 		</tr>

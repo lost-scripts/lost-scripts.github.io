@@ -20,7 +20,7 @@ Draft: true
 
 <table id="top" width="100%" border="0"><tr><td align="left" valign="middle" width="96">
 
-[![Icon](docs/index@2x.png "Icon")](#! "Icon")
+[![Icon](assets/icon.png "Icon")](#! "Icon")
 </td><td align="right" valign="middle" width="1920" nowrap>
 
 [![h-shield1-i]][h-shield1-a] [![h-shield2-i]][h-shield2-a] [![h-shield3-i]][h-shield3-a]
@@ -37,16 +37,16 @@ Summary or overview of what the script does and its main purpose.
 <details align="center" width="100%" class="gallery-holder" style="cursor: pointer; user-select: none;">
 <summary title="Click here to expand/collapse image gallery"><strong>UI</strong> <sub><sup>(Expand/Collapse)</sup></sub><br><br>
 
-[![UI](docs/index_gallery.png "UI")](#! "UI")
+[![UI](assets/image_gallery.png "UI")](#! "UI")
 </summary><br>
 
 <table align="center" border="0" class="gallery"><tr>
 <td width="XXX" valign="top">
 
-![Image 1](docs/index_gallery_1.png "Description 1")
+![Image 1](assets/image_gallery_1.png "Description 1")
 </td><td width="XXX" valign="top">
 
-![Image 2](docs/index_gallery_2.png "Description 2")
+![Image 2](assets/image_gallery_2.png "Description 2")
 </td>
 </tr></table>
 </details>

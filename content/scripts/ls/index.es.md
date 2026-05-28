@@ -11,7 +11,7 @@ Weight: -1
 <!-- mIxEd style head (quite simple and full width in GitHub) -->
 <table id="top" width="100%" border="0"><tr><td align="left" valign="middle" width="96">
 
-[![Icon](docs/index@2x.png "Icon")](#! "Icon")
+[![Icon](assets/icon.png "Icon")](#! "Icon")
 </td><td align="right" valign="middle" width="1920" nowrap>
 
 [![h-shield1-i]][h-shield1-a] [![h-shield2-i]][h-shield2-a] [![h-shield3-i]][h-shield3-a]
@@ -21,7 +21,7 @@ Weight: -1
 <table width="100%" border="0">
 	<tr>
 		<th align="center" valign="middle" width="96">
-			<a href="#!" style="cursor: default;"><img src="index@2x.png" title="Icon" class="colorize"></a>
+			<a href="#!" style="cursor: default;"><img src="icon.png" title="Icon" class="colorize"></a>
 		</th>
 		<th align="right" valign="middle" width="1920" nowrap>
 			<a href="https://moho.lostmarble.com/" title="Go to Moho website"><img height="20px" src="https://img.shields.io/badge/For-Moho_Pro_14.3+-orange" alt="Moho version"></a>
@@ -33,7 +33,7 @@ Weight: -1
 -->
 
 <!-- Pure Markdown style head (simplest, but not full width in GitHub)
-| ![Icon](index@2x.png "Icon") | [![h-shield1-i]][h-shield1-a] [![h-shield2-i]][h-shield2-a] [![h-shield3-i]][h-shield3-a] |
+| ![Icon](icon.png "Icon") | [![h-shield1-i]][h-shield1-a] [![h-shield2-i]][h-shield2-a] [![h-shield3-i]][h-shield3-a] |
 | :--------------------------- | ----------------------------------------------------------------------------------------: |
 -->
 
@@ -52,7 +52,7 @@ El núcleo que te proporciona todos los módulos y recursos que [Moho®](https:/
 
 [m1-1i]: https://img.shields.io/badge/Shapes-blue.svg
 [m1-1a]: /scripts/ls_shapes "Go to Shapes Window webpage..."
-[m1-2i]: /scripts/ls_shapes/index@2x.png
+[m1-2i]: /scripts/ls_shapes/icon.png
 [m1-3i]: https://img.shields.io/github/v/release/lost-scripts/ls_shapes?color=yellow
 [m1-3a]: https://github.com/lost-scripts/ls_shapes "Release"
 [m1-4i]: https://img.shields.io/github/v/tag/lost-scripts/ls_shapes "Shapes Window"
@@ -80,7 +80,7 @@ El núcleo que te proporciona todos los módulos y recursos que [Moho®](https:/
 	</tr>
 	<tr>
 		<td width="96" align="center" valign="middle">
-			<a inert href="#!" style="cursor: default;"><img src="/scripts/ls_shapes/docs/index@2x.png" alt="Icon" width="50%" class="colorize"></a>
+			<a inert href="#!" style="cursor: default;"><img src="/scripts/ls_shapes/assets/icon.png" alt="Icon" width="50%" class="colorize"></a>
 		</td>
 		<td width="1920" valign="middle">
 			<div>
