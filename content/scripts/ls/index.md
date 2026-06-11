@@ -46,14 +46,14 @@ Provides all the necessary shared/common resources and helpers that *[Moho®](ht
 ## *Featured Scripts*
 
 <table width='100%' border='3' class='card'><tr>
-    <td align='center' width='96'><a href='https://github.com/lost-scripts/ls_dummy'><picture><source media='(prefers-color-scheme: dark)' srcset='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_dummy/assets/icon_dark.png'><source media='(prefers-color-scheme: light)' srcset='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_dummy/assets/icon_light.png'><img src='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_dummy/assets/icon.png' width='48' alt='Icon' class='colorize'></picture></a></td>
-    <td width='724'><div><a href='https://github.com/lost-scripts/ls_dummy'><strong>Dummy</strong></a><br>A dummy script/placeholder just for the sake of testing different parts of the READMEs and Lost Script&trade; webpage.</div></td>
-    <td align='center' width='192'><a href='https://github.com/lost-scripts/ls_dummy'><img src='https://img.shields.io/badge/Soon…-inactive.svg' alt='Download' title='Download: Unavailable' width='160'></a></td>
-</tr></table>
-<table width='100%' border='3' class='card'><tr>
     <td align='center' width='96'><a href='https://github.com/lost-scripts/ls_shapes'><picture><source media='(prefers-color-scheme: dark)' srcset='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_shapes/assets/icon_dark.png'><source media='(prefers-color-scheme: light)' srcset='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_shapes/assets/icon_light.png'><img src='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_shapes/assets/icon.png' width='48' alt='Icon' class='colorize'></picture></a></td>
     <td width='724'><div><a href='https://github.com/lost-scripts/ls_shapes'><strong>Shapes</strong></a><br>Persistent shape palette plus helpers for better Moho&reg; vector/s management.</div></td>
     <td align='center' width='192'><a href='https://github.com/lost-scripts/ls_shapes/releases/latest/download/ls_shapes.zip'><img src='https://img.shields.io/github/downloads/lost-scripts/ls_shapes/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue&label=' alt='Download' title='Download: ls_shapes.zip' width='160'></a></td>
+</tr></table>
+<table width='100%' border='3' class='card'><tr>
+    <td align='center' width='96'><a href='https://github.com/lost-scripts/ls_dummy'><picture><source media='(prefers-color-scheme: dark)' srcset='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_dummy/assets/icon_dark.png'><source media='(prefers-color-scheme: light)' srcset='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_dummy/assets/icon_light.png'><img src='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_dummy/assets/icon.png' width='48' alt='Icon' class='colorize'></picture></a></td>
+    <td width='724'><div><a href='https://github.com/lost-scripts/ls_dummy'><strong>Dummy</strong></a><br>A dummy script/placeholder just for the sake of testing different parts of the READMEs and Lost Script&trade; webpage.</div></td>
+    <td align='center' width='192'><a href='https://github.com/lost-scripts/ls_dummy'><img src='https://img.shields.io/badge/Soon…-inactive.svg' alt='Download' title='Download: Unavailable' width='160'></a></td>
 </tr></table>
 
 
@@ -109,7 +109,7 @@ More than user-facing features, *LS<sub><sup><sup> Core</sup></sup></sub>* works
 
 Starting from you have already unzipped the downloaded file, and regardless of whether it is the Core or any other script, you actually have two different installation methods...
 
-| MANUAL (RECOMMENDED)                                                             | ASSISTED (BY MOHO®)                                                              |
+| MANUAL (RECOMMENDED)                                                             | ASSISTED BY MOHO®                                                                |
 | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | 1. You'll get some of these folders:  `Menu / ScriptResources / Tool / Utility`  | 1. In Moho®, go to "Scripts > Install Script…" to open the installation wizard*  |
 | 2. Place'em all into the *Scripts* folder of your [Custom Content Folder][3-1a]  | 2. Click *Select A Script Folder*, browse to the unzipped folder & **select it** |

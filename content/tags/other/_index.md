@@ -1,5 +1,5 @@
 ---
-Title: Other...
+Title: Other
 Description: Everything else...
 Date: 2025-03-08 02:03:30
 Weight: 999
