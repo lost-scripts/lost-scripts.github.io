@@ -1,11 +1,18 @@
-{{- /* Adjust relative paths for HTML kind of resources of the "homepaged" post (WARNING: './' not allowed!) */ -}}
+{{- /* Smart HTML path fixer for multi-language bundles (Handles 'assets/' and './assets/') */ -}}
+{{- $content := .Inner -}}
+{{- $isTranslation := false -}}
 
-{{- $content := "" -}}
-{{- if (isset . "Inner") -}}
-	{{- $content = .Inner -}}
-{{- else -}}
-	{{- $content = .Content -}}
+{{- /* Check if the current page URL belongs to a translation */ -}}
+{{- if or (strings.Contains .Page.RelPermalink "/es/") (strings.Contains .Page.RelPermalink "/ca/") -}}
+	{{- $isTranslation = true -}}
 {{- end -}}
 
-{{- $content = $content | replaceRE `(src|href|srcset|poster|data-[\w-]+)=['"](([^'"/]+|./[^'"]+))['"]` (printf "$1=\"%s$2\"" .Page.RelPermalink) -}}
-{{- $content | safeHTML -}}
+{{- if not $isTranslation -}}
+	{{- /* Default language: leave assets as-is for GitHub and native rendering */ -}}
+	{{- $content | safeHTML -}}
+{{- else -}}
+	{{- /* Translation: inject the 3-level-back path */ -}}
+	{{- $scriptDir := urlize (path.Base .Page.File.Dir) -}}
+	{{- $content = $content | replaceRE `(src|href|srcset)=['"](?:\./)?assets/([^'"]+)['"]` (printf "$1=\"../../../scripts/%s/assets/$2\"" $scriptDir) -}}
+	{{- $content | safeHTML -}}
+{{- end -}}
