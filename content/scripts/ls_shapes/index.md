@@ -4,17 +4,28 @@ Description: Shape palette plus helpers for better Moho® vectors management
 Tags: [vectors, shapes]
 Date: 2023-10-20 17:29:50
 Modified: 2025-10-11 22:15:00
-Aliases: [/scripts/ls_shapes_window/]
+Buildme: true
 ---
 
-<table id="top" width="100%" border="0"><tr><td align="left" valign="middle" width="96">
-
-[![Icon](assets/icon.png "Icon")](#! "Icon")
-</td><td align="right" valign="middle" width="1920" nowrap>
-
-[![h-shield1-i]][h-shield1-a] [![h-shield2-i]][h-shield2-a] [![h-shield3-i]][h-shield3-a]
-</td></tr></table>
-
+<!--{{% adjust-paths %}}-->
+<table id='top' width='100%' border='0'>
+    <tr>
+        <td align='center' valign='middle' width='96'>
+            <picture>
+                <source media='(prefers-color-scheme: dark)' srcset='assets/icon_dark.png'>
+                <source media='(prefers-color-scheme: light)' srcset='assets/icon_light.png'>
+                <img src='assets/icon.png' width='48' alt='Icon' title='Shapes: Persistent shape palette plus helpers for better Moho&reg; vector/s management.' class='colorize'>
+            </picture>
+        </td>
+        <td align='right' valign='middle' width='916' nowrap>
+            <a href='https://github.com/lost-scripts/ls_shapes/releases/latest/download/ls_shapes.zip' title='Download latest version...'><img src='https://img.shields.io/github/downloads/lost-scripts/ls_shapes/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue&label=Download' alt='Download'></a> 
+            <a href='https://github.com/lost-scripts/ls_shapes/releases/latest' title='Go to release in GitHub...'><img src='https://img.shields.io/github/v/release/lost-scripts/ls_shapes?logo=github&color=yellow&label=Release' alt='Release'></a> 
+            <a href='https://moho.lostmarble.com/' title='Go to Moho® homepage...'><img src='https://img.shields.io/badge/For-Moho_Moho®_14.3+_Pro-orange' alt='Moho'></a> 
+        </td>
+    </tr>
+</table>
+<!--{{% /adjust-paths %}}-->
+ 
 # LS Shapes Window
 
 Persistent shape palette plus helpers for better management of Moho® vectors in general and *Liquid Shapes* in particular. This script provides a visual and user-friendly interface for performing complex shape operations effortlessly.
@@ -90,7 +101,7 @@ Persistent shape palette plus helpers for better management of Moho® vectors in
 
 <br>
 
-## Installation
+## Download & Install
 
 [**Download**][h-shield1-a] the file, **unzip** it, and proceed with the installation method of your choice...
 
@@ -102,7 +113,7 @@ Persistent shape palette plus helpers for better management of Moho® vectors in
 
 And that's all! The script should appear in *Tools* palette and/or under *Scripts* menu.
 
-> ⚠ **WARNING:** Please, make sure you have uninstalled every Lost Script on your system before removing any of these shared resources or they may start throwing errors or stop working. For uninstalling a script, just remove any file and folder matching its name and restart Moho® or Reload Tools And Brushes if necessary.
+> ⚠ **WARNING:** Please, make sure you have uninstalled every Lost Script on your system before removing any shared resource or they may start throwing errors or stop working. For uninstalling a script, just remove any file and folder matching its name and restart Moho® or Reload Tools And Brushes if necessary.
 
 <br>
 

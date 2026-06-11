@@ -1,7 +1,7 @@
 ---
 Title: Temp
 Description: An unlisted (but still accessible) page for temporary stuff such as notes, tests, samples... that can be placed anywhere
-Tags: [other]
+Categories: [other]
 Date: 2026-01-31 00:00:00
 Comments: false
 Build: { list: never, render: always } # Won't list in .Pages, RSS feeds, sitemaps... but generate the HTML file so it's accessible via URL
