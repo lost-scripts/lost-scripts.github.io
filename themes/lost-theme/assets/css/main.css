@@ -666,6 +666,11 @@ nav, .nav {
 						font-size: clamp(0.75em, 6cqw, 1em);
 						white-space: nowrap;
 						text-overflow: ellipsis;
+
+						.nav-item:first-of-type & {
+							font-style: italic;
+							text-shadow: 0 0 6px color-mix(in oklch, color-mix(in oklch, var(--accent), #fff 66%) 33%, transparent);
+						}
 					}
 					&:link {
 						text-decoration: none; 
@@ -1112,6 +1117,9 @@ ol, ul {
 			color: var(--accent);
 		}
 	}
+	& + p {
+		margin-top: 0.66rem;
+	}
 }
 
 p {
@@ -1120,6 +1128,7 @@ p {
 	line-height: 1.33;
 
 	& + ol, + ul {
+		margin-top: 0.33rem;
 		margin-left: 1rem; /* Or your full margin: 0.2rem 0 0.6rem 1.2rem; */
 
 		& li {
@@ -2312,7 +2321,7 @@ h2 + p:has(a) + table, h2 + p:has(del) + table, h2 + p:has(strong) + table { /* 
 	}
 }
 
-.card {
+.cardplus {
 	box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.33);
 	background: rgba(128, 128, 128, 0.1);
 
@@ -2386,6 +2395,78 @@ h2 + p:has(a) + table, h2 + p:has(del) + table, h2 + p:has(strong) + table { /* 
 				text-wrap: pretty;
 				hyphens: auto;
 				hyphenate-limit-chars: 6;
+			}
+		}
+	}
+}
+
+.card {
+	box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.33);
+	background: rgb(from var(--text) r g b / 3.33%);
+	border-collapse: separate;
+
+	& tr {
+		& td {
+			vertical-align: middle;
+			padding: 0.5rem;
+
+			/* 1️⃣ Icon Cell (Left) */
+			&:first-child {
+				width: 48px;
+				padding: 0.5rem 0.25rem;
+
+				& a:not(.undecorate) {
+					display: block;
+					filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.33));
+					background-image: none;
+				}
+				& img, & picture img {
+					display: block;
+					width: 48px;
+					object-fit: contain;
+					margin: 0 auto;
+				}
+			}
+
+			/* 2️⃣ Text/Description Cell (Center) */
+			&:nth-child(2) {
+				padding: 0;
+				vertical-align: top;
+				mask-image: linear-gradient(to bottom, transparent, black 0.25em, black calc(100% - 0.25em), transparent 100%);
+
+				& a strong {
+					font-size: 1.1em;
+				}
+
+				& div {
+					container-type: inline-size;
+					height: calc((var(--card-lines) + var(--card-lines) / (var(--card-lines) * var(--card-lines))) * clamp(1.25em, 4.5cqw, 1.45em)); /* Try to show clean lines (works along with padding & line-height bellow) */
+					width: 100%;
+					padding: 0.1em 0.35em 0.3em 0.35em;
+					vertical-align: top;
+					overflow-y: auto;
+					line-height: clamp(1.25em, 4.5cqw, 1.45em);
+					text-align: justify;
+					text-wrap: pretty;
+					hyphens: auto;
+					hyphenate-limit-chars: 6;
+					overflow-wrap: break-word;
+				}
+			}
+
+			/* 3️⃣ Download/Shield Cell (Right) */
+			&:last-child {
+				text-align: center;
+				padding: 0.15em 0.35em;
+				max-width: 96px;
+				min-width: 64px;
+
+				& img {
+					display: inline-block;
+					vertical-align: middle;
+					max-width: 90%;
+					height: auto;
+				}
 			}
 		}
 	}
