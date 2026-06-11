@@ -2137,11 +2137,11 @@ input:not(input:checked) + .label {
 	display: flex;
 	flex: 1 0 auto;
 	gap: 8px;
-	align-items: end;
+	align-items: end; /* Or center if chars & icons got misaligned */
 	justify-content: space-between;
 	container-type: inline-size;
 	font-size: 0.5em;
-	font-size: clamp(0.33em, 3.33cqw, 0.75em);
+	font-size: clamp(0.5em, 2.5cqw, 0.9em);
 	overflow: hidden;
 
 	& span {
@@ -2175,6 +2175,8 @@ input:not(input:checked) + .label {
 	& ol, ul {
 		display: flex;
 		flex-wrap: nowrap;
+		margin: 0;
+		padding: 0;
 	}
 	& li {
 		list-style: none;
