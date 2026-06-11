@@ -185,26 +185,26 @@
 	/* Other... */
 	--docsearch-primary-color: var(--accent);
 	--docsearch-text-color: var(--text);
-	--docsearch-muted-color: color-mix(in srgb, var(--text) 50%, transparent);
+	--docsearch-muted-color: rgb(from var(--text) r g b / 50%);
 	--docsearch-searchbox-height: 48px;
 	--docsearch-searchbox-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.33); /* Convert outline into shadow! */
 	--docsearch-footer-height: 36px;
-	--docsearch-searchbox-focus-background: color-mix(in srgb, var(--bg) 25%, transparent);
-	--docsearch-modal-container-background: color-mix(in srgb, var(--bg) 75%, transparent);
+	--docsearch-searchbox-focus-background: rgb(from var(--bg) r g b / 25%);
+	--docsearch-modal-container-background: rgb(from var(--bg) r g b / 75%);
 
 	/*
 	--docsearch-primary-color: var(--accent);
 	--docsearch-text-color: var(--text);
-	--docsearch-muted-color: color-mix(in srgb, var(--text) 50%, transparent);
+	--docsearch-muted-color: rgb(from var(--text) r g b / 50%);
 	--docsearch-searchbox-height: 48px;
 	--docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-primary-color);
-	--docsearch-modal-container-background: color-mix(in srgb, var(--bg) 67%, transparent);
+	--docsearch-modal-container-background: rgb(from var(--bg) r g b / 67%);
 	--docsearch-modal-background: var(--gray-C3);
 	--docsearch-modal-shadow: 2px 4px 8px rgba(0, 0, 0, 0.67);
 	--docsearch-searchbox-height: 36px;
-	--docsearch-searchbox-focus-background: color-mix(in srgb, var(--bg) 25%, transparent);
+	--docsearch-searchbox-focus-background: crgb(from var(--bg) r g b / 25%);
 	--docsearch-hit-color: var(--text);
-	--docsearch-hit-shadow: 0 1px 3px 0 color-mix(in srgb, var(--bg) 66%, transparent);
+	--docsearch-hit-shadow: 0 1px 3px 0 rgb(from var(--bg) r g b / 67%);
 	--docsearch-key-gradient: linear-gradient(-225deg, var(--gray-B4) 0%, var(--gray-A5) 100%);
 	--docsearch-key-shadow: inset 0 -2px 0 0 var(--gray-C3), inset 0 0 1px 1px var(--gray-D2), 0 1px 2px 1px rgba(0, 0, 0, 0.33);
 	--docsearch-footer-height: 36px;
@@ -243,8 +243,8 @@
 	--gray-1E: #EEE;
 	--gray-0F: #FFF;
 
-	--docsearch-searchbox-focus-background: color-mix(in srgb, var(--bg) 50%, transparent) !important;
-	--docsearch-modal-container-background: color-mix(in srgb, var(--bg) 75%, transparent) !important;
+	--docsearch-searchbox-focus-background: rgb(from var(--bg) r g b / 50%) !important;
+	--docsearch-modal-container-background: rgb(from var(--bg) r g b / 75%) !important;
 
 	iframe, img, video {
 		/*filter: brightness(0.9);*/
@@ -332,7 +332,7 @@
 	-moz-tap-highlight-color: transparent;
 
 	&:focus-visible {
-		outline: 2px solid color-mix(in srgb, var(--accent) 90%, transparent);
+		outline: 2px solid rgb(from var(--accent) r g b / 90%);
 		border-radius: 2px;
 	}
 	&::-webkit-scrollbar {
@@ -669,19 +669,19 @@ nav, .nav {
 
 						.nav-item:first-of-type & {
 							font-style: italic;
-							text-shadow: 0 0 6px color-mix(in oklch, color-mix(in oklch, var(--accent), #fff 66%) 33%, transparent);
+							/*text-shadow: 0 0 6px color-mix(in oklch, color-mix(in oklch, var(--accent), #fff 66%) 33%, transparent);*/
 						}
 					}
 					&:link {
 						text-decoration: none; 
 					}
 					&:visited {
-						color: inherit; /*color: color-mix(in srgb, var(--gray-5A) 33%, transparent);*/ /*#ee80ff*/
+						color: inherit; /*color: rgb(from var(--gray-5A) r g b / 33%);*/ /*#ee80ff*/
 					}
 					&:hover, &:focus-within {
 						color: var(--gray-0F);
 						font-weight: bold;
-						text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.33);
+						text-shadow: -1px 1px 2px rgb(from var(--text-inv) r g b / 50%);
 					}
 					&:active {
 						color: inherit;
@@ -740,7 +740,7 @@ nav, .nav {
 			/*margin: 0 auto;*/ /* NOTE: Allowed centering even only 1 element when set to space-between */
 			font-size: 0.5em; /* Fallback for unsupported browsers ↴ */
 			font-size: clamp(0.475em, 4.25cqw, 0.67em);
-			color: color-mix(in srgb, var(--text) 67%, transparent);
+			color: rgb(from var(--text) r g b / 67%);
 		}
 		& > *:not(:last-child)::after {
 			content: " · ";
@@ -803,7 +803,8 @@ nav, .nav {
 		font-size: smaller;
 		font-weight: bold;
 		font-family: 'Consolas', 'Menlo', 'Lucida Console', 'Monaco', Courier, 'Courier New', monospace;
-		background-color: color-mix(in srgb, var(--accent) 50%, transparent);
+		box-shadow: inset -1px 1px 2px 0px rgba(0, 0, 0, 0.25);
+		background-color: rgb(from var(--accent) r g b / 50%);
 	}
 	& .new {
 		/*background-color: #00dd00;*/
@@ -972,7 +973,7 @@ blockquote {
 	font-size: 0.8em;
 	font-size: clamp(0.75em, 4.25cqw, 0.85em);
 	line-height: 1.25;
-	background-color: color-mix(in srgb, var(--accent) 33%, transparent);
+	background-color: rgb(from var(--accent) r g b / 33%);
 	box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.33);
 
 	& p {
@@ -1001,7 +1002,7 @@ button, .button, a.button {
 	&:active {
 		transform: translateX(1px) translateY(1px);
 		border-color: var(--accent);
-		box-shadow: 1px 2px 2px 0 inset rgba(0, 0, 0, 0.33);
+		box-shadow: inset 1px 2px 2px 0 rgba(0, 0, 0, 0.33);
 		background-color: color-mix(in srgb, var(--accent) 50%, var(--gray-A5));
 	}
 	&.tag {
@@ -1038,7 +1039,7 @@ dialog button {
 }
 
 dialog::backdrop {
-	background-color: color-mix(in srgb, var(--bg) 67%, transparent);
+	background-color: rgb(from var(--bg) r g b / 67%);
 	backdrop-filter: blur(4px);
 }
 
@@ -1232,7 +1233,7 @@ table {
 		line-height: 1.25cqw;
 		text-align: center;
 		border-radius: var(--round);
-		box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.67) inset;
+		box-shadow: inset -1px 1px 2px 1px rgba(0, 0, 0, 0.67);
 		background-image: repeating-linear-gradient(-45deg, rgb(from var(--text-inv) r g b / 50%) 0 10px, rgb(from var(--accent) r g b / 50%) 10px 20px);
 
 		& span {
@@ -1302,14 +1303,14 @@ table {
 	&:not([open]) {
 		> summary:hover {
 			scale: 1.33;
-			text-shadow: -1.5px 1.5px 3px rgba(0, 0, 0, 0.66);
+			text-shadow: -1.5px 1.5px 3px rgb(from var(--text-inv) r g b / 75%);
 		}
 	}
 	> summary {
 		margin-right: -6px;
 		padding: 0 6px 0 8px;
 		list-style: none;
-		text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.33);
+		text-shadow: -1px 1px 2px rgb(from var(--text-inv) r g b / 67%);
 
 		&:hover:not[open] {
 			scale: 1.25;
@@ -1374,7 +1375,7 @@ table {
 			padding: 4px 0.5em 4px 1.5em;
 
 			&:focus-visible {
-				outline: 2px solid color-mix(in srgb, var(--accent) 90%, transparent);
+				outline: 2px solid rgb(from var(--accent) r g b / 90%);
 				outline-offset: -2px;
 				border-radius: 2px;
 			}
@@ -1524,7 +1525,7 @@ table {
 		scale: var(--item-scale);
 		/*outline: 2px solid var(--accent);*/ /* Old unanimated way... */
 		box-shadow: -1px 2px 2px 1px rgb(0, 0, 0, 0.5);
-		background-image: linear-gradient(to bottom, rgb(from var(--gray-A5) r g b / 50%));
+		background-image: linear-gradient(to bottom, rgb(from var(--text-inv) r g b / 25%));
 		z-index: var(--item-count, 9) !important; /* For visual testing e.g. `calc(var(--item-count, 9) * 1px) solid red;`*/
 
 		&:not(:focus-visible) + .link-tip {
@@ -1830,7 +1831,7 @@ input:not(input:checked) + .label {
 	overflow: hidden;
 	font-size: 0.67rem;
 	border-radius: var(--widget-h-rem);
-	box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.67) inset;
+	box-shadow: inset -1px 1px 2px rgba(0, 0, 0, 0.67);
 	background: rgba(0, 0, 0, 0.25);
 
 	&:hover, &:focus {
@@ -1842,7 +1843,7 @@ input:not(input:checked) + .label {
 		}
 	}
 	&:active {
-		box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.67) inset;
+		box-shadow: inset -1px 1px 2px 1px rgba(0, 0, 0, 0.67);
 		background-color: color-mix(in srgb, var(--accent) 50%, var(--gray-A5));
 	}
 }
@@ -1875,7 +1876,7 @@ input:not(input:checked) + .label {
 }
 
 .docsearch-modal-search-input-form {
-	box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.67) inset;
+	box-shadow: inset -1px 1px 2px 1px rgba(0, 0, 0, 0.67);
 }
 
 .docsearch-modal-search-input {
@@ -1892,7 +1893,7 @@ input:not(input:checked) + .label {
 
 .docsearch-modal-search-cancel-btn {
 	color: var(--text);
-	box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.67) inset;
+	box-shadow: inset -1px 1px 2px rgba(0, 0, 0, 0.67);
 	background: var(--gray-B4);
 
 	&:active {
@@ -1932,7 +1933,7 @@ input:not(input:checked) + .label {
 	border-radius: var(--widget-h-rem);
 	align-items: center;
 	vertical-align: middle;
-	box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.67) inset;
+	box-shadow: inset -1px 1px 2px rgba(0, 0, 0, 0.67);
 	background: rgba(0, 0, 0, 0.25);
 }
 
@@ -1955,7 +1956,7 @@ input:not(input:checked) + .label {
 		border: none;
 		border-radius: var(--widget-h-rem);
 		user-select: none;
-		box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.67) inset;
+		box-shadow: inset -1px 1px 2px rgba(0, 0, 0, 0.67);
 		background: rgba(0, 0, 0, 0.25); /*var(--gray-2D);*/
 
 		&:hover, &:focus-visible {
@@ -1981,19 +1982,21 @@ input:not(input:checked) + .label {
 	padding: 0;
 	border: 0;
 	border-radius: 50%;
-	box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.67) inset;
+	box-shadow: inset -1px 1px 1px rgba(0, 0, 0, 0.67);
 	cursor: pointer;
 	background: rgba(0, 0, 0, 0.25); /*var(--gray-2D);*/
 	transition: scale var(--shorter);
 
 	&:hover {
-		scale: 1.33;
+		scale: 1.5;
+		box-shadow: inset -0.5px 0.5px 1px rgba(0, 0, 0, 0.67);
+		filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.33));
 		background-color: var(--gray-A5);
 	}
 
 	&:active {
 		transform: translateX(0px) translateY(0px);
-		box-shadow: -1px 1px 1px 1px rgba(0, 0, 0, 0.67) inset;
+		box-shadow: inset -1px 1px 1px 1px rgba(0, 0, 0, 0.67);
 		background-color: color-mix(in srgb, var(--accent) 50%, var(--gray-A5));
 	}
 }
@@ -2121,6 +2124,7 @@ input:not(input:checked) + .label {
 	box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.33);
 	transition: all var(--short) cubic-bezier(0.175, 0.885, 0.32, 1.275); /*transition: all 0.33s ease-out;*/
 	transition-behavior: allow-discrete;
+	z-index: 999;
 
 	&.visible {
 		display: block;
@@ -2139,15 +2143,17 @@ input:not(input:checked) + .label {
 	gap: 8px;
 	align-items: end; /* Or center if chars & icons got misaligned */
 	justify-content: space-between;
+	padding-bottom: 0.1em;
+	padding-inline: 0.1em;
 	container-type: inline-size;
 	font-size: 0.5em;
-	font-size: clamp(0.5em, 2.5cqw, 0.9em);
+	font-size: clamp(0.6em, 2.33cqw, 0.85em);
 	overflow: hidden;
 
 	& span {
 		align-items: center;
-		color: color-mix(in srgb, var(--text) 67%, transparent);
-		text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.33);
+		color: rgb(from var(--text) r g b / 67%);
+		text-shadow: -1px 1px 2px rgb(from var(--text-inv) r g b / 50%);
 		user-select: none;
 
 		& a {
@@ -2169,14 +2175,13 @@ input:not(input:checked) + .label {
 }
 
 .breadcrumber {
-	padding: 0 0.5rem;
+	padding: 0 .5rem;
 	overflow: hidden;
 
 	& ol, ul {
 		display: flex;
 		flex-wrap: nowrap;
 		margin: 0;
-		padding: 0;
 	}
 	& li {
 		list-style: none;
@@ -2553,7 +2558,7 @@ h2 + p:has(a) + table, h2 + p:has(del) + table, h2 + p:has(strong) + table { /* 
 		position: absolute;
 		inset: 0;
 		mix-blend-mode: multiply;
-		box-shadow: -2px 2px 4px 2px rgb(0, 0, 0, 0.33) inset;
+		box-shadow: inset -2px 2px 4px 2px rgb(0, 0, 0, 0.33);
 		pointer-events: none;
 	}
 }
@@ -2629,7 +2634,7 @@ h2 + p:has(a) + table, h2 + p:has(del) + table, h2 + p:has(strong) + table { /* 
 		width: 100%;
 		vertical-align: top;
 		border-radius: var(--widget-h-rem); /*2rem*/
-		box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.67) inset;
+		box-shadow: inset -1px 1px 2px rgba(0, 0, 0, 0.67);
 		cursor: pointer;
 		background: rgba(0, 0, 0, 0.25); /*var(--gray-2D);*/
 		transition: background ease var(--short);
@@ -2647,7 +2652,7 @@ h2 + p:has(a) + table, h2 + p:has(del) + table, h2 + p:has(strong) + table { /* 
 			left: calc(var(--widget-h-rem) * 0.166); /*0.2rem*/
 			border-radius: 50%; /*1.2rem*/
 			box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.5);
-			background: color-mix(in srgb, var(--accent) 67%, transparent); /*var(--gray-1E)*/
+			background: rgb(from var(--accent) r g b / 67%); /*var(--gray-1E)*/
 			transition: cubic-bezier(0.3, 1.5, 0.7, 1) var(--short);
 			animation: fadeIn var(--shorter) ease-in;
 		}
@@ -2655,7 +2660,7 @@ h2 + p:has(a) + table, h2 + p:has(del) + table, h2 + p:has(strong) + table { /* 
 }
 
 #darker.toggle::before { /* Toggle dot OFF id-based customizations */
-	/*outline: calc(var(--widget-h-rem) * 0.111) dotted color-mix(in srgb, var(--accent) 67%, transparent);*/
+	/*outline: calc(var(--widget-h-rem) * 0.111) dotted rgb(from var(--accent) r g b / 67%);*/
 }
 
 .darked .toggle { /* ON */
@@ -2703,9 +2708,10 @@ h2 + p:has(a) + table, h2 + p:has(del) + table, h2 + p:has(strong) + table { /* 
 	}
 	&:hover {
 		scale: 1.16;
+		box-shadow: -1px 2px 2px 0px rgb(0, 0, 0, 0.33);
 	}
 	&:focus-within { /* Detect when internal input is in focus */
-		box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 90%, transparent);
+		box-shadow: 0 0 0 2px rgb(from var(--accent) r g b / 90%);
 	}
 	& input[type="color"] {
 		position: absolute;
