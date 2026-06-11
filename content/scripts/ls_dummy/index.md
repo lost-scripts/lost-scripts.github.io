@@ -67,7 +67,7 @@ A dummy script/placeholder just for the sake of testing different parts of the R
 
 [**Download**][h-shield1-a] the file, **unzip** it, and proceed with the installation method of your choice...
 
-| MANUAL                                                                           | ASSISTED                                                                         |
+| MANUAL (RECOMMENDED)                                                             | ASSISTED BY MOHO®                                                                |
 | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | 1. You'll get some of these folders:  `Menu / ScriptResources / Tool / Utility`  | 1. In Moho®, go to "Scripts > Install Script…" to open the installation wizard*  |
 | 2. Place'em all into the *Scripts* folder of your [Custom Content Folder][3-1a]  | 2. Click *Select A Script Folder*, browse to the unzipped folder & **select it** |
