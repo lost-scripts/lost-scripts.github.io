@@ -1,7 +1,7 @@
 ---
 Title: LS (Core)
 Description: Recursos comuns/compartits del projecte Lost Scripts.
-Tags: [utilities, deps]
+Tags: [utils, deps]
 Subcategory: Index
 Date: 2023-10-17T4:24:43
 LastMod: 2024-02-09T00:54:00
