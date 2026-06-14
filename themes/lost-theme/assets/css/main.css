@@ -2143,11 +2143,11 @@ input:not(input:checked) + .label {
 	gap: 8px;
 	align-items: end; /* Or center if chars & icons got misaligned */
 	justify-content: space-between;
-	padding-bottom: 0.1em;
-	padding-inline: 0.1em;
+	padding-bottom: 2px;
+	padding-inline: 2px;
 	container-type: inline-size;
 	font-size: 0.5em;
-	font-size: clamp(0.6em, 2.33cqw, 0.85em);
+	font-size: clamp(0.6em, 1.85cqw, 0.85em);
 	overflow: hidden;
 
 	& span {
