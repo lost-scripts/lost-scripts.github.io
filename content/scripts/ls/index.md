@@ -6,7 +6,7 @@ Params:
   Version: 0.0.1
   Build: 20250114-0005
   Flags: [UPD!] # NEW! UPD! WIP! TODO BETA ALPHA
-  Starred: [ls_shapes, ls_dummy] # The chosen ones for glory
+  Starred: [ls_shapes] # The chosen ones for glory
 Tags: [utils, deps]
 Date: 2023-10-17T4:24:43
 LastMod: 2024-02-09T00:54:00
@@ -49,11 +49,6 @@ Provides all the necessary shared/common resources and helpers that *[Moho®](ht
     <td align='center' width='96'><a href='https://github.com/lost-scripts/ls_shapes'><picture><source media='(prefers-color-scheme: dark)' srcset='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_shapes/assets/icon_dark.png'><source media='(prefers-color-scheme: light)' srcset='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_shapes/assets/icon_light.png'><img src='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_shapes/assets/icon.png' width='48' alt='Icon' class='colorize'></picture></a></td>
     <td width='724'><div><a href='https://github.com/lost-scripts/ls_shapes'><strong>Shapes</strong></a><br>Persistent shape palette plus helpers for better Moho&reg; vector/s management.</div></td>
     <td align='center' width='192'><a href='https://github.com/lost-scripts/ls_shapes/releases/latest/download/ls_shapes.zip'><img src='https://img.shields.io/github/downloads/lost-scripts/ls_shapes/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue&label=' alt='Download' title='Download: ls_shapes.zip' width='160'></a></td>
-</tr></table>
-<table width='100%' border='3' class='card'><tr>
-    <td align='center' width='96'><a href='https://github.com/lost-scripts/ls_dummy'><picture><source media='(prefers-color-scheme: dark)' srcset='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_dummy/assets/icon_dark.png'><source media='(prefers-color-scheme: light)' srcset='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_dummy/assets/icon_light.png'><img src='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_dummy/assets/icon.png' width='48' alt='Icon' class='colorize'></picture></a></td>
-    <td width='724'><div><a href='https://github.com/lost-scripts/ls_dummy'><strong>Dummy</strong></a><br>A dummy script/placeholder just for the sake of testing different parts of the READMEs and Lost Script&trade; webpage.</div></td>
-    <td align='center' width='192'><a href='https://github.com/lost-scripts/ls_dummy'><img src='https://img.shields.io/badge/Soon…-inactive.svg' alt='Download' title='Download: Unavailable' width='160'></a></td>
 </tr></table>
 
 
@@ -101,13 +96,15 @@ Provides all the necessary shared/common resources and helpers that *[Moho®](ht
 
 ## *Features*
 
-More than user-facing features, *LS<sub><sup><sup> Core</sup></sup></sub>* works under the hood not only to meet the development requirements of *Lost Scripts™* like the ones just above, but also to extend (within the limits) the scripting possibilities of the program with *new* kind of functions, methods, UI widgets and more...
+More than user-facing features, *LS<sub><sup><sup> Core</sup></sup></sub>* works under the hood not only to meet the development requirements of *Lost Scripts™* like the ones just above, but also to extend (within the limits) the scripting possibilities of the program with *new* kind of functions, methods, UI widgets and more!
 
-<br>
 
-## *Installation*
 
-Starting from you have already unzipped the downloaded file, and regardless of whether it is the Core or any other script, you actually have two different installation methods...
+## *Installation* ![](assets/image_nothingtodohere.png "NOTHING TO DO HERE")
+
+~~Starting from you have already unzipped the downloaded file~~*, and regardless of whether it is the Core or any other script, you actually have two different installation methods...
+
+***No Download Available (Yet!):** Due to its initial stage, all Core dependencies are already compiled and automatically embedded inside each standalone script pack from the catalog (e.g., _ls_shapes_). Since they already contain everything you need to make them work on your system, there is no need to install anything else from here at the moment... 
 
 | MANUAL (RECOMMENDED)                                                             | ASSISTED BY MOHO®                                                                |
 | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |

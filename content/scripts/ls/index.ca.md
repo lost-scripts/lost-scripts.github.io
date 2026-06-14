@@ -54,11 +54,6 @@ El *Core* (nucli) que et proporciona tots els mòduls i recursos que el programa
     <td width='724'><div><a href='https://github.com/lost-scripts/ls_shapes'><strong>Shapes</strong></a><br>Persistent shape palette plus helpers for better Moho&reg; vector/s management.</div></td>
     <td align='center' width='192'><a href='https://github.com/lost-scripts/ls_shapes/releases/latest/download/ls_shapes.zip'><img src='https://img.shields.io/github/downloads/lost-scripts/ls_shapes/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue&label=' alt='Download' title='Download: ls_shapes.zip' width='160'></a></td>
 </tr></table>
-<table width='100%' border='3' class='card'><tr>
-    <td align='center' width='96'><a href='https://github.com/lost-scripts/ls_dummy'><picture><source media='(prefers-color-scheme: dark)' srcset='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_dummy/assets/icon_dark.png'><source media='(prefers-color-scheme: light)' srcset='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_dummy/assets/icon_light.png'><img src='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_dummy/assets/icon.png' width='48' alt='Icon' class='colorize'></picture></a></td>
-    <td width='724'><div><a href='https://github.com/lost-scripts/ls_dummy'><strong>Dummy</strong></a><br>A dummy script/placeholder just for the sake of testing different parts of the READMEs and Lost Script&trade; webpage.</div></td>
-    <td align='center' width='192'><a href='https://github.com/lost-scripts/ls_dummy'><img src='https://img.shields.io/badge/Soon…-inactive.svg' alt='Download' title='Download: Unavailable' width='160'></a></td>
-</tr></table>
 
 
 <!-- Pure Markdown style cards...
@@ -109,9 +104,11 @@ Més que característiques de cara a l'usuari, *LS<sub><sup><sup> Core</sup></su
 
 <br>
 
-## *Instal·lació*
+## *Instal·lació* ![](assets/image_nothingtodohere.png "NOTHING TO DO HERE")
 
-Partint que ja has descomprimit el fitxer descarregat, i independentment de si es tracta del *Core* o de qualsevol altre script, disposes en realitat de dos mètodes d'instal·lació diferents...
+~~Partint que ja has descomprimit el fitxer descarregat~~*, i independentment de si es tracta del *Core* o de qualsevol altre script, disposes en realitat de dos mètodes d'instal·lació diferents...
+
+***Descàrrega no disponible (Encara!):** A causa de la fase inicial, totes les dependències del _Core_ ja estan compilades i automàticament integrades en cada paquet d'scripts del catàleg (per exemple, _ls_shapes_). Atès que ja contenen tot el necessari perquè funcionin al vostre sistema, no cal instal·lar res més des d'aquí de moment...
 
 | MANUAL (RECOMANAT)                                                                   | ASSISTIDA PER MOHO®                                                                    |
 | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
