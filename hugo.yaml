@@ -5,7 +5,7 @@
 baseURL: https://lost-scripts.github.io/
 locale: en-us
 title: Lost Scripts
-copyright: Copyright © 2025 · Rai López · All Rights Reserved
+copyright: Copyright © 2026 · Rai López · All Rights Reserved
 timezone: Europe/Madrid
 theme: lost-theme
 defaultContentLanguage: en
@@ -149,7 +149,7 @@ params:
   github:
     href: https://github.com/
     user: lost-scripts
-  copyrightAlt: © 2025 · Rai López · <abbr title="All Rights Reserved">ARR</abbr>
+  copyrightAlt: © 2026 · Rai López · <abbr title="All Rights Reserved">ARR</abbr>
   since: 2024
   navMode: auto # auto (default) / tabbed / accordion
   readmes: true

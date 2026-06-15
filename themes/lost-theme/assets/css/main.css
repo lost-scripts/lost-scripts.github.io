@@ -2199,6 +2199,16 @@ input:not(input:checked) + .label {
 	}
 }
 
+.fas, .far { /* FontAwesome icons (i tags) inside headings and table cells */
+	:is(h1, h2, h3, th) i& {
+		margin-right: 0.5rem;
+
+		th & {
+			color: var(--accent);
+		}
+	}
+}
+
 .hs, .hs1, .hs2, .hs3 { /* Horizontal separators */
 	display: block;
 	height: 2px;
