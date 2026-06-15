@@ -39,7 +39,7 @@ All development, bug fixes, and feature updates happen inside the centralized **
 
 <br>
 
-|                   🛠                   |                   📖                   |
+|      <i class="fas fa-tools"></i>      |    <i class="fas fa-book-open"></i>    |
 | :------------------------------------: | :------------------------------------: |
 | **[Main Workspace (The Monorepo)][1]** | **[Full Catalog (GitHub Profile)][2]** |
 

@@ -4,7 +4,7 @@ Description: A dummy script/placeholder just for the sake of testing different p
 Tags: [other]
 Date: 1978-08-11 06:00:00Z
 Modified: 2026-06-10 15:30:00Z
-Draft: false
+Draft: true
 Buildme: true
 ---
 
@@ -97,7 +97,7 @@ Suggestions and bugs can be reported in the [<i>Issues</i>](https://github.com/l
 ## Other...
 
 - <a href="https://lost-scripts.github.io/scripts/ls_dummy" data-alt-href="https://github.com/lost-scripts/ls_dummy" data-alt-textContent="Dummy window repository" data-alt-title="Go to the Dummy Script repository...">Dummy Script webpage</a>
-- [Lost Marble Forum topics](https://lostmarble.net/forum/search.php?author_id=88&sr=posts "Go to my Lost Marble Forum topics...")
+- [Lost Marble Forum topics](https://www.lostmarble.net/forum/search.php?keywords=&terms=all&author=Rai+L%C3%B3pez&fid%5B%5D=12&sc=1&sf=firstpost&sr=posts&sk=t&sd=d&st=0&ch=512&t=0&submit=Search "Go to my Lost Marble Forum topics...")
 
 ---
 

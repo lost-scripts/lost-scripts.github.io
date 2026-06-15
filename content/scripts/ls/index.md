@@ -20,7 +20,7 @@ Weight: -1
             <picture>
                 <source media='(prefers-color-scheme: dark)' srcset='assets/icon_dark.png'>
                 <source media='(prefers-color-scheme: light)' srcset='assets/icon_light.png'>
-                <img src='assets/icon.png' width='48' alt='Icon' title='LS: Essential shared resources and core modules required for the Lost Scripts&trade; project to work with MOHO Animation Software.' class='colorize'>
+                <img src='assets/icon.png' width='48' alt='Icon' title='LS: Essential shared resources and core modules required for the Lost Scripts&trade; project to work with MOHO Animation Software (NOT YET AVAILABLE).' class='colorize'>
             </picture>
         </td>
         <td align='right' valign='middle' width='916' nowrap>
@@ -46,7 +46,7 @@ Provides all the necessary shared/common resources and helpers that *[Moho®](ht
 ## *Featured Scripts*
 
 <table width='100%' border='3' class='card'><tr>
-    <td align='center' width='96'><a href='https://github.com/lost-scripts/ls_shapes'><picture><source media='(prefers-color-scheme: dark)' srcset='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_shapes/assets/icon_dark.png'><source media='(prefers-color-scheme: light)' srcset='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_shapes/assets/icon_light.png'><img src='https://raw.githubusercontent.com/lost-scripts/lost-scripts/refs/heads/main/docs/ls_shapes/assets/icon.png' width='48' alt='Icon' class='colorize'></picture></a></td>
+    <td align='center' width='96'><a href='https://github.com/lost-scripts/ls_shapes'><picture><source media='(prefers-color-scheme: dark)' srcset='https://raw.githubusercontent.com/lost-scripts/lost-scripts/main/ScriptResources/ls_shapes/docs/assets/icon_dark.png'><source media='(prefers-color-scheme: light)' srcset='https://raw.githubusercontent.com/lost-scripts/lost-scripts/main/ScriptResources/ls_shapes/docs/assets/icon_light.png'><img src='https://raw.githubusercontent.com/lost-scripts/lost-scripts/main/ScriptResources/ls_shapes/docs/assets/icon.png' width='48' alt='Icon' class='colorize'></picture></a></td>
     <td width='724'><div><a href='https://github.com/lost-scripts/ls_shapes'><strong>Shapes</strong></a><br>Persistent shape palette plus helpers for better Moho&reg; vector/s management.</div></td>
     <td align='center' width='192'><a href='https://github.com/lost-scripts/ls_shapes/releases/latest/download/ls_shapes.zip'><img src='https://img.shields.io/github/downloads/lost-scripts/ls_shapes/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue&label=' alt='Download' title='Download: ls_shapes.zip' width='160'></a></td>
 </tr></table>
