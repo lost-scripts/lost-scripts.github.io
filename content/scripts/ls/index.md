@@ -5,7 +5,7 @@ Params:
   Author: Rai López
   Version: 0.0.1
   Build: 20250114-0005
-  Flags: [UPD!] # NEW! UPD! WIP! TODO BETA ALPHA
+  Flags: [WIP!] # NEW! UPD! WIP! TODO BETA ALPHA
   Starred: [ls_shapes] # The chosen ones for glory
 Tags: [utils, deps]
 Date: 2023-10-17T4:24:43
@@ -24,7 +24,7 @@ Weight: -1
             </picture>
         </td>
         <td align='right' valign='middle' width='916' nowrap>
-            <a href='https://github.com/lost-scripts/ls/releases/latest/download/ls.zip' title='Download latest version...'><img src='https://img.shields.io/github/downloads/lost-scripts/ls/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue&label=Download' alt='Download'></a> 
+            <a href='https://github.com/lost-scripts/ls/releases/latest/download/ls.zip' title='Download latest version...'><img src='https://img.shields.io/github/downloads/lost-scripts/ls/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyaC02NHYyMTRsLTc3LTc4LTQ1IDQ1IDE1NCAxNTUgMTU0LTE1NS00NS00NS03NyA3OHpNNjQgMzUyYTY0IDY0IDAgMCAwLTY0IDY0djMyYTY0IDY0IDAgMCAwIDY0IDY0aDM4NGE2NCA2NCAwIDAgMCA2NC02NHYtMzJhNjQgNjQgMCAwIDAtNjQtNjRIMzQ3bC00NiA0NWE2NCA2NCAwIDAgMS05MCAwbC00NS00NXptMzY4IDU2YTI0IDI0IDAgMSAxIDAgNDggMjQgMjQgMCAxIDEgMC00OHoiLz48L3N2Zz4=&color=blue&label=Download' alt='Download'></a> 
             <a href='https://github.com/lost-scripts/ls/releases/latest' title='Go to release in GitHub...'><img src='https://img.shields.io/github/v/release/lost-scripts/ls?logo=github&color=yellow&label=Release' alt='Release'></a> 
             <a href='https://moho.lostmarble.com/' title='Go to Moho® homepage...'><img src='https://img.shields.io/badge/For-Moho_-orange' alt='Moho'></a> 
         </td>
@@ -48,7 +48,7 @@ Provides all the necessary shared/common resources and helpers that *[Moho®](ht
 <table width='100%' border='3' class='card'><tr>
     <td align='center' width='96'><a href='https://github.com/lost-scripts/ls_shapes'><picture><source media='(prefers-color-scheme: dark)' srcset='https://raw.githubusercontent.com/lost-scripts/lost-scripts/main/ScriptResources/ls_shapes/docs/assets/icon_dark.png'><source media='(prefers-color-scheme: light)' srcset='https://raw.githubusercontent.com/lost-scripts/lost-scripts/main/ScriptResources/ls_shapes/docs/assets/icon_light.png'><img src='https://raw.githubusercontent.com/lost-scripts/lost-scripts/main/ScriptResources/ls_shapes/docs/assets/icon.png' width='48' alt='Icon' class='colorize'></picture></a></td>
     <td width='724'><div><a href='https://github.com/lost-scripts/ls_shapes'><strong>Shapes</strong></a><br>Persistent shape palette plus helpers for better Moho&reg; vector/s management.</div></td>
-    <td align='center' width='192'><a href='https://github.com/lost-scripts/ls_shapes/releases/latest/download/ls_shapes.zip'><img src='https://img.shields.io/github/downloads/lost-scripts/ls_shapes/total?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyYTMyIDMyIDAgMSAwLTY0IDB2MjQzbC03My03NGEzMiAzMiAwIDAgMC00NiA0NmwxMjggMTI4YzEzIDEyIDMzIDEyIDQ2IDBsMTI4LTEyOGEzMiAzMiAwIDAgMC00Ni00NmwtNzMgNzRWMzJ6TTY0IDM1MmMtMzUgMC02NCAyOS02NCA2NHYzMmMwIDM1IDI5IDY0IDY0IDY0aDM4NGMzNSAwIDY0LTI5IDY0LTY0di0zMmMwLTM1LTI5LTY0LTY0LTY0SDM0N2wtNDYgNDVhNjQgNjQgMCAwIDEtOTAgMGwtNDUtNDVINjR6bTM2OCA1NmEyNCAyNCAwIDEgMSAwIDQ4IDI0IDI0IDAgMSAxIDAtNDh6Ii8+PC9zdmc+&color=blue&label=' alt='Download' title='Download: ls_shapes.zip' width='160'></a></td>
+    <td align='center' width='96'><a href='https://github.com/lost-scripts/ls_shapes/releases/latest/download/ls_shapes.zip'><img src='https://img.shields.io/badge/-%20-blue?style=flat&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZWVlIiBkPSJNMjg4IDMyaC02NHYyMTRsLTc3LTc4LTQ1IDQ1IDE1NCAxNTUgMTU0LTE1NS00NS00NS03NyA3OHpNNjQgMzUyYTY0IDY0IDAgMCAwLTY0IDY0djMyYTY0IDY0IDAgMCAwIDY0IDY0aDM4NGE2NCA2NCAwIDAgMCA2NC02NHYtMzJhNjQgNjQgMCAwIDAtNjQtNjRIMzQ3bC00NiA0NWE2NCA2NCAwIDAgMS05MCAwbC00NS00NXptMzY4IDU2YTI0IDI0IDAgMSAxIDAgNDggMjQgMjQgMCAxIDEgMC00OHoiLz48L3N2Zz4=' alt='Download' title='Download: ls_shapes.zip' width='96'></a></td>
 </tr></table>
 
 

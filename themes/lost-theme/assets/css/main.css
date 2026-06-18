@@ -2471,15 +2471,15 @@ h2 + p:has(a) + table, h2 + p:has(del) + table, h2 + p:has(strong) + table { /* 
 			/* 3️⃣ Download/Shield Cell (Right) */
 			&:last-child {
 				text-align: center;
-				padding: 0.15em 0.35em;
+				padding: 0.5em 0.25em;
+				min-width: 48px;
 				max-width: 96px;
-				min-width: 64px;
 
 				& img {
-					display: inline-block;
-					vertical-align: middle;
-					max-width: 90%;
-					height: auto;
+					display: block;
+					width: 48px;
+					object-fit: contain;
+					margin: 0 auto;
 				}
 			}
 		}
