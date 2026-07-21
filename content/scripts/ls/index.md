@@ -106,7 +106,7 @@ More than user-facing features, *LS<sub><sup><sup> Core</sup></sup></sub>* works
 
 ***No Download Available (Yet!):** Due to its initial stage, all Core dependencies are already compiled and automatically embedded inside each standalone script pack from the catalog (e.g., _ls_shapes_). Since they already contain everything you need to make them work on your system, there is no need to install anything else from here at the moment... 
 
-| MANUAL (RECOMMENDED)                                                             | ASSISTED BY MOHO®                                                                |
+| MANUAL                                                                           | ASSISTED                                                                         |
 | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | 1. You'll get some of these folders:  `Menu / ScriptResources / Tool / Utility`  | 1. In Moho®, go to "Scripts > Install Script…" to open the installation wizard*  |
 | 2. Place'em all into the *Scripts* folder of your [Custom Content Folder][3-1a]  | 2. Click *Select A Script Folder*, browse to the unzipped folder & **select it** |
