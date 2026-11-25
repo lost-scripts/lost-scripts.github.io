@@ -20,7 +20,7 @@ uglyURLs: false
 # PERFORMANCE #
 ###############
 
-cleanDestinationDir: true # remove files from destination not found in static directories
+build.cleanDestinationDir.enable: true # remove files from destination not found in static directories
 disableFastRender: true # Enables full re-renders on changes (commented cause this setting doesn't really belong here...)
 #disableKinds: ['taxonomy', 'taxonomyTerm', 'term', ' robotsTXT', 'RSS', 'sitemap', '404'] # Reduce rendering complexity if you don't need taxonomies
 
@@ -182,7 +182,7 @@ params:
   headingIconTint: true
   app:
     name: Moho
-    version: 14.3
+    version: 14.5
     company: Lost Marble LLC
     link: https://moho.lostmarble.com/
   #debug: true
