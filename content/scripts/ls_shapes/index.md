@@ -1,6 +1,6 @@
 ---
 Title: LS Shapes Window
-Description: Shape palette plus helpers for better Moho® vectors management
+Description: Shape palette plus helpers for better Moho® vector management
 Tags: [vectors, shapes]
 Date: 2023-10-20 17:29:50
 Modified: 2026-11-23 20:10:00
@@ -121,9 +121,14 @@ And that's all! The script should appear in *Tools* palette and/or under *Script
 ## Usage
 
 1. **Opening**: Open *Shapes Window* from Moho's *Tools* palette or via its entry in the *Scripts* menu.
-2. **Operating**: You can now keep it open permanently open to visualize and performming various operations related to Moho® vectors.
-3. **Customizing**: Unfold Window's main menu: ≡ (at top left of the window) to access different settings & actions.
-4. **Tooltips**: If *Beginners Mode* is checked, holding the cursor over the different elements will give a hint of their functionality...
+2. **Operating**: You can now keep it permanently open to visualize and performing various operations related to Moho® vectors.
+3. **Customizing**: Unfold window's *Main Menu* (at top left ≡) to access different settings & actions.
+4. **Tooltips**: If *Beginners Mode* is checked, holding the cursor over the different elements will give a hint of their functionality.
+5. **Quick Help**: There is also a handy dialog with plenty of valuable info accessible via *Main Menu > Help...*
+
+<br>
+
+![HELP](https://raw.githubusercontent.com/lost-scripts/ls_shapes/refs/heads/main/ScriptResources/ls_shapes/HELP.png "Quick Help Image")
 
 <br>
 
@@ -158,10 +163,10 @@ And, of course, to **Lost Marble** and the talented Moho® team for all the hard
 [h-shield1-a]: https://github.com/lost-scripts/ls_shapes/releases/latest/download/ls_shapes.zip "Download latest version..."
 
 [h-shield2-i]: https://img.shields.io/github/release/lost-scripts/ls_shapes?logo=github
-[h-shield2-a]: https://github.com/lost-scripts/ls_shapes/releases/latest "Go to release in GitHub..."
+[h-shield2-a]: https://github.com/lost-scripts/ls_shapes/releases/latest "Go to the release in GitHub..."
 
-[h-shield3-i]: https://img.shields.io/badge/for-Moho_Pro_14.3+_(Win)-orange
-[h-shield3-a]: https://moho.lostmarble.com/ "Go to Moho® website..."
+[h-shield3-i]: https://img.shields.io/badge/for-Moho_Pro_14.5+_(Win)-orange
+[h-shield3-a]: https://moho.lostmarble.com/ "Go to the Moho® website..."
 
 [3-1a]: https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3
 [3-2a]: https://manual.lostmarble.com/app/page/1IOuEOfMa7kUwqYPi2ABDhwoWE_KXB1OBCC5ib__iyIE?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3

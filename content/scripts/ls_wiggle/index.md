@@ -113,10 +113,10 @@ And, of course, to **Lost Marble** and the talented Moho® team for all the hard
 [h-shield1-a]: https://github.com/lost-scripts/ls_wiggle/releases/latest/download/ls_wiggle.zip "Download latest version..."
 
 [h-shield2-i]: https://img.shields.io/github/release/lost-scripts/ls_wiggle?logo=github
-[h-shield2-a]: https://github.com/lost-scripts/ls_wiggle/releases/latest "Go to release in GitHub..."
+[h-shield2-a]: https://github.com/lost-scripts/ls_wiggle/releases/latest "Go to the release in GitHub..."
 
-[h-shield3-i]: https://img.shields.io/badge/for-Moho_Pro_14.3+_(Win)-orange
-[h-shield3-a]: https://moho.lostmarble.com/ "Go to Moho® website..."
+[h-shield3-i]: https://img.shields.io/badge/for-Moho_Pro_14.5+_(Win)-orange
+[h-shield3-a]: https://moho.lostmarble.com/ "Go to the Moho® website..."
 
 [3-1a]: https://manual.lostmarble.com/app/page/1bmBks7y8KPdbPd-ll9kQGPdZJfDf3Rq67BCp8F5Y-FI?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3
 [3-2a]: https://manual.lostmarble.com/app/page/1IOuEOfMa7kUwqYPi2ABDhwoWE_KXB1OBCC5ib__iyIE?p=1UxA8Gi5DttJku9AmFlSpO0gJw4U9flX3
